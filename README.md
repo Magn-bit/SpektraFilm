@@ -77,7 +77,7 @@ SpektraFilm 是一款独立离线的 RAW 编辑与光谱胶片模拟软件。导
 
 | 平台 | 当前发布 | 下载与安装 |
 | --- | --- | --- |
-| Windows x64 | **0.8.4**，首次预览与窗口图标修订 | [下载便携版 ZIP](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.8.4-Windows-x64.zip)，完整解压后运行 `SpektraFilm.exe`，保留 `_internal` 目录 |
+| Windows x64 | **0.8.4**，首次预览与窗口图标修订 | 下载 [分卷 001](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.8.4-Windows-x64.7z.001) 和 [分卷 002](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.8.4-Windows-x64.7z.002)，放在同一目录，用 7-Zip 解压 `001`，运行 `SpektraFilm.exe` |
 | Android arm64-v8a | **0.5.0 / code 23** | [下载 APK](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.5.0-arm64-v8a.apk)，在系统允许安装后打开 |
 | 源码 | 当前开发源码与各发布物的对应源码 | [浏览源码](https://github.com/Magn-bit/SpektraFilm)或在 [Releases](https://github.com/Magn-bit/SpektraFilm/releases/latest) 下载对应源码包 |
 
