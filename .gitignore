@@ -5,6 +5,7 @@ release/Personal/
 .tools/
 android/local.properties
 android/.gradle/
+android/.kotlin/
 android/app/build/
 __pycache__/
 *.pyc
