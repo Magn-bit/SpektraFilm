@@ -1,0 +1,178 @@
+{
+  "stock": "fujifilm_natura_1600",
+  "source_url": "https://github.com/JanLohse/spectral_film_lut/blob/bcbcfc6861f49cc706dc5d00ea048e4853060aab/src/spectral_film_lut/negative_film/fuji_natura_1600.py",
+  "source_sha256": "5c6afce79b702ea74496f9f63e43695fdd39ba2164c7ff010da71227ae2949fa",
+  "density_source_sha256": "c04ea67f57bfef6852ac50d0306291f98b59c1509ff3a4dbd98ea2bc9564ba75",
+  "source_iso": 1600,
+  "source_year": 2003,
+  "source_color_masking": null,
+  "assumptions": [
+    "According to the upstream author these values digitize manufacturer graphs; original factory datasheets not independently cross-checked here. No new laboratory measurements.",
+    "Source linear log-sensitivity extrapolation, bounded to [-12,12]; Gaussian dye/base spectral tails; 380-780 nm, 5 nm sampling.",
+    "Absolute H axis reanchored by log10(12.5/ISO); each sensitivity normalized on engine D55 Hanatos 18.4% gray; positive-film neutral speed further solved on spectral transmittance.",
+    "Status A inverse or source APD/CDD-to-CID inverse; small nonnegative/monotone projections recorded.",
+    "Negative shoulder extended by source's assumed logistic curve; prepared H-D supports clamped outside endpoints.",
+    "Three normal-CDF sublayers fitted to curves; these are numerical components, not measured physical emulsions.",
+    "Identity Hanatos adaptation; no stock-specific adaptation surface, DIR-coupler, halation or particle-area calibration.",
+    "Antihalation=weak and sensitivity density-over-min=0.2 are host schema defaults, not measured stock attributes; D50 is a selected viewing condition."
+  ],
+  "source_details": {
+    "dye_source": "modeled split of total reference spectrum minus minimum spectrum",
+    "blue_green_cut_nm": 495.0,
+    "green_red_cut_nm": 605.0,
+    "smoothing_sigma_nm": 25
+  },
+  "source_domains": {
+    "log_sensitivity": [
+      {
+        "n": 36,
+        "min": 559.0706,
+        "max": 677.0566
+      },
+      {
+        "n": 39,
+        "min": 471.2339,
+        "max": 613.6718
+      },
+      {
+        "n": 50,
+        "min": 386.7999,
+        "max": 503.9946
+      }
+    ],
+    "sensiometric_curve": [
+      {
+        "n": 31,
+        "min": -3.6214,
+        "max": 0.2728
+      },
+      {
+        "n": 31,
+        "min": -3.6276,
+        "max": 0.2977
+      },
+      {
+        "n": 31,
+        "min": -3.6214,
+        "max": 0.2759
+      }
+    ]
+  },
+  "density_fit": [
+    {
+      "rmse_density": 0.0017936692327788562,
+      "max_abs_density": 0.006343679287735338,
+      "solver_success": true
+    },
+    {
+      "rmse_density": 0.0026267630272169057,
+      "max_abs_density": 0.008717330006593874,
+      "solver_success": true
+    },
+    {
+      "rmse_density": 0.0018436624258959292,
+      "max_abs_density": 0.007107300954993969,
+      "solver_success": true
+    }
+  ],
+  "monotone_projection_max_density": 3.612090125411431e-05,
+  "base_nonnegative_clamp_max_density": 0.007347884426664035,
+  "slide_gray_calibration": null,
+  "license": "MIT (Jan Lohse); manufacturer trademarks and original datasheets are separate",
+  "grain_rms_source": 7,
+  "grain_calibrated": false,
+  "dir_couplers_calibrated": false,
+  "profile_sha256": "3cb4d68a5d336d5de30c64c752b30590feb9dc716b8f485d806f707cf726d8b9",
+  "verification": {
+    "schema_valid": true,
+    "all_numeric_fields_finite": true,
+    "layer_sum_max_error": 0.0,
+    "grayscale_monotone": true,
+    "gray_output_linear_srgb": [
+      [
+        [
+          0.005855895468533673,
+          0.005265999417696718,
+          0.006170566332462789
+        ],
+        [
+          0.005968895225827782,
+          0.005295259860968477,
+          0.006188100529264849
+        ],
+        [
+          0.006556109591739052,
+          0.0055478371393998015,
+          0.006364008961735997
+        ],
+        [
+          0.010357897821674426,
+          0.007669561767184291,
+          0.008005144983134036
+        ],
+        [
+          0.050721799327236236,
+          0.036547125995724704,
+          0.03615474649784785
+        ],
+        [
+          0.18178827152248372,
+          0.18178827153004845,
+          0.18178827153124297
+        ],
+        [
+          0.39753140769798107,
+          0.4381762871991827,
+          0.4178438237291326
+        ],
+        [
+          0.6478479521695235,
+          0.7100353603576328,
+          0.6734654317442391
+        ],
+        [
+          0.7344139545950922,
+          0.780540318499758,
+          0.7543873902483006
+        ],
+        [
+          0.8155850546234044,
+          0.8234813942343321,
+          0.8156302746161055
+        ]
+      ]
+    ],
+    "chart_finite": true,
+    "chart_range_linear_srgb": [
+      -0.0174134614335529,
+      0.7652232642777778
+    ],
+    "negative_output_values": 1,
+    "above_one_values": 0,
+    "encoded_vs_linear_max_abs_error": 4.996003610813204e-16,
+    "neutral_print": {
+      "paper": "fujifilm_crystal_archive_typeii",
+      "illuminant": "TH-KG3",
+      "cmy_cc": [
+        0.0,
+        46.49630120802669,
+        50.72966098355611
+      ],
+      "method": "numerical 18.4% D55 gray chromaticity solve on exact spectral print+scan path; minimum one filter fixed at zero",
+      "log_rgb_ratio_residual_norm": 4.212843149434488e-11,
+      "gray_output_linear_srgb": [
+        0.18178827152248384,
+        0.18178827153004856,
+        0.18178827153124308
+      ],
+      "solver_success": true,
+      "measured_calibration": false,
+      "dir_couplers_active": false,
+      "black_white_correction": [
+        false,
+        false
+      ]
+    },
+    "simulation": "actual vendor Simulator; Hanatos2025, direct spectral enlarger/scanner, stock-calibrated spatial/grain/DIR effects unavailable and disabled"
+  }
+}

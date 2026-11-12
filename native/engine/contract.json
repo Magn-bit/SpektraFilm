@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "c_abi": "upstream/engine/include/spektrafilm/spk_engine.h",
+  "resources": "runtime/resources",
+  "windows_bridge": "desktop.native_spectral.render_spectral",
+  "input": {"layout": "HWC RGB", "type": "float32", "space": "encoded sRGB", "alpha": false},
+  "output": {"c_layout": "RGBA16 with row_stride_px", "bridge_type": "float32 RGB normalized from uint16", "space": "encoded sRGB", "dimensions": "identical to input"},
+  "session_policy": {
+    "render_entry": "spk_reprint",
+    "reason": "It develops a missing negative and reuses a valid negative; spk_render explicitly forces redevelopment.",
+    "cache_identity": "source_token + source dimensions + preview/final identity",
+    "shoot": ["film_stock", "exposure_compensation_ev", "film_format_mm", "halation_*", "grain_*"],
+    "print": ["print_stock", "print_exposure", "m_filter_shift", "y_filter_shift", "glare_*"],
+    "ownership": "Caller frees JSON with spk_string_free, results with spk_result_free, sessions with spk_session_release before engine_destroy."
+  },
+  "region_exposure_peaks": {
+    "entry": "spk_solve(session, exposure_peaks)",
+    "input": "Every source pixel, after fixed source colour/WB/exposure preparation; no preview sampling; auto_exposure=false",
+    "measurement": "frame_exposure_peak is the maximum after scene latitude, spectral reconstruction and camera exposure; frame_boosted_peak is its exact GPU boost result before clipped-highlight headroom",
+    "execution": "For bounded source regions, reduce both fields across non-overlapping source strips and send the same pair on every render region. No prepass when boost and headroom are both off.",
+    "default": "Both fields default to -1 and retain the original full-frame device reductions. These transient execution fields are not user settings."
+  },
+  "product_mapping": {
+    "paper": "shared.darkroom.resolve_paper(stock,paper)",
+    "print_exposure": "2 ** product.print_exposure_ev",
+    "m_filter_shift": "product.print_m / 100; filter_shift_scale=60 CC",
+    "y_filter_shift": "product.print_y / 100; filter_shift_scale=60 CC",
+    "glare": "glare_percent=product.glare; glare_amount=1",
+    "grain_particle_area_um2": "max(1e-6, .8*grain_size^2*style_area_scale); strength never changes spatial pitch",
+    "grain_amount": "product.grain / 50 (desktop 0..100; Android normalized grain*2)",
+    "grain_texture": "1=fine,2=classic,3=coarse,4=clustered; 0 preserves the upstream Poisson sublayer path",
+    "grain_texture_scale_um": "style_pitch_um*grain_size (fine=2.2,classic=4,coarse=6,clustered=4.5)",
+    "halation": "halation_amount=product.halation/25; scatter_amount=min(1,product.halation/25)",
+    "halation_headroom_ev": 0,
+    "black_and_white": "Real spectral emulsion + silver density and Ilford paper, DIR disabled; neutral CMY=[0,0,68].",
+    "extensions": "Retain independently calibrated neutral CMY and illuminant only for matching calibrated paper; DIR and scanner black/white correction disabled."
+  },
+  "limits": {
+    "raw_headroom": "This boundary accepts float32, but the current LibRaw RGB16 source remains display-referred and does not restore unclipped RAW highlights.",
+    "reference_parity": "Full C++/Vulkan spectral model; not claimed byte-identical to historical Python model, nor C1/LR rendering.",
+    "unsupported_upstream_features": ["contrast_mask"],
+    "android": "Android JNI builds the same pipeline with bounded region IO. Physical pixel pitch and composed spatial halo must be retained. Tiled random grain is statistically consistent, not a whole-frame byte-equivalence claim."
+  }
+}

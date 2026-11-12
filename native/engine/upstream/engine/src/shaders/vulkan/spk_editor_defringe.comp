@@ -1,0 +1,21 @@
+#version 450
+layout(local_size_x=256) in;
+layout(binding=0,std430) readonly buffer Input { float v[]; } src;
+layout(binding=1,std430) readonly buffer Meta { uint v[]; } m;
+layout(binding=2,std430) writeonly buffer Output { float v[]; } dst;
+layout(binding=3,std430) buffer Stats { uint v[]; } stats;
+uint index1D(){return gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;}
+vec3 sampleAt(ivec2 p){p=clamp(p,ivec2(0),ivec2(m.v[1],m.v[2])-1);uint k=(uint(p.y)*m.v[1]+uint(p.x))*3u;return vec3(src.v[k],src.v[k+1u],src.v[k+2u]);}
+float lum(vec3 c){return dot(c,vec3(.2126,.7152,.0722));}
+bool purple(vec3 c){return min(c.r,c.b)-c.g>.06&&c.r>c.g*1.2&&c.b>c.g*1.2;}
+void main(){
+    uint i=index1D();if(i>=m.v[0])return;ivec2 p=ivec2(i%m.v[1],i/m.v[1]);vec3 c=sampleAt(p);float amount=0.;
+    if(purple(c)){
+        float row=0.,col=0.;for(int d=-3;d<=3;++d){row+=purple(sampleAt(p+ivec2(d,0)))?1.:0.;col+=purple(sampleAt(p+ivec2(0,d)))?1.:0.;}
+        if(row<2.8||col<2.8){
+            float lo=1./0.,hi=-1./0.;bool neutral=false;for(int y=-2;y<=2;++y)for(int x=-2;x<=2;++x){vec3 q=sampleAt(p+ivec2(x,y));float l=lum(q);lo=min(lo,l);hi=max(hi,l);if(abs(x)<=1&&abs(y)<=1&&max(q.r,max(q.g,q.b))-min(q.r,min(q.g,q.b))<.08)neutral=true;}
+            if(neutral)amount=clamp((min(c.r,c.b)-c.g-.04)/.12,0,.85)*clamp((hi-lo-.30)/.25,0,1);
+        }
+    }
+    if(amount>.02&&uint(p.y)>=m.v[3]&&uint(p.y)<m.v[4])atomicAdd(stats.v[0],1u);c+= (vec3(lum(c))-c)*amount;dst.v[3u*i]=c.r;dst.v[3u*i+1u]=c.g;dst.v[3u*i+2u]=c.b;
+}

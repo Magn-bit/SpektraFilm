@@ -1,0 +1,11 @@
+<resources>
+    <color name="spektra_background">#FCFCFB</color>
+    <color name="spektra_surface">#FFFFFF</color>
+    <color name="spektra_ink">#252725</color>
+    <color name="spektra_muted">#555E54</color>
+    <color name="spektra_line">#D8DDD2</color>
+    <color name="spektra_accent">#667C65</color>
+    <color name="spektra_accent_text">#66745E</color>
+    <color name="spektra_highlight">#26667C65</color>
+    <color name="spektra_canvas">#EBEEE9</color>
+</resources>

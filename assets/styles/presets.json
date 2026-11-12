@@ -1,0 +1,3909 @@
+{
+  "version": 4,
+  "presets": [
+    {
+      "id": "none",
+      "name": "无预设",
+      "category": "general",
+      "description": "不应用风格参数。",
+      "author": "",
+      "kind": "none",
+      "source": "",
+      "settings": {
+        "contrast": 0.0,
+        "saturation": 0.0,
+        "vibrance": 0.0,
+        "highlights": 0.0,
+        "shadows": 0.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-natural",
+      "name": "自然肤色",
+      "category": "portrait",
+      "description": "保留肤色关系，轻柔反差，适合日常与环境人像。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -1.0,
+        "saturation": -2.0,
+        "vibrance": 4.0,
+        "highlights": -8.0,
+        "shadows": 4.0,
+        "black_point": 6.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.2,
+              0.21
+            ],
+            [
+              0.75,
+              0.76
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-soft",
+      "name": "柔光人像",
+      "category": "portrait",
+      "description": "柔和明暗过渡与轻盈暗部，适合窗边和漫射光。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -6.0,
+        "saturation": -4.0,
+        "vibrance": 2.0,
+        "highlights": -16.0,
+        "shadows": 6.0,
+        "black_point": 6.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.012
+            ],
+            [
+              0.25,
+              0.27
+            ],
+            [
+              0.75,
+              0.76
+            ],
+            [
+              1.0,
+              0.985
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-warm",
+      "name": "暖光人像",
+      "category": "portrait",
+      "description": "轻暖高光与克制色彩，适合户外和傍晚人像。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -1.0,
+        "saturation": 0.0,
+        "vibrance": 5.0,
+        "highlights": -12.0,
+        "shadows": 4.0,
+        "black_point": 5.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 38.0,
+            "saturation": 1.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 42.0,
+            "saturation": 3.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-bright",
+      "name": "明净人像",
+      "category": "portrait",
+      "description": "提起中间调与暗部，保留高光层次，适合清爽的生活照。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -2.0,
+        "saturation": -2.0,
+        "vibrance": 3.0,
+        "highlights": -12.0,
+        "shadows": 8.0,
+        "black_point": 6.0,
+        "white_point": 100.0,
+        "gamma": 1.03,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-window",
+      "name": "窗边自然光",
+      "category": "portrait",
+      "description": "保留肤色和窗边光线的柔和层次，适合室内自然光人像。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -4.0,
+        "saturation": -3.0,
+        "vibrance": 4.0,
+        "highlights": -18.0,
+        "shadows": 10.0,
+        "black_point": 4.0,
+        "white_point": 100.0,
+        "gamma": 1.02,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 218.0,
+            "saturation": 2.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 38.0,
+            "saturation": 2.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-clean",
+      "name": "清透人像",
+      "category": "portrait",
+      "description": "压低肤色中的杂色，保持明亮但不过曝的面部层次。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 2.0,
+        "saturation": -5.0,
+        "vibrance": 8.0,
+        "highlights": -20.0,
+        "shadows": 7.0,
+        "black_point": 4.0,
+        "white_point": 100.0,
+        "gamma": 1.02,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-editorial",
+      "name": "克制人像",
+      "category": "portrait",
+      "description": "低饱和与细腻反差，适合纪实肖像和环境人像。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 5.0,
+        "saturation": -12.0,
+        "vibrance": -2.0,
+        "highlights": -18.0,
+        "shadows": 8.0,
+        "black_point": 8.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": -3.0,
+            "saturation": -10.0,
+            "luminance": 10.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": -18.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "portrait-backlight",
+      "name": "逆光人像",
+      "category": "portrait",
+      "description": "保留高光空气感并抬起暗部，适合逆光和侧逆光场景。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -3.0,
+        "saturation": -2.0,
+        "vibrance": 6.0,
+        "highlights": -28.0,
+        "shadows": 18.0,
+        "black_point": 3.0,
+        "white_point": 100.0,
+        "gamma": 1.04,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-clear",
+      "name": "通透风光",
+      "category": "landscape",
+      "description": "增强中间调与自然色彩，兼顾天空和地面层次。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 8.0,
+        "saturation": 0.0,
+        "vibrance": 16.0,
+        "highlights": -25.0,
+        "shadows": 12.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.2,
+              0.18
+            ],
+            [
+              0.65,
+              0.68
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-forest",
+      "name": "林间绿意",
+      "category": "landscape",
+      "description": "展开林间暗部，收敛刺眼高光，保留自然绿意。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -2.0,
+        "saturation": -3.0,
+        "vibrance": 12.0,
+        "highlights": -22.0,
+        "shadows": 16.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-sea-sky",
+      "name": "海天清透",
+      "category": "landscape",
+      "description": "清晰的天空与水面色彩，避免强烈偏色和压暗。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 6.0,
+        "saturation": 0.0,
+        "vibrance": 14.0,
+        "highlights": -26.0,
+        "shadows": 6.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.45,
+              0.457
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-sunset",
+      "name": "日落暖光",
+      "category": "landscape",
+      "description": "温暖亮部搭配克制冷阴影，适合落日和逆光风景。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 4.0,
+        "saturation": 0.0,
+        "vibrance": 10.0,
+        "highlights": -22.0,
+        "shadows": 10.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 220.0,
+            "saturation": 3.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 35.0,
+            "saturation": 3.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 36.0,
+            "saturation": 7.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-city",
+      "name": "城市层次",
+      "category": "landscape",
+      "description": "清晰线条与低饱和色彩，适合建筑和阴天街景。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 10.0,
+        "saturation": -8.0,
+        "vibrance": -5.0,
+        "highlights": -18.0,
+        "shadows": 10.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-night",
+      "name": "夜景平衡",
+      "category": "landscape",
+      "description": "控制亮灯与暗部反差，适合有人工光源的夜景。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 3.0,
+        "saturation": -4.0,
+        "vibrance": 0.0,
+        "highlights": -30.0,
+        "shadows": 18.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.04,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-architecture",
+      "name": "建筑中性",
+      "category": "landscape",
+      "description": "保持建筑材质和天空颜色的稳定关系，适合城市与建筑照片。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 9.0,
+        "saturation": -6.0,
+        "vibrance": 2.0,
+        "highlights": -20.0,
+        "shadows": 8.0,
+        "black_point": 5.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-mountain",
+      "name": "山野层次",
+      "category": "landscape",
+      "description": "恢复远景层次和暗部细节，适合山地与大景别风光。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 5.0,
+        "saturation": 0.0,
+        "vibrance": 10.0,
+        "highlights": -24.0,
+        "shadows": 18.0,
+        "black_point": 4.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 8.0,
+            "saturation": -5.0,
+            "luminance": 8.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 10.0,
+            "luminance": -10.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-overcast",
+      "name": "阴天柔光",
+      "category": "landscape",
+      "description": "在阴天保持中性灰和细节，减少生硬的局部反差。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": -4.0,
+        "saturation": -5.0,
+        "vibrance": 5.0,
+        "highlights": -14.0,
+        "shadows": 14.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.03,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    },
+    {
+      "id": "landscape-spring",
+      "name": "春日自然",
+      "category": "landscape",
+      "description": "轻微提亮绿色与天空，保留自然饱和度和空气感。",
+      "author": "SpektraFilm",
+      "kind": "original",
+      "source": "SpektraFilm 原创调色参数",
+      "settings": {
+        "contrast": 3.0,
+        "saturation": -2.0,
+        "vibrance": 13.0,
+        "highlights": -18.0,
+        "shadows": 9.0,
+        "black_point": 0.0,
+        "white_point": 100.0,
+        "gamma": 1.0,
+        "curves": {
+          "master": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "red": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "green": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "blue": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "luma": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "parametric": {
+            "master": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "red": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "green": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "blue": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            },
+            "luma": {
+              "shadows": 0.0,
+              "darks": 0.0,
+              "lights": 0.0,
+              "highlights": 0.0,
+              "shadow_split": 0.25,
+              "midtone_split": 0.5,
+              "highlight_split": 0.75
+            }
+          }
+        },
+        "grading": {
+          "shadows": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "midtones": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "highlights": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "balance": 0.0,
+          "blending": 50.0,
+          "master": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "channel_mixer": {
+          "red": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "green": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "blue": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+          }
+        },
+        "hsl": {
+          "red": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "orange": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "yellow": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "green": {
+            "hue": 10.0,
+            "saturation": 5.0,
+            "luminance": 12.0
+          },
+          "aqua": {
+            "hue": 0.0,
+            "saturation": 8.0,
+            "luminance": 0.0
+          },
+          "blue": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": -8.0
+          },
+          "purple": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          },
+          "magenta": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "luminance": 0.0
+          }
+        },
+        "look_lut": "",
+        "look_strength": 100.0
+      },
+      "warnings": []
+    }
+  ]
+}

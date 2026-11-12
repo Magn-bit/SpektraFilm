@@ -1,0 +1,6153 @@
+{
+  "sourceLanguage": "zh-Hans",
+  "languages": [
+    "en",
+    "zh-Hans",
+    "zh-Hant",
+    "ja"
+  ],
+  "entries": {
+    "全部": {
+      "en": "All",
+      "ja": "すべて",
+      "zh-Hant": "全部"
+    },
+    "电影": {
+      "en": "Cinema",
+      "ja": "映画用",
+      "zh-Hant": "電影"
+    },
+    "黑白": {
+      "en": "B&W",
+      "ja": "白黒",
+      "zh-Hant": "黑白"
+    },
+    "图库": {
+      "en": "Gallery",
+      "ja": "ギャラリー",
+      "zh-Hant": "相簿"
+    },
+    "编辑": {
+      "en": "Edit",
+      "ja": "編集",
+      "zh-Hant": "編輯"
+    },
+    "设置": {
+      "en": "Settings",
+      "ja": "設定",
+      "zh-Hant": "設定"
+    },
+    "导出": {
+      "en": "Export",
+      "ja": "書き出す",
+      "zh-Hant": "匯出"
+    },
+    "原图": {
+      "en": "Original",
+      "ja": "元画像",
+      "zh-Hant": "原圖"
+    },
+    "重试": {
+      "en": "Try Again",
+      "ja": "もう一度試す",
+      "zh-Hant": "重試"
+    },
+    "适合": {
+      "en": "Fit",
+      "ja": "全体表示",
+      "zh-Hant": "符合"
+    },
+    "照片": {
+      "en": "Pictures",
+      "ja": "写真",
+      "zh-Hant": "照片"
+    },
+    "全选": {
+      "en": "Select All",
+      "ja": "すべてを選択",
+      "zh-Hant": "全選"
+    },
+    "移除": {
+      "en": "Remove",
+      "ja": "取り除く",
+      "zh-Hant": "移除"
+    },
+    "添加": {
+      "en": "Add",
+      "ja": "追加",
+      "zh-Hant": "加入"
+    },
+    "关闭": {
+      "en": "Close",
+      "ja": "閉じる",
+      "zh-Hant": "關閉"
+    },
+    "黑白负片": {
+      "en": "b&w negative",
+      "ja": "白黒ネガ",
+      "zh-Hant": "黑白負片"
+    },
+    "反转片": {
+      "en": "slide (positive)",
+      "ja": "リバーサル（ポジ）",
+      "zh-Hant": "正片"
+    },
+    "彩色负片": {
+      "en": "colour negative",
+      "ja": "カラーネガ",
+      "zh-Hant": "彩色負片"
+    },
+    "色相": {
+      "en": "Hue",
+      "ja": "色相",
+      "zh-Hant": "色相"
+    },
+    "饱和度": {
+      "en": "Saturation",
+      "ja": "彩度",
+      "zh-Hant": "飽和度"
+    },
+    "红": {
+      "en": "Red",
+      "ja": "赤",
+      "zh-Hant": "紅"
+    },
+    "橙": {
+      "en": "Orange",
+      "ja": "橙",
+      "zh-Hant": "橙"
+    },
+    "黄": {
+      "en": "Yellow",
+      "ja": "黄",
+      "zh-Hant": "黃"
+    },
+    "绿": {
+      "en": "Green",
+      "ja": "緑",
+      "zh-Hant": "綠"
+    },
+    "青": {
+      "en": "Aqua",
+      "ja": "水色",
+      "zh-Hant": "青"
+    },
+    "蓝": {
+      "en": "Blue",
+      "ja": "青",
+      "zh-Hant": "藍"
+    },
+    "紫": {
+      "en": "Purple",
+      "ja": "紫",
+      "zh-Hant": "紫"
+    },
+    "红色": {
+      "en": "Red",
+      "ja": "レッド",
+      "zh-Hant": "紅色"
+    },
+    "绿色": {
+      "en": "Green",
+      "ja": "グリーン",
+      "zh-Hant": "綠色"
+    },
+    "蓝色": {
+      "en": "Blue",
+      "ja": "ブルー",
+      "zh-Hant": "藍色"
+    },
+    "阴影": {
+      "en": "Shadows",
+      "ja": "暗部",
+      "zh-Hant": "陰影"
+    },
+    "中间调": {
+      "en": "Midtones",
+      "ja": "中間調",
+      "zh-Hant": "中間調"
+    },
+    "高光": {
+      "en": "Highlights",
+      "ja": "明部",
+      "zh-Hant": "高光"
+    },
+    "混合": {
+      "en": "Mixed",
+      "ja": "混在",
+      "zh-Hant": "混合"
+    },
+    "平衡": {
+      "en": "Balance",
+      "ja": "バランス",
+      "zh-Hant": "平衡"
+    },
+    "明度": {
+      "en": "Luminance",
+      "ja": "輝度",
+      "zh-Hant": "明度"
+    },
+    "取景": {
+      "en": "Frame",
+      "ja": "構図",
+      "zh-Hant": "取景"
+    },
+    "片幅": {
+      "en": "Film format",
+      "ja": "フィルム判型",
+      "zh-Hant": "片幅"
+    },
+    "横向": {
+      "en": "Landscape",
+      "ja": "横長",
+      "zh-Hant": "橫向"
+    },
+    "网格": {
+      "en": "Grid",
+      "ja": "グリッド",
+      "zh-Hant": "格線"
+    },
+    "显示": {
+      "en": "Shown",
+      "ja": "表示",
+      "zh-Hant": "顯示"
+    },
+    "片门": {
+      "en": "Gate",
+      "ja": "画枠",
+      "zh-Hant": "片門"
+    },
+    "圆角": {
+      "en": "Rounded",
+      "ja": "角丸",
+      "zh-Hant": "圓角"
+    },
+    "画幅": {
+      "en": "Frame",
+      "ja": "コマ",
+      "zh-Hant": "畫幅"
+    },
+    "位置": {
+      "en": "Where",
+      "ja": "場所",
+      "zh-Hant": "位置"
+    },
+    "片边": {
+      "en": "Film edge",
+      "ja": "フィルムの縁",
+      "zh-Hant": "片邊"
+    },
+    "右下": {
+      "en": "bottom right",
+      "ja": "右下",
+      "zh-Hant": "右下"
+    },
+    "左下": {
+      "en": "bottom left",
+      "ja": "左下",
+      "zh-Hant": "左下"
+    },
+    "右上": {
+      "en": "top right",
+      "ja": "右上",
+      "zh-Hant": "右上"
+    },
+    "左上": {
+      "en": "top left",
+      "ja": "左上",
+      "zh-Hant": "左上"
+    },
+    "曝光": {
+      "en": "Exposure",
+      "ja": "露出",
+      "zh-Hant": "曝光"
+    },
+    "格式": {
+      "en": "Format",
+      "ja": "形式",
+      "zh-Hant": "格式"
+    },
+    "长边": {
+      "en": "Long edge",
+      "ja": "長辺",
+      "zh-Hant": "長邊"
+    },
+    "停止": {
+      "en": "Stop",
+      "ja": "停止",
+      "zh-Hant": "停止"
+    },
+    "自由": {
+      "en": "Free",
+      "ja": "自由",
+      "zh-Hant": "自由"
+    },
+    "竖向": {
+      "en": "Portrait",
+      "ja": "縦長",
+      "zh-Hant": "直向"
+    },
+    "取消": {
+      "en": "Cancel",
+      "ja": "キャンセル",
+      "zh-Hant": "取消"
+    },
+    "应用": {
+      "en": "Apply",
+      "ja": "適用",
+      "zh-Hant": "應用"
+    },
+    "亮度": {
+      "en": "Brightness",
+      "ja": "明るさ",
+      "zh-Hant": "亮度"
+    },
+    "输出": {
+      "en": "Output",
+      "ja": "出力",
+      "zh-Hant": "輸出"
+    },
+    "原片": {
+      "en": "Source",
+      "ja": "元の露出",
+      "zh-Hant": "原片"
+    },
+    "胶片": {
+      "en": "Film",
+      "ja": "フィルム",
+      "zh-Hant": "底片"
+    },
+    "镜头校正": {
+      "en": "Lens correction",
+      "ja": "レンズ補正",
+      "zh-Hant": "鏡頭校正"
+    },
+    "白平衡": {
+      "en": "White balance",
+      "ja": "ホワイトバランス",
+      "zh-Hant": "白平衡"
+    },
+    "色温": {
+      "en": "Temperature",
+      "ja": "色温度",
+      "zh-Hant": "色溫"
+    },
+    "色调": {
+      "en": "Tint",
+      "ja": "色かぶり",
+      "zh-Hant": "色調"
+    },
+    "对比度": {
+      "en": "Contrast",
+      "ja": "コントラスト",
+      "zh-Hant": "對比度"
+    },
+    "眩光": {
+      "en": "Glare",
+      "ja": "迷光",
+      "zh-Hant": "眩光"
+    },
+    "暗角": {
+      "en": "Vignette",
+      "ja": "周辺減光",
+      "zh-Hant": "暗角"
+    },
+    "颗粒": {
+      "en": "Grain",
+      "ja": "粒状感",
+      "zh-Hant": "顆粒"
+    },
+    "保护高光": {
+      "en": "protect highlights",
+      "ja": "明部を保護",
+      "zh-Hant": "保護亮部"
+    },
+    "保护阴影": {
+      "en": "protect shadows",
+      "ja": "暗部を保護",
+      "zh-Hant": "保護陰影"
+    },
+    "调整": {
+      "en": "Adjust",
+      "ja": "調整",
+      "zh-Hant": "調整"
+    },
+    "宽容度": {
+      "en": "Latitude",
+      "ja": "寛容度",
+      "zh-Hant": "寬容度"
+    },
+    "散射": {
+      "en": "Scatter",
+      "ja": "散乱",
+      "zh-Hant": "散射"
+    },
+    "移除防光晕层": {
+      "en": "Remove anti-halation layer",
+      "ja": "ハレーション防止層を除く",
+      "zh-Hant": "移除防光暈層"
+    },
+    "撤销": {
+      "en": "Undo",
+      "ja": "取り消す",
+      "zh-Hant": "復原"
+    },
+    "重做": {
+      "en": "Redo",
+      "ja": "やり直す",
+      "zh-Hant": "重做"
+    },
+    "恢复默认": {
+      "en": "Reset to default",
+      "ja": "初期値に戻す",
+      "zh-Hant": "恢復預設"
+    },
+    "旋转": {
+      "en": "Turn",
+      "ja": "回転",
+      "zh-Hant": "旋轉"
+    },
+    "直方图": {
+      "en": "Histogram",
+      "ja": "ヒストグラム",
+      "zh-Hant": "直方圖"
+    },
+    "已收起": {
+      "en": "Folded",
+      "ja": "閉じています",
+      "zh-Hant": "已收合"
+    },
+    "自动": {
+      "en": "Auto",
+      "ja": "自動",
+      "zh-Hant": "自動"
+    },
+    "打开": {
+      "en": "Open",
+      "ja": "開く",
+      "zh-Hant": "打開"
+    },
+    "更多": {
+      "en": "More",
+      "ja": "その他",
+      "zh-Hant": "更多"
+    },
+    "排序": {
+      "en": "Sort",
+      "ja": "並べ替え",
+      "zh-Hant": "排序"
+    },
+    "重命名": {
+      "en": "Rename",
+      "ja": "名称変更",
+      "zh-Hant": "重新命名"
+    },
+    "旋转 90°": {
+      "en": "Turn the film a quarter",
+      "ja": "90°回転",
+      "zh-Hant": "旋轉 90°"
+    },
+    "开": {
+      "en": "On",
+      "ja": "オン",
+      "zh-Hant": "開"
+    },
+    "关": {
+      "en": "Off",
+      "ja": "オフ",
+      "zh-Hant": "關"
+    },
+    "名称": {
+      "en": "Name",
+      "ja": "名前",
+      "zh-Hant": "名稱"
+    },
+    "配方名称": {
+      "en": "Recipe name",
+      "ja": "設定の名前",
+      "zh-Hant": "配方名稱"
+    },
+    "删除配方": {
+      "en": "Delete Recipe",
+      "ja": "書き出し設定を削除",
+      "zh-Hant": "刪除配方"
+    },
+    "预览": {
+      "en": "Preview",
+      "ja": "プレビュー",
+      "zh-Hant": "預覽"
+    },
+    "色彩": {
+      "en": "Colour",
+      "ja": "色",
+      "zh-Hant": "色彩"
+    },
+    "界面缩放": {
+      "en": "Interface scale",
+      "ja": "インターフェイスの拡大縮小",
+      "zh-Hant": "介面縮放"
+    },
+    "诊断": {
+      "en": "Diagnostics",
+      "ja": "診断",
+      "zh-Hant": "診斷"
+    },
+    "导入": {
+      "en": "Import",
+      "ja": "読み込む",
+      "zh-Hant": "匯入"
+    },
+    "相纸": {
+      "en": "Paper",
+      "ja": "印画紙",
+      "zh-Hant": "相紙"
+    },
+    "SpektraFilm · 光影暗房": {
+      "en": "SpektraFilm · Darkroom",
+      "ja": "SpektraFilm · 暗室",
+      "zh-Hant": "SpektraFilm · 光影暗房"
+    },
+    "选择胶片": {
+      "en": "Choose film",
+      "ja": "フィルムを選択",
+      "zh-Hant": "選擇膠片"
+    },
+    "最小化窗口": {
+      "en": "Minimize window",
+      "ja": "ウインドウを最小化",
+      "zh-Hant": "最小化視窗"
+    },
+    "还原窗口": {
+      "en": "Restore window",
+      "ja": "ウインドウを元に戻す",
+      "zh-Hant": "還原視窗"
+    },
+    "最大化窗口": {
+      "en": "Maximize window",
+      "ja": "ウインドウを最大化",
+      "zh-Hant": "最大化視窗"
+    },
+    "关闭窗口": {
+      "en": "Close window",
+      "ja": "ウインドウを閉じる",
+      "zh-Hant": "關閉視窗"
+    },
+    "关于 SpektraFilm": {
+      "en": "About SpektraFilm",
+      "ja": "SpektraFilm について",
+      "zh-Hant": "關於 SpektraFilm"
+    },
+    "显影": {
+      "en": "Develop",
+      "ja": "現像",
+      "zh-Hant": "顯影"
+    },
+    "看片台": {
+      "en": "Light table",
+      "ja": "ライトテーブル",
+      "zh-Hant": "看片臺"
+    },
+    "排版": {
+      "en": "Composition",
+      "ja": "レイアウト",
+      "zh-Hant": "排版"
+    },
+    "导出中…": {
+      "en": "Exporting…",
+      "ja": "書き出し中…",
+      "zh-Hant": "匯出中…"
+    },
+    "导出 ": {
+      "en": "Export ",
+      "ja": "書き出す：",
+      "zh-Hant": "匯出 "
+    },
+    " 张": {
+      "en": " photos",
+      "ja": " 枚",
+      "zh-Hant": " 張"
+    },
+    "导出作品": {
+      "en": "Export photo",
+      "ja": "写真を書き出す",
+      "zh-Hant": "匯出作品"
+    },
+    "导入照片后即可导出作品": {
+      "en": "Import a photo to export",
+      "ja": "写真を読み込むと書き出せます",
+      "zh-Hant": "匯入照片後即可匯出作品"
+    },
+    "选择格式与目标文件夹；每张使用各自的参数": {
+      "en": "Choose a format and destination; each photo keeps its own edits",
+      "ja": "形式と保存先を選択。各写真の調整を使用します",
+      "zh-Hant": "選擇格式與目標資料夾；每張使用各自的引數"
+    },
+    "照片工作区": {
+      "en": "Photo workspace",
+      "ja": "写真ワークスペース",
+      "zh-Hant": "照片工作區"
+    },
+    "裁切": {
+      "en": "Crop",
+      "ja": "切り抜き",
+      "zh-Hant": "裁切"
+    },
+    "C 键打开裁切；可拖动范围并选择 XPan 等画幅": {
+      "en": "Press C to crop; drag the frame or choose a ratio such as XPan",
+      "ja": "C で切り抜き。枠をドラッグし、XPan などの比率を選択できます",
+      "zh-Hant": "C 鍵開啟裁切；可拖動範圍並選擇 XPan 等畫幅"
+    },
+    "裁切 · C": {
+      "en": "Crop · C",
+      "ja": "切り抜き · C",
+      "zh-Hant": "裁切 · C"
+    },
+    "退出对比": {
+      "en": "Exit comparison",
+      "ja": "比較を終了",
+      "zh-Hant": "退出對比"
+    },
+    "原图对比": {
+      "en": "Before / after",
+      "ja": "元画像と比較",
+      "zh-Hant": "原圖對比"
+    },
+    "B 键切换原图对比；对比时拖动分界线，双击居中": {
+      "en": "Press B to compare; drag the divider, double-click to center",
+      "ja": "B で比較を切り替え。境界をドラッグ、ダブルクリックで中央に戻します",
+      "zh-Hant": "B 鍵切換原圖對比；對比時拖動分界線，雙擊居中"
+    },
+    "收起工具": {
+      "en": "Hide tools",
+      "ja": "ツールを隠す",
+      "zh-Hant": "收起工具"
+    },
+    "显示工具": {
+      "en": "Show tools",
+      "ja": "ツールを表示",
+      "zh-Hant": "顯示工具"
+    },
+    "工具区 · Tab": {
+      "en": "Tools · Tab",
+      "ja": "ツール · Tab",
+      "zh-Hant": "工具區 · Tab"
+    },
+    "编辑结果": {
+      "en": "Edited photo",
+      "ja": "調整後",
+      "zh-Hant": "編輯結果"
+    },
+    "正在准备画幅…": {
+      "en": "Preparing frame…",
+      "ja": "フレームを準備中…",
+      "zh-Hant": "正在準備畫幅…"
+    },
+    "选择照片": {
+      "en": "Choose photos",
+      "ja": "写真を選択",
+      "zh-Hant": "選擇照片"
+    },
+    "将照片拖入此处，或选择本地文件": {
+      "en": "Drop photos here or choose local files",
+      "ja": "写真をここにドロップするか、ファイルを選択",
+      "zh-Hant": "將照片拖入此處，或選擇本地檔案"
+    },
+    "失败": {
+      "en": "Failed",
+      "ja": "失敗",
+      "zh-Hant": "失敗"
+    },
+    "正在加载原始细节…": {
+      "en": "Loading original detail…",
+      "ja": "元画像の細部を読み込み中…",
+      "zh-Hant": "正在載入原始細節…"
+    },
+    "正在": {
+      "en": "Working",
+      "ja": "処理中",
+      "zh-Hant": "正在"
+    },
+    "正在显影…": {
+      "en": "Developing…",
+      "ja": "現像中…",
+      "zh-Hant": "正在顯影…"
+    },
+    "停止批量": {
+      "en": "Stop batch",
+      "ja": "一括処理を停止",
+      "zh-Hant": "停止批次"
+    },
+    "收起照片": {
+      "en": "Hide photos",
+      "ja": "写真一覧を隠す",
+      "zh-Hant": "收起照片"
+    },
+    "显示照片": {
+      "en": "Show photos",
+      "ja": "写真一覧を表示",
+      "zh-Hant": "顯示照片"
+    },
+    "预览缩放百分比": {
+      "en": "Preview zoom percentage",
+      "ja": "プレビューの拡大率",
+      "zh-Hant": "預覽縮放百分比"
+    },
+    "输入 5 至 800，100% 对应原始像素；不改变导出尺寸": {
+      "en": "Enter 5–800; 100% shows original pixels. Export size is unchanged",
+      "ja": "5〜800 を入力。100% は等倍表示。書き出しサイズは変わりません",
+      "zh-Hant": "輸入 5 至 800，100% 對應原始畫素；不改變匯出尺寸"
+    },
+    "缩放以适合窗口": {
+      "en": "Fit photo to window",
+      "ja": "ウインドウに合わせる",
+      "zh-Hant": "縮放以適合視窗"
+    },
+    "原始像素一比一查看": {
+      "en": "View original pixels at 1:1",
+      "ja": "元画像を等倍表示",
+      "zh-Hant": "原始畫素一比一檢視"
+    },
+    "放大至百分之二百，不增加原片细节": {
+      "en": "Zoom to 200%; no additional source detail",
+      "ja": "200% に拡大。元画像の細部は増えません",
+      "zh-Hant": "放大至百分之二百，不增加原片細節"
+    },
+    "已选 ": {
+      "en": "Selected: ",
+      "ja": "選択中：",
+      "zh-Hant": "已選 "
+    },
+    "从列表移除已选照片，保留磁盘原片；Delete 键": {
+      "en": "Remove selected photos from the list; keep originals on disk. Delete key",
+      "ja": "Delete で選択した写真を一覧から除外。元ファイルは保持します",
+      "zh-Hant": "從列表移除已選照片，保留磁碟原片；Delete 鍵"
+    },
+    "当前编辑。": {
+      "en": "Currently editing. ",
+      "ja": "編集中。",
+      "zh-Hant": "當前編輯。"
+    },
+    "已选中。Ctrl 点击切换，Shift 点击连续多选。": {
+      "en": "Selected. Ctrl-click to toggle, Shift-click to select a range.",
+      "ja": "選択済み。Ctrl クリックで切り替え、Shift クリックで範囲選択。",
+      "zh-Hant": "已選中。Ctrl 點選切換，Shift 點選連續多選。"
+    },
+    "Ctrl 点击多选，Shift 点击连续多选。": {
+      "en": "Ctrl-click to select, Shift-click to select a range.",
+      "ja": "Ctrl クリックで複数選択、Shift クリックで範囲選択。",
+      "zh-Hant": "Ctrl 點選多選，Shift 點選連續多選。"
+    },
+    " · 当前": {
+      "en": " · Current",
+      "ja": " · 現在",
+      "zh-Hant": " · 當前"
+    },
+    "同步": {
+      "en": "Sync",
+      "ja": "同期",
+      "zh-Hant": "同步"
+    },
+    "拖动调整工具区宽度；双击恢复": {
+      "en": "Drag to resize the tools panel; double-click to reset",
+      "ja": "ドラッグでツール幅を変更、ダブルクリックで元に戻します",
+      "zh-Hant": "拖動調整工具區寬度；雙擊恢復"
+    },
+    "胶片档案": {
+      "en": "Film stocks",
+      "ja": "フィルム一覧",
+      "zh-Hant": "膠片檔案"
+    },
+    "选定后应用至 ": {
+      "en": "Apply selection to ",
+      "ja": "選択後に適用：",
+      "zh-Hant": "選定後應用至 "
+    },
+    " 张 · 各张参数保持独立": {
+      "en": " photos · Individual edits are retained",
+      "ja": " 枚 · 各写真の調整を保持",
+      "zh-Hant": " 張 · 各張引數保持獨立"
+    },
+    " 款胶片配置": {
+      "en": " film stocks",
+      "ja": " 種のフィルム",
+      "zh-Hant": " 款膠片配置"
+    },
+    "搜索胶片": {
+      "en": "Search film stocks",
+      "ja": "フィルムを検索",
+      "zh-Hant": "搜尋膠片"
+    },
+    "没有匹配的胶片": {
+      "en": "No matching film stocks",
+      "ja": "一致するフィルムがありません",
+      "zh-Hant": "沒有匹配的膠片"
+    },
+    "换个关键词，或切换分类": {
+      "en": "Try another term or category",
+      "ja": "検索語または分類を変更してください",
+      "zh-Hant": "換個關鍵詞，或切換分類"
+    },
+    "当前胶片": {
+      "en": "Current film",
+      "ja": "現在のフィルム",
+      "zh-Hant": "當前膠片"
+    },
+    "选择后应用胶片，保留各张调色参数": {
+      "en": "Apply film while retaining each photo's color adjustments",
+      "ja": "各写真の色調整を保持してフィルムを適用",
+      "zh-Hant": "選擇後應用膠片，保留各張調色引數"
+    },
+    "胶片科学来自 Andrea Volpato 的 spektrafilm。预览与导出使用完整光谱管线；调节期间的交互近似会单独标注。": {
+      "en": "Film science by Andrea Volpato's spektrafilm. Preview and export use the full spectral pipeline; interactive approximations are labeled separately.",
+      "ja": "フィルム科学は Andrea Volpato の spektrafilm に基づきます。プレビューと書き出しに完全スペクトル処理を使用し、操作中の近似処理は別途表示します。",
+      "zh-Hant": "膠片科學來自 Andrea Volpato 的 spektrafilm。預覽與匯出使用完整光譜管線；調節期間的互動近似會單獨標註。"
+    },
+    "github.com/andreavolpato/spektrafilm\n代码 GPL-3.0 / 胶片数据与 LUT CC BY-SA 4.0\n": {
+      "en": "github.com/andreavolpato/spektrafilm\nCode GPL-3.0 / Film data and LUTs CC BY-SA 4.0\n",
+      "ja": "github.com/andreavolpato/spektrafilm\nコード GPL-3.0 / フィルムデータ・LUT CC BY-SA 4.0\n",
+      "zh-Hant": "github.com/andreavolpato/spektrafilm\n程式碼 GPL-3.0 / 膠片資料與 LUT CC BY-SA 4.0\n"
+    },
+    "界面字体：": {
+      "en": "Interface fonts: ",
+      "ja": "インターフェイスの書体：",
+      "zh-Hant": "介面字型："
+    },
+    "减少动态效果：开启": {
+      "en": "Reduce motion: On",
+      "ja": "視差効果を減らす：オン",
+      "zh-Hant": "減少動態效果：開啟"
+    },
+    "减少动态效果：关闭": {
+      "en": "Reduce motion: Off",
+      "ja": "視差効果を減らす：オフ",
+      "zh-Hant": "減少動態效果：關閉"
+    },
+    "返回暗房": {
+      "en": "Back to darkroom",
+      "ja": "暗室に戻る",
+      "zh-Hant": "返回暗房"
+    },
+    "阴影色调": {
+      "en": "Shadow tint",
+      "ja": "シャドウの色かぶり",
+      "zh-Hant": "陰影色調"
+    },
+    "红原色": {
+      "en": "Red primary",
+      "ja": "レッド原色",
+      "zh-Hant": "紅原色"
+    },
+    "绿原色": {
+      "en": "Green primary",
+      "ja": "グリーン原色",
+      "zh-Hant": "綠原色"
+    },
+    "蓝原色": {
+      "en": "Blue primary",
+      "ja": "ブルー原色",
+      "zh-Hant": "藍原色"
+    },
+    "风格预设": {
+      "en": "Style presets",
+      "ja": "スタイルプリセット",
+      "zh-Hant": "風格預設"
+    },
+    "浏览精选": {
+      "en": "Browse styles",
+      "ja": "スタイルを参照",
+      "zh-Hant": "瀏覽精選"
+    },
+    "移除此照片的创作者色彩风格，保留其它编辑": {
+      "en": "Remove this photo's color style and retain other edits",
+      "ja": "他の調整を保持し、この写真のカラースタイルを解除",
+      "zh-Hant": "移除此照片的創作者色彩風格，保留其它編輯"
+    },
+    "风格强度": {
+      "en": "Style amount",
+      "ja": "スタイルの適用量",
+      "zh-Hant": "風格強度"
+    },
+    "色彩混合": {
+      "en": "Color mixer",
+      "ja": "カラーミキサー",
+      "zh-Hant": "色彩混合"
+    },
+    "HSL · 八色": {
+      "en": "HSL · 8 colors",
+      "ja": "HSL · 8 色",
+      "zh-Hant": "HSL · 八色"
+    },
+    "洋红": {
+      "en": "Magenta",
+      "ja": "マゼンタ",
+      "zh-Hant": "洋紅"
+    },
+    "色混合": {
+      "en": " color mix",
+      "ja": "カラーミックス",
+      "zh-Hant": "色混合"
+    },
+    "橙色": {
+      "en": "Orange",
+      "ja": "オレンジ",
+      "zh-Hant": "橙色"
+    },
+    "黄色": {
+      "en": "Yellow",
+      "ja": "イエロー",
+      "zh-Hant": "黃色"
+    },
+    "青色": {
+      "en": "Aqua",
+      "ja": "アクア",
+      "zh-Hant": "青色"
+    },
+    "紫色": {
+      "en": "Purple",
+      "ja": "パープル",
+      "zh-Hant": "紫色"
+    },
+    "洋红色": {
+      "en": "Magenta",
+      "ja": "マゼンタ",
+      "zh-Hant": "洋紅色"
+    },
+    "重置此色": {
+      "en": "Reset this color",
+      "ja": "この色をリセット",
+      "zh-Hant": "重置此色"
+    },
+    "明亮度": {
+      "en": "Lightness",
+      "ja": "明るさ",
+      "zh-Hant": "明亮度"
+    },
+    "色调曲线": {
+      "en": "Tone curves",
+      "ja": "トーンカーブ",
+      "zh-Hant": "色調曲線"
+    },
+    "RGB · 亮度": {
+      "en": "RGB · Luma",
+      "ja": "RGB · 輝度",
+      "zh-Hant": "RGB · 亮度"
+    },
+    "色彩校准": {
+      "en": "Color calibration",
+      "ja": "カラーキャリブレーション",
+      "zh-Hant": "色彩校準"
+    },
+    "原色": {
+      "en": "Primaries",
+      "ja": "原色",
+      "zh-Hant": "原色"
+    },
+    "色彩分级": {
+      "en": "Color grading",
+      "ja": "カラーグレーディング",
+      "zh-Hant": "色彩分級"
+    },
+    "三区色轮": {
+      "en": "Three-way color wheels",
+      "ja": "3 ウェイカラーホイール",
+      "zh-Hant": "三區色輪"
+    },
+    "重置当前色轮": {
+      "en": "Reset current wheel",
+      "ja": "現在のホイールをリセット",
+      "zh-Hant": "重置當前色輪"
+    },
+    " 张 · ": {
+      "en": " photos · ",
+      "ja": " 枚 · ",
+      "zh-Hant": " 張 · "
+    },
+    "长边 ": {
+      "en": "Long edge ",
+      "ja": "長辺 ",
+      "zh-Hant": "長邊 "
+    },
+    "原像素": {
+      "en": "Original pixels",
+      "ja": "元のピクセル数",
+      "zh-Hant": "原畫素"
+    },
+    "返回编辑": {
+      "en": "Back to editor",
+      "ja": "編集に戻る",
+      "zh-Hant": "返回編輯"
+    },
+    "，拖动取景，滚轮缩放": {
+      "en": ", drag to frame, scroll to zoom",
+      "ja": "。ドラッグで構図を調整、ホイールで拡大縮小",
+      "zh-Hant": "，拖動取景，滾輪縮放"
+    },
+    "边框": {
+      "en": "Borders",
+      "ja": "フレーム",
+      "zh-Hant": "邊框"
+    },
+    "图饰": {
+      "en": "Imprints",
+      "ja": "装飾",
+      "zh-Hant": "圖飾"
+    },
+    "无边框": {
+      "en": "No border",
+      "ja": "フレームなし",
+      "zh-Hant": "無邊框"
+    },
+    "留白纸张": {
+      "en": "Paper margin",
+      "ja": "余白のある用紙",
+      "zh-Hant": "留白紙張"
+    },
+    "即影纸边": {
+      "en": "Instant frame",
+      "ja": "インスタント写真",
+      "zh-Hant": "即影紙邊"
+    },
+    "胶片片边": {
+      "en": "Film rebate",
+      "ja": "フィルムの縁",
+      "zh-Hant": "膠片片邊"
+    },
+    "电影片边": {
+      "en": "Cinema film rebate",
+      "ja": "映画フィルムの縁",
+      "zh-Hant": "電影片邊"
+    },
+    "接触印样": {
+      "en": "Contact sheet",
+      "ja": "コンタクトシート",
+      "zh-Hant": "接觸印樣"
+    },
+    "半格双图": {
+      "en": "Half-frame pair",
+      "ja": "ハーフ判ペア",
+      "zh-Hant": "半格雙圖"
+    },
+    "边缘": {
+      "en": "Edge",
+      "ja": "縁",
+      "zh-Hant": "邊緣"
+    },
+    "完整片条": {
+      "en": "Full film strip",
+      "ja": "フィルムストリップ全体",
+      "zh-Hant": "完整片條"
+    },
+    "片夹开窗": {
+      "en": "Carrier window",
+      "ja": "キャリアの開口部",
+      "zh-Hant": "片夾開窗"
+    },
+    "双图方向": {
+      "en": "Pair direction",
+      "ja": "ペアの向き",
+      "zh-Hant": "雙圖方向"
+    },
+    "纵向": {
+      "en": "Vertical",
+      "ja": "縦方向",
+      "zh-Hant": "縱向"
+    },
+    "排列": {
+      "en": "Arrangement",
+      "ja": "配置",
+      "zh-Hant": "排列"
+    },
+    "横向片条": {
+      "en": "Horizontal strip",
+      "ja": "横方向のストリップ",
+      "zh-Hant": "橫向片條"
+    },
+    "纵向片条": {
+      "en": "Vertical strip",
+      "ja": "縦方向のストリップ",
+      "zh-Hant": "縱向片條"
+    },
+    "胶片字样": {
+      "en": "Edge lettering",
+      "ja": "フィルム文字",
+      "zh-Hant": "膠片字樣"
+    },
+    "隐藏": {
+      "en": "Hide",
+      "ja": "非表示",
+      "zh-Hant": "隱藏"
+    },
+    "片孔": {
+      "en": "Perforations",
+      "ja": "パーフォレーション",
+      "zh-Hant": "片孔"
+    },
+    "透光": {
+      "en": "Transparent",
+      "ja": "透過",
+      "zh-Hant": "透光"
+    },
+    "遮黑": {
+      "en": "Black",
+      "ja": "黒",
+      "zh-Hant": "遮黑"
+    },
+    "起始格号": {
+      "en": "First frame number",
+      "ja": "開始コマ番号",
+      "zh-Hant": "起始格號"
+    },
+    "随片幅": {
+      "en": "Match format",
+      "ja": "判型に合わせる",
+      "zh-Hant": "隨片幅"
+    },
+    "直角": {
+      "en": "Square corners",
+      "ja": "直角",
+      "zh-Hant": "直角"
+    },
+    "带耳片门": {
+      "en": "Eared gate",
+      "ja": "耳付き画枠",
+      "zh-Hant": "帶耳片門"
+    },
+    "肩形片门": {
+      "en": "Shouldered gate",
+      "ja": "肩付き画枠",
+      "zh-Hant": "肩形片門"
+    },
+    "切角片门": {
+      "en": "Clipped-corner gate",
+      "ja": "切り欠き画枠",
+      "zh-Hant": "切角片門"
+    },
+    "片夹": {
+      "en": "Film carrier",
+      "ja": "フィルムキャリア",
+      "zh-Hant": "片夾"
+    },
+    "无片夹": {
+      "en": "No carrier",
+      "ja": "キャリアなし",
+      "zh-Hant": "無片夾"
+    },
+    "黑色片夹": {
+      "en": "Black carrier",
+      "ja": "黒いキャリア",
+      "zh-Hant": "黑色片夾"
+    },
+    "透光片夹": {
+      "en": "Transparent carrier",
+      "ja": "透過キャリア",
+      "zh-Hant": "透光片夾"
+    },
+    "片基雾化": {
+      "en": "Base fog",
+      "ja": "ベースかぶり",
+      "zh-Hant": "片基霧化"
+    },
+    "漏光": {
+      "en": "Light leaks",
+      "ja": "光漏れ",
+      "zh-Hant": "漏光"
+    },
+    "布局": {
+      "en": "Layout",
+      "ja": "レイアウト",
+      "zh-Hant": "佈局"
+    },
+    "主图与片格": {
+      "en": "Feature and frames",
+      "ja": "メイン写真とコマ",
+      "zh-Hant": "主圖與片格"
+    },
+    "边宽": {
+      "en": "Border width",
+      "ja": "フレーム幅",
+      "zh-Hant": "邊寬"
+    },
+    "片间距": {
+      "en": "Frame spacing",
+      "ja": "コマの間隔",
+      "zh-Hant": "片間距"
+    },
+    "当前照片": {
+      "en": "Current photo",
+      "ja": "現在の写真",
+      "zh-Hant": "當前照片"
+    },
+    "两格联动": {
+      "en": "Link both frames",
+      "ja": "両コマを連動",
+      "zh-Hant": "兩格聯動"
+    },
+    "全部联动": {
+      "en": "Link all frames",
+      "ja": "全コマを連動",
+      "zh-Hant": "全部聯動"
+    },
+    "交换": {
+      "en": "Swap",
+      "ja": "入れ替え",
+      "zh-Hant": "交換"
+    },
+    "旋转整组": {
+      "en": "Rotate group",
+      "ja": "グループを回転",
+      "zh-Hant": "旋轉整組"
+    },
+    "旋转照片": {
+      "en": "Rotate photo",
+      "ja": "写真を回転",
+      "zh-Hant": "旋轉照片"
+    },
+    "取景缩放": {
+      "en": "Framing zoom",
+      "ja": "構図の拡大率",
+      "zh-Hant": "取景縮放"
+    },
+    "恢复两格取景": {
+      "en": "Reset both frames",
+      "ja": "両コマの構図をリセット",
+      "zh-Hant": "恢復兩格取景"
+    },
+    "恢复当前取景": {
+      "en": "Reset current frame",
+      "ja": "現在の構図をリセット",
+      "zh-Hant": "恢復當前取景"
+    },
+    "日期曝光": {
+      "en": "Date imprint",
+      "ja": "日付写し込み",
+      "zh-Hant": "日期曝光"
+    },
+    "开启": {
+      "en": "On",
+      "ja": "オン",
+      "zh-Hant": "開啟"
+    },
+    "输入日期": {
+      "en": "Enter date",
+      "ja": "日付を入力",
+      "zh-Hant": "輸入日期"
+    },
+    "数据字样": {
+      "en": "Data imprint",
+      "ja": "データの写し込み",
+      "zh-Hant": "資料字樣"
+    },
+    "字样": {
+      "en": "Imprint style",
+      "ja": "写し込み形式",
+      "zh-Hant": "字樣"
+    },
+    "液晶日期": {
+      "en": "LCD date",
+      "ja": "液晶日付",
+      "zh-Hant": "液晶日期"
+    },
+    "点阵日期": {
+      "en": "Dot-matrix date",
+      "ja": "ドット日付",
+      "zh-Hant": "點陣日期"
+    },
+    "画面内": {
+      "en": "Inside frame",
+      "ja": "画面内",
+      "zh-Hant": "畫面內"
+    },
+    "角落": {
+      "en": "Corner",
+      "ja": "隅",
+      "zh-Hant": "角落"
+    },
+    "字号": {
+      "en": "Type size",
+      "ja": "文字サイズ",
+      "zh-Hant": "字號"
+    },
+    "拍摄信息": {
+      "en": "Shooting information",
+      "ja": "撮影情報",
+      "zh-Hant": "拍攝資訊"
+    },
+    "附加文字": {
+      "en": "Additional text",
+      "ja": "追加テキスト",
+      "zh-Hant": "附加文字"
+    },
+    "日期覆盖": {
+      "en": "Date override",
+      "ja": "日付を上書き",
+      "zh-Hant": "日期覆蓋"
+    },
+    "图面颜色": {
+      "en": "Canvas color",
+      "ja": "キャンバスの色",
+      "zh-Hant": "圖面顏色"
+    },
+    "图面颜色 ": {
+      "en": "Canvas color ",
+      "ja": "キャンバスの色 ",
+      "zh-Hant": "圖面顏色 "
+    },
+    "TIFF · 16 位": {
+      "en": "TIFF · 16-bit",
+      "ja": "TIFF · 16 bit",
+      "zh-Hant": "TIFF · 16 位"
+    },
+    "PNG · 16 位": {
+      "en": "PNG · 16-bit",
+      "ja": "PNG · 16 bit",
+      "zh-Hant": "PNG · 16 位"
+    },
+    "JPG · 最高品质": {
+      "en": "JPG · Maximum quality",
+      "ja": "JPG · 最高画質",
+      "zh-Hant": "JPG · 最高品質"
+    },
+    "原像素排版": {
+      "en": "Compose at original pixels",
+      "ja": "元のピクセル数で配置",
+      "zh-Hant": "原畫素排版"
+    },
+    "导出排版": {
+      "en": "Export composition",
+      "ja": "レイアウトを書き出す",
+      "zh-Hant": "匯出排版"
+    },
+    "XPan 65 比 24 宽画幅": {
+      "en": "XPan 65:24 wide format",
+      "ja": "XPan 65:24 ワイド判型",
+      "zh-Hant": "XPan 65 比 24 寬畫幅"
+    },
+    "选择裁切比例 ": {
+      "en": "Choose crop ratio ",
+      "ja": "切り抜き比率を選択 ",
+      "zh-Hant": "選擇裁切比例 "
+    },
+    "切换裁切比例的横向或竖向": {
+      "en": "Swap crop orientation",
+      "ja": "切り抜きの縦横を切り替え",
+      "zh-Hant": "切換裁切比例的橫向或豎向"
+    },
+    "裁切范围": {
+      "en": "Crop bounds",
+      "ja": "切り抜き範囲",
+      "zh-Hant": "裁切範圍"
+    },
+    "拖动内部移动范围，拖动边角调整大小；方向键移动，Shift 加速": {
+      "en": "Drag inside to move, corners to resize; arrow keys move, Shift accelerates",
+      "ja": "内側をドラッグして移動、角でサイズ変更。矢印キーで移動、Shift で加速",
+      "zh-Hant": "拖動內部移動範圍，拖動邊角調整大小；方向鍵移動，Shift 加速"
+    },
+    "裁切预览不可用": {
+      "en": "Crop preview unavailable",
+      "ja": "切り抜きプレビューを利用できません",
+      "zh-Hant": "裁切預覽不可用"
+    },
+    "恢复原图": {
+      "en": "Reset crop",
+      "ja": "切り抜きをリセット",
+      "zh-Hant": "恢復原圖"
+    },
+    "应用裁切": {
+      "en": "Apply crop",
+      "ja": "切り抜きを適用",
+      "zh-Hant": "應用裁切"
+    },
+    "拖动内部移动范围，拖动四角或边缘调整大小；方向键移动，Shift 加速，Enter 应用，Esc 取消": {
+      "en": "Drag inside to move, corners or edges to resize; arrows move, Shift accelerates, Enter applies, Esc cancels",
+      "ja": "内側で移動、角や辺でサイズ変更。矢印キーで移動、Shift で加速、Enter で適用、Esc で取消",
+      "zh-Hant": "拖動內部移動範圍，拖動四角或邊緣調整大小；方向鍵移動，Shift 加速，Enter 應用，Esc 取消"
+    },
+    "裁切比例": {
+      "en": "Crop ratio",
+      "ja": "切り抜き比率",
+      "zh-Hant": "裁切比例"
+    },
+    "选择自由、原图、方形或 XPan 等比例": {
+      "en": "Choose free, original, square or XPan ratio",
+      "ja": "自由、元画像、正方形、XPan などの比率を選択",
+      "zh-Hant": "選擇自由、原圖、方形或 XPan 等比例"
+    },
+    "切换为纵向裁切": {
+      "en": "Switch to portrait crop",
+      "ja": "縦向きの切り抜きに変更",
+      "zh-Hant": "切換為縱向裁切"
+    },
+    "切换为横向裁切": {
+      "en": "Switch to landscape crop",
+      "ja": "横向きの切り抜きに変更",
+      "zh-Hant": "切換為橫向裁切"
+    },
+    "曲线控制点；拖出图表或 Delete 删除中间点，方向键微调，Escape 取消拖动": {
+      "en": "Curve points: drag outside or press Delete to remove interior points; arrows fine-tune, Escape cancels dragging",
+      "ja": "カーブの点。枠外へドラッグまたは Delete で中間点を削除。矢印で微調整、Esc で取消",
+      "zh-Hant": "曲線控制點；拖出圖表或 Delete 刪除中間點，方向鍵微調，Escape 取消拖動"
+    },
+    "松开删除控制点": {
+      "en": "Release to delete point",
+      "ja": "離すと点を削除",
+      "zh-Hant": "鬆開刪除控制點"
+    },
+    "点击添加 · 拖出删除": {
+      "en": "Click to add · Drag out to delete",
+      "ja": "クリックで追加 · 枠外へドラッグで削除",
+      "zh-Hant": "點選新增 · 拖出刪除"
+    },
+    "重置曲线": {
+      "en": "Reset curve",
+      "ja": "カーブをリセット",
+      "zh-Hant": "重置曲線"
+    },
+    "输入": {
+      "en": "Input",
+      "ja": "入力",
+      "zh-Hant": "輸入"
+    },
+    "场景曲线，负八至八 EV": {
+      "en": "Scene curve, −8 to +8 EV",
+      "ja": "シーンカーブ、−8〜+8 EV",
+      "zh-Hant": "場景曲線，負八至八 EV"
+    },
+    "曲线数值，零至二百五十五": {
+      "en": "Curve value, 0 to 255",
+      "ja": "カーブ値、0〜255",
+      "zh-Hant": "曲線數值，零至二百五十五"
+    },
+    "基础": {
+      "en": "Basic",
+      "ja": "基本",
+      "zh-Hant": "基礎"
+    },
+    "颜色": {
+      "en": "Color",
+      "ja": "カラー",
+      "zh-Hant": "顏色"
+    },
+    "局部": {
+      "en": "Local",
+      "ja": "部分",
+      "zh-Hant": "區域性"
+    },
+    "几何": {
+      "en": "Geometry",
+      "ja": "ジオメトリ",
+      "zh-Hant": "幾何"
+    },
+    "工具": {
+      "en": " tools",
+      "ja": "ツール",
+      "zh-Hant": "工具"
+    },
+    "参数面板滚动条": {
+      "en": "Adjustment panel scrollbar",
+      "ja": "調整パネルのスクロールバー",
+      "zh-Hant": "引數面板捲軸"
+    },
+    "原片显影": {
+      "en": "Source development",
+      "ja": "元画像の現像",
+      "zh-Hant": "原片顯影"
+    },
+    "去除紫边": {
+      "en": "Defringe",
+      "ja": "フリンジ除去",
+      "zh-Hant": "去除紫邊"
+    },
+    "未导入照片": {
+      "en": "No photo imported",
+      "ja": "写真が読み込まれていません",
+      "zh-Hant": "未匯入照片"
+    },
+    "基础调整": {
+      "en": "Basic adjustments",
+      "ja": "基本調整",
+      "zh-Hant": "基礎調整"
+    },
+    "自动白平衡": {
+      "en": "Auto white balance",
+      "ja": "自動ホワイトバランス",
+      "zh-Hant": "自動白平衡"
+    },
+    "影调": {
+      "en": "Tone",
+      "ja": "階調",
+      "zh-Hant": "影調"
+    },
+    "自动影调": {
+      "en": "Auto tone",
+      "ja": "自動階調",
+      "zh-Hant": "自動影調"
+    },
+    "自然饱和度": {
+      "en": "Vibrance",
+      "ja": "自然な彩度",
+      "zh-Hant": "自然飽和度"
+    },
+    "高动态范围": {
+      "en": "High dynamic range",
+      "ja": "ハイダイナミックレンジ",
+      "zh-Hant": "高動態範圍"
+    },
+    "白色": {
+      "en": "Whites",
+      "ja": "白レベル",
+      "zh-Hant": "白色"
+    },
+    "黑色": {
+      "en": "Blacks",
+      "ja": "黒レベル",
+      "zh-Hant": "黑色"
+    },
+    "色阶": {
+      "en": "Levels",
+      "ja": "レベル",
+      "zh-Hant": "色階"
+    },
+    "质感": {
+      "en": "Presence",
+      "ja": "質感",
+      "zh-Hant": "質感"
+    },
+    "纹理": {
+      "en": "Texture",
+      "ja": "テクスチャ",
+      "zh-Hant": "紋理"
+    },
+    "清晰度": {
+      "en": "Clarity",
+      "ja": "明瞭度",
+      "zh-Hant": "清晰度"
+    },
+    "去雾": {
+      "en": "Dehaze",
+      "ja": "かすみの除去",
+      "zh-Hant": "去霧"
+    },
+    "细节": {
+      "en": "Detail",
+      "ja": "ディテール",
+      "zh-Hant": "細節"
+    },
+    "锐化": {
+      "en": "Sharpening",
+      "ja": "シャープ",
+      "zh-Hant": "銳化"
+    },
+    "明度降噪": {
+      "en": "Luminance noise reduction",
+      "ja": "輝度ノイズ軽減",
+      "zh-Hant": "明度降噪"
+    },
+    "彩色降噪": {
+      "en": "Color noise reduction",
+      "ja": "カラーノイズ軽減",
+      "zh-Hant": "彩色降噪"
+    },
+    "胶片显影": {
+      "en": "Film development",
+      "ja": "フィルム現像",
+      "zh-Hant": "膠片顯影"
+    },
+    "成像": {
+      "en": "Imaging",
+      "ja": "画像形成",
+      "zh-Hant": "成像"
+    },
+    "胶片强度": {
+      "en": "Film amount",
+      "ja": "フィルムの適用量",
+      "zh-Hant": "膠片強度"
+    },
+    "高光光晕": {
+      "en": "Halation",
+      "ja": "ハレーション",
+      "zh-Hant": "高光光暈"
+    },
+    "颗粒强度": {
+      "en": "Grain amount",
+      "ja": "粒状感の量",
+      "zh-Hant": "顆粒強度"
+    },
+    "颗粒大小": {
+      "en": "Grain size",
+      "ja": "粒子サイズ",
+      "zh-Hant": "顆粒大小"
+    },
+    "印相": {
+      "en": "Printing",
+      "ja": "プリント",
+      "zh-Hant": "印相"
+    },
+    "直接扫描": {
+      "en": "Direct scan",
+      "ja": "ダイレクトスキャン",
+      "zh-Hant": "直接掃描"
+    },
+    "材料": {
+      "en": "Material",
+      "ja": "感材",
+      "zh-Hant": "材料"
+    },
+    "印放方式": {
+      "en": "Print method",
+      "ja": "プリント方式",
+      "zh-Hant": "印放方式"
+    },
+    "完整光谱": {
+      "en": "Full spectral",
+      "ja": "完全スペクトル",
+      "zh-Hant": "完整光譜"
+    },
+    "快速印放 · 标定 LUT": {
+      "en": "Fast print · Calibrated LUT",
+      "ja": "高速プリント · 校正済み LUT",
+      "zh-Hant": "快速印放 · 標定 LUT"
+    },
+    "印相曝光": {
+      "en": "Print exposure",
+      "ja": "プリント露出",
+      "zh-Hant": "印相曝光"
+    },
+    "黄色滤色": {
+      "en": "Yellow filter",
+      "ja": "イエローフィルター",
+      "zh-Hant": "黃色濾色"
+    },
+    "品红滤色": {
+      "en": "Magenta filter",
+      "ja": "マゼンタフィルター",
+      "zh-Hant": "品紅濾色"
+    },
+    "相纸预闪": {
+      "en": "Paper preflash",
+      "ja": "印画紙のプレフラッシュ",
+      "zh-Hant": "相紙預閃"
+    },
+    "自动配光": {
+      "en": "Auto print balance",
+      "ja": "自動プリント補正",
+      "zh-Hant": "自動配光"
+    },
+    "测光": {
+      "en": "Metering",
+      "ja": "測光",
+      "zh-Hant": "測光"
+    },
+    "均衡": {
+      "en": "Balanced",
+      "ja": "バランス",
+      "zh-Hant": "均衡"
+    },
+    "中央重点": {
+      "en": "Center weighted",
+      "ja": "中央重点",
+      "zh-Hant": "中央重點"
+    },
+    "曝光与滤色": {
+      "en": "Exposure and filters",
+      "ja": "露出とフィルター",
+      "zh-Hant": "曝光與濾色"
+    },
+    "滤色": {
+      "en": "Filtration",
+      "ja": "フィルター",
+      "zh-Hant": "濾色"
+    },
+    "计算中…": {
+      "en": "Calculating…",
+      "ja": "計算中…",
+      "zh-Hant": "計算中…"
+    },
+    "场景曲线": {
+      "en": "Scene curve",
+      "ja": "シーンカーブ",
+      "zh-Hant": "場景曲線"
+    },
+    "光学": {
+      "en": "Optics",
+      "ja": "光学",
+      "zh-Hant": "光學"
+    },
+    "散射强度": {
+      "en": "Scatter amount",
+      "ja": "散乱の強さ",
+      "zh-Hant": "散射強度"
+    },
+    "跟随光晕": {
+      "en": "Follow halation",
+      "ja": "ハレーションに連動",
+      "zh-Hant": "跟隨光暈"
+    },
+    "恢复跟随": {
+      "en": "Restore linked value",
+      "ja": "連動値に戻す",
+      "zh-Hant": "恢復跟隨"
+    },
+    "散射尺度": {
+      "en": "Scatter scale",
+      "ja": "散乱スケール",
+      "zh-Hant": "散射尺度"
+    },
+    "空间尺度": {
+      "en": "Spatial scale",
+      "ja": "空間スケール",
+      "zh-Hant": "空間尺度"
+    },
+    "光晕增益": {
+      "en": "Halation gain",
+      "ja": "ハレーションゲイン",
+      "zh-Hant": "光暈增益"
+    },
+    "高光保护": {
+      "en": "Highlight protection",
+      "ja": "ハイライト保護",
+      "zh-Hant": "高光保護"
+    },
+    "高光余量": {
+      "en": "Highlight headroom",
+      "ja": "ハイライトの余裕",
+      "zh-Hant": "高光餘量"
+    },
+    "层间耦合": {
+      "en": "Interlayer coupling",
+      "ja": "層間カップリング",
+      "zh-Hant": "層間耦合"
+    },
+    "密度曲线": {
+      "en": "Density curves",
+      "ja": "濃度カーブ",
+      "zh-Hant": "密度曲線"
+    },
+    "撤销 · Ctrl+Z": {
+      "en": "Undo · Ctrl+Z",
+      "ja": "取り消す · Ctrl+Z",
+      "zh-Hant": "撤銷 · Ctrl+Z"
+    },
+    "重做 · Ctrl+Y": {
+      "en": "Redo · Ctrl+Y",
+      "ja": "やり直す · Ctrl+Y",
+      "zh-Hant": "重做 · Ctrl+Y"
+    },
+    "恢复当前照片全部参数；可撤销": {
+      "en": "Reset all adjustments for this photo; can be undone",
+      "ja": "この写真のすべての調整をリセット。取り消し可能",
+      "zh-Hant": "恢復當前照片全部引數；可撤銷"
+    },
+    "批量导出 ": {
+      "en": "Batch export ",
+      "ja": "一括書き出し：",
+      "zh-Hant": "批次匯出 "
+    },
+    "高品质 JPG": {
+      "en": "High-quality JPG",
+      "ja": "高画質 JPG",
+      "zh-Hant": "高品質 JPG"
+    },
+    "原尺寸 · 质量 100 · 4:4:4 · sRGB": {
+      "en": "Original size · Quality 100 · 4:4:4 · sRGB",
+      "ja": "元のサイズ · 品質 100 · 4:4:4 · sRGB",
+      "zh-Hant": "原尺寸 · 質量 100 · 4:4:4 · sRGB"
+    },
+    "分享 JPG": {
+      "en": "Sharing JPG",
+      "ja": "共有用 JPG",
+      "zh-Hant": "分享 JPG"
+    },
+    "原尺寸 · 质量 85 · 适合微信等平台": {
+      "en": "Original size · Quality 85 · For sharing platforms",
+      "ja": "元のサイズ · 品質 85 · 共有サービス向け",
+      "zh-Hant": "原尺寸 · 質量 85 · 適合微信等平臺"
+    },
+    "无损 TIFF": {
+      "en": "Lossless TIFF",
+      "ja": "ロスレス TIFF",
+      "zh-Hant": "無損 TIFF"
+    },
+    "原尺寸 · 16 bit / 通道 · sRGB": {
+      "en": "Original size · 16-bit/channel · sRGB",
+      "ja": "元のサイズ · 16 bit/チャンネル · sRGB",
+      "zh-Hant": "原尺寸 · 16 bit / 通道 · sRGB"
+    },
+    "RAW 原片": {
+      "en": "Original RAW",
+      "ja": "元の RAW",
+      "zh-Hant": "RAW 原片"
+    },
+    "相机原始文件 · 不包含编辑效果": {
+      "en": "Original camera file · Edits not included",
+      "ja": "カメラの元ファイル · 調整は含まれません",
+      "zh-Hant": "相機原始檔案 · 不包含編輯效果"
+    },
+    "需全部为相机 RAW · 不将 JPG 转为 RAW": {
+      "en": "All selected files must be camera RAW; JPG is not converted to RAW",
+      "ja": "すべてカメラ RAW を選択。JPG から RAW へは変換できません",
+      "zh-Hant": "需全部為相機 RAW · 不將 JPG 轉為 RAW"
+    },
+    "输出配方": {
+      "en": "Output recipes",
+      "ja": "書き出し設定",
+      "zh-Hant": "輸出配方"
+    },
+    "按原字节另存，保留原扩展名。": {
+      "en": "Copy original bytes and retain the original extension.",
+      "ja": "元データをそのままコピーし、元の拡張子を保持します。",
+      "zh-Hant": "按原位元組另存，保留原副檔名。"
+    },
+    "从源照片重新显影，保留原始像素尺寸。": {
+      "en": "Develop from the source photo at original pixel dimensions.",
+      "ja": "元写真から現像し、元のピクセル寸法を保持します。",
+      "zh-Hant": "從源照片重新顯影，保留原始畫素尺寸。"
+    },
+    "在所选位置创建「": {
+      "en": "Create “",
+      "ja": "選択場所に「",
+      "zh-Hant": "在所選位置建立「"
+    },
+    "」文件夹；同名文件自动编号。": {
+      "en": "” folder at the selected location; duplicate names are numbered.",
+      "ja": "」フォルダーを作成。同名ファイルには連番を付けます。",
+      "zh-Hant": "」資料夾；同名檔案自動編號。"
+    },
+    "每张使用各自的参数。": {
+      "en": "Each photo uses its own adjustments.",
+      "ja": "各写真の調整を使用します。",
+      "zh-Hant": "每張使用各自的引數。"
+    },
+    "选择位置并导出": {
+      "en": "Choose location and export",
+      "ja": "保存先を選んで書き出す",
+      "zh-Hant": "選擇位置並匯出"
+    },
+    "模拟片幅": {
+      "en": "Simulated format",
+      "ja": "シミュレーション判型",
+      "zh-Hant": "模擬片幅"
+    },
+    "自定物理尺寸": {
+      "en": "Custom physical size",
+      "ja": "物理サイズを指定",
+      "zh-Hant": "自定物理尺寸"
+    },
+    "尺寸基准": {
+      "en": "Size reference",
+      "ja": "サイズの基準",
+      "zh-Hant": "尺寸基準"
+    },
+    "画面长边": {
+      "en": "Image long edge",
+      "ja": "画像の長辺",
+      "zh-Hant": "畫面長邊"
+    },
+    "画面短边": {
+      "en": "Image short edge",
+      "ja": "画像の短辺",
+      "zh-Hant": "畫面短邊"
+    },
+    "短边尺寸": {
+      "en": "Short-edge size",
+      "ja": "短辺のサイズ",
+      "zh-Hant": "短邊尺寸"
+    },
+    "长边尺寸": {
+      "en": "Long-edge size",
+      "ja": "長辺のサイズ",
+      "zh-Hant": "長邊尺寸"
+    },
+    "双击标签恢复默认值；右键可重置": {
+      "en": "Double-click the label or right-click to reset",
+      "ja": "ラベルをダブルクリック、または右クリックでリセット",
+      "zh-Hant": "雙擊標籤恢復預設值；右鍵可重置"
+    },
+    "数值": {
+      "en": " value",
+      "ja": "値",
+      "zh-Hant": "數值"
+    },
+    "可直接输入精确数值；方向键按步进调整，Shift 为细调，Alt 为粗调": {
+      "en": "Enter an exact value; arrows adjust by step, Shift for fine, Alt for coarse",
+      "ja": "数値を直接入力。矢印キーで調整、Shift で微調整、Alt で大きく調整",
+      "zh-Hant": "可直接輸入精確數值；方向鍵按步進調整，Shift 為細調，Alt 為粗調"
+    },
+    "；方向键按步进，Shift 细调，Alt 粗调；双击圆点恢复默认值": {
+      "en": "; arrows adjust by step, Shift for fine, Alt for coarse; double-click the handle to reset",
+      "ja": "。矢印で調整、Shift で微調整、Alt で大きく調整。ハンドルをダブルクリックでリセット",
+      "zh-Hant": "；方向鍵按步進，Shift 細調，Alt 粗調；雙擊圓點恢復預設值"
+    },
+    "恢复默认值": {
+      "en": "Reset to default",
+      "ja": "初期値に戻す",
+      "zh-Hant": "恢復預設值"
+    },
+    "自动拉直": {
+      "en": "Auto straighten",
+      "ja": "自動角度補正",
+      "zh-Hant": "自動拉直"
+    },
+    "自动检测直线并拉直": {
+      "en": "Detect lines and straighten automatically",
+      "ja": "直線を検出し、自動で傾きを補正",
+      "zh-Hant": "自動檢測直線並拉直"
+    },
+    "裁切画幅": {
+      "en": "Crop frame",
+      "ja": "切り抜き範囲",
+      "zh-Hant": "裁切畫幅"
+    },
+    "自动垂直": {
+      "en": "Auto vertical",
+      "ja": "垂直を自動補正",
+      "zh-Hant": "自動垂直"
+    },
+    "根据垂直线自动校正透视": {
+      "en": "Correct perspective using vertical lines",
+      "ja": "垂直線を使って遠近を自動補正",
+      "zh-Hant": "根據垂直線自動校正透視"
+    },
+    "自动透视": {
+      "en": "Auto perspective",
+      "ja": "遠近を自動補正",
+      "zh-Hant": "自動透視"
+    },
+    "根据水平与垂直线自动校正完整透视": {
+      "en": "Correct perspective using horizontal and vertical lines",
+      "ja": "水平線と垂直線を使って遠近を自動補正",
+      "zh-Hant": "根據水平與垂直線自動校正完整透視"
+    },
+    "画面方向": {
+      "en": "Orientation",
+      "ja": "向き",
+      "zh-Hant": "畫面方向"
+    },
+    "向左旋转 90°": {
+      "en": "Rotate 90° left",
+      "ja": "左に 90° 回転",
+      "zh-Hant": "向左旋轉 90°"
+    },
+    "向右旋转 90°": {
+      "en": "Rotate 90° right",
+      "ja": "右に 90° 回転",
+      "zh-Hant": "向右旋轉 90°"
+    },
+    "垂直透视": {
+      "en": "Vertical perspective",
+      "ja": "垂直方向の遠近",
+      "zh-Hant": "垂直透視"
+    },
+    "水平透视": {
+      "en": "Horizontal perspective",
+      "ja": "水平方向の遠近",
+      "zh-Hant": "水平透視"
+    },
+    "纵横比例": {
+      "en": "Aspect ratio",
+      "ja": "縦横比",
+      "zh-Hant": "縱橫比例"
+    },
+    "缩放": {
+      "en": "Scale",
+      "ja": "拡大縮小",
+      "zh-Hant": "縮放"
+    },
+    "水平翻转": {
+      "en": "Flip horizontal",
+      "ja": "左右反転",
+      "zh-Hant": "水平翻轉"
+    },
+    "垂直翻转": {
+      "en": "Flip vertical",
+      "ja": "上下反転",
+      "zh-Hant": "垂直翻轉"
+    },
+    "自动填满画幅": {
+      "en": "Auto fill frame",
+      "ja": "画面を自動で埋める",
+      "zh-Hant": "自動填滿畫幅"
+    },
+    "重置几何": {
+      "en": "Reset geometry",
+      "ja": "ジオメトリをリセット",
+      "zh-Hant": "重置幾何"
+    },
+    "细腻": {
+      "en": "Fine",
+      "ja": "微粒子",
+      "zh-Hant": "細膩"
+    },
+    "经典": {
+      "en": "Classic",
+      "ja": "クラシック",
+      "zh-Hant": "經典"
+    },
+    "粗粝": {
+      "en": "Coarse",
+      "ja": "粗粒子",
+      "zh-Hant": "粗糲"
+    },
+    "团簇": {
+      "en": "Clustered",
+      "ja": "クラスター",
+      "zh-Hant": "團簇"
+    },
+    "颗粒类型": {
+      "en": "Grain type",
+      "ja": "粒子の種類",
+      "zh-Hant": "顆粒型別"
+    },
+    "，展开选择": {
+      "en": ", expand to choose",
+      "ja": "、展開して選択",
+      "zh-Hant": "，展開選擇"
+    },
+    "颗粒类型：": {
+      "en": "Grain type: ",
+      "ja": "粒子の種類：",
+      "zh-Hant": "顆粒型別："
+    },
+    "收起直方图": {
+      "en": "Collapse histogram",
+      "ja": "ヒストグラムを折りたたむ",
+      "zh-Hant": "收起直方圖"
+    },
+    "展开直方图": {
+      "en": "Expand histogram",
+      "ja": "ヒストグラムを展開",
+      "zh-Hant": "展開直方圖"
+    },
+    "已展开": {
+      "en": "Expanded",
+      "ja": "展開中",
+      "zh-Hant": "已展開"
+    },
+    "照片 RGB 与亮度直方图": {
+      "en": "Photo RGB and luminance histogram",
+      "ja": "写真の RGB と輝度のヒストグラム",
+      "zh-Hant": "照片 RGB 與亮度直方圖"
+    },
+    "暗部": {
+      "en": "Shadows",
+      "ja": "暗部",
+      "zh-Hant": "暗部"
+    },
+    "两端": {
+      "en": "Both ends",
+      "ja": "両端",
+      "zh-Hant": "兩端"
+    },
+    "压缩不足，无法落入胶片范围": {
+      "en": "Insufficient compression to fit the film range",
+      "ja": "圧縮が不足し、フィルムの範囲に収まりません",
+      "zh-Hant": "壓縮不足，無法落入膠片範圍"
+    },
+    "暗部提升超过上限": {
+      "en": "Shadow lift exceeds the limit",
+      "ja": "暗部の持ち上げが上限を超えています",
+      "zh-Hant": "暗部提升超過上限"
+    },
+    "过渡空间不足": {
+      "en": "Insufficient transition range",
+      "ja": "階調移行の範囲が不足しています",
+      "zh-Hant": "過渡空間不足"
+    },
+    "场景范围超出可用拟合范围": {
+      "en": "Scene range exceeds the available fitting range",
+      "ja": "シーンの範囲が補正可能な範囲を超えています",
+      "zh-Hant": "場景範圍超出可用擬合範圍"
+    },
+    "场景反差超过当前材料可容纳范围": {
+      "en": "Scene contrast exceeds this material's range",
+      "ja": "シーンのコントラストが現在の感材の範囲を超えています",
+      "zh-Hant": "場景反差超過當前材料可容納範圍"
+    },
+    "压缩已影响中间调": {
+      "en": "Compression affects midtones",
+      "ja": "圧縮が中間調に影響しています",
+      "zh-Hant": "壓縮已影響中間調"
+    },
+    "当前场景无法可靠拟合": {
+      "en": "This scene cannot be fitted reliably",
+      "ja": "このシーンは確実に補正できません",
+      "zh-Hant": "當前場景無法可靠擬合"
+    },
+    "分析中…": {
+      "en": "Analyzing…",
+      "ja": "解析中…",
+      "zh-Hant": "分析中…"
+    },
+    "分析": {
+      "en": "Analyze",
+      "ja": "解析",
+      "zh-Hant": "分析"
+    },
+    "恢复": {
+      "en": "Restore",
+      "ja": "元に戻す",
+      "zh-Hant": "恢復"
+    },
+    "尚未分析": {
+      "en": "Not analyzed",
+      "ja": "未解析",
+      "zh-Hant": "尚未分析"
+    },
+    "胶片 ": {
+      "en": "Film ",
+      "ja": "フィルム ",
+      "zh-Hant": "膠片 "
+    },
+    "场景中值 ": {
+      "en": "Scene median ",
+      "ja": "シーンの中央値 ",
+      "zh-Hant": "場景中值 "
+    },
+    "无法应用：": {
+      "en": "Cannot apply: ",
+      "ja": "適用できません：",
+      "zh-Hant": "無法應用："
+    },
+    "参数已更改，需重新分析": {
+      "en": "Adjustments changed; analyze again",
+      "ja": "調整が変更されました。再解析してください",
+      "zh-Hant": "引數已更改，需重新分析"
+    },
+    "左右方向键调整，Shift 细调，双击恢复默认值": {
+      "en": "Left/right arrows adjust, Shift for fine, double-click to reset",
+      "ja": "左右キーで調整、Shift で微調整、ダブルクリックでリセット",
+      "zh-Hant": "左右方向鍵調整，Shift 細調，雙擊恢復預設值"
+    },
+    "通道色阶": {
+      "en": "Channel levels",
+      "ja": "チャンネルのレベル",
+      "zh-Hant": "通道色階"
+    },
+    "自动色阶": {
+      "en": "Auto levels",
+      "ja": "自動レベル補正",
+      "zh-Hant": "自動色階"
+    },
+    "输入黑场": {
+      "en": "Input black",
+      "ja": "入力ブラック",
+      "zh-Hant": "輸入黑場"
+    },
+    "输入中间调": {
+      "en": "Input midtone",
+      "ja": "入力中間調",
+      "zh-Hant": "輸入中間調"
+    },
+    "输入白场": {
+      "en": "Input white",
+      "ja": "入力ホワイト",
+      "zh-Hant": "輸入白場"
+    },
+    "精确数值": {
+      "en": "Exact values",
+      "ja": "数値指定",
+      "zh-Hant": "精確數值"
+    },
+    "输出黑场": {
+      "en": "Output black",
+      "ja": "出力ブラック",
+      "zh-Hant": "輸出黑場"
+    },
+    "输出白场": {
+      "en": "Output white",
+      "ja": "出力ホワイト",
+      "zh-Hant": "輸出白場"
+    },
+    "资料库": {
+      "en": "Library",
+      "ja": "ライブラリ",
+      "zh-Hant": "資料庫"
+    },
+    "新建": {
+      "en": "New",
+      "ja": "新規",
+      "zh-Hant": "新建"
+    },
+    "拍摄会话": {
+      "en": "Session",
+      "ja": "セッション",
+      "zh-Hant": "拍攝會話"
+    },
+    "链接 Capture One 资料库": {
+      "en": "Link Capture One catalog",
+      "ja": "Capture One カタログにリンク",
+      "zh-Hant": "連結 Capture One 資料庫"
+    },
+    "复制为独立资料库": {
+      "en": "Copy as independent library",
+      "ja": "独立したライブラリとしてコピー",
+      "zh-Hant": "複製為獨立資料庫"
+    },
+    "同步 Capture One": {
+      "en": "Sync Capture One",
+      "ja": "Capture One を同期",
+      "zh-Hant": "同步 Capture One"
+    },
+    "添加照片文件夹": {
+      "en": "Add photo folder",
+      "ja": "写真フォルダーを追加",
+      "zh-Hant": "新增照片資料夾"
+    },
+    "刷新照片文件夹": {
+      "en": "Refresh photo folders",
+      "ja": "写真フォルダーを更新",
+      "zh-Hant": "重新整理照片資料夾"
+    },
+    "直接使用快速会话": {
+      "en": "Use a quick session",
+      "ja": "クイックセッションを使用",
+      "zh-Hant": "直接使用快速會話"
+    },
+    "重新载入": {
+      "en": "Reload",
+      "ja": "再読み込み",
+      "zh-Hant": "重新載入"
+    },
+    "另存变体": {
+      "en": "Save as new variant",
+      "ja": "新しいバリアントとして保存",
+      "zh-Hant": "另存變體"
+    },
+    "选择照片的工作方式": {
+      "en": "Choose how to work with photos",
+      "ja": "写真の管理方法を選択",
+      "zh-Hant": "選擇照片的工作方式"
+    },
+    "打开资料库": {
+      "en": "Open library",
+      "ja": "ライブラリを開く",
+      "zh-Hant": "開啟資料庫"
+    },
+    "快速会话": {
+      "en": "Quick session",
+      "ja": "クイックセッション",
+      "zh-Hant": "快速會話"
+    },
+    "相册与文件夹": {
+      "en": "Albums and folders",
+      "ja": "アルバムとフォルダー",
+      "zh-Hant": "相簿與資料夾"
+    },
+    "新建相册": {
+      "en": "New album",
+      "ja": "新規アルバム",
+      "zh-Hant": "新建相簿"
+    },
+    "原片位置": {
+      "en": "Original locations",
+      "ja": "元ファイルの場所",
+      "zh-Hant": "原片位置"
+    },
+    "重新定位 ": {
+      "en": "Relocate ",
+      "ja": "再指定 ",
+      "zh-Hant": "重新定位 "
+    },
+    "离线 · ": {
+      "en": "Offline · ",
+      "ja": "オフライン · ",
+      "zh-Hant": "離線 · "
+    },
+    "搜索文件名、相机或关键词": {
+      "en": "Search filename, camera or keywords",
+      "ja": "ファイル名、カメラ、キーワードで検索",
+      "zh-Hant": "搜尋檔名、相機或關鍵詞"
+    },
+    "搜索资料库": {
+      "en": "Search library",
+      "ja": "ライブラリを検索",
+      "zh-Hant": "搜尋資料庫"
+    },
+    "拍摄时间": {
+      "en": "Capture time",
+      "ja": "撮影日時",
+      "zh-Hant": "拍攝時間"
+    },
+    "文件名": {
+      "en": "Filename",
+      "ja": "ファイル名",
+      "zh-Hant": "檔名"
+    },
+    "最近加入": {
+      "en": "Recently added",
+      "ja": "最近追加",
+      "zh-Hant": "最近加入"
+    },
+    "加入照片": {
+      "en": "Add photos",
+      "ja": "写真を追加",
+      "zh-Hant": "加入照片"
+    },
+    " 张照片": {
+      "en": " photos",
+      "ja": " 枚の写真",
+      "zh-Hant": " 張照片"
+    },
+    "选择本页": {
+      "en": "Select this page",
+      "ja": "このページを選択",
+      "zh-Hant": "選擇本頁"
+    },
+    "加入相册": {
+      "en": "Add to album",
+      "ja": "アルバムに追加",
+      "zh-Hant": "加入相簿"
+    },
+    "移出相册": {
+      "en": "Remove from album",
+      "ja": "アルバムから除外",
+      "zh-Hant": "移出相簿"
+    },
+    "新建变体": {
+      "en": "New variant",
+      "ja": "新規バリアント",
+      "zh-Hant": "新建變體"
+    },
+    "选片": {
+      "en": "Selection",
+      "ja": "セレクト",
+      "zh-Hant": "選片"
+    },
+    "留用": {
+      "en": "Keep",
+      "ja": "採用",
+      "zh-Hant": "留用"
+    },
+    "暂不留用": {
+      "en": "Not kept",
+      "ja": "不採用",
+      "zh-Hant": "暫不留用"
+    },
+    "移至 Selects": {
+      "en": "Move to Selects",
+      "ja": "Selects に移動",
+      "zh-Hant": "移至 Selects"
+    },
+    "还原原位置": {
+      "en": "Restore original location",
+      "ja": "元の場所に戻す",
+      "zh-Hant": "還原原位置"
+    },
+    "编辑变体 ": {
+      "en": "Edit variant ",
+      "ja": "バリアントを編集 ",
+      "zh-Hant": "編輯變體 "
+    },
+    "没有匹配的照片": {
+      "en": "No matching photos",
+      "ja": "一致する写真がありません",
+      "zh-Hant": "沒有匹配的照片"
+    },
+    "此处还没有照片": {
+      "en": "No photos here yet",
+      "ja": "ここにはまだ写真がありません",
+      "zh-Hant": "此處還沒有照片"
+    },
+    "正在读取…": {
+      "en": "Reading…",
+      "ja": "読み込み中…",
+      "zh-Hant": "正在讀取…"
+    },
+    "正在保存调整…": {
+      "en": "Saving adjustments…",
+      "ja": "調整を保存中…",
+      "zh-Hant": "正在儲存調整…"
+    },
+    "0 张": {
+      "en": "0 photos",
+      "ja": "0 枚",
+      "zh-Hant": "0 張"
+    },
+    "上一页": {
+      "en": "Previous page",
+      "ja": "前のページ",
+      "zh-Hant": "上一頁"
+    },
+    "下一页": {
+      "en": "Next page",
+      "ja": "次のページ",
+      "zh-Hant": "下一頁"
+    },
+    "编辑所选": {
+      "en": "Edit selected",
+      "ja": "選択した写真を編集",
+      "zh-Hant": "編輯所選"
+    },
+    "删除空相册": {
+      "en": "Delete empty album",
+      "ja": "空のアルバムを削除",
+      "zh-Hant": "刪除空相簿"
+    },
+    "重命名相册": {
+      "en": "Rename album",
+      "ja": "アルバム名を変更",
+      "zh-Hant": "重新命名相簿"
+    },
+    "相册名称": {
+      "en": "Album name",
+      "ja": "アルバム名",
+      "zh-Hant": "相簿名稱"
+    },
+    "保存": {
+      "en": "Save",
+      "ja": "保存",
+      "zh-Hant": "儲存"
+    },
+    "缩小看片台": {
+      "en": "Zoom out light table",
+      "ja": "ライトテーブルを縮小",
+      "zh-Hant": "縮小看片臺"
+    },
+    "放大片台": {
+      "en": "Zoom in light table",
+      "ja": "ライトテーブルを拡大",
+      "zh-Hant": "放大片臺"
+    },
+    "拖动摆放，方向键移动；R 旋转，Enter 编辑": {
+      "en": "Drag to arrange, arrows to move; R rotates, Enter edits",
+      "ja": "ドラッグで配置、矢印で移動。R で回転、Enter で編集",
+      "zh-Hant": "拖動擺放，方向鍵移動；R 旋轉，Enter 編輯"
+    },
+    "无法显影": {
+      "en": "Cannot develop",
+      "ja": "現像できません",
+      "zh-Hant": "無法顯影"
+    },
+    "恢复方向": {
+      "en": "Reset orientation",
+      "ja": "向きをリセット",
+      "zh-Hant": "恢復方向"
+    },
+    "局部调整": {
+      "en": "Local adjustments",
+      "ja": "部分調整",
+      "zh-Hant": "區域性調整"
+    },
+    " 层": {
+      "en": " layers",
+      "ja": " レイヤー",
+      "zh-Hant": " 層"
+    },
+    "画笔": {
+      "en": "Brush",
+      "ja": "ブラシ",
+      "zh-Hant": "畫筆"
+    },
+    "线性渐变": {
+      "en": "Linear gradient",
+      "ja": "線形グラデーション",
+      "zh-Hant": "線性漸變"
+    },
+    "径向渐变": {
+      "en": "Radial gradient",
+      "ja": "円形グラデーション",
+      "zh-Hant": "徑向漸變"
+    },
+    "选择局部调整蒙版；右键可重命名": {
+      "en": "Select an adjustment mask; right-click to rename",
+      "ja": "部分調整マスクを選択。右クリックで名前を変更",
+      "zh-Hant": "選擇區域性調整蒙版；右鍵可重新命名"
+    },
+    "蒙版名称": {
+      "en": "Mask name",
+      "ja": "マスク名",
+      "zh-Hant": "蒙版名稱"
+    },
+    "停用": {
+      "en": "Disable",
+      "ja": "無効化",
+      "zh-Hant": "停用"
+    },
+    "启用": {
+      "en": "Enable",
+      "ja": "有効化",
+      "zh-Hant": "啟用"
+    },
+    "删除蒙版 ": {
+      "en": "Delete mask ",
+      "ja": "マスクを削除 ",
+      "zh-Hant": "刪除蒙版 "
+    },
+    "删除此蒙版": {
+      "en": "Delete this mask",
+      "ja": "このマスクを削除",
+      "zh-Hant": "刪除此蒙版"
+    },
+    "添加笔迹": {
+      "en": "Add strokes",
+      "ja": "ストロークを追加",
+      "zh-Hant": "新增筆跡"
+    },
+    "擦除笔迹": {
+      "en": "Erase strokes",
+      "ja": "ストロークを消去",
+      "zh-Hant": "擦除筆跡"
+    },
+    "隐藏选区": {
+      "en": "Hide overlay",
+      "ja": "オーバーレイを隠す",
+      "zh-Hant": "隱藏選區"
+    },
+    "显示选区": {
+      "en": "Show overlay",
+      "ja": "オーバーレイを表示",
+      "zh-Hant": "顯示選區"
+    },
+    "删除上一笔": {
+      "en": "Delete last stroke",
+      "ja": "最後のストロークを削除",
+      "zh-Hant": "刪除上一筆"
+    },
+    "仅删除当前蒙版的最后一笔；可撤销": {
+      "en": "Delete only the last stroke in this mask; can be undone",
+      "ja": "現在のマスクの最後のストロークのみ削除。取り消し可能",
+      "zh-Hant": "僅刪除當前蒙版的最後一筆；可撤銷"
+    },
+    "清空笔迹": {
+      "en": "Clear strokes",
+      "ja": "ストロークをすべて削除",
+      "zh-Hant": "清空筆跡"
+    },
+    "清空当前蒙版的全部笔迹；保留局部调整参数，可撤销": {
+      "en": "Clear all strokes in this mask; keep adjustments, can be undone",
+      "ja": "調整を保持し、現在のマスクの全ストロークを削除。取り消し可能",
+      "zh-Hant": "清空當前蒙版的全部筆跡；保留區域性調整引數，可撤銷"
+    },
+    "选区叠加": {
+      "en": "Mask overlay",
+      "ja": "マスクオーバーレイ",
+      "zh-Hant": "選區疊加"
+    },
+    "红色选区": {
+      "en": "Red overlay",
+      "ja": "赤いオーバーレイ",
+      "zh-Hant": "紅色選區"
+    },
+    "青色选区": {
+      "en": "Cyan overlay",
+      "ja": "シアンのオーバーレイ",
+      "zh-Hant": "青色選區"
+    },
+    "显示浓度": {
+      "en": "Overlay opacity",
+      "ja": "表示の不透明度",
+      "zh-Hant": "顯示濃度"
+    },
+    "收起画笔设置": {
+      "en": "Collapse brush settings",
+      "ja": "ブラシ設定を折りたたむ",
+      "zh-Hant": "收起畫筆設定"
+    },
+    "画笔设置": {
+      "en": "Brush settings",
+      "ja": "ブラシ設定",
+      "zh-Hant": "畫筆設定"
+    },
+    "% · 柔边 ": {
+      "en": "% · Softness ",
+      "ja": "% · ソフトさ ",
+      "zh-Hant": "% · 柔邊 "
+    },
+    "画笔半径": {
+      "en": "Brush radius",
+      "ja": "ブラシ半径",
+      "zh-Hant": "畫筆半徑"
+    },
+    "柔边": {
+      "en": "Softness",
+      "ja": "ソフトさ",
+      "zh-Hant": "柔邊"
+    },
+    "流量": {
+      "en": "Flow",
+      "ja": "流量",
+      "zh-Hant": "流量"
+    },
+    "空格或右键拖动平移 · 滚轮缩放": {
+      "en": "Space or right-drag to pan · Scroll to zoom",
+      "ja": "スペースまたは右ドラッグで移動 · ホイールで拡大縮小",
+      "zh-Hant": "空格或右鍵拖動平移 · 滾輪縮放"
+    },
+    "收起范围设置": {
+      "en": "Collapse range settings",
+      "ja": "範囲設定を折りたたむ",
+      "zh-Hant": "收起範圍設定"
+    },
+    "范围设置": {
+      "en": "Range settings",
+      "ja": "範囲設定",
+      "zh-Hant": "範圍設定"
+    },
+    "拖动端点与中点": {
+      "en": "Drag endpoints and midpoint",
+      "ja": "端点と中点をドラッグ",
+      "zh-Hant": "拖動端點與中點"
+    },
+    "拖动圆心与边缘": {
+      "en": "Drag center and edge",
+      "ja": "中心と縁をドラッグ",
+      "zh-Hant": "拖動圓心與邊緣"
+    },
+    "边缘羽化": {
+      "en": "Edge feather",
+      "ja": "境界のぼかし",
+      "zh-Hant": "邊緣羽化"
+    },
+    "已反相": {
+      "en": "Inverted",
+      "ja": "反転中",
+      "zh-Hant": "已反相"
+    },
+    "反相": {
+      "en": "Invert",
+      "ja": "反転",
+      "zh-Hant": "反相"
+    },
+    "不透明度": {
+      "en": "Opacity",
+      "ja": "不透明度",
+      "zh-Hant": "不透明度"
+    },
+    "冷暖": {
+      "en": "Warmth",
+      "ja": "暖かさ",
+      "zh-Hant": "冷暖"
+    },
+    "新配方": {
+      "en": "New recipe",
+      "ja": "新規設定",
+      "zh-Hant": "新配方"
+    },
+    "线性 DNG": {
+      "en": "Linear DNG",
+      "ja": "リニア DNG",
+      "zh-Hant": "線性 DNG"
+    },
+    "位深": {
+      "en": "Bit depth",
+      "ja": "ビット深度",
+      "zh-Hant": "位深"
+    },
+    "8 bit / 通道": {
+      "en": "8-bit/channel",
+      "ja": "8 bit/チャンネル",
+      "zh-Hant": "8 bit / 通道"
+    },
+    "16 bit / 通道": {
+      "en": "16-bit/channel",
+      "ja": "16 bit/チャンネル",
+      "zh-Hant": "16 bit / 通道"
+    },
+    "色彩空间": {
+      "en": "Color space",
+      "ja": "色空間",
+      "zh-Hant": "色彩空間"
+    },
+    "品质": {
+      "en": "Quality",
+      "ja": "品質",
+      "zh-Hant": "品質"
+    },
+    "输出尺寸": {
+      "en": "Output size",
+      "ja": "出力サイズ",
+      "zh-Hant": "輸出尺寸"
+    },
+    "原始像素尺寸": {
+      "en": "Original pixel dimensions",
+      "ja": "元のピクセル寸法",
+      "zh-Hant": "原始畫素尺寸"
+    },
+    "长边 1920 px": {
+      "en": "Long edge 1920 px",
+      "ja": "長辺 1920 px",
+      "zh-Hant": "長邊 1920 px"
+    },
+    "长边 2560 px": {
+      "en": "Long edge 2560 px",
+      "ja": "長辺 2560 px",
+      "zh-Hant": "長邊 2560 px"
+    },
+    "长边 3840 px": {
+      "en": "Long edge 3840 px",
+      "ja": "長辺 3840 px",
+      "zh-Hant": "長邊 3840 px"
+    },
+    "文件命名": {
+      "en": "File naming",
+      "ja": "ファイル名の付け方",
+      "zh-Hant": "檔案命名"
+    },
+    "原文件名_胶片名称": {
+      "en": "Original filename_film name",
+      "ja": "元のファイル名_フィルム名",
+      "zh-Hant": "原檔名_膠片名稱"
+    },
+    "原文件名": {
+      "en": "Original filename",
+      "ja": "元のファイル名",
+      "zh-Hant": "原檔名"
+    },
+    "子文件夹": {
+      "en": "Subfolder",
+      "ja": "サブフォルダー",
+      "zh-Hant": "子資料夾"
+    },
+    "输出子文件夹": {
+      "en": "Output subfolder",
+      "ja": "出力サブフォルダー",
+      "zh-Hant": "輸出子資料夾"
+    },
+    "文件重名": {
+      "en": "Name conflict",
+      "ja": "同名ファイル",
+      "zh-Hant": "檔案重名"
+    },
+    "自动编号": {
+      "en": "Number automatically",
+      "ja": "自動で連番を付ける",
+      "zh-Hant": "自動編號"
+    },
+    "跳过已存在文件": {
+      "en": "Skip existing files",
+      "ja": "既存ファイルをスキップ",
+      "zh-Hant": "跳過已存在檔案"
+    },
+    "导出后打开文件夹：开启": {
+      "en": "Open folder after export: On",
+      "ja": "書き出し後にフォルダーを開く：オン",
+      "zh-Hant": "匯出後開啟資料夾：開啟"
+    },
+    "导出后打开文件夹：关闭": {
+      "en": "Open folder after export: Off",
+      "ja": "書き出し後にフォルダーを開く：オフ",
+      "zh-Hant": "匯出後開啟資料夾：關閉"
+    },
+    "保存配方": {
+      "en": "Save recipe",
+      "ja": "設定を保存",
+      "zh-Hant": "儲存配方"
+    },
+    "原图与编辑结果分界": {
+      "en": "Before/after divider",
+      "ja": "元画像と調整後の境界",
+      "zh-Hant": "原圖與編輯結果分界"
+    },
+    "左侧为原图，右侧为编辑结果。左右方向键移动，Home 和 End 查看两侧，双击或按 0 居中，B 退出对比。": {
+      "en": "Original on the left, edited on the right. Arrows move the divider; Home/End show either side; double-click or 0 centers it; B exits comparison.",
+      "ja": "左が元画像、右が調整後。左右キーで境界を移動、Home/End で片側を表示。ダブルクリックまたは 0 で中央、B で比較終了。",
+      "zh-Hant": "左側為原圖，右側為編輯結果。左右方向鍵移動，Home 和 End 檢視兩側，雙擊或按 0 居中，B 退出對比。"
+    },
+    "搜索文件名或文件夹": {
+      "en": "Search filename or folder",
+      "ja": "ファイル名またはフォルダーで検索",
+      "zh-Hant": "搜尋檔名或資料夾"
+    },
+    "搜索当前会话照片": {
+      "en": "Search current session photos",
+      "ja": "現在のセッション内を検索",
+      "zh-Hant": "搜尋當前會話照片"
+    },
+    "导入顺序": {
+      "en": "Import order",
+      "ja": "読み込み順",
+      "zh-Hant": "匯入順序"
+    },
+    "文件名 A—Z": {
+      "en": "Filename A–Z",
+      "ja": "ファイル名 A〜Z",
+      "zh-Hant": "檔名 A—Z"
+    },
+    "文件名 Z—A": {
+      "en": "Filename Z–A",
+      "ja": "ファイル名 Z〜A",
+      "zh-Hant": "檔名 Z—A"
+    },
+    "已选中，": {
+      "en": "Selected, ",
+      "ja": "選択済み、",
+      "zh-Hant": "已選中，"
+    },
+    "双击编辑；Ctrl或Shift多选": {
+      "en": "Double-click to edit; Ctrl or Shift for multiple selection",
+      "ja": "ダブルクリックで編集。Ctrl または Shift で複数選択",
+      "zh-Hant": "雙擊編輯；Ctrl或Shift多選"
+    },
+    "仅从当前会话移除，保留磁盘原片": {
+      "en": "Remove from this session only; keep originals on disk",
+      "ja": "現在のセッションからのみ除外。元ファイルは保持",
+      "zh-Hant": "僅從當前會話移除，保留磁碟原片"
+    },
+    "显示器色彩管理：开启": {
+      "en": "Display color management: On",
+      "ja": "ディスプレイのカラーマネジメント：オン",
+      "zh-Hant": "顯示器色彩管理：開啟"
+    },
+    "显示器色彩管理：关闭": {
+      "en": "Display color management: Off",
+      "ja": "ディスプレイのカラーマネジメント：オフ",
+      "zh-Hant": "顯示器色彩管理：關閉"
+    },
+    "软打样：开启": {
+      "en": "Soft proofing: On",
+      "ja": "ソフト校正：オン",
+      "zh-Hant": "軟打樣：開啟"
+    },
+    "软打样：关闭": {
+      "en": "Soft proofing: Off",
+      "ja": "ソフト校正：オフ",
+      "zh-Hant": "軟打樣：關閉"
+    },
+    "打样空间": {
+      "en": "Proofing space",
+      "ja": "校正用色空間",
+      "zh-Hant": "打樣空間"
+    },
+    "选择打样 ICC…": {
+      "en": "Choose proofing ICC…",
+      "ja": "校正用 ICC を選択…",
+      "zh-Hant": "選擇打樣 ICC…"
+    },
+    "超色域提示：开启": {
+      "en": "Gamut warning: On",
+      "ja": "色域外警告：オン",
+      "zh-Hant": "超色域提示：開啟"
+    },
+    "超色域提示：关闭": {
+      "en": "Gamut warning: Off",
+      "ja": "色域外警告：オフ",
+      "zh-Hant": "超色域提示：關閉"
+    },
+    "资源": {
+      "en": "Resources",
+      "ja": "リソース",
+      "zh-Hant": "資源"
+    },
+    "预览缓存": {
+      "en": "Preview cache",
+      "ja": "プレビューキャッシュ",
+      "zh-Hant": "預覽快取"
+    },
+    "磁盘缓存": {
+      "en": "Disk cache",
+      "ja": "ディスクキャッシュ",
+      "zh-Hant": "磁碟快取"
+    },
+    "清理缓存": {
+      "en": "Clear cache",
+      "ja": "キャッシュを削除",
+      "zh-Hant": "清理快取"
+    },
+    "清理可重建的预览与计算缓存，保留照片及编辑参数": {
+      "en": "Clear rebuildable preview and processing caches; retain photos and edits",
+      "ja": "再生成可能なプレビューと計算キャッシュを削除。写真と調整は保持",
+      "zh-Hant": "清理可重建的預覽與計算快取，保留照片及編輯引數"
+    },
+    "界面": {
+      "en": "Interface",
+      "ja": "インターフェイス",
+      "zh-Hant": "介面"
+    },
+    "本机会话接口：开启": {
+      "en": "Local session API: On",
+      "ja": "ローカルセッション API：オン",
+      "zh-Hant": "本機會話介面：開啟"
+    },
+    "本机会话接口：关闭": {
+      "en": "Local session API: Off",
+      "ja": "ローカルセッション API：オフ",
+      "zh-Hant": "本機會話介面：關閉"
+    },
+    "记录保留": {
+      "en": "Record retention",
+      "ja": "記録の保持期間",
+      "zh-Hant": "記錄保留"
+    },
+    "1 天": {
+      "en": "1 day",
+      "ja": "1 日",
+      "zh-Hant": "1 天"
+    },
+    "3 天": {
+      "en": "3 days",
+      "ja": "3 日",
+      "zh-Hant": "3 天"
+    },
+    "7 天": {
+      "en": "7 days",
+      "ja": "7 日",
+      "zh-Hant": "7 天"
+    },
+    "14 天": {
+      "en": "14 days",
+      "ja": "14 日",
+      "zh-Hant": "14 天"
+    },
+    "30 天": {
+      "en": "30 days",
+      "ja": "30 日",
+      "zh-Hant": "30 天"
+    },
+    "导出诊断": {
+      "en": "Export diagnostics",
+      "ja": "診断情報を書き出す",
+      "zh-Hant": "匯出診斷"
+    },
+    "选择本地 ZIP 位置，仅包含版本、设置及可用的汇总计时；不包含照片或源文件路径": {
+      "en": "Choose a local ZIP location. Includes version, settings and available timing summaries; no photos or source paths",
+      "ja": "ZIP の保存先を選択。バージョン、設定、計測概要のみを含み、写真と元ファイルのパスは含みません",
+      "zh-Hant": "選擇本地 ZIP 位置，僅包含版本、設定及可用的彙總計時；不包含照片或原始檔路徑"
+    },
+    "不包含照片或源文件路径": {
+      "en": "No photos or source file paths",
+      "ja": "写真と元ファイルのパスは含みません",
+      "zh-Hant": "不包含照片或原始檔路徑"
+    },
+    "人像": {
+      "en": "Portrait",
+      "ja": "ポートレート",
+      "zh-Hant": "人像"
+    },
+    "风光": {
+      "en": "Landscape",
+      "ja": "風景",
+      "zh-Hant": "風光"
+    },
+    "原创": {
+      "en": "Original",
+      "ja": "オリジナル",
+      "zh-Hant": "原創"
+    },
+    "创作者风格": {
+      "en": "Creator style",
+      "ja": "クリエイタースタイル",
+      "zh-Hant": "創作者風格"
+    },
+    "XMP 部分转换": {
+      "en": "Partial XMP conversion",
+      "ja": "XMP の部分変換",
+      "zh-Hant": "XMP 部分轉換"
+    },
+    "本地预设": {
+      "en": "Local preset",
+      "ja": "ローカルプリセット",
+      "zh-Hant": "本地預設"
+    },
+    "暂无可用风格": {
+      "en": "No styles available",
+      "ja": "利用できるスタイルがありません",
+      "zh-Hant": "暫無可用風格"
+    },
+    "查看来源": {
+      "en": "View source",
+      "ja": "出典を表示",
+      "zh-Hant": "檢視來源"
+    },
+    "在浏览器中打开此风格的原始出处": {
+      "en": "Open this style's original source in a browser",
+      "ja": "このスタイルの出典をブラウザーで開く",
+      "zh-Hant": "在瀏覽器中開啟此風格的原始出處"
+    },
+    "应用至已选 ": {
+      "en": "Apply to selected ",
+      "ja": "選択した写真に適用：",
+      "zh-Hant": "應用至已選 "
+    },
+    " 张。保留各张曝光、白平衡、胶片、几何与蒙版。": {
+      "en": " photos. Retain each photo's exposure, white balance, film, geometry and masks.",
+      "ja": " 枚。各写真の露出、ホワイトバランス、フィルム、ジオメトリ、マスクを保持。",
+      "zh-Hant": " 張。保留各張曝光、白平衡、膠片、幾何與蒙版。"
+    },
+    "保留当前曝光、白平衡、胶片、几何与蒙版。": {
+      "en": "Retain current exposure, white balance, film, geometry and masks.",
+      "ja": "現在の露出、ホワイトバランス、フィルム、ジオメトリ、マスクを保持。",
+      "zh-Hant": "保留當前曝光、白平衡、膠片、幾何與蒙版。"
+    },
+    "应用至 ": {
+      "en": "Apply to ",
+      "ja": "適用先：",
+      "zh-Hant": "應用至 "
+    },
+    "应用风格": {
+      "en": "Apply style",
+      "ja": "スタイルを適用",
+      "zh-Hant": "應用風格"
+    },
+    "同步设置": {
+      "en": "Sync adjustments",
+      "ja": "調整を同期",
+      "zh-Hant": "同步設定"
+    },
+    "蒙版": {
+      "en": "Masks",
+      "ja": "マスク",
+      "zh-Hant": "蒙版"
+    },
+    "裁切与几何": {
+      "en": "Crop and geometry",
+      "ja": "切り抜きとジオメトリ",
+      "zh-Hant": "裁切與幾何"
+    },
+    "复制当前": {
+      "en": "Copy current",
+      "ja": "現在の調整をコピー",
+      "zh-Hant": "複製當前"
+    },
+    "粘贴到所选": {
+      "en": "Paste to selected",
+      "ja": "選択した写真にペースト",
+      "zh-Hant": "貼上到所選"
+    },
+    "同步至 ": {
+      "en": "Sync to ",
+      "ja": "同期先：",
+      "zh-Hant": "同步至 "
+    },
+    "同步至所选": {
+      "en": "Sync to selected",
+      "ja": "選択した写真に同期",
+      "zh-Hant": "同步至所選"
+    },
+    "将当前照片的所选分类应用到已选照片；每张可撤销，未勾选项保持不变": {
+      "en": "Apply selected adjustment groups to selected photos; each can be undone, unchecked groups are unchanged",
+      "ja": "選択した調整グループを選択写真に適用。各写真で取り消し可能。未選択の項目は保持",
+      "zh-Hant": "將當前照片的所選分類應用到已選照片；每張可撤銷，未勾選項保持不變"
+    },
+    "已展开，点击收起": {
+      "en": "Expanded; click to collapse",
+      "ja": "展開中。クリックで折りたたむ",
+      "zh-Hant": "已展開，點選收起"
+    },
+    "点击展开": {
+      "en": "Click to expand",
+      "ja": "クリックで展開",
+      "zh-Hant": "點選展開"
+    },
+    "准备就绪": {
+      "en": "Ready",
+      "ja": "準備完了",
+      "zh-Hant": "準備就緒"
+    },
+    "你的下一张作品": {
+      "en": "Your next photo",
+      "ja": "次の一枚",
+      "zh-Hant": "你的下一張作品"
+    },
+    "导入后检测镜头信息": {
+      "en": "Lens information is detected on import",
+      "ja": "読み込み時にレンズ情報を検出",
+      "zh-Hant": "匯入後檢測鏡頭資訊"
+    },
+    "导入照片": {
+      "en": "Import photos",
+      "ja": "写真を読み込む",
+      "zh-Hant": "匯入照片"
+    },
+    "照片已移除 · 原片保留": {
+      "en": "Photos removed · Originals retained",
+      "ja": "写真を除外 · 元ファイルを保持",
+      "zh-Hant": "照片已移除 · 原片保留"
+    },
+    "导入风格预设": {
+      "en": "Import style preset",
+      "ja": "スタイルプリセットを読み込む",
+      "zh-Hant": "匯入風格預設"
+    },
+    "风格预设 (*.sfpreset *.json *.xmp)": {
+      "en": "Style presets (*.sfpreset *.json *.xmp)",
+      "ja": "スタイルプリセット (*.sfpreset *.json *.xmp)",
+      "zh-Hant": "風格預設 (*.sfpreset *.json *.xmp)"
+    },
+    "正在精细显影…": {
+      "en": "Developing full detail…",
+      "ja": "高精細に現像中…",
+      "zh-Hant": "正在精細顯影…"
+    },
+    "正在加载原始像素并精细显影…": {
+      "en": "Loading original pixels and developing full detail…",
+      "ja": "元のピクセルを読み込み、高精細に現像中…",
+      "zh-Hant": "正在載入原始畫素並精細顯影…"
+    },
+    "选择导出位置": {
+      "en": "Choose export location",
+      "ja": "書き出し先を選択",
+      "zh-Hant": "選擇匯出位置"
+    },
+    "正在保存 RAW 原片…": {
+      "en": "Saving original RAW…",
+      "ja": "元の RAW を保存中…",
+      "zh-Hant": "正在儲存 RAW 原片…"
+    },
+    "正在完成当前照片，随后停止…": {
+      "en": "Finishing the current photo, then stopping…",
+      "ja": "現在の写真を完了してから停止します…",
+      "zh-Hant": "正在完成當前照片，隨後停止…"
+    },
+    "原片不在当前位置，请在资料库中重新定位文件夹。": {
+      "en": "Original not found here. Relocate its folder in the library.",
+      "ja": "元ファイルが見つかりません。ライブラリでフォルダーを再指定してください。",
+      "zh-Hant": "原片不在當前位置，請在資料庫中重新定位資料夾。"
+    },
+    "一次最多选择9张照片进行拼图": {
+      "en": "Select up to 9 photos for a composition",
+      "ja": "レイアウトには最大 9 枚まで選択できます",
+      "zh-Hant": "一次最多選擇9張照片進行拼圖"
+    },
+    "快速印放使用标定滤色，印相曝光与滤色已恢复默认；可撤销。": {
+      "en": "Fast print uses calibrated filtration. Print exposure and filters were reset; can be undone.",
+      "ja": "高速プリントは校正済みフィルターを使用します。プリント露出とフィルターを初期値に戻しました。取り消し可能です。",
+      "zh-Hant": "快速印放使用標定濾色，印相曝光與濾色已恢復預設；可撤銷。"
+    },
+    "切换后尺寸超出 4–200 mm 范围，请先调整尺寸。": {
+      "en": "Switching would exceed 4–200 mm. Adjust the size first.",
+      "ja": "変更後のサイズが 4〜200 mm の範囲を超えます。先にサイズを調整してください。",
+      "zh-Hant": "切換後尺寸超出 4–200 mm 範圍，請先調整尺寸。"
+    },
+    "界面缩放将在下次启动时生效": {
+      "en": "Interface scaling applies after restart",
+      "ja": "インターフェイスの拡大率は次回起動時に適用されます",
+      "zh-Hant": "介面縮放將在下次啟動時生效"
+    },
+    "诊断已保存": {
+      "en": "Diagnostics saved",
+      "ja": "診断情報を保存しました",
+      "zh-Hant": "診斷已儲存"
+    },
+    "剪贴板中没有可导入的本地照片。请复制照片文件或图片后按 Ctrl+V。": {
+      "en": "No importable local photos on the clipboard. Copy photo files or an image, then press Ctrl+V.",
+      "ja": "クリップボードに読み込める写真がありません。写真ファイルや画像をコピーして Ctrl+V を押してください。",
+      "zh-Hant": "剪貼簿中沒有可匯入的本地照片。請複製照片檔案或圖片後按 Ctrl+V。"
+    },
+    "每张照片最多可创建 32 个蒙版。": {
+      "en": "Each photo supports up to 32 masks.",
+      "ja": "写真ごとに最大 32 個のマスクを作成できます。",
+      "zh-Hant": "每張照片最多可建立 32 個蒙版。"
+    },
+    "线性": {
+      "en": "Linear",
+      "ja": "線形",
+      "zh-Hant": "線性"
+    },
+    "径向": {
+      "en": "Radial",
+      "ja": "円形",
+      "zh-Hant": "徑向"
+    },
+    "目标文件已存在，已按配方跳过": {
+      "en": "Destination exists; skipped according to the recipe",
+      "ja": "保存先が既存のため、設定に従いスキップしました",
+      "zh-Hant": "目標檔案已存在，已按配方跳過"
+    },
+    "RAW 原片仅适用于所选相机 RAW 文件；普通图片无法转换为 RAW。": {
+      "en": "Original RAW export requires selected camera RAW files. Standard images cannot be converted to RAW.",
+      "ja": "元の RAW 書き出しにはカメラ RAW ファイルが必要です。通常の画像は RAW に変換できません。",
+      "zh-Hant": "RAW 原片僅適用於所選相機 RAW 檔案；普通圖片無法轉換為 RAW。"
+    },
+    "请先选择需要导出的照片。": {
+      "en": "Select photos to export first.",
+      "ja": "書き出す写真を先に選択してください。",
+      "zh-Hant": "請先選擇需要匯出的照片。"
+    },
+    "所选导出格式不可用于当前照片。": {
+      "en": "The selected export format is unavailable for this photo.",
+      "ja": "選択した形式はこの写真に使用できません。",
+      "zh-Hant": "所選匯出格式不可用於當前照片。"
+    },
+    "正在压缩分享照片…": {
+      "en": "Encoding sharing photo…",
+      "ja": "共有用の写真を圧縮中…",
+      "zh-Hant": "正在壓縮分享照片…"
+    },
+    "正在导出原尺寸照片…": {
+      "en": "Exporting at original dimensions…",
+      "ja": "元のサイズで書き出し中…",
+      "zh-Hant": "正在匯出原尺寸照片…"
+    },
+    "此记录来自其他显影格式，保留原记录并从自然原片开始。": {
+      "en": "These edits use another development format. The original record is retained; starting from the natural source.",
+      "ja": "この調整記録は別の現像形式です。元の記録を保持し、自然な元画像から開始します。",
+      "zh-Hant": "此記錄來自其他顯影格式，保留原記錄並從自然原片開始。"
+    },
+    "剪贴板图片保存失败，请检查缓存目录空间。": {
+      "en": "Could not save the clipboard image. Check cache disk space.",
+      "ja": "クリップボードの画像を保存できません。キャッシュ先の空き容量を確認してください。",
+      "zh-Hant": "剪貼簿圖片儲存失敗，請檢查快取目錄空間。"
+    },
+    "预设文件过大（上限 2 MiB）": {
+      "en": "Preset file exceeds the 2 MiB limit",
+      "ja": "プリセットが上限の 2 MiB を超えています",
+      "zh-Hant": "預設檔案過大（上限 2 MiB）"
+    },
+    "预设依赖的色彩资源未安装": {
+      "en": "Required preset color resources are not installed",
+      "ja": "プリセットに必要なカラーリソースがインストールされていません",
+      "zh-Hant": "預設依賴的色彩資源未安裝"
+    },
+    "缓存已清理": {
+      "en": "Cache cleared",
+      "ja": "キャッシュを削除しました",
+      "zh-Hant": "快取已清理"
+    },
+    "读取原片": {
+      "en": "Read source",
+      "ja": "元画像を読み込み",
+      "zh-Hant": "讀取原片"
+    },
+    "编码写入": {
+      "en": "Encode and write",
+      "ja": "エンコードと書き込み",
+      "zh-Hant": "編碼寫入"
+    },
+    "随胶片": {
+      "en": "Follow film",
+      "ja": "フィルムに合わせる",
+      "zh-Hant": "隨膠片"
+    },
+    "最多保存64个导出配方": {
+      "en": "Up to 64 export recipes can be saved",
+      "ja": "書き出し設定は最大 64 個まで保存できます",
+      "zh-Hant": "最多儲存64個匯出配方"
+    },
+    "RAW · 相机原始文件": {
+      "en": "RAW · Original camera file",
+      "ja": "RAW · カメラの元ファイル",
+      "zh-Hant": "RAW · 相機原始檔案"
+    },
+    "未找到可靠的自动调整": {
+      "en": "No reliable automatic adjustment found",
+      "ja": "確実な自動調整を検出できませんでした",
+      "zh-Hant": "未找到可靠的自動調整"
+    },
+    "照片打开失败": {
+      "en": "Could not open photo",
+      "ja": "写真を開けませんでした",
+      "zh-Hant": "照片開啟失敗"
+    },
+    "导出完成": {
+      "en": "Export complete",
+      "ja": "書き出し完了",
+      "zh-Hant": "匯出完成"
+    },
+    "导出失败": {
+      "en": "Export failed",
+      "ja": "書き出し失敗",
+      "zh-Hant": "匯出失敗"
+    },
+    "显影失败 · 点击重试": {
+      "en": "Development failed · Click to retry",
+      "ja": "現像失敗 · クリックして再試行",
+      "zh-Hant": "顯影失敗 · 點選重試"
+    },
+    "已停止": {
+      "en": "Stopped",
+      "ja": "停止しました",
+      "zh-Hant": "已停止"
+    },
+    "完成": {
+      "en": "Complete",
+      "ja": "完了",
+      "zh-Hant": "完成"
+    },
+    "正在显影片边": {
+      "en": "Developing film rebate",
+      "ja": "フィルムの縁を現像中",
+      "zh-Hant": "正在顯影片邊"
+    },
+    "准备画布": {
+      "en": "Preparing canvas",
+      "ja": "キャンバスを準備中",
+      "zh-Hant": "準備畫布"
+    },
+    "正在停止": {
+      "en": "Stopping",
+      "ja": "停止中",
+      "zh-Hant": "正在停止"
+    },
+    "选择排版导出位置": {
+      "en": "Choose composition export location",
+      "ja": "レイアウトの書き出し先を選択",
+      "zh-Hant": "選擇排版匯出位置"
+    },
+    "原像素排版超出文件尺寸限制，请选择导出长边": {
+      "en": "Composition exceeds file-size limits at original pixels; choose an output long edge",
+      "ja": "元のピクセル数ではファイルサイズの制限を超えます。出力の長辺を選択してください",
+      "zh-Hant": "原畫素排版超出檔案尺寸限制，請選擇匯出長邊"
+    },
+    "原像素排版超出文件尺寸限制，请明确选择导出长边": {
+      "en": "Composition exceeds file-size limits at original pixels; explicitly choose an output long edge",
+      "ja": "元のピクセル数ではファイルサイズの制限を超えます。出力の長辺を指定してください",
+      "zh-Hant": "原畫素排版超出檔案尺寸限制，請明確選擇匯出長邊"
+    },
+    "临时磁盘空间不足，请选择较小的排版输出尺寸": {
+      "en": "Insufficient temporary disk space; choose a smaller composition output size",
+      "ja": "一時ディスクの容量が不足しています。小さいレイアウト出力サイズを選択してください",
+      "zh-Hant": "臨時磁碟空間不足，請選擇較小的排版輸出尺寸"
+    },
+    "排版导出已取消": {
+      "en": "Composition export canceled",
+      "ja": "レイアウトの書き出しを取り消しました",
+      "zh-Hant": "排版匯出已取消"
+    },
+    "预览已停止": {
+      "en": "Preview stopped",
+      "ja": "プレビューを停止しました",
+      "zh-Hant": "預覽已停止"
+    },
+    "全部照片": {
+      "en": "All photos",
+      "ja": "すべての写真",
+      "zh-Hant": "全部照片"
+    },
+    "最近导入": {
+      "en": "Recently imported",
+      "ja": "最近読み込んだ写真",
+      "zh-Hant": "最近匯入"
+    },
+    "最近拍摄": {
+      "en": "Recently captured",
+      "ja": "最近撮影した写真",
+      "zh-Hant": "最近拍攝"
+    },
+    "未留用": {
+      "en": "Not kept",
+      "ja": "不採用",
+      "zh-Hant": "未留用"
+    },
+    "库内原片": {
+      "en": "Managed originals",
+      "ja": "ライブラリ内の元ファイル",
+      "zh-Hant": "庫內原片"
+    },
+    "新建拍摄会话": {
+      "en": "New session",
+      "ja": "新規セッション",
+      "zh-Hant": "新建拍攝會話"
+    },
+    "新建资料库": {
+      "en": "New library",
+      "ja": "新規ライブラリ",
+      "zh-Hant": "新建資料庫"
+    },
+    "资料库连接已关闭，请重新打开。未保存的调整仍保留在当前编辑器。": {
+      "en": "Library connection closed. Reopen it; unsaved adjustments remain in the editor.",
+      "ja": "ライブラリ接続が閉じました。再度開いてください。未保存の調整はエディターに保持されています。",
+      "zh-Hant": "資料庫連線已關閉，請重新開啟。未儲存的調整仍保留在當前編輯器。"
+    },
+    "打开资料库或拍摄会话": {
+      "en": "Open library or session",
+      "ja": "ライブラリまたはセッションを開く",
+      "zh-Hant": "開啟資料庫或拍攝會話"
+    },
+    "选择 Capture One 资料库": {
+      "en": "Choose Capture One catalog",
+      "ja": "Capture One カタログを選択",
+      "zh-Hant": "選擇 Capture One 資料庫"
+    },
+    "添加自动刷新的照片文件夹": {
+      "en": "Add automatically refreshed photo folder",
+      "ja": "自動更新する写真フォルダーを追加",
+      "zh-Hant": "新增自動重新整理的照片資料夾"
+    },
+    "重新定位原片文件夹": {
+      "en": "Relocate original folder",
+      "ja": "元ファイルのフォルダーを再指定",
+      "zh-Hant": "重新定位原片資料夾"
+    },
+    "资料库操作失败。": {
+      "en": "Library operation failed.",
+      "ja": "ライブラリの操作に失敗しました。",
+      "zh-Hant": "資料庫操作失敗。"
+    },
+    "请先将照片移出相册，再删除相册。原片不会删除。": {
+      "en": "Remove photos from the album before deleting it. Originals will not be deleted.",
+      "ja": "先に写真をアルバムから除外してください。元ファイルは削除されません。",
+      "zh-Hant": "請先將照片移出相簿，再刪除相簿。原片不會刪除。"
+    },
+    "另存为独立资料库": {
+      "en": "Save as independent library",
+      "ja": "独立したライブラリとして保存",
+      "zh-Hant": "另存為獨立資料庫"
+    },
+    "未命名": {
+      "en": "Untitled",
+      "ja": "名称未設定",
+      "zh-Hant": "未命名"
+    },
+    "照片列表读取失败。": {
+      "en": "Could not read the photo list.",
+      "ja": "写真一覧を読み込めませんでした。",
+      "zh-Hant": "照片列表讀取失敗。"
+    },
+    "文件夹刷新失败。": {
+      "en": "Could not refresh the folder.",
+      "ja": "フォルダーを更新できませんでした。",
+      "zh-Hant": "資料夾重新整理失敗。"
+    },
+    "此变体已由另一处修改。可重新载入，或将当前调整另存为新变体。": {
+      "en": "This variant was modified elsewhere. Reload it or save current adjustments as a new variant.",
+      "ja": "このバリアントは別の場所で変更されました。再読み込みするか、現在の調整を新しいバリアントに保存してください。",
+      "zh-Hant": "此變體已由另一處修改。可重新載入，或將當前調整另存為新變體。"
+    },
+    "调整尚未保存。": {
+      "en": "Adjustments have not been saved.",
+      "ja": "調整はまだ保存されていません。",
+      "zh-Hant": "調整尚未儲存。"
+    },
+    "请选择文件或输入文件名。": {
+      "en": "Select a file or enter a filename.",
+      "ja": "ファイルを選択するか、ファイル名を入力してください。",
+      "zh-Hant": "請選擇檔案或輸入檔名。"
+    },
+    "所选文件不存在，请检查路径。": {
+      "en": "Selected file does not exist. Check the path.",
+      "ja": "選択したファイルがありません。パスを確認してください。",
+      "zh-Hant": "所選檔案不存在，請檢查路徑。"
+    },
+    "请选择存在的文件夹。": {
+      "en": "Choose an existing folder.",
+      "ja": "既存のフォルダーを選択してください。",
+      "zh-Hant": "請選擇存在的資料夾。"
+    },
+    "此名称已存在，请换一个文件名，原有文件将保留。": {
+      "en": "This name already exists. Choose another; the existing file is retained.",
+      "ja": "同じ名前が存在します。別の名前を指定してください。既存のファイルは保持します。",
+      "zh-Hant": "此名稱已存在，請換一個檔名，原有檔案將保留。"
+    },
+    "保存文件夹不存在，请重新选择。": {
+      "en": "The destination folder does not exist. Choose another folder.",
+      "ja": "保存先フォルダーがありません。別のフォルダーを選択してください。",
+      "zh-Hant": "儲存資料夾不存在，請重新選擇。"
+    },
+    "关闭对话框": {
+      "en": "Close dialog",
+      "ja": "ダイアログを閉じる",
+      "zh-Hant": "關閉對話方塊"
+    },
+    "文件类型": {
+      "en": "File type",
+      "ja": "ファイルの種類",
+      "zh-Hant": "檔案型別"
+    },
+    "选择文件夹": {
+      "en": "Choose folder",
+      "ja": "フォルダーを選択",
+      "zh-Hant": "選擇資料夾"
+    },
+    "未知设置项": {
+      "en": "Unknown setting",
+      "ja": "不明な設定項目",
+      "zh-Hant": "未知設定項"
+    },
+    "设置值必须是有效数字": {
+      "en": "Setting must be a valid number",
+      "ja": "設定には有効な数値が必要です",
+      "zh-Hant": "設定值必須是有效數字"
+    },
+    "不支持的预览尺寸": {
+      "en": "Unsupported preview size",
+      "ja": "未対応のプレビューサイズ",
+      "zh-Hant": "不支援的預覽尺寸"
+    },
+    "高位深图片需要 RGB 矩阵型 ICC 配置": {
+      "en": "High-bit-depth images require a matrix RGB ICC profile",
+      "ja": "高ビット深度画像にはマトリクス型 RGB ICC プロファイルが必要です",
+      "zh-Hant": "高位深圖片需要 RGB 矩陣型 ICC 配置"
+    },
+    "图片 ICC 配置损坏": {
+      "en": "Image ICC profile is damaged",
+      "ja": "画像の ICC プロファイルが破損しています",
+      "zh-Hant": "圖片 ICC 配置損壞"
+    },
+    "图片 ICC 曲线不受支持": {
+      "en": "Unsupported image ICC curve",
+      "ja": "画像の ICC カーブに対応していません",
+      "zh-Hant": "圖片 ICC 曲線不受支援"
+    },
+    "图片 ICC 参数曲线损坏": {
+      "en": "Image ICC parametric curve is damaged",
+      "ja": "画像の ICC パラメトリックカーブが破損しています",
+      "zh-Hant": "圖片 ICC 引數曲線損壞"
+    },
+    "图片 ICC gamma 无效": {
+      "en": "Invalid image ICC gamma",
+      "ja": "画像の ICC ガンマが無効です",
+      "zh-Hant": "圖片 ICC gamma 無效"
+    },
+    "图片 ICC 曲线斜率无效": {
+      "en": "Invalid image ICC curve slope",
+      "ja": "画像の ICC カーブの傾きが無効です",
+      "zh-Hant": "圖片 ICC 曲線斜率無效"
+    },
+    "图片 ICC 标签越界": {
+      "en": "Image ICC tag is out of bounds",
+      "ja": "画像の ICC タグが範囲外です",
+      "zh-Hant": "圖片 ICC 標籤越界"
+    },
+    "图片 ICC 曲线损坏": {
+      "en": "Image ICC curve is damaged",
+      "ja": "画像の ICC カーブが破損しています",
+      "zh-Hant": "圖片 ICC 曲線損壞"
+    },
+    "高位深图片需要灰度或 RGB 像素": {
+      "en": "High-bit-depth images require grayscale or RGB pixels",
+      "ja": "高ビット深度画像にはグレースケールまたは RGB ピクセルが必要です",
+      "zh-Hant": "高位深圖片需要灰度或 RGB 畫素"
+    },
+    "暂不支持此高位深 LUT 型 ICC；请使用矩阵型 RGB 配置": {
+      "en": "This high-bit-depth LUT ICC is unsupported; use a matrix RGB profile",
+      "ja": "この高ビット深度 LUT 型 ICC は未対応です。マトリクス型 RGB プロファイルを使用してください",
+      "zh-Hant": "暫不支援此高位深 LUT 型 ICC；請使用矩陣型 RGB 配置"
+    },
+    "高位深图片读取失败": {
+      "en": "Could not read high-bit-depth image",
+      "ja": "高ビット深度画像を読み込めませんでした",
+      "zh-Hant": "高位深圖片讀取失敗"
+    },
+    "临时磁盘空间不足，无法保存原尺寸高位深显影缓冲": {
+      "en": "Insufficient temporary disk space for the original-size high-bit-depth development buffer",
+      "ja": "元サイズの高ビット深度現像バッファー用の一時ディスク容量が不足しています",
+      "zh-Hant": "臨時磁碟空間不足，無法儲存原尺寸高位深顯影緩衝"
+    },
+    "当前片幅和空间光晕需要的邻域过大，超过有界显影内存预算；请增大片幅或降低光晕": {
+      "en": "Current format and halation exceed the bounded development memory budget; increase format size or reduce halation",
+      "ja": "現在の判型とハレーションが現像メモリの上限を超えます。判型を大きくするかハレーションを下げてください",
+      "zh-Hant": "當前片幅和空間光暈需要的鄰域過大，超過有界顯影記憶體預算；請增大片幅或降低光暈"
+    },
+    "原生光谱引擎初始化或渲染失败": {
+      "en": "Native spectral engine initialization or rendering failed",
+      "ja": "ネイティブスペクトルエンジンの初期化または描画に失敗しました",
+      "zh-Hant": "原生光譜引擎初始化或渲染失敗"
+    },
+    "原生光谱不可用": {
+      "en": "Native spectral processing unavailable",
+      "ja": "ネイティブスペクトル処理を利用できません",
+      "zh-Hant": "原生光譜不可用"
+    },
+    "原生编辑引擎不可用": {
+      "en": "Native editing engine unavailable",
+      "ja": "ネイティブ編集エンジンを利用できません",
+      "zh-Hant": "原生編輯引擎不可用"
+    },
+    "当前引擎尚未包含独立半格印放接口，请重新构建引擎": {
+      "en": "The engine lacks the independent half-frame print interface; rebuild the engine",
+      "ja": "現在のエンジンには独立したハーフ判プリント API がありません。再ビルドしてください",
+      "zh-Hant": "當前引擎尚未包含獨立半格印放介面，請重新構建引擎"
+    },
+    "原生光谱返回尺寸不匹配，已阻止缩小的导出": {
+      "en": "Native spectral output dimensions mismatch; reduced-resolution export was blocked",
+      "ja": "スペクトル出力のサイズが一致せず、縮小された書き出しを防止しました",
+      "zh-Hant": "原生光譜返回尺寸不匹配，已阻止縮小的匯出"
+    },
+    "全图光学峰值无效，已阻止分块产生不一致的高光": {
+      "en": "Invalid global optical peak; inconsistent tiled highlights were prevented",
+      "ja": "全体の光学ピークが無効なため、タイル間のハイライト不整合を防止しました",
+      "zh-Hant": "全圖光學峰值無效，已阻止分塊產生不一致的高光"
+    },
+    "胶片画布与原生片门几何不一致": {
+      "en": "Film canvas and native gate geometry do not match",
+      "ja": "フィルムキャンバスと画枠のジオメトリが一致しません",
+      "zh-Hant": "膠片畫布與原生片門幾何不一致"
+    },
+    "日期曝光返回尺寸不匹配": {
+      "en": "Date imprint output dimensions mismatch",
+      "ja": "日付写し込みの出力サイズが一致しません",
+      "zh-Hant": "日期曝光返回尺寸不匹配"
+    },
+    "导出已取消": {
+      "en": "Export canceled",
+      "ja": "書き出しを取り消しました",
+      "zh-Hant": "匯出已取消"
+    },
+    "文件扩展名与配方不一致": {
+      "en": "File extension does not match the recipe",
+      "ja": "拡張子と書き出し設定が一致しません",
+      "zh-Hant": "副檔名與配方不一致"
+    },
+    "排版画布不能导出为原始相机RAW": {
+      "en": "A composition cannot be exported as original camera RAW",
+      "ja": "レイアウトはカメラの元 RAW として書き出せません",
+      "zh-Hant": "排版畫布不能匯出為原始相機RAW"
+    },
+    "未知导出格式。": {
+      "en": "Unknown export format.",
+      "ja": "不明な書き出し形式です。",
+      "zh-Hant": "未知匯出格式。"
+    },
+    "RAW 批量备份要求所选照片全部为相机 RAW；不会静默跳过普通图片。": {
+      "en": "RAW batch backup requires all selected files to be camera RAW. Standard images will not be silently skipped.",
+      "ja": "RAW の一括バックアップでは全ファイルがカメラ RAW である必要があります。通常画像を黙ってスキップしません。",
+      "zh-Hant": "RAW 批次備份要求所選照片全部為相機 RAW；不會靜默跳過普通圖片。"
+    },
+    "请先选择照片": {
+      "en": "Select a photo first",
+      "ja": "先に写真を選択してください",
+      "zh-Hant": "請先選擇照片"
+    },
+    "RAW原片仅适用于相机RAW文件": {
+      "en": "Original RAW export requires a camera RAW file",
+      "ja": "元の RAW 書き出しにはカメラ RAW ファイルが必要です",
+      "zh-Hant": "RAW原片僅適用於相機RAW檔案"
+    },
+    "语言": {
+      "en": "Language",
+      "ja": "言語",
+      "zh-Hant": "語言"
+    },
+    "应用语言": {
+      "en": "App language",
+      "ja": "アプリの言語",
+      "zh-Hant": "應用語言"
+    },
+    "显示语言": {
+      "en": "Display language",
+      "ja": "表示言語",
+      "zh-Hant": "顯示語言"
+    },
+    "简体中文": {
+      "en": "简体中文",
+      "ja": "简体中文",
+      "zh-Hant": "简体中文"
+    },
+    "繁體中文": {
+      "en": "繁體中文",
+      "ja": "繁體中文",
+      "zh-Hant": "繁體中文"
+    },
+    "English": {
+      "en": "English",
+      "ja": "English",
+      "zh-Hant": "English"
+    },
+    "日本語": {
+      "en": "日本語",
+      "ja": "日本語",
+      "zh-Hant": "日本語"
+    },
+    "Ctrl+O 导入 / Ctrl+V 粘贴 / Ctrl+A 全选\nCtrl / Shift 点击多选 · Ctrl+E 导出所选\nDelete 移除所选（保留原片）\n滚轮缩放 · 拖动画面 · 双击适合/100%\nCtrl+0/1/2 适合/100%/200%\nC 裁切 / B 对比 / Ctrl+Z 撤销 / Ctrl+Y 重做": {
+      "en": "Ctrl+O import / Ctrl+V paste / Ctrl+A select all\nCtrl / Shift-click to select · Ctrl+E export selected\nDelete removes selected (originals retained)\nScroll to zoom · Drag to pan · Double-click Fit/100%\nCtrl+0/1/2 Fit/100%/200%\nC crop / B compare / Ctrl+Z undo / Ctrl+Y redo",
+      "ja": "Ctrl+O 読み込み / Ctrl+V ペースト / Ctrl+A すべて選択\nCtrl / Shift クリックで複数選択 · Ctrl+E 選択を書き出す\nDelete で除外（元ファイル保持）\nホイールで拡大縮小 · ドラッグで移動 · ダブルクリックで全体/100%\nCtrl+0/1/2 全体/100%/200%\nC 切り抜き / B 比較 / Ctrl+Z 取消 / Ctrl+Y やり直し",
+      "zh-Hant": "Ctrl+O 匯入 / Ctrl+V 貼上 / Ctrl+A 全選\nCtrl / Shift 點選多選 · Ctrl+E 匯出所選\nDelete 移除所選（保留原片）\n滾輪縮放 · 拖動畫面 · 雙擊適合/100%\nCtrl+0/1/2 適合/100%/200%\nC 裁切 / B 對比 / Ctrl+Z 撤銷 / Ctrl+Y 重做"
+    },
+    "正在读取来源": {
+      "en": "Reading sources",
+      "ja": "読み込み元を確認中",
+      "zh-Hant": "正在讀取來源"
+    },
+    "导入自": {
+      "en": "Import from",
+      "ja": "読み込み元",
+      "zh-Hant": "匯入自"
+    },
+    "选择照片来源": {
+      "en": "Choose photo source",
+      "ja": "写真の読み込み元を選択",
+      "zh-Hant": "選擇照片來源"
+    },
+    "包含子文件夹": {
+      "en": "Include subfolders",
+      "ja": "サブフォルダーを含む",
+      "zh-Hant": "包含子資料夾"
+    },
+    "停止读取": {
+      "en": "Stop reading",
+      "ja": "読み込みを停止",
+      "zh-Hant": "停止讀取"
+    },
+    "加入": {
+      "en": "Add to",
+      "ja": "追加先",
+      "zh-Hant": "加入"
+    },
+    "当前会话": {
+      "en": "Current session",
+      "ja": "現在のセッション",
+      "zh-Hant": "當前會話"
+    },
+    "原文件保留在原位置": {
+      "en": "Original files remain in their current locations",
+      "ja": "元ファイルは現在の場所に保持します",
+      "zh-Hant": "原檔案保留在原位置"
+    },
+    "取消选择": {
+      "en": "Deselect all",
+      "ja": "選択を解除",
+      "zh-Hant": "取消選擇"
+    },
+    "已在当前会话": {
+      "en": "Already in the current session",
+      "ja": "現在のセッションに追加済み",
+      "zh-Hant": "已在當前會話"
+    },
+    "已选择，空格取消": {
+      "en": "Selected; Space to deselect",
+      "ja": "選択済み。スペースで解除",
+      "zh-Hant": "已選擇，空格取消"
+    },
+    "未选择，空格选择": {
+      "en": "Not selected; Space to select",
+      "ja": "未選択。スペースで選択",
+      "zh-Hant": "未選擇，空格選擇"
+    },
+    "正在查找照片": {
+      "en": "Looking for photos",
+      "ja": "写真を検索中",
+      "zh-Hant": "正在查詢照片"
+    },
+    "尚未选择来源": {
+      "en": "No source selected",
+      "ja": "読み込み元が選択されていません",
+      "zh-Hant": "尚未選擇來源"
+    },
+    "无法预览": {
+      "en": "Preview unavailable",
+      "ja": "プレビューできません",
+      "zh-Hant": "無法預覽"
+    },
+    "选择照片以预览": {
+      "en": "Select a photo to preview",
+      "ja": "写真を選択してプレビュー",
+      "zh-Hant": "選擇照片以預覽"
+    },
+    "正在读取预览": {
+      "en": "Loading preview",
+      "ja": "プレビューを読み込み中",
+      "zh-Hant": "正在讀取預覽"
+    },
+    "已在会话中": {
+      "en": "Already in session",
+      "ja": "セッションに追加済み",
+      "zh-Hant": "已在會話中"
+    },
+    "加入当前会话": {
+      "en": "Add to current session",
+      "ja": "現在のセッションに追加",
+      "zh-Hant": "加入當前會話"
+    },
+    "16 bit 底片密度编码，附带显示 LUT。不包含相纸和成品调色。": {
+      "en": "16-bit negative density encoding with viewing LUTs. Paper and final color adjustments are excluded.",
+      "ja": "16 bit のネガ濃度符号化と表示用 LUT。印画紙と最終カラー調整は含まれません。",
+      "zh-Hant": "16 bit 底片密度編碼，附帶顯示 LUT。不包含相紙和成品調色。"
+    },
+    "新照片": {
+      "en": "New photos",
+      "ja": "新しい写真",
+      "zh-Hant": "新照片"
+    },
+    "关于": {
+      "en": "About",
+      "ja": "このアプリについて",
+      "zh-Hant": "關於"
+    },
+    "使用当前胶片设置": {
+      "en": "Use current film settings",
+      "ja": "現在のフィルム設定を使用",
+      "zh-Hant": "使用當前膠片設定"
+    },
+    "检查参考引擎更新": {
+      "en": "Check reference engine releases",
+      "ja": "参考エンジンのリリースを確認",
+      "zh-Hant": "檢查參考引擎更新"
+    },
+    "查看发布页面": {
+      "en": "View release page",
+      "ja": "リリースページを表示",
+      "zh-Hant": "檢視釋出頁面"
+    },
+    "许可证与致谢": {
+      "en": "Licenses and acknowledgments",
+      "ja": "ライセンスと謝辞",
+      "zh-Hant": "許可證與致謝"
+    },
+    "正在检查参考引擎更新…": {
+      "en": "Checking reference engine releases…",
+      "ja": "参考エンジンのリリースを確認中…",
+      "zh-Hant": "正在檢查參考引擎更新…"
+    },
+    "暂时无法连接更新来源，请稍后重试。": {
+      "en": "Unable to reach the update source. Try again later.",
+      "ja": "更新元に接続できません。後でもう一度お試しください。",
+      "zh-Hant": "暫時無法連線更新來源，請稍後重試。"
+    },
+    "Cineon DI 需要开启胶片显影": {
+      "en": "Cineon DI requires film development to be enabled",
+      "ja": "Cineon DI にはフィルム現像を有効にする必要があります",
+      "zh-Hant": "Cineon DI 需要開啟膠片顯影"
+    },
+    "反转片没有负片中间片，请使用普通图像配方": {
+      "en": "Reversal film has no negative intermediate; use a standard image recipe",
+      "ja": "リバーサルフィルムにはネガ中間素材がありません。通常の画像設定を使用してください",
+      "zh-Hant": "反轉片沒有負片中間片，請使用普通影象配方"
+    },
+    "缺少 Cineon DI 专用显示 LUT": {
+      "en": "Cineon DI viewing LUTs are missing",
+      "ja": "Cineon DI 用の表示 LUT がありません",
+      "zh-Hant": "缺少 Cineon DI 專用顯示 LUT"
+    },
+    "已停止读取": {
+      "en": "Reading stopped",
+      "ja": "読み込みを停止しました",
+      "zh-Hant": "已停止讀取"
+    },
+    "正在加入当前会话": {
+      "en": "Adding to current session",
+      "ja": "現在のセッションに追加中",
+      "zh-Hant": "正在加入當前會話"
+    },
+    "选择照片文件夹": {
+      "en": "Choose photo folder",
+      "ja": "写真フォルダーを選択",
+      "zh-Hant": "選擇照片資料夾"
+    },
+    "没有找到支持的照片": {
+      "en": "No supported photos found",
+      "ja": "対応する写真が見つかりません",
+      "zh-Hant": "沒有找到支援的照片"
+    },
+    "未启用镜头处理": {
+      "en": "Lens processing is off",
+      "ja": "レンズ処理は無効です",
+      "zh-Hant": "未啟用鏡頭處理"
+    },
+    "镜头矫正": {
+      "en": "Lens correction",
+      "ja": "レンズ補正",
+      "zh-Hant": "鏡頭矯正"
+    },
+    "色差校正": {
+      "en": "Chromatic aberration correction",
+      "ja": "色収差補正",
+      "zh-Hant": "色差校正"
+    },
+    "保守去紫边": {
+      "en": "Conservative defringe",
+      "ja": "控えめなフリンジ除去",
+      "zh-Hant": "保守去紫邊"
+    },
+    "镜头配置无法可靠应用，已保留原始几何": {
+      "en": "Lens profile could not be applied reliably; original geometry retained",
+      "ja": "レンズプロファイルを確実に適用できないため、元のジオメトリを保持しました",
+      "zh-Hant": "鏡頭配置無法可靠應用，已保留原始幾何"
+    },
+    "镜头未匹配": {
+      "en": "No matching lens profile",
+      "ja": "一致するレンズプロファイルなし",
+      "zh-Hant": "鏡頭未匹配"
+    },
+    "镜头矫正未应用": {
+      "en": "Lens correction not applied",
+      "ja": "レンズ補正は未適用",
+      "zh-Hant": "鏡頭矯正未應用"
+    },
+    "ICC 配置无效或不受支持": {
+      "en": "Invalid or unsupported ICC profile",
+      "ja": "無効または未対応の ICC プロファイル",
+      "zh-Hant": "ICC 配置無效或不受支援"
+    },
+    "ICC 配置大小无效": {
+      "en": "Invalid ICC profile size",
+      "ja": "ICC プロファイルのサイズが無効です",
+      "zh-Hant": "ICC 配置大小無效"
+    },
+    "显示变换需要 RGB 浮点像素": {
+      "en": "Display transform requires floating-point RGB pixels",
+      "ja": "表示変換には浮動小数点 RGB ピクセルが必要です",
+      "zh-Hant": "顯示變換需要 RGB 浮點畫素"
+    },
+    "选择打样 ICC 配置": {
+      "en": "Choose proofing ICC profile",
+      "ja": "校正用 ICC プロファイルを選択",
+      "zh-Hant": "選擇打樣 ICC 配置"
+    },
+    "ICC 配置 (*.icc *.icm)": {
+      "en": "ICC profiles (*.icc *.icm)",
+      "ja": "ICC プロファイル (*.icc *.icm)",
+      "zh-Hant": "ICC 配置 (*.icc *.icm)"
+    },
+    "显示器需要 RGB ICC 配置": {
+      "en": "The display requires an RGB ICC profile",
+      "ja": "ディスプレイには RGB ICC プロファイルが必要です",
+      "zh-Hant": "顯示器需要 RGB ICC 配置"
+    },
+    "无法创建此 ICC 显示／打样变换": {
+      "en": "Could not create this ICC display/proofing transform",
+      "ja": "ICC の表示・校正変換を作成できません",
+      "zh-Hant": "無法建立此 ICC 顯示／打樣變換"
+    },
+    "新照片默认胶片设置已保存": {
+      "en": "Default film settings for new photos saved",
+      "ja": "新しい写真の既定フィルム設定を保存しました",
+      "zh-Hant": "新照片預設膠片設定已儲存"
+    },
+    "新照片默认设置已恢复": {
+      "en": "Defaults for new photos restored",
+      "ja": "新しい写真の既定設定を復元しました",
+      "zh-Hant": "新照片預設設定已恢復"
+    },
+    "色差校正 · 保守去紫边": {
+      "en": "Chromatic aberration correction · Conservative defringe",
+      "ja": "色収差補正 · 控えめなフリンジ除去",
+      "zh-Hant": "色差校正 · 保守去紫邊"
+    },
+    "镜头未匹配 · 保守去紫边": {
+      "en": "No matching lens profile · Conservative defringe",
+      "ja": "一致するレンズプロファイルなし · 控えめなフリンジ除去",
+      "zh-Hant": "鏡頭未匹配 · 保守去紫邊"
+    },
+    "镜头未匹配 · 色差校正": {
+      "en": "No matching lens profile · Chromatic aberration correction",
+      "ja": "一致するレンズプロファイルなし · 色収差補正",
+      "zh-Hant": "鏡頭未匹配 · 色差校正"
+    },
+    "镜头未匹配 · 色差校正 · 保守去紫边": {
+      "en": "No matching lens profile · Chromatic aberration correction · Conservative defringe",
+      "ja": "一致するレンズプロファイルなし · 色収差補正 · 控えめなフリンジ除去",
+      "zh-Hant": "鏡頭未匹配 · 色差校正 · 保守去紫邊"
+    },
+    "镜头矫正 · 保守去紫边": {
+      "en": "Lens correction · Conservative defringe",
+      "ja": "レンズ補正 · 控えめなフリンジ除去",
+      "zh-Hant": "鏡頭矯正 · 保守去紫邊"
+    },
+    "镜头矫正 · 色差校正": {
+      "en": "Lens correction · Chromatic aberration correction",
+      "ja": "レンズ補正 · 色収差補正",
+      "zh-Hant": "鏡頭矯正 · 色差校正"
+    },
+    "镜头矫正 · 色差校正 · 保守去紫边": {
+      "en": "Lens correction · Chromatic aberration correction · Conservative defringe",
+      "ja": "レンズ補正 · 色収差補正 · 控えめなフリンジ除去",
+      "zh-Hant": "鏡頭矯正 · 色差校正 · 保守去紫邊"
+    },
+    "镜头矫正 · 镜头未匹配": {
+      "en": "Lens correction · No matching lens profile",
+      "ja": "レンズ補正 · 一致するレンズプロファイルなし",
+      "zh-Hant": "鏡頭矯正 · 鏡頭未匹配"
+    },
+    "镜头矫正 · 镜头未匹配 · 保守去紫边": {
+      "en": "Lens correction · No matching lens profile · Conservative defringe",
+      "ja": "レンズ補正 · 一致するレンズプロファイルなし · 控えめなフリンジ除去",
+      "zh-Hant": "鏡頭矯正 · 鏡頭未匹配 · 保守去紫邊"
+    },
+    "镜头矫正 · 镜头未匹配 · 色差校正": {
+      "en": "Lens correction · No matching lens profile · Chromatic aberration correction",
+      "ja": "レンズ補正 · 一致するレンズプロファイルなし · 色収差補正",
+      "zh-Hant": "鏡頭矯正 · 鏡頭未匹配 · 色差校正"
+    },
+    "镜头矫正 · 镜头未匹配 · 色差校正 · 保守去紫边": {
+      "en": "Lens correction · No matching lens profile · Chromatic aberration correction · Conservative defringe",
+      "ja": "レンズ補正 · 一致するレンズプロファイルなし · 色収差補正 · 控えめなフリンジ除去",
+      "zh-Hant": "鏡頭矯正 · 鏡頭未匹配 · 色差校正 · 保守去紫邊"
+    },
+    "无损 PNG": {
+      "en": "Lossless PNG",
+      "ja": "ロスレス PNG",
+      "zh-Hant": "無損 PNG"
+    },
+    "导出配方应为参数文档": {
+      "en": "Export recipe must be a parameter document",
+      "ja": "書き出し設定にはパラメータードキュメントが必要です",
+      "zh-Hant": "匯出配方應為引數文件"
+    },
+    "配方标识无效": {
+      "en": "Invalid recipe identifier",
+      "ja": "設定の識別子が無効です",
+      "zh-Hant": "配方標識無效"
+    },
+    "不支持的导出格式": {
+      "en": "Unsupported export format",
+      "ja": "未対応の書き出し形式",
+      "zh-Hant": "不支援的匯出格式"
+    },
+    "不支持的输出色彩空间": {
+      "en": "Unsupported output color space",
+      "ja": "未対応の出力色空間",
+      "zh-Hant": "不支援的輸出色彩空間"
+    },
+    "位深只能为8或16": {
+      "en": "Bit depth must be 8 or 16",
+      "ja": "ビット深度は 8 または 16 で指定してください",
+      "zh-Hant": "位深只能為8或16"
+    },
+    "JPEG / HEIF输出为8位": {
+      "en": "JPEG / HEIF output is 8-bit",
+      "ja": "JPEG / HEIF 出力は 8 bit です",
+      "zh-Hant": "JPEG / HEIF輸出為8位"
+    },
+    "线性DNG输出为16位": {
+      "en": "Linear DNG output is 16-bit",
+      "ja": "リニア DNG 出力は 16 bit です",
+      "zh-Hant": "線性DNG輸出為16位"
+    },
+    "Cineon DI 使用16位 ProPhoto原色密度编码与原始像素尺寸": {
+      "en": "Cineon DI uses 16-bit ProPhoto-primary density encoding at original pixel dimensions",
+      "ja": "Cineon DI は元のピクセル寸法で 16 bit の ProPhoto 原色濃度符号化を使用します",
+      "zh-Hant": "Cineon DI 使用16位 ProPhoto原色密度編碼與原始畫素尺寸"
+    },
+    "RAW原片不能缩放": {
+      "en": "Original RAW cannot be resized",
+      "ja": "元の RAW はサイズ変更できません",
+      "zh-Hant": "RAW原片不能縮放"
+    },
+    "线性DNG使用线性sRGB原色，不能标为其他空间": {
+      "en": "Linear DNG uses linear sRGB primaries and cannot be labeled as another space",
+      "ja": "リニア DNG はリニア sRGB 原色を使用し、他の色空間を指定できません",
+      "zh-Hant": "線性DNG使用線性sRGB原色，不能標為其他空間"
+    },
+    "导出子文件夹必须为单个名称": {
+      "en": "Export subfolder must be a single folder name",
+      "ja": "書き出し先のサブフォルダーには単一の名前を指定してください",
+      "zh-Hant": "匯出子資料夾必須為單個名稱"
+    },
+    "文件名仅支持{name}、{film}、{index}": {
+      "en": "Filename supports only {name}, {film} and {index}",
+      "ja": "ファイル名には {name}、{film}、{index} のみ使用できます",
+      "zh-Hant": "檔名僅支援{name}、{film}、{index}"
+    },
+    "文件名至少包含一个命名字段": {
+      "en": "Filename must contain at least one naming field",
+      "ja": "ファイル名には少なくとも 1 つの命名フィールドが必要です",
+      "zh-Hant": "檔名至少包含一個命名欄位"
+    },
+    "冲突策略应为编号或跳过": {
+      "en": "Name conflicts must use numbering or skipping",
+      "ja": "同名ファイルの処理には連番またはスキップを指定してください",
+      "zh-Hant": "衝突策略應為編號或跳過"
+    },
+    "文件命名格式无效": {
+      "en": "Invalid filename pattern",
+      "ja": "ファイル名の形式が無効です",
+      "zh-Hant": "檔案命名格式無效"
+    },
+    "XMP 部分转换：基础参数、HSL、曲线和色轮映射到本引擎，不能等同 Adobe 原版效果。": {
+      "en": "Partial XMP conversion maps basic adjustments, HSL, curves and wheels to this engine. It does not reproduce Adobe's original rendering.",
+      "ja": "XMP の部分変換では基本調整、HSL、カーブ、カラーホイールを本エンジンに対応付けます。Adobe の描画と同一ではありません。",
+      "zh-Hant": "XMP 部分轉換：基礎引數、HSL、曲線和色輪對映到本引擎，不能等同 Adobe 原版效果。"
+    },
+    "曝光、白平衡、几何和蒙版保留每张照片原有编辑，不由风格覆盖。": {
+      "en": "Each photo retains its exposure, white balance, geometry and masks; styles do not overwrite them.",
+      "ja": "各写真の露出、ホワイトバランス、ジオメトリ、マスクを保持し、スタイルでは上書きしません。",
+      "zh-Hant": "曝光、白平衡、幾何和蒙版保留每張照片原有編輯，不由風格覆蓋。"
+    },
+    "预设应为参数文档": {
+      "en": "Preset must be a parameter document",
+      "ja": "プリセットにはパラメータードキュメントが必要です",
+      "zh-Hant": "預設應為引數文件"
+    },
+    "预设缺少 settings 参数": {
+      "en": "Preset is missing settings",
+      "ja": "プリセットに settings パラメーターがありません",
+      "zh-Hant": "預設缺少 settings 引數"
+    },
+    "预设色彩资源标识无效": {
+      "en": "Invalid preset color resource identifier",
+      "ja": "プリセットのカラーリソース識別子が無効です",
+      "zh-Hant": "預設色彩資源標識無效"
+    },
+    "支持 .xmp、.sfpreset 或预设 JSON；尼康 NP3 配方不能直接套用为本引擎参数。": {
+      "en": "Supports .xmp, .sfpreset and preset JSON. Nikon NP3 recipes cannot be applied directly to this engine.",
+      "ja": ".xmp、.sfpreset、プリセット JSON に対応。ニコン NP3 設定を本エンジンに直接適用することはできません。",
+      "zh-Hant": "支援 .xmp、.sfpreset 或預設 JSON；尼康 NP3 配方不能直接套用為本引擎引數。"
+    },
+    "不支持包含实体或文档类型的 XML": {
+      "en": "XML entities and document types are unsupported",
+      "ja": "実体や文書型を含む XML は未対応です",
+      "zh-Hant": "不支援包含實體或文件型別的 XML"
+    },
+    "此 XMP 不含可读取的显影参数": {
+      "en": "This XMP contains no readable development settings",
+      "ja": "この XMP には読み取り可能な現像パラメーターがありません",
+      "zh-Hant": "此 XMP 不含可讀取的顯影引數"
+    },
+    "此 XMP 没有可转换的基础色调、HSL、点曲线或色轮参数；未应用。": {
+      "en": "This XMP has no convertible tone, HSL, point curve or wheel settings; nothing was applied.",
+      "ja": "この XMP に変換可能な階調、HSL、ポイントカーブ、ホイール設定がないため、適用しませんでした。",
+      "zh-Hant": "此 XMP 沒有可轉換的基礎色調、HSL、點曲線或色輪引數；未應用。"
+    },
+    "；该配置尚未载入，Adobe 配置文件不能仅靠参数还原。": {
+      "en": "; the profile is not loaded. Adobe profiles cannot be reproduced from parameters alone.",
+      "ja": "。このプロファイルは未読み込みです。Adobe プロファイルはパラメーターだけでは再現できません。",
+      "zh-Hant": "；該配置尚未載入，Adobe 配置檔案不能僅靠引數還原。"
+    },
+    "此预设包含 Adobe Look 资源依赖，尚未载入；当前仅转换可支持的参数。": {
+      "en": "This preset depends on an unloaded Adobe Look resource; only supported settings were converted.",
+      "ja": "このプリセットは未読み込みの Adobe Look リソースに依存します。対応する設定のみ変換しました。",
+      "zh-Hant": "此預設包含 Adobe Look 資源依賴，尚未載入；當前僅轉換可支援的引數。"
+    },
+    "XMP 参数转换": {
+      "en": "XMP settings conversion",
+      "ja": "XMP 設定の変換",
+      "zh-Hant": "XMP 引數轉換"
+    },
+    "外部文件": {
+      "en": "External file",
+      "ja": "外部ファイル",
+      "zh-Hant": "外部檔案"
+    },
+    "XMP 色轮参数超出范围": {
+      "en": "XMP color wheel setting is out of range",
+      "ja": "XMP カラーホイール設定が範囲外です",
+      "zh-Hant": "XMP 色輪引數超出範圍"
+    },
+    "自定义风格": {
+      "en": "Custom style",
+      "ja": "カスタムスタイル",
+      "zh-Hant": "自定義風格"
+    },
+    "无法读取 XMP 色彩分级": {
+      "en": "Could not read XMP color grading",
+      "ja": "XMP カラーグレーディングを読み取れません",
+      "zh-Hant": "無法讀取 XMP 色彩分級"
+    },
+    "半格 · 24 mm": {
+      "en": "Half frame · 24 mm",
+      "ja": "ハーフ判 · 24 mm",
+      "zh-Hant": "半格 · 24 mm"
+    },
+    "新照片将使用当前胶片设置，已有照片保持各自参数": {
+      "en": "New photos will use the current film settings; existing photos keep their own adjustments",
+      "ja": "新しい写真に現在のフィルム設定を使用します。既存の写真は各自の調整を保持します",
+      "zh-Hant": "新照片將使用當前膠片設定，已有照片保持各自引數"
+    },
+    "原生光谱需要 H×W×3 源像素": {
+      "en": "Native spectral rendering requires H×W×3 source pixels",
+      "ja": "ネイティブスペクトル描画には H×W×3 の元ピクセルが必要です",
+      "zh-Hant": "原生光譜需要 H×W×3 源畫素"
+    },
+    "胶片画布需要 H×W×3 源像素": {
+      "en": "Film canvas requires H×W×3 source pixels",
+      "ja": "フィルムキャンバスには H×W×3 の元ピクセルが必要です",
+      "zh-Hant": "膠片畫布需要 H×W×3 源畫素"
+    },
+    "胶片画布必须启用片边或日期曝光": {
+      "en": "Film canvas requires a film rebate or date imprint",
+      "ja": "フィルムキャンバスにはフィルムの縁または日付写し込みが必要です",
+      "zh-Hant": "膠片畫布必須啟用片邊或日期曝光"
+    },
+    "编辑引擎需要 H×W×3 源像素": {
+      "en": "Editing engine requires H×W×3 source pixels",
+      "ja": "編集エンジンには H×W×3 の元ピクセルが必要です",
+      "zh-Hant": "編輯引擎需要 H×W×3 源畫素"
+    },
+    "编辑输出需要同尺寸连续可写 float32 RGB 缓冲": {
+      "en": "Edit output requires a same-size contiguous writable float32 RGB buffer",
+      "ja": "編集出力には同じサイズの連続した書き込み可能な float32 RGB バッファーが必要です",
+      "zh-Hant": "編輯輸出需要同尺寸連續可寫 float32 RGB 緩衝"
+    },
+    "原生片边画布尺寸无效": {
+      "en": "Invalid native film rebate canvas dimensions",
+      "ja": "ネイティブフィルムの縁のキャンバスサイズが無効です",
+      "zh-Hant": "原生片邊畫布尺寸無效"
+    },
+    "原生片边尺寸与片门几何不一致": {
+      "en": "Native film rebate dimensions do not match gate geometry",
+      "ja": "ネイティブフィルムの縁のサイズと画枠ジオメトリが一致しません",
+      "zh-Hant": "原生片邊尺寸與片門幾何不一致"
+    },
+    "原生光谱返回无效画布": {
+      "en": "Native spectral engine returned an invalid canvas",
+      "ja": "ネイティブスペクトルエンジンが無効なキャンバスを返しました",
+      "zh-Hant": "原生光譜返回無效畫布"
+    },
+    "此运行时是 Windows Vulkan 引擎": {
+      "en": "This runtime uses the Windows Vulkan engine",
+      "ja": "このランタイムは Windows Vulkan エンジンです",
+      "zh-Hant": "此執行時是 Windows Vulkan 引擎"
+    },
+    "请先为所选照片开启负片显影": {
+      "en": "Enable negative film development for the selected photos first",
+      "ja": "先に選択した写真のネガフィルム現像を有効にしてください",
+      "zh-Hant": "請先為所選照片開啟負片顯影"
+    },
+    "内存缓存": {
+      "en": "Memory cache",
+      "ja": "メモリキャッシュ",
+      "zh-Hant": "記憶體快取"
+    },
+    "原源工作副本": {
+      "en": "Source working copies",
+      "ja": "元画像の作業コピー",
+      "zh-Hant": "原始來源工作副本"
+    },
+    "磁盘预览": {
+      "en": "Disk previews",
+      "ja": "ディスクプレビュー",
+      "zh-Hant": "磁碟預覽"
+    },
+    "原尺寸显影": {
+      "en": "Full-resolution renders",
+      "ja": "フル解像度の現像",
+      "zh-Hant": "原尺寸顯影"
+    },
+    "清理": {
+      "en": "Clear",
+      "ja": "消去",
+      "zh-Hant": "清理"
+    },
+    "清理内存缓存": {
+      "en": "Clear memory cache",
+      "ja": "メモリキャッシュを消去",
+      "zh-Hant": "清理記憶體快取"
+    },
+    "外观": {
+      "en": "Appearance",
+      "ja": "外観",
+      "zh-Hant": "外觀"
+    },
+    "跟随系统": {
+      "en": "System",
+      "ja": "システムに合わせる",
+      "zh-Hant": "跟隨系統"
+    },
+    "浅色": {
+      "en": "Light",
+      "ja": "ライト",
+      "zh-Hant": "淺色"
+    },
+    "深色": {
+      "en": "Dark",
+      "ja": "ダーク",
+      "zh-Hant": "深色"
+    },
+    "画布背景": {
+      "en": "Canvas background",
+      "ja": "キャンバス背景",
+      "zh-Hant": "畫布背景"
+    },
+    "当前外观的画布背景HEX": {
+      "en": "Canvas background HEX for this appearance",
+      "ja": "現在の外観の背景色 HEX",
+      "zh-Hant": "目前外觀的畫布背景 HEX"
+    },
+    "复位": {
+      "en": "Reset",
+      "ja": "リセット",
+      "zh-Hant": "復位"
+    },
+    "默认胶片": {
+      "en": "Default film",
+      "ja": "標準のフィルム",
+      "zh-Hant": "預設膠片"
+    },
+    "已保存的默认值": {
+      "en": "Saved defaults",
+      "ja": "保存した初期設定",
+      "zh-Hant": "已儲存的預設值"
+    },
+    "上次使用": {
+      "en": "Last used",
+      "ja": "前回の設定",
+      "zh-Hant": "上次使用"
+    },
+    "默认相纸": {
+      "en": "Default paper",
+      "ja": "標準の印画紙",
+      "zh-Hant": "預設相紙"
+    },
+    "像素数量": {
+      "en": "Pixel count",
+      "ja": "画素数",
+      "zh-Hant": "像素數量"
+    },
+    "指定长边": {
+      "en": "Set long edge",
+      "ja": "長辺を指定",
+      "zh-Hant": "指定長邊"
+    },
+    "指定短边": {
+      "en": "Set short edge",
+      "ja": "短辺を指定",
+      "zh-Hant": "指定短邊"
+    },
+    "短边": {
+      "en": "Short edge",
+      "ja": "短辺",
+      "zh-Hant": "短邊"
+    },
+    "拍摄日期_原文件名_胶片名称": {
+      "en": "Date_original name_film",
+      "ja": "撮影日_元ファイル名_フィルム",
+      "zh-Hant": "拍攝日期_原檔名_膠片名稱"
+    },
+    "原文件名_胶片名称_相纸": {
+      "en": "Original name_film_paper",
+      "ja": "元ファイル名_フィルム_印画紙",
+      "zh-Hant": "原檔名_膠片名稱_相紙"
+    },
+    "自定义": {
+      "en": "Custom",
+      "ja": "カスタム",
+      "zh-Hant": "自訂"
+    },
+    "自定义文件命名": {
+      "en": "Custom file naming",
+      "ja": "ファイル名を指定",
+      "zh-Hant": "自訂檔案命名"
+    },
+    "输出打样": {
+      "en": "Output proof",
+      "ja": "出力プルーフ",
+      "zh-Hant": "輸出打樣"
+    },
+    "软打样": {
+      "en": "Soft proof",
+      "ja": "ソフトプルーフ",
+      "zh-Hant": "軟打樣"
+    },
+    "模拟所选输出色域，并使用当前显示器配置": {
+      "en": "Simulate the output gamut using the current monitor profile",
+      "ja": "現在のモニタープロファイルで出力色域を再現",
+      "zh-Hant": "使用目前顯示器描述檔模擬所選輸出色域"
+    },
+    "色域警告": {
+      "en": "Gamut warning",
+      "ja": "色域警告",
+      "zh-Hant": "色域警告"
+    },
+    "原像素输出打样，可拖动查看细节": {
+      "en": "Full-resolution output proof; drag to inspect details",
+      "ja": "等倍の出力プルーフ。ドラッグで細部を確認",
+      "zh-Hant": "原像素輸出打樣，可拖曳檢視細節"
+    },
+    "正在生成原像素打样…": {
+      "en": "Rendering full-resolution proof…",
+      "ja": "フル解像度のプルーフを作成中…",
+      "zh-Hant": "正在產生原像素打樣…"
+    },
+    "正在更新打样…": {
+      "en": "Updating proof…",
+      "ja": "プルーフを更新中…",
+      "zh-Hant": "正在更新打樣…"
+    },
+    "原像素检查": {
+      "en": "Inspect at 100%",
+      "ja": "等倍で確認",
+      "zh-Hant": "原像素檢查"
+    },
+    "从完整源照片生成真实输出文件，按一个照片像素对应一个屏幕像素检查": {
+      "en": "Create the actual output from the full source and inspect one image pixel per screen pixel",
+      "ja": "元画像から実際の出力を作成し、画像1画素を画面1画素で確認",
+      "zh-Hant": "從完整原始照片產生實際輸出，以一個照片像素對應一個螢幕像素檢查"
+    },
+    "原像素打样": {
+      "en": "Full-resolution proof",
+      "ja": "フル解像度プルーフ",
+      "zh-Hant": "原像素打樣"
+    },
+    "代理打样": {
+      "en": "Proxy proof",
+      "ja": "プロキシプルーフ",
+      "zh-Hant": "代理打樣"
+    },
+    "通道混合": {
+      "en": "Channel mixer",
+      "ja": "チャンネルミキサー",
+      "zh-Hant": "通道混合"
+    },
+    "全局 · 三区": {
+      "en": "Global · Three ranges",
+      "ja": "全体・3領域",
+      "zh-Hant": "全域 · 三區"
+    },
+    "全局": {
+      "en": "Global",
+      "ja": "全体",
+      "zh-Hant": "全域"
+    },
+    "红色输出": {
+      "en": "Red output",
+      "ja": "赤出力",
+      "zh-Hant": "紅色輸出"
+    },
+    "绿色输出": {
+      "en": "Green output",
+      "ja": "緑出力",
+      "zh-Hant": "綠色輸出"
+    },
+    "蓝色输出": {
+      "en": "Blue output",
+      "ja": "青出力",
+      "zh-Hant": "藍色輸出"
+    },
+    "重置此通道": {
+      "en": "Reset channel",
+      "ja": "このチャンネルをリセット",
+      "zh-Hant": "重設此通道"
+    },
+    "亮调": {
+      "en": "Lights",
+      "ja": "明部",
+      "zh-Hant": "亮調"
+    },
+    "暗调": {
+      "en": "Darks",
+      "ja": "暗部",
+      "zh-Hant": "暗調"
+    },
+    "分区": {
+      "en": "Ranges",
+      "ja": "領域",
+      "zh-Hant": "分區"
+    },
+    "阴影边界": {
+      "en": "Shadow boundary",
+      "ja": "シャドウ境界",
+      "zh-Hant": "陰影邊界"
+    },
+    "中调边界": {
+      "en": "Midtone boundary",
+      "ja": "中間調の境界",
+      "zh-Hant": "中調邊界"
+    },
+    "高光边界": {
+      "en": "Highlight boundary",
+      "ja": "ハイライト境界",
+      "zh-Hant": "高光邊界"
+    },
+    "重置参数曲线": {
+      "en": "Reset parametric curve",
+      "ja": "パラメトリックカーブをリセット",
+      "zh-Hant": "重設參數曲線"
+    },
+    "控制点": {
+      "en": "Point",
+      "ja": "ポイント",
+      "zh-Hant": "控制點"
+    },
+    "参数": {
+      "en": "Parametric",
+      "ja": "パラメトリック",
+      "zh-Hant": "參數"
+    },
+    "参考线": {
+      "en": "Guides",
+      "ja": "ガイド",
+      "zh-Hant": "參考線"
+    },
+    "水平": {
+      "en": "Horizontal",
+      "ja": "水平",
+      "zh-Hant": "水平"
+    },
+    "垂直": {
+      "en": "Vertical",
+      "ja": "垂直",
+      "zh-Hant": "垂直"
+    },
+    "矩形": {
+      "en": "Rectangle",
+      "ja": "四角形",
+      "zh-Hant": "矩形"
+    },
+    "使用": {
+      "en": "Use",
+      "ja": "使用",
+      "zh-Hant": "使用"
+    },
+    "参考线校正透视": {
+      "en": "Guided perspective correction",
+      "ja": "ガイドによる遠近補正",
+      "zh-Hant": "參考線校正透視"
+    },
+    "参考线无法对齐，请重新放置": {
+      "en": "The guides cannot align; place them again",
+      "ja": "ガイドを合わせられません。配置し直してください",
+      "zh-Hant": "參考線無法對齊，請重新放置"
+    },
+    "透视参考线": {
+      "en": "Perspective guides",
+      "ja": "遠近補正ガイド",
+      "zh-Hant": "透視參考線"
+    },
+    "拖动四个控制点或线段，对齐照片中应当水平或垂直的边缘。应用后只校正透视与旋转。方向键精调，Tab 切换控制点，Esc 取消当前拖动。": {
+      "en": "Align the four points or lines with edges that should be horizontal or vertical. Apply corrects perspective and rotation. Arrow keys fine-tune, Tab switches points, and Esc cancels the drag.",
+      "ja": "4つの点や線を、水平または垂直になるべき輪郭に合わせます。適用すると遠近と回転のみを補正します。矢印キーで微調整、Tabで点を切替、Escでドラッグを取り消します。",
+      "zh-Hant": "拖曳四個控制點或線段，對齊照片中應為水平或垂直的邊緣。套用後只校正透視與旋轉。方向鍵微調，Tab 切換控制點，Esc 取消目前拖曳。"
+    },
+    "水平参考线": {
+      "en": "Horizontal guides",
+      "ja": "水平ガイド",
+      "zh-Hant": "水平參考線"
+    },
+    "垂直参考线": {
+      "en": "Vertical guides",
+      "ja": "垂直ガイド",
+      "zh-Hant": "垂直參考線"
+    },
+    "矩形参考线": {
+      "en": "Rectangle guides",
+      "ja": "四角形ガイド",
+      "zh-Hant": "矩形參考線"
+    },
+    "重新放置": {
+      "en": "Place again",
+      "ja": "配置し直す",
+      "zh-Hant": "重新放置"
+    },
+    "照片导航": {
+      "en": "Photo navigator",
+      "ja": "写真ナビゲーター",
+      "zh-Hant": "照片導覽"
+    },
+    "点击照片定位，拖动范围框平移，双击适合窗口；方向键平移": {
+      "en": "Click to locate, drag the view box to pan, double-click to fit; arrow keys pan",
+      "ja": "クリックで移動、表示枠をドラッグでパン、ダブルクリックで全体表示。矢印キーでも移動",
+      "zh-Hant": "點選照片定位，拖曳範圍框平移，按兩下符合視窗；方向鍵平移"
+    },
+    "已存预设": {
+      "en": "Saved presets",
+      "ja": "保存済みプリセット",
+      "zh-Hant": "已存預設"
+    },
+    "全部品牌": {
+      "en": "All makers",
+      "ja": "すべてのメーカー",
+      "zh-Hant": "全部品牌"
+    },
+    "全部类型": {
+      "en": "All types",
+      "ja": "すべての種類",
+      "zh-Hant": "全部類型"
+    },
+    "电影胶片": {
+      "en": "Cinema film",
+      "ja": "映画用フィルム",
+      "zh-Hant": "電影膠片"
+    },
+    "黑白胶片": {
+      "en": "B&W film",
+      "ja": "白黒フィルム",
+      "zh-Hant": "黑白膠片"
+    },
+    "正在预览": {
+      "en": "Loading preview",
+      "ja": "プレビュー中",
+      "zh-Hant": "正在預覽"
+    },
+    "未载入照片": {
+      "en": "No photo loaded",
+      "ja": "写真がありません",
+      "zh-Hant": "未載入照片"
+    },
+    "删除": {
+      "en": "Delete",
+      "ja": "削除",
+      "zh-Hant": "刪除"
+    },
+    "暂无已存预设": {
+      "en": "No saved presets",
+      "ja": "保存済みプリセットはありません",
+      "zh-Hant": "尚無已存預設"
+    },
+    "撤销删除": {
+      "en": "Undo deletion",
+      "ja": "削除を取り消す",
+      "zh-Hant": "復原刪除"
+    },
+    "保存当前预设": {
+      "en": "Save current preset",
+      "ja": "現在の設定を保存",
+      "zh-Hant": "儲存目前預設"
+    },
+    "重命名预设": {
+      "en": "Rename preset",
+      "ja": "プリセット名を変更",
+      "zh-Hant": "重新命名預設"
+    },
+    "保存预设": {
+      "en": "Save preset",
+      "ja": "プリセットを保存",
+      "zh-Hant": "儲存預設"
+    },
+    "预设名称": {
+      "en": "Preset name",
+      "ja": "プリセット名",
+      "zh-Hant": "預設名稱"
+    },
+    "筛选": {
+      "en": "Filter",
+      "ja": "絞り込み",
+      "zh-Hant": "篩選"
+    },
+    "清除": {
+      "en": "Clear",
+      "ja": "クリア",
+      "zh-Hant": "清除"
+    },
+    "搜索文件名": {
+      "en": "Search filenames",
+      "ja": "ファイル名を検索",
+      "zh-Hant": "搜尋檔名"
+    },
+    "清除筛选": {
+      "en": "Clear filters",
+      "ja": "絞り込みを解除",
+      "zh-Hant": "清除篩選"
+    },
+    "已折叠": {
+      "en": "Collapsed",
+      "ja": "折りたたみ",
+      "zh-Hant": "已摺疊"
+    },
+    "是否保存过显影调整，不代表照片已经导出": {
+      "en": "Whether development edits are saved; this does not indicate an exported photo",
+      "ja": "現像調整の保存状態です。書き出し済みかどうかではありません",
+      "zh-Hant": "是否儲存過顯影調整，不代表照片已經匯出"
+    },
+    "正在统计…": {
+      "en": "Counting…",
+      "ja": "集計中…",
+      "zh-Hant": "正在統計…"
+    },
+    "返回照片": {
+      "en": "Back to photo",
+      "ja": "写真に戻る",
+      "zh-Hant": "返回照片"
+    },
+    "不印相 · 直接扫描": {
+      "en": "No print · Direct scan",
+      "ja": "印画なし・直接スキャン",
+      "zh-Hant": "不印相 · 直接掃描"
+    },
+    "光晕强度": {
+      "en": "Halation strength",
+      "ja": "ハレーションの強さ",
+      "zh-Hant": "光暈強度"
+    },
+    "分层颗粒": {
+      "en": "Layered grain",
+      "ja": "多層粒子",
+      "zh-Hant": "分層顆粒"
+    },
+    "相纸效果": {
+      "en": "Paper effects",
+      "ja": "印画紙効果",
+      "zh-Hant": "相紙效果"
+    },
+    "扩展印相范围": {
+      "en": "Extended print range",
+      "ja": "印画レンジ拡張",
+      "zh-Hant": "擴展印相範圍"
+    },
+    "正在导出…": {
+      "en": "Exporting…",
+      "ja": "書き出し中…",
+      "zh-Hant": "正在匯出…"
+    },
+    "导出相纸 LUT…": {
+      "en": "Export paper LUT…",
+      "ja": "印画紙 LUT を書き出す…",
+      "zh-Hant": "匯出相紙 LUT…"
+    },
+    "导出相纸 LUT": {
+      "en": "Export paper LUT",
+      "ja": "印画紙 LUT を書き出す",
+      "zh-Hant": "匯出相紙 LUT"
+    },
+    "相纸 LUT (*.cube)": {
+      "en": "Paper LUT (*.cube)",
+      "ja": "印画紙 LUT (*.cube)",
+      "zh-Hant": "相紙 LUT (*.cube)"
+    },
+    "配套归一化负片密度；不用于普通 RGB 照片": {
+      "en": "For normalized negative density, not ordinary RGB photos",
+      "ja": "正規化ネガ濃度用。通常の RGB 写真には非対応",
+      "zh-Hant": "適用於正規化負片密度，不用於一般 RGB 照片"
+    },
+    "打开半格": {
+      "en": "Open half-frame",
+      "ja": "ハーフ判を開く",
+      "zh-Hant": "開啟半格"
+    },
+    "保存半格": {
+      "en": "Save half-frame",
+      "ja": "ハーフ判を保存",
+      "zh-Hant": "儲存半格"
+    },
+    "纸面排版": {
+      "en": "Paper layout",
+      "ja": "用紙レイアウト",
+      "zh-Hant": "紙面排版"
+    },
+    "样式": {
+      "en": "Style",
+      "ja": "スタイル",
+      "zh-Hant": "樣式"
+    },
+    "半格间距": {
+      "en": "Half-frame spacing",
+      "ja": "ハーフ判の間隔",
+      "zh-Hant": "半格間距"
+    },
+    "替换当前照片": {
+      "en": "Replace current photo",
+      "ja": "現在の写真を置換",
+      "zh-Hant": "替換目前照片"
+    },
+    "不可用": {
+      "en": "Unavailable",
+      "ja": "利用不可",
+      "zh-Hant": "無法使用"
+    },
+    "此片幅没有日期后背": {
+      "en": "No date back for this format",
+      "ja": "この判型にデートバックはありません",
+      "zh-Hant": "此片幅沒有日期後背"
+    },
+    "快门与光圈": {
+      "en": "Shutter and aperture",
+      "ja": "シャッターと絞り",
+      "zh-Hant": "快門與光圈"
+    },
+    "拍摄数据": {
+      "en": "Exposure data",
+      "ja": "撮影データ",
+      "zh-Hant": "拍攝資料"
+    },
+    "同时打印拍摄数据": {
+      "en": "Also imprint exposure data",
+      "ja": "撮影データも焼き込む",
+      "zh-Hant": "同時打印拍攝資料"
+    },
+    "日期顺序": {
+      "en": "Date order",
+      "ja": "日付の順序",
+      "zh-Hant": "日期順序"
+    },
+    "年 月 日": {
+      "en": "Year month day",
+      "ja": "年 月 日",
+      "zh-Hant": "年 月 日"
+    },
+    "月 日 年": {
+      "en": "Month day year",
+      "ja": "月 日 年",
+      "zh-Hant": "月 日 年"
+    },
+    "重试预览": {
+      "en": "Retry preview",
+      "ja": "プレビューを再試行",
+      "zh-Hant": "重試預覽"
+    },
+    "135 片条": {
+      "en": "135 filmstrip",
+      "ja": "135 フィルム片",
+      "zh-Hant": "135 片條"
+    },
+    "保存半格组合": {
+      "en": "Save half-frame pair",
+      "ja": "ハーフ判ペアを保存",
+      "zh-Hant": "儲存半格組合"
+    },
+    "半格组合 (*.spektrapair)": {
+      "en": "Half-frame pair (*.spektrapair)",
+      "ja": "ハーフ判ペア (*.spektrapair)",
+      "zh-Hant": "半格組合 (*.spektrapair)"
+    },
+    "打开半格组合": {
+      "en": "Open half-frame pair",
+      "ja": "ハーフ判ペアを開く",
+      "zh-Hant": "開啟半格組合"
+    },
+    "替换半格照片": {
+      "en": "Replace half-frame photo",
+      "ja": "ハーフ判写真を置換",
+      "zh-Hant": "替換半格照片"
+    },
+    "空位": {
+      "en": "Empty slot",
+      "ja": "空きコマ",
+      "zh-Hant": "空位"
+    },
+    "无法读取照片": {
+      "en": "Could not read photo",
+      "ja": "写真を読み取れません",
+      "zh-Hant": "無法讀取照片"
+    },
+    "请填写预设名称": {
+      "en": "Enter a preset name",
+      "ja": "プリセット名を入力してください",
+      "zh-Hant": "請填寫預設名稱"
+    },
+    "预设名称最多80个字": {
+      "en": "Preset names can contain up to 80 characters",
+      "ja": "プリセット名は80文字以内です",
+      "zh-Hant": "預設名稱最多 80 個字"
+    },
+    "已有同名预设": {
+      "en": "A preset with this name already exists",
+      "ja": "同じ名前のプリセットがあります",
+      "zh-Hant": "已有同名預設"
+    },
+    "请选择要保存的调整分类": {
+      "en": "Select adjustment groups to save",
+      "ja": "保存する調整項目を選択してください",
+      "zh-Hant": "請選擇要儲存的調整分類"
+    },
+    "预设已不存在": {
+      "en": "This preset no longer exists",
+      "ja": "このプリセットは存在しません",
+      "zh-Hant": "預設已不存在"
+    },
+    "预设文件版本不受支持，已保持只读": {
+      "en": "Unsupported preset file version; opened read-only",
+      "ja": "未対応のプリセットバージョンです。読み取り専用です",
+      "zh-Hant": "預設檔案版本不受支援，已保持唯讀"
+    },
+    "预设文件内容不完整，已保持只读": {
+      "en": "Incomplete preset file; opened read-only",
+      "ja": "プリセットファイルが不完全です。読み取り専用です",
+      "zh-Hant": "預設檔案內容不完整，已保持唯讀"
+    },
+    "预设文件为只读": {
+      "en": "The preset file is read-only",
+      "ja": "プリセットファイルは読み取り専用です",
+      "zh-Hant": "預設檔案為唯讀"
+    },
+    "预设文件记录无效，已保持只读": {
+      "en": "Invalid preset records; opened read-only",
+      "ja": "プリセットの記録が無効です。読み取り専用です",
+      "zh-Hant": "預設檔案記錄無效，已保持唯讀"
+    },
+    "相纸 LUT 目录无效": {
+      "en": "Invalid paper LUT catalog",
+      "ja": "印画紙 LUT カタログが無効です",
+      "zh-Hant": "相紙 LUT 目錄無效"
+    },
+    "相纸 LUT 包含无效数值": {
+      "en": "The paper LUT contains invalid values",
+      "ja": "印画紙 LUT に無効な値があります",
+      "zh-Hant": "相紙 LUT 包含無效數值"
+    },
+    "相纸 LUT 数据无效": {
+      "en": "Invalid paper LUT data",
+      "ja": "印画紙 LUT データが無効です",
+      "zh-Hant": "相紙 LUT 資料無效"
+    },
+    "文件已存在，请换一个名称": {
+      "en": "The file exists; choose a different name",
+      "ja": "ファイルが存在します。別の名前を指定してください",
+      "zh-Hant": "檔案已存在，請換一個名稱"
+    },
+    "当前相纸没有配套 LUT": {
+      "en": "No matching LUT for this paper",
+      "ja": "この印画紙の LUT はありません",
+      "zh-Hant": "目前相紙沒有配套 LUT"
+    },
+    "相纸 LUT 数据尺寸无效": {
+      "en": "Invalid paper LUT dimensions",
+      "ja": "印画紙 LUT のサイズが無効です",
+      "zh-Hant": "相紙 LUT 資料尺寸無效"
+    },
+    "拍摄日期": {
+      "en": "Capture date",
+      "ja": "撮影日",
+      "zh-Hant": "拍攝日期"
+    },
+    "显影状态": {
+      "en": "Development status",
+      "ja": "現像状態",
+      "zh-Hant": "顯影狀態"
+    },
+    "日期范围无效": {
+      "en": "Invalid date range",
+      "ja": "日付範囲が無効です",
+      "zh-Hant": "日期範圍無效"
+    },
+    "相机": {
+      "en": "Camera",
+      "ja": "カメラ",
+      "zh-Hant": "相機"
+    },
+    "镜头": {
+      "en": "Lens",
+      "ja": "レンズ",
+      "zh-Hant": "鏡頭"
+    },
+    "关键词": {
+      "en": "Keywords",
+      "ja": "キーワード",
+      "zh-Hant": "關鍵字"
+    },
+    "筛选统计读取失败。": {
+      "en": "Could not read filter counts.",
+      "ja": "絞り込み件数を読み取れません。",
+      "zh-Hant": "篩選統計讀取失敗。"
+    },
+    "已有显影调整": {
+      "en": "Edits saved",
+      "ja": "現像調整あり",
+      "zh-Hant": "已有顯影調整"
+    },
+    "尚无显影调整": {
+      "en": "No saved edits",
+      "ja": "現像調整なし",
+      "zh-Hant": "尚無顯影調整"
+    },
+    "视频": {
+      "en": "Video",
+      "ja": "動画",
+      "zh-Hant": "影片"
+    },
+    "半格组合": {
+      "en": "Half-frame pair",
+      "ja": "ハーフ判ペア",
+      "zh-Hant": "半格組合"
+    },
+    "其他": {
+      "en": "Other",
+      "ja": "その他",
+      "zh-Hant": "其他"
+    },
+    "未知": {
+      "en": "Unknown",
+      "ja": "不明",
+      "zh-Hant": "未知"
+    },
+    "任务已取消": {
+      "en": "Task cancelled",
+      "ja": "処理を取り消しました",
+      "zh-Hant": "工作已取消"
+    },
+    "缓存目录不能是符号链接": {
+      "en": "The cache folder cannot be a symbolic link",
+      "ja": "キャッシュフォルダーにシンボリックリンクは使えません",
+      "zh-Hant": "快取目錄不能是符號連結"
+    },
+    "缓存目录标识无效": {
+      "en": "Invalid cache folder identity",
+      "ja": "キャッシュフォルダーの識別情報が無効です",
+      "zh-Hant": "快取目錄識別無效"
+    },
+    "无效缓存分类或标识": {
+      "en": "Invalid cache category or identity",
+      "ja": "キャッシュの種類または識別情報が無効です",
+      "zh-Hant": "無效快取分類或識別"
+    },
+    "缓存需要RGB数值像素": {
+      "en": "The cache requires numeric RGB pixels",
+      "ja": "キャッシュには数値 RGB ピクセルが必要です",
+      "zh-Hant": "快取需要 RGB 數值像素"
+    },
+    "缓存分类目录必须属于缓存根目录": {
+      "en": "Cache categories must remain inside the cache folder",
+      "ja": "キャッシュの種類別フォルダーはルート内に配置してください",
+      "zh-Hant": "快取分類目錄必須位於快取根目錄"
+    },
+    "未知缓存分类": {
+      "en": "Unknown cache category",
+      "ja": "不明なキャッシュの種類です",
+      "zh-Hant": "未知快取分類"
+    },
+    "缓存写入后无法读取": {
+      "en": "The written cache could not be read",
+      "ja": "書き込んだキャッシュを読み取れません",
+      "zh-Hant": "快取寫入後無法讀取"
+    },
+    "未知外观模式": {
+      "en": "Unknown appearance mode",
+      "ja": "不明な外観モードです",
+      "zh-Hant": "未知外觀模式"
+    },
+    "背景色应为六位HEX色值": {
+      "en": "Use a six-digit HEX background color",
+      "ja": "背景色は6桁の HEX 値で指定してください",
+      "zh-Hant": "背景色應為六位 HEX 色值"
+    },
+    "未知尺寸单位": {
+      "en": "Unknown dimension unit",
+      "ja": "不明な寸法単位です",
+      "zh-Hant": "未知尺寸單位"
+    },
+    "未知默认胶片": {
+      "en": "Unknown default film",
+      "ja": "不明な標準フィルムです",
+      "zh-Hant": "未知預設膠片"
+    },
+    "未知默认相纸": {
+      "en": "Unknown default paper",
+      "ja": "不明な標準印画紙です",
+      "zh-Hant": "未知預設相紙"
+    },
+    "请先选择可以编辑的照片": {
+      "en": "Select an editable photo first",
+      "ja": "編集できる写真を選択してください",
+      "zh-Hant": "請先選擇可以編輯的照片"
+    },
+    "导出未完成": {
+      "en": "Export did not complete",
+      "ja": "書き出しが完了しませんでした",
+      "zh-Hant": "匯出未完成"
+    },
+    "已完成": {
+      "en": "Completed",
+      "ja": "完了",
+      "zh-Hant": "已完成"
+    },
+    "已取消": {
+      "en": "Cancelled",
+      "ja": "取消済み",
+      "zh-Hant": "已取消"
+    },
+    "正在显影": {
+      "en": "Developing",
+      "ja": "現像中",
+      "zh-Hant": "正在顯影"
+    },
+    "写入文件": {
+      "en": "Writing file",
+      "ja": "ファイルを書き込み中",
+      "zh-Hant": "寫入檔案"
+    },
+    "保存元数据": {
+      "en": "Saving metadata",
+      "ja": "メタデータを保存中",
+      "zh-Hant": "儲存中繼資料"
+    },
+    "生成打样": {
+      "en": "Creating proof",
+      "ja": "プルーフを作成中",
+      "zh-Hant": "產生打樣"
+    },
+    "复制原片": {
+      "en": "Copying original",
+      "ja": "元ファイルをコピー中",
+      "zh-Hant": "複製原片"
+    },
+    "正在导出": {
+      "en": "Exporting",
+      "ja": "書き出し中",
+      "zh-Hant": "正在匯出"
+    },
+    "等待导出": {
+      "en": "Queued",
+      "ja": "書き出し待ち",
+      "zh-Hant": "等待匯出"
+    },
+    "重试失败项": {
+      "en": "Retry failed",
+      "ja": "失敗分を再試行",
+      "zh-Hant": "重試失敗項目"
+    },
+    "取消导出": {
+      "en": "Cancel export",
+      "ja": "書き出しを取り消す",
+      "zh-Hant": "取消匯出"
+    },
+    "色轮；左右调整色相，上下调整饱和度，双击重置": {
+      "en": "Color wheel; left/right adjusts hue, up/down adjusts saturation, double-click resets",
+      "ja": "カラーホイール。左右で色相、上下で彩度を調整。ダブルクリックでリセット",
+      "zh-Hant": "色輪；左右調整色相，上下調整飽和度，按兩下重設"
+    },
+    "单位": {
+      "en": "Units",
+      "ja": "単位",
+      "zh-Hant": "單位"
+    },
+    "设置剪贴板": {
+      "en": "Settings clipboard",
+      "ja": "設定クリップボード",
+      "zh-Hant": "設定剪貼簿"
+    },
+    "已复制来源": {
+      "en": "Copied source",
+      "ja": "コピー元",
+      "zh-Hant": "已複製來源"
+    },
+    "胶片与相纸": {
+      "en": "Film and paper",
+      "ja": "フィルムと印画紙",
+      "zh-Hant": "膠片與相紙"
+    },
+    "胶片效果": {
+      "en": "Film effects",
+      "ja": "フィルム効果",
+      "zh-Hant": "膠片效果"
+    },
+    "场景置位": {
+      "en": "Scene placement",
+      "ja": "シーン配置",
+      "zh-Hant": "場景置位"
+    },
+    "调色": {
+      "en": "Color adjustments",
+      "ja": "カラー調整",
+      "zh-Hant": "調色"
+    },
+    "半格文件需要两个片位": {
+      "en": "A half-frame file requires two slots",
+      "ja": "ハーフ判ファイルには2コマが必要です",
+      "zh-Hant": "半格檔案需要兩個片位"
+    },
+    "半格文件过大": {
+      "en": "The half-frame file is too large",
+      "ja": "ハーフ判ファイルが大きすぎます",
+      "zh-Hant": "半格檔案過大"
+    },
+    "不支持此半格文件版本": {
+      "en": "Unsupported half-frame file version",
+      "ja": "未対応のハーフ判ファイルバージョンです",
+      "zh-Hant": "不支援此半格檔案版本"
+    },
+    "半格照片记录不完整": {
+      "en": "Incomplete half-frame photo record",
+      "ja": "ハーフ判の写真記録が不完全です",
+      "zh-Hant": "半格照片記錄不完整"
+    },
+    "照片来源": {
+      "en": "Photo sources",
+      "ja": "写真の読み込み元",
+      "zh-Hant": "照片來源"
+    },
+    "来源": {
+      "en": "Sources",
+      "ja": "読み込み元",
+      "zh-Hant": "來源"
+    },
+    "信息": {
+      "en": "Info",
+      "ja": "情報",
+      "zh-Hant": "資訊"
+    },
+    "全部刷新": {
+      "en": "Refresh all",
+      "ja": "すべて更新",
+      "zh-Hant": "全部重新整理"
+    },
+    "正在刷新…": {
+      "en": "Refreshing…",
+      "ja": "更新中…",
+      "zh-Hant": "正在重新整理…"
+    },
+    "Capture One 独立副本": {
+      "en": "Independent Capture One copy",
+      "ja": "Capture One の独立コピー",
+      "zh-Hant": "Capture One 獨立副本"
+    },
+    "Capture One 只读来源": {
+      "en": "Read-only Capture One source",
+      "ja": "Capture One の読み取り専用ソース",
+      "zh-Hant": "Capture One 唯讀來源"
+    },
+    "同步来源": {
+      "en": "Sync source",
+      "ja": "読み込み元を同期",
+      "zh-Hant": "同步來源"
+    },
+    "未监视文件夹": {
+      "en": "No watched folders",
+      "ja": "監視フォルダーはありません",
+      "zh-Hant": "尚未監看資料夾"
+    },
+    "在线": {
+      "en": "Online",
+      "ja": "オンライン",
+      "zh-Hant": "線上"
+    },
+    "离线": {
+      "en": "Offline",
+      "ja": "オフライン",
+      "zh-Hant": "離線"
+    },
+    "含子文件夹": {
+      "en": "Including subfolders",
+      "ja": "サブフォルダーを含む",
+      "zh-Hant": "含子資料夾"
+    },
+    "刷新": {
+      "en": "Refresh",
+      "ja": "更新",
+      "zh-Hant": "重新整理"
+    },
+    "取消监视": {
+      "en": "Unwatch",
+      "ja": "監視を解除",
+      "zh-Hant": "取消監看"
+    },
+    "重新定位": {
+      "en": "Relocate",
+      "ja": "場所を再指定",
+      "zh-Hant": "重新定位"
+    },
+    "停止监视文件夹": {
+      "en": "Stop watching folder",
+      "ja": "フォルダーの監視を停止",
+      "zh-Hant": "停止監看資料夾"
+    },
+    "仅停止自动刷新。已导入的照片、调整和磁盘原文件都会保留。": {
+      "en": "Only automatic refresh stops. Imported photos, edits and originals remain.",
+      "ja": "自動更新のみ停止します。読み込み済み写真、調整、元ファイルは保持されます。",
+      "zh-Hant": "僅停止自動重新整理。已匯入的照片、調整和磁碟原檔案都會保留。"
+    },
+    "停止监视": {
+      "en": "Stop watching",
+      "ja": "監視を停止",
+      "zh-Hant": "停止監看"
+    },
+    "尺寸": {
+      "en": "Dimensions",
+      "ja": "寸法",
+      "zh-Hant": "尺寸"
+    },
+    "感光度": {
+      "en": "Sensitivity",
+      "ja": "感度",
+      "zh-Hant": "感光度"
+    },
+    "光圈": {
+      "en": "Aperture",
+      "ja": "絞り",
+      "zh-Hant": "光圈"
+    },
+    "快门": {
+      "en": "Shutter",
+      "ja": "シャッター",
+      "zh-Hant": "快門"
+    },
+    "焦距": {
+      "en": "Focal length",
+      "ja": "焦点距離",
+      "zh-Hant": "焦距"
+    },
+    "多种": {
+      "en": "Mixed",
+      "ja": "複数",
+      "zh-Hant": "多種"
+    },
+    "蓝通道补偿：开启": {
+      "en": "Blue-channel compensation: On",
+      "ja": "青チャンネル補正：オン",
+      "zh-Hant": "藍通道補償：開啟"
+    },
+    "蓝通道补偿：关闭": {
+      "en": "Blue-channel compensation: Off",
+      "ja": "青チャンネル補正：オフ",
+      "zh-Hant": "藍通道補償：關閉"
+    },
+    "片边机身": {
+      "en": "Film-edge camera body",
+      "ja": "フィルム縁のカメラボディ",
+      "zh-Hant": "片邊機身"
+    },
+    "按照片区分": {
+      "en": "Vary by photo",
+      "ja": "写真ごとに変える",
+      "zh-Hant": "按照片區分"
+    },
+    "固定机身": {
+      "en": "Fix camera body",
+      "ja": "ボディを固定",
+      "zh-Hant": "固定機身"
+    },
+    "更换机身": {
+      "en": "Change camera body",
+      "ja": "ボディを変更",
+      "zh-Hant": "更換機身"
+    },
+    "返回": {
+      "en": "Back",
+      "ja": "戻る",
+      "zh-Hant": "返回"
+    },
+    "场景直方图": {
+      "en": "Scene histogram",
+      "zh-Hant": "場景直方圖",
+      "ja": "シーンヒストグラム"
+    },
+    "更新中…": {
+      "en": "Updating…",
+      "zh-Hant": "更新中…",
+      "ja": "更新中…"
+    },
+    "胶片显影已关闭": {
+      "en": "Film development is off",
+      "zh-Hant": "膠片顯影已關閉",
+      "ja": "フィルム現像はオフです"
+    },
+    "暂无场景数据": {
+      "en": "Scene data unavailable",
+      "zh-Hant": "暫無場景資料",
+      "ja": "シーンデータがありません"
+    },
+    "当前场景曲线后的真实分布": {
+      "en": "Measured scene distribution after the current curve",
+      "zh-Hant": "目前場景曲線後的真實分布",
+      "ja": "現在のカーブ適用後に測定したシーン分布"
+    },
+    "场景直方图暂不可用": {
+      "en": "Scene histogram is temporarily unavailable",
+      "zh-Hant": "場景直方圖暫不可用",
+      "ja": "シーンヒストグラムは現在利用できません"
+    },
+    "画布色域": {
+      "en": "Canvas gamut",
+      "zh-Hant": "畫布色域",
+      "ja": "キャンバス色域"
+    },
+    "数字中间片 · DI": {
+      "en": "Digital intermediate · DI",
+      "zh-Hant": "數位中間片 · DI",
+      "ja": "デジタルインターミディエイト · DI"
+    },
+    "HDR 增益图": {
+      "en": "HDR gain map",
+      "zh-Hant": "HDR 增益圖",
+      "ja": "HDR ゲインマップ"
+    },
+    "HDR 峰值": {
+      "en": "HDR peak",
+      "zh-Hant": "HDR 峰值",
+      "ja": "HDR ピーク"
+    },
+    "HDR 增益图不能与相纸 EDR 同时启用": {
+      "en": "HDR gain maps and paper EDR cannot be enabled together",
+      "zh-Hant": "HDR 增益圖不能與相紙 EDR 同時啟用",
+      "ja": "HDR ゲインマップと印画紙 EDR は同時に有効にできません"
+    },
+    "HDR 增益图必须与输出照片尺寸一致": {
+      "en": "The HDR gain map must match the output photo dimensions",
+      "zh-Hant": "HDR 增益圖必須與輸出照片尺寸一致",
+      "ja": "HDR ゲインマップは出力写真と同じサイズにしてください"
+    },
+    "HDR 增益图的尺寸或色彩空间已变更，请重新渲染": {
+      "en": "HDR gain-map dimensions or color space changed; render again",
+      "zh-Hant": "HDR 增益圖的尺寸或色彩空間已變更，請重新算圖",
+      "ja": "HDR ゲインマップのサイズまたは色空間が変更されました。再レンダリングしてください"
+    },
+    "HDR 增益图色彩空间无效": {
+      "en": "Invalid HDR gain-map color space",
+      "zh-Hant": "HDR 增益圖色彩空間無效",
+      "ja": "HDR ゲインマップの色空間が無効です"
+    },
+    "HDR 增益图输出支持 sRGB / Display P3 的 JPEG 配方": {
+      "en": "HDR gain-map export requires an sRGB or Display P3 JPEG recipe",
+      "zh-Hant": "HDR 增益圖輸出支援 sRGB / Display P3 的 JPEG 配方",
+      "ja": "HDR ゲインマップの出力には sRGB または Display P3 の JPEG レシピを使用してください"
+    },
+    "HDR 增益图适用于彩色印相或反转片显影，不支持底片扫描、数字中间片或黑白胶片": {
+      "en": "HDR gain maps support color printing or slide development, not negative scans, digital intermediates or black-and-white film",
+      "zh-Hant": "HDR 增益圖適用於彩色印相或反轉片顯影，不支援底片掃描、數位中間片或黑白膠片",
+      "ja": "HDR ゲインマップはカラー印画またはリバーサル現像に対応します。ネガスキャン、デジタルインターミディエイト、白黒フィルムには対応していません"
+    },
+    "HDR 增益图需要开启胶片显影": {
+      "en": "Enable film development to export an HDR gain map",
+      "zh-Hant": "HDR 增益圖需要開啟膠片顯影",
+      "ja": "HDR ゲインマップにはフィルム現像を有効にしてください"
+    },
+    "HDR 峰值应为 0.5–4 EV": {
+      "en": "HDR peak must be 0.5–4 EV",
+      "zh-Hant": "HDR 峰值應為 0.5–4 EV",
+      "ja": "HDR ピークは 0.5–4 EV にしてください"
+    },
+    "HDR 峰值应大于 0 且不超过 4 EV": {
+      "en": "HDR peak must be above 0 and no higher than 4 EV",
+      "zh-Hant": "HDR 峰值應大於 0 且不超過 4 EV",
+      "ja": "HDR ピークは 0 EV より大きく、4 EV 以下にしてください"
+    },
+    "HDR 峰值范围无效": {
+      "en": "Invalid HDR peak range",
+      "zh-Hant": "HDR 峰值範圍無效",
+      "ja": "HDR ピークの範囲が無効です"
+    },
+    "HDR 曲线不属于当前峰值设置": {
+      "en": "The HDR curve does not match the current peak setting",
+      "zh-Hant": "HDR 曲線不屬於目前峰值設定",
+      "ja": "HDR カーブが現在のピーク設定と一致しません"
+    },
+    "HDR 曲线亮度范围无效": {
+      "en": "Invalid HDR curve luminance range",
+      "zh-Hant": "HDR 曲線亮度範圍無效",
+      "ja": "HDR カーブの輝度範囲が無効です"
+    },
+    "HDR 曲线峰值不一致": {
+      "en": "HDR curve peak does not match",
+      "zh-Hant": "HDR 曲線峰值不一致",
+      "ja": "HDR カーブのピークが一致しません"
+    },
+    "HDR 曲线末端不匹配峰值": {
+      "en": "The HDR curve endpoint does not match its peak",
+      "zh-Hant": "HDR 曲線末端不符合峰值",
+      "ja": "HDR カーブの終点がピークと一致しません"
+    },
+    "HDR 输入包含无效像素": {
+      "en": "HDR input contains invalid pixels",
+      "zh-Hant": "HDR 輸入包含無效像素",
+      "ja": "HDR 入力に無効な画素が含まれています"
+    },
+    "HDR 输出缺少实际增益图": {
+      "en": "The HDR output is missing its gain map",
+      "zh-Hant": "HDR 輸出缺少實際增益圖",
+      "ja": "HDR 出力にゲインマップがありません"
+    },
+    "HDR 需要 RGB 图像": {
+      "en": "HDR requires an RGB image",
+      "zh-Hant": "HDR 需要 RGB 圖像",
+      "ja": "HDR には RGB 画像が必要です"
+    },
+    "HDR 颗粒恢复参数无效": {
+      "en": "Invalid HDR grain restoration parameters",
+      "zh-Hant": "HDR 顆粒還原參數無效",
+      "ja": "HDR 粒状感復元パラメーターが無効です"
+    },
+    "光谱引擎未返回 HDR 曲线": {
+      "en": "The spectral engine did not return an HDR curve",
+      "zh-Hant": "光譜引擎未傳回 HDR 曲線",
+      "ja": "スペクトルエンジンから HDR カーブが返されませんでした"
+    },
+    "缺少 HDR 输出组件，请修复应用安装": {
+      "en": "The HDR output component is missing; repair the application installation",
+      "zh-Hant": "缺少 HDR 輸出元件，請修復應用程式安裝",
+      "ja": "HDR 出力コンポーネントがありません。アプリのインストールを修復してください"
+    },
+    "HDR 增益图请使用照片输出配方；排版导出暂不支持增益图": {
+      "en": "Use a photo output recipe for HDR gain maps; composition export does not yet support them",
+      "zh-Hant": "HDR 增益圖請使用照片輸出配方；排版輸出暫不支援增益圖",
+      "ja": "HDR ゲインマップには写真の出力レシピを使用してください。レイアウト出力にはまだ対応していません"
+    },
+    "数字中间片请使用照片输出配方；物理片边请先选择相纸或直接扫描": {
+      "en": "Use a photo output recipe for digital intermediates; choose a paper or direct scan for physical film edges",
+      "zh-Hant": "數位中間片請使用照片輸出配方；物理片邊請先選擇相紙或直接掃描",
+      "ja": "デジタルインターミディエイトには写真の出力レシピを使用してください。物理フィルム縁には印画紙または直接スキャンを選択してください"
+    },
+    "镜头与光学": {
+      "en": "Lens & optics",
+      "zh-Hant": "鏡頭與光學",
+      "ja": "レンズと光学補正"
+    },
+    "正在匹配镜头…": {
+      "en": "Matching lens…",
+      "zh-Hant": "正在匹配鏡頭…",
+      "ja": "レンズを照合中…"
+    },
+    "镜头校正已关闭": {
+      "en": "Lens correction off",
+      "zh-Hant": "鏡頭校正已關閉",
+      "ja": "レンズ補正オフ"
+    },
+    "缺少镜头信息": {
+      "en": "Lens metadata missing",
+      "zh-Hant": "缺少鏡頭資訊",
+      "ja": "レンズ情報がありません"
+    },
+    "未找到本机镜头配置": {
+      "en": "No local lens profiles found",
+      "zh-Hant": "未找到本機鏡頭設定檔",
+      "ja": "ローカルのレンズプロファイルがありません"
+    },
+    "匹配到多个镜头配置": {
+      "en": "Multiple lens profiles matched",
+      "zh-Hant": "匹配到多個鏡頭設定檔",
+      "ja": "複数のレンズプロファイルが一致しました"
+    },
+    "焦距超出配置范围": {
+      "en": "Focal length outside profile range",
+      "zh-Hant": "焦距超出設定檔範圍",
+      "ja": "焦点距離がプロファイルの範囲外です"
+    },
+    "校正范围不可靠": {
+      "en": "Correction range is unreliable",
+      "zh-Hant": "校正範圍不可靠",
+      "ja": "補正範囲が信頼できません"
+    },
+    "缺少可置信的中性区域，保留白平衡": {
+      "en": "No reliable neutral areas; white balance retained",
+      "zh-Hant": "缺少可信的中性區域，保留白平衡",
+      "ja": "信頼できるニュートラル領域がないためホワイトバランスを維持しました"
+    },
+    "中性区域分布不足，保留白平衡": {
+      "en": "Insufficient neutral distribution; white balance retained",
+      "zh-Hant": "中性區域分布不足，保留白平衡",
+      "ja": "ニュートラル領域の分布が不十分なためホワイトバランスを維持しました"
+    },
+    "按分布式中性区域估计色温与色调": {
+      "en": "Estimated temperature and tint from distributed neutral areas",
+      "zh-Hant": "依分散中性區域估計色溫與色調",
+      "ja": "分散したニュートラル領域から色温度と色かぶりを推定しました"
+    },
+    "镜头未匹配 · 缺少镜头信息": {
+      "en": "No matching lens profile · Lens metadata missing",
+      "zh-Hant": "鏡頭未匹配 · 缺少鏡頭資訊",
+      "ja": "一致するレンズプロファイルなし · レンズ情報がありません"
+    },
+    "镜头未匹配 · 未找到本机镜头配置": {
+      "en": "No matching lens profile · No local lens profiles found",
+      "zh-Hant": "鏡頭未匹配 · 未找到本機鏡頭設定檔",
+      "ja": "一致するレンズプロファイルなし · ローカルのレンズプロファイルがありません"
+    },
+    "镜头未匹配 · 匹配到多个镜头配置": {
+      "en": "No matching lens profile · Multiple lens profiles matched",
+      "zh-Hant": "鏡頭未匹配 · 匹配到多個鏡頭設定檔",
+      "ja": "一致するレンズプロファイルなし · 複数のレンズプロファイルが一致しました"
+    },
+    "镜头未匹配 · 焦距超出配置范围": {
+      "en": "No matching lens profile · Focal length outside profile range",
+      "zh-Hant": "鏡頭未匹配 · 焦距超出設定檔範圍",
+      "ja": "一致するレンズプロファイルなし · 焦点距離がプロファイルの範囲外です"
+    },
+    "镜头未匹配 · 校正范围不可靠": {
+      "en": "No matching lens profile · Correction range is unreliable",
+      "zh-Hant": "鏡頭未匹配 · 校正範圍不可靠",
+      "ja": "一致するレンズプロファイルなし · 補正範囲が信頼できません"
+    },
+    "显示器色彩管理": {
+      "en": "Display color management",
+      "ja": "ディスプレイのカラーマネジメント",
+      "zh-Hant": "顯示器色彩管理"
+    },
+    "超色域提示": {
+      "en": "Gamut warning",
+      "ja": "色域外警告",
+      "zh-Hant": "超色域提示"
+    },
+    "减少动态效果": {
+      "en": "Reduce motion",
+      "ja": "視差効果を減らす",
+      "zh-Hant": "減少動態效果"
+    },
+    "本机会话接口": {
+      "en": "Local session API",
+      "ja": "ローカルセッション API",
+      "zh-Hant": "本機會話介面"
+    },
+    "导出后打开文件夹": {
+      "en": "Open folder after export",
+      "ja": "書き出し後にフォルダーを開く",
+      "zh-Hant": "匯出後開啟資料夾"
+    },
+    "蓝通道补偿": {
+      "en": "Blue-channel compensation",
+      "ja": "青チャンネル補正",
+      "zh-Hant": "藍通道補償"
+    },
+    "选区显示": {
+      "en": "Selection overlay",
+      "ja": "選択範囲の表示",
+      "zh-Hant": "選區顯示"
+    }
+  },
+  "templates": {
+    "{status} · 色差校正 · 保守去紫边": {
+      "en": "{status} · CA correction · Purple defringe",
+      "zh-Hant": "{status} · 色差校正 · 保守去紫邊",
+      "ja": "{status} · 色収差補正 · パープルフリンジ軽減"
+    },
+    "{status} · 色差校正": {
+      "en": "{status} · CA correction",
+      "zh-Hant": "{status} · 色差校正",
+      "ja": "{status} · 色収差補正"
+    },
+    "{status} · 保守去紫边": {
+      "en": "{status} · Purple defringe",
+      "zh-Hant": "{status} · 保守去紫邊",
+      "ja": "{status} · パープルフリンジ軽減"
+    },
+    "已矫正 {name} · 缺少镜头信息": {
+      "en": "Corrected · {name} · Lens metadata missing",
+      "zh-Hant": "已校正 {name} · 缺少鏡頭資訊",
+      "ja": "補正済み · {name} · レンズ情報がありません"
+    },
+    "已矫正 {name} · 未找到本机镜头配置": {
+      "en": "Corrected · {name} · No local lens profiles found",
+      "zh-Hant": "已校正 {name} · 未找到本機鏡頭設定檔",
+      "ja": "補正済み · {name} · ローカルのレンズプロファイルがありません"
+    },
+    "已矫正 {name} · 匹配到多个镜头配置": {
+      "en": "Corrected · {name} · Multiple lens profiles matched",
+      "zh-Hant": "已校正 {name} · 匹配到多個鏡頭設定檔",
+      "ja": "補正済み · {name} · 複数のレンズプロファイルが一致しました"
+    },
+    "已矫正 {name} · 焦距超出配置范围": {
+      "en": "Corrected · {name} · Focal length outside profile range",
+      "zh-Hant": "已校正 {name} · 焦距超出設定檔範圍",
+      "ja": "補正済み · {name} · 焦点距離がプロファイルの範囲外です"
+    },
+    "已矫正 {name} · 校正范围不可靠": {
+      "en": "Corrected · {name} · Correction range is unreliable",
+      "zh-Hant": "已校正 {name} · 校正範圍不可靠",
+      "ja": "補正済み · {name} · 補正範囲が信頼できません"
+    },
+    "已矫正 {name}": {
+      "en": "Corrected · {name}",
+      "zh-Hant": "已校正 {name}",
+      "ja": "補正済み · {name}"
+    },
+    "镜头配置未应用 · {name} · 缺少镜头信息": {
+      "en": "Lens profile not applied · {name} · Lens metadata missing",
+      "zh-Hant": "鏡頭設定檔未套用 · {name} · 缺少鏡頭資訊",
+      "ja": "レンズプロファイル未適用 · {name} · レンズ情報がありません"
+    },
+    "镜头配置未应用 · {name} · 未找到本机镜头配置": {
+      "en": "Lens profile not applied · {name} · No local lens profiles found",
+      "zh-Hant": "鏡頭設定檔未套用 · {name} · 未找到本機鏡頭設定檔",
+      "ja": "レンズプロファイル未適用 · {name} · ローカルのレンズプロファイルがありません"
+    },
+    "镜头配置未应用 · {name} · 匹配到多个镜头配置": {
+      "en": "Lens profile not applied · {name} · Multiple lens profiles matched",
+      "zh-Hant": "鏡頭設定檔未套用 · {name} · 匹配到多個鏡頭設定檔",
+      "ja": "レンズプロファイル未適用 · {name} · 複数のレンズプロファイルが一致しました"
+    },
+    "镜头配置未应用 · {name} · 焦距超出配置范围": {
+      "en": "Lens profile not applied · {name} · Focal length outside profile range",
+      "zh-Hant": "鏡頭設定檔未套用 · {name} · 焦距超出設定檔範圍",
+      "ja": "レンズプロファイル未適用 · {name} · 焦点距離がプロファイルの範囲外です"
+    },
+    "镜头配置未应用 · {name} · 校正范围不可靠": {
+      "en": "Lens profile not applied · {name} · Correction range is unreliable",
+      "zh-Hant": "鏡頭設定檔未套用 · {name} · 校正範圍不可靠",
+      "ja": "レンズプロファイル未適用 · {name} · 補正範囲が信頼できません"
+    },
+    "镜头配置未应用 · {name}": {
+      "en": "Lens profile not applied · {name}",
+      "zh-Hant": "鏡頭設定檔未套用 · {name}",
+      "ja": "レンズプロファイル未適用 · {name}"
+    },
+    "镜头未匹配 · {name} · 缺少镜头信息": {
+      "en": "Lens not matched · {name} · Lens metadata missing",
+      "zh-Hant": "鏡頭未匹配 · {name} · 缺少鏡頭資訊",
+      "ja": "レンズが一致しません · {name} · レンズ情報がありません"
+    },
+    "镜头未匹配 · {name} · 未找到本机镜头配置": {
+      "en": "Lens not matched · {name} · No local lens profiles found",
+      "zh-Hant": "鏡頭未匹配 · {name} · 未找到本機鏡頭設定檔",
+      "ja": "レンズが一致しません · {name} · ローカルのレンズプロファイルがありません"
+    },
+    "镜头未匹配 · {name} · 匹配到多个镜头配置": {
+      "en": "Lens not matched · {name} · Multiple lens profiles matched",
+      "zh-Hant": "鏡頭未匹配 · {name} · 匹配到多個鏡頭設定檔",
+      "ja": "レンズが一致しません · {name} · 複数のレンズプロファイルが一致しました"
+    },
+    "镜头未匹配 · {name} · 焦距超出配置范围": {
+      "en": "Lens not matched · {name} · Focal length outside profile range",
+      "zh-Hant": "鏡頭未匹配 · {name} · 焦距超出設定檔範圍",
+      "ja": "レンズが一致しません · {name} · 焦点距離がプロファイルの範囲外です"
+    },
+    "镜头未匹配 · {name} · 校正范围不可靠": {
+      "en": "Lens not matched · {name} · Correction range is unreliable",
+      "zh-Hant": "鏡頭未匹配 · {name} · 校正範圍不可靠",
+      "ja": "レンズが一致しません · {name} · 補正範囲が信頼できません"
+    },
+    "镜头未匹配 · {name}": {
+      "en": "Lens not matched · {name}",
+      "zh-Hant": "鏡頭未匹配 · {name}",
+      "ja": "レンズが一致しません · {name}"
+    },
+    "镜头未匹配 · 缺少镜头信息": {
+      "en": "No matching lens profile · Lens metadata missing",
+      "zh-Hant": "鏡頭未匹配 · 缺少鏡頭資訊",
+      "ja": "一致するレンズプロファイルなし · レンズ情報がありません"
+    },
+    "镜头未匹配 · 未找到本机镜头配置": {
+      "en": "No matching lens profile · No local lens profiles found",
+      "zh-Hant": "鏡頭未匹配 · 未找到本機鏡頭設定檔",
+      "ja": "一致するレンズプロファイルなし · ローカルのレンズプロファイルがありません"
+    },
+    "镜头未匹配 · 匹配到多个镜头配置": {
+      "en": "No matching lens profile · Multiple lens profiles matched",
+      "zh-Hant": "鏡頭未匹配 · 匹配到多個鏡頭設定檔",
+      "ja": "一致するレンズプロファイルなし · 複数のレンズプロファイルが一致しました"
+    },
+    "镜头未匹配 · 焦距超出配置范围": {
+      "en": "No matching lens profile · Focal length outside profile range",
+      "zh-Hant": "鏡頭未匹配 · 焦距超出設定檔範圍",
+      "ja": "一致するレンズプロファイルなし · 焦点距離がプロファイルの範囲外です"
+    },
+    "镜头未匹配 · 校正范围不可靠": {
+      "en": "No matching lens profile · Correction range is unreliable",
+      "zh-Hant": "鏡頭未匹配 · 校正範圍不可靠",
+      "ja": "一致するレンズプロファイルなし · 補正範囲が信頼できません"
+    },
+    "正在打开 {count} 张照片…": {
+      "en": "Opening {count} photos…",
+      "ja": "写真 {count} 枚を開いています…",
+      "zh-Hant": "正在開啟 {count} 張照片…"
+    },
+    "正在批量导出 · {done}/{total} 张": {
+      "en": "Batch export · {done}/{total} photos",
+      "ja": "一括書き出し · {done}/{total} 枚",
+      "zh-Hant": "正在批次匯出 · {done}/{total} 張"
+    },
+    "第 {current}/{total} 张 · {phase}": {
+      "en": "Photo {current}/{total} · {phase}",
+      "ja": "{current}/{total} 枚 · {phase}",
+      "zh-Hant": "第 {current}/{total} 張 · {phase}"
+    },
+    "批量导出{state} · {done}/{total} 张": {
+      "en": "Batch export {state} · {done}/{total} photos",
+      "ja": "一括書き出し{state} · {done}/{total} 枚",
+      "zh-Hant": "批次匯出{state} · {done}/{total} 張"
+    },
+    "批量导出{state} · {done}/{total} 张 · {failed} 张失败": {
+      "en": "Batch export {state} · {done}/{total} photos · {failed} failed",
+      "ja": "一括書き出し{state} · {done}/{total} 枚 · {failed} 枚失敗",
+      "zh-Hant": "批次匯出{state} · {done}/{total} 張 · {failed} 張失敗"
+    },
+    "已同步 {count} 张，可逐张撤销": {
+      "en": "Synced {count} photos; each can be undone",
+      "ja": "{count} 枚に同期しました。各写真で取り消し可能",
+      "zh-Hant": "已同步 {count} 張，可逐張撤銷"
+    },
+    "已从列表移除 {count} 张照片，磁盘原片和编辑记录均保留。": {
+      "en": "Removed {count} photos from the list. Originals and edit records are retained.",
+      "ja": "{count} 枚を一覧から除外しました。元ファイルと調整記録は保持しています。",
+      "zh-Hant": "已從列表移除 {count} 張照片，磁碟原片和編輯記錄均保留。"
+    },
+    "已应用「{name}」至 {count} 张照片，可逐张撤销。": {
+      "en": "Applied “{name}” to {count} photos; each can be undone.",
+      "ja": "「{name}」を {count} 枚に適用しました。各写真で取り消し可能です。",
+      "zh-Hant": "已應用「{name}」至 {count} 張照片，可逐張撤銷。"
+    },
+    "已将胶片应用至 {count} 张照片；各张曝光与显影参数保持独立。": {
+      "en": "Applied film to {count} photos; each photo's exposure and development remain independent.",
+      "ja": "フィルムを {count} 枚に適用しました。各写真の露出と現像は独立したままです。",
+      "zh-Hant": "已將膠片應用至 {count} 張照片；各張曝光與顯影引數保持獨立。"
+    },
+    "{count} 张照片未加入，请检查原文件。": {
+      "en": "{count} photos were not added. Check the source files.",
+      "ja": "{count} 枚の写真を追加できませんでした。元ファイルを確認してください。",
+      "zh-Hant": "{count} 張照片未加入，請檢查原檔案。"
+    },
+    "诊断导出失败：{reason}": {
+      "en": "Could not export diagnostics: {reason}",
+      "ja": "診断情報を書き出せませんでした：{reason}",
+      "zh-Hant": "診斷匯出失敗：{reason}"
+    },
+    "编辑记录保存失败：{reason}": {
+      "en": "Could not save edits: {reason}",
+      "ja": "調整記録を保存できませんでした：{reason}",
+      "zh-Hant": "編輯記錄儲存失敗：{reason}"
+    },
+    "跳过非照片文件：{name}": {
+      "en": "Skipped non-photo file: {name}",
+      "ja": "写真以外のファイルをスキップ：{name}",
+      "zh-Hant": "跳過非照片檔案：{name}"
+    },
+    "预设导入失败：{reason}": {
+      "en": "Could not import preset: {reason}",
+      "ja": "プリセットを読み込めませんでした：{reason}",
+      "zh-Hant": "預設匯入失敗：{reason}"
+    },
+    "无法打开 {name}：{reason}": {
+      "en": "Could not open {name}: {reason}",
+      "ja": "{name} を開けませんでした：{reason}",
+      "zh-Hant": "無法開啟 {name}：{reason}"
+    },
+    "自动调整失败：{reason}": {
+      "en": "Automatic adjustment failed: {reason}",
+      "ja": "自動調整に失敗しました：{reason}",
+      "zh-Hant": "自動調整失敗：{reason}"
+    },
+    "测量失败：{reason}": {
+      "en": "Measurement failed: {reason}",
+      "ja": "測定に失敗しました：{reason}",
+      "zh-Hant": "測量失敗：{reason}"
+    },
+    "裁切预览加载失败：{reason}": {
+      "en": "Could not load crop preview: {reason}",
+      "ja": "切り抜きプレビューを読み込めませんでした：{reason}",
+      "zh-Hant": "裁切預覽載入失敗：{reason}"
+    },
+    "照片已导出：{name}": {
+      "en": "Photo exported: {name}",
+      "ja": "写真を書き出しました：{name}",
+      "zh-Hant": "照片已匯出：{name}"
+    },
+    "目标文件已存在，已自动使用新文件名：{name}": {
+      "en": "Destination exists; a new filename was used: {name}",
+      "ja": "保存先が既存のため新しいファイル名を使用しました：{name}",
+      "zh-Hant": "目標檔案已存在，已自動使用新檔名：{name}"
+    },
+    "看片台位置保存失败：{reason}": {
+      "en": "Could not save light table positions: {reason}",
+      "ja": "ライトテーブルの配置を保存できませんでした：{reason}",
+      "zh-Hant": "看片臺位置儲存失敗：{reason}"
+    },
+    "已导出 {name}": {
+      "en": "Exported {name}",
+      "ja": "書き出しました：{name}",
+      "zh-Hant": "已匯出 {name}"
+    },
+    "显影 {current}/{total}": {
+      "en": "Developing {current}/{total}",
+      "ja": "現像中 {current}/{total}",
+      "zh-Hant": "顯影 {current}/{total}"
+    },
+    "删除蒙版 {name}": {
+      "en": "Delete mask {name}",
+      "ja": "マスクを削除：{name}",
+      "zh-Hant": "刪除蒙版 {name}"
+    },
+    "{label}数值": {
+      "en": "{label} value",
+      "ja": "{label}の値",
+      "zh-Hant": "{label}數值"
+    },
+    "{label}；方向键按步进，Shift 细调，Alt 粗调；双击圆点恢复默认值": {
+      "en": "{label}; arrows adjust by step, Shift for fine, Alt for coarse; double-click the handle to reset",
+      "ja": "{label}。矢印で調整、Shift で微調整、Alt で大きく調整。ハンドルをダブルクリックでリセット",
+      "zh-Hant": "{label}；方向鍵按步進，Shift 細調，Alt 粗調；雙擊圓點恢復預設值"
+    },
+    "{label}，展开选择": {
+      "en": "{label}, expand to choose",
+      "ja": "{label}、展開して選択",
+      "zh-Hant": "{label}，展開選擇"
+    },
+    "颗粒类型：{label}": {
+      "en": "Grain type: {label}",
+      "ja": "粒子の種類：{label}",
+      "zh-Hant": "顆粒型別：{label}"
+    },
+    "{label}工具": {
+      "en": "{label} tools",
+      "ja": "{label}ツール",
+      "zh-Hant": "{label}工具"
+    },
+    "编辑变体 {name}": {
+      "en": "Edit variant {name}",
+      "ja": "バリアントを編集：{name}",
+      "zh-Hant": "編輯變體 {name}"
+    },
+    "离线 · {name}": {
+      "en": "Offline · {name}",
+      "ja": "オフライン · {name}",
+      "zh-Hant": "離線 · {name}"
+    },
+    "重新定位 {name}": {
+      "en": "Relocate {name}",
+      "ja": "再指定：{name}",
+      "zh-Hant": "重新定位 {name}"
+    },
+    "已选 {count}": {
+      "en": "Selected: {count}",
+      "ja": "選択中：{count}",
+      "zh-Hant": "已選 {count}"
+    },
+    "已选 {count} 张": {
+      "en": "Selected: {count} photos",
+      "ja": "選択中：{count} 枚",
+      "zh-Hant": "已選 {count} 張"
+    },
+    "{count} 张": {
+      "en": "{count} photos",
+      "ja": "{count} 枚",
+      "zh-Hant": "{count} 張"
+    },
+    "{count} 张照片": {
+      "en": "{count} photos",
+      "ja": "{count} 枚の写真",
+      "zh-Hant": "{count} 張照片"
+    },
+    "{count} 层": {
+      "en": "{count} layers",
+      "ja": "{count} レイヤー",
+      "zh-Hant": "{count} 層"
+    },
+    "{count} 款胶片配置": {
+      "en": "{count} film stocks",
+      "ja": "{count} 種のフィルム",
+      "zh-Hant": "{count} 款膠片配置"
+    },
+    "导出 {count} 张": {
+      "en": "Export {count} photos",
+      "ja": "{count} 枚を書き出す",
+      "zh-Hant": "匯出 {count} 張"
+    },
+    "批量导出 {count} 张": {
+      "en": "Batch export {count} photos",
+      "ja": "{count} 枚を一括書き出し",
+      "zh-Hant": "批次匯出 {count} 張"
+    },
+    "选定后应用至 {count} 张 · 各张参数保持独立": {
+      "en": "Apply selection to {count} photos · Individual edits are retained",
+      "ja": "選択後 {count} 枚に適用 · 各写真の調整を保持",
+      "zh-Hant": "選定後應用至 {count} 張 · 各張引數保持獨立"
+    },
+    "应用至已选 {count} 张。保留各张曝光、白平衡、胶片、几何与蒙版。": {
+      "en": "Apply to {count} selected photos. Retain each photo's exposure, white balance, film, geometry and masks.",
+      "ja": "選択した {count} 枚に適用。各写真の露出、ホワイトバランス、フィルム、ジオメトリ、マスクを保持。",
+      "zh-Hant": "應用至已選 {count} 張。保留各張曝光、白平衡、膠片、幾何與蒙版。"
+    },
+    "应用至 {count} 张": {
+      "en": "Apply to {count} photos",
+      "ja": "{count} 枚に適用",
+      "zh-Hant": "應用至 {count} 張"
+    },
+    "同步至 {count} 张": {
+      "en": "Sync to {count} photos",
+      "ja": "{count} 枚に同期",
+      "zh-Hant": "同步至 {count} 張"
+    },
+    "在所选位置创建「{name}」文件夹；同名文件自动编号。": {
+      "en": "Create “{name}” folder at the selected location; duplicate names are numbered.",
+      "ja": "選択場所に「{name}」フォルダーを作成。同名ファイルには連番を付けます。",
+      "zh-Hant": "在所選位置建立「{name}」資料夾；同名檔案自動編號。"
+    },
+    "无法应用：{reason}": {
+      "en": "Cannot apply: {reason}",
+      "ja": "適用できません：{reason}",
+      "zh-Hant": "無法應用：{reason}"
+    },
+    "胶片 {value}": {
+      "en": "Film {value}",
+      "ja": "フィルム {value}",
+      "zh-Hant": "膠片 {value}"
+    },
+    "场景中值 {value}": {
+      "en": "Scene median {value}",
+      "ja": "シーンの中央値 {value}",
+      "zh-Hant": "場景中值 {value}"
+    },
+    "图面颜色 {value}": {
+      "en": "Canvas color {value}",
+      "ja": "キャンバスの色 {value}",
+      "zh-Hant": "圖面顏色 {value}"
+    },
+    "选择裁切比例 {value}": {
+      "en": "Choose crop ratio {value}",
+      "ja": "切り抜き比率を選択：{value}",
+      "zh-Hant": "選擇裁切比例 {value}"
+    },
+    "{label}场景曲线，负八至八 EV": {
+      "en": "{label} scene curve, −8 to +8 EV",
+      "ja": "{label}のシーンカーブ、−8〜+8 EV",
+      "zh-Hant": "{label}場景曲線，負八至八 EV"
+    },
+    "{label}曲线数值，零至二百五十五": {
+      "en": "{label} curve value, 0 to 255",
+      "ja": "{label}のカーブ値、0〜255",
+      "zh-Hant": "{label}曲線數值，零至二百五十五"
+    },
+    "{name}，拖动取景，滚轮缩放": {
+      "en": "{name}, drag to frame, scroll to zoom",
+      "ja": "{name}。ドラッグで構図を調整、ホイールで拡大縮小",
+      "zh-Hant": "{name}，拖動取景，滾輪縮放"
+    },
+    "{radius}% · 柔边 {softness}%": {
+      "en": "{radius}% · Softness {softness}%",
+      "ja": "{radius}% · ソフトさ {softness}%",
+      "zh-Hant": "{radius}% · 柔邊 {softness}%"
+    },
+    "{count} 张 · {value}": {
+      "en": "{count} photos · {value}",
+      "ja": "{count} 枚 · {value}",
+      "zh-Hant": "{count} 張 · {value}"
+    },
+    "{count} 个来源": {
+      "en": "{count} sources",
+      "ja": "{count} 個の読み込み元",
+      "zh-Hant": "{count} 個來源"
+    },
+    "{paths}\n另 {count} 个来源": {
+      "en": "{paths}\n{count} more sources",
+      "ja": "{paths}\n他 {count} 個の読み込み元",
+      "zh-Hant": "{paths}\n另 {count} 個來源"
+    },
+    "选择 {name}": {
+      "en": "Select {name}",
+      "ja": "選択：{name}",
+      "zh-Hant": "選擇 {name}"
+    },
+    "{name}\n已在当前会话": {
+      "en": "{name}\nAlready in current session",
+      "ja": "{name}\n現在のセッションに追加済み",
+      "zh-Hant": "{name}\n已在當前會話"
+    },
+    "已选择 {count} 张": {
+      "en": "Selected {count} photos",
+      "ja": "{count} 枚を選択中",
+      "zh-Hant": "已選擇 {count} 張"
+    },
+    "加入当前会话 · {count}": {
+      "en": "Add to session · {count}",
+      "ja": "現在のセッションに追加 · {count}",
+      "zh-Hant": "加入當前會話 · {count}"
+    },
+    "已加入 {count} 张": {
+      "en": "Added {count} photos",
+      "ja": "{count} 枚を追加しました",
+      "zh-Hant": "已加入 {count} 張"
+    },
+    "部分来源无法读取：{reason}": {
+      "en": "Some sources could not be read: {reason}",
+      "ja": "一部の読み込み元を開けません：{reason}",
+      "zh-Hant": "部分來源無法讀取：{reason}"
+    },
+    "无法加入照片：{reason}": {
+      "en": "Could not add photos: {reason}",
+      "ja": "写真を追加できません：{reason}",
+      "zh-Hant": "無法加入照片：{reason}"
+    },
+    "无法预览这张照片：{reason}": {
+      "en": "Could not preview this photo: {reason}",
+      "ja": "この写真をプレビューできません：{reason}",
+      "zh-Hant": "無法預覽這張照片：{reason}"
+    },
+    "来源不可用：{name}": {
+      "en": "Source unavailable: {name}",
+      "ja": "読み込み元を利用できません：{name}",
+      "zh-Hant": "來源不可用：{name}"
+    },
+    "{name} · 原尺寸": {
+      "en": "{name} · Original size",
+      "ja": "{name} · 元のサイズ",
+      "zh-Hant": "{name} · 原尺寸"
+    },
+    "导出参数无效：{reason}": {
+      "en": "Invalid export settings: {reason}",
+      "ja": "書き出し設定が無効です：{reason}",
+      "zh-Hant": "匯出引數無效：{reason}"
+    },
+    "未转换字段：{value}": {
+      "en": "Unconverted fields: {value}",
+      "ja": "未変換フィールド：{value}",
+      "zh-Hant": "未轉換欄位：{value}"
+    },
+    "预设参数超出范围：{value}": {
+      "en": "Preset setting out of range: {value}",
+      "ja": "プリセット設定が範囲外です：{value}",
+      "zh-Hant": "預設引數超出範圍：{value}"
+    },
+    "依赖色彩配置：{value}": {
+      "en": "Required color profile: {value}",
+      "ja": "必要なカラープロファイル：{value}",
+      "zh-Hant": "依賴色彩配置：{value}"
+    },
+    "XMP 参数超出范围：{value}": {
+      "en": "XMP setting out of range: {value}",
+      "ja": "XMP 設定が範囲外です：{value}",
+      "zh-Hant": "XMP 引數超出範圍：{value}"
+    },
+    "无法读取 XMP 参数：{value}": {
+      "en": "Could not read XMP setting: {value}",
+      "ja": "XMP 設定を読み取れません：{value}",
+      "zh-Hant": "無法讀取 XMP 引數：{value}"
+    },
+    "无法读取 XMP 曲线：{value}": {
+      "en": "Could not read XMP curve: {value}",
+      "ja": "XMP カーブを読み取れません：{value}",
+      "zh-Hant": "無法讀取 XMP 曲線：{value}"
+    },
+    "{maker} / 黑白负片": {
+      "en": "{maker} / B&W negative",
+      "ja": "{maker} / 白黒ネガ",
+      "zh-Hant": "{maker} / 黑白負片"
+    },
+    "{maker} / 反转片": {
+      "en": "{maker} / Reversal film",
+      "ja": "{maker} / リバーサル",
+      "zh-Hant": "{maker} / 反轉片"
+    },
+    "{maker} / 彩色负片": {
+      "en": "{maker} / Color negative",
+      "ja": "{maker} / カラーネガ",
+      "zh-Hant": "{maker} / 彩色負片"
+    },
+    "{status}；原片保持不变。": {
+      "en": "{status}; originals are unchanged.",
+      "ja": "{status}。元ファイルは変更されていません。",
+      "zh-Hant": "{status}；原片保持不變。"
+    },
+    "{status}；{reason}": {
+      "en": "{status}; {reason}",
+      "ja": "{status}：{reason}",
+      "zh-Hant": "{status}；{reason}"
+    },
+    "相纸 LUT 已导出：{path}": {
+      "en": "Paper LUT exported: {path}",
+      "ja": "印画紙 LUT を書き出しました：{path}",
+      "zh-Hant": "相紙 LUT 已匯出：{path}"
+    },
+    "相纸 LUT 导出失败：{reason}": {
+      "en": "Paper LUT export failed: {reason}",
+      "ja": "印画紙 LUT の書き出しに失敗：{reason}",
+      "zh-Hant": "相紙 LUT 匯出失敗：{reason}"
+    },
+    "已保存 {name}": {
+      "en": "Saved {name}",
+      "ja": "保存済み：{name}",
+      "zh-Hant": "已儲存 {name}"
+    },
+    "显影 {current} / {total}": {
+      "en": "Developing {current} / {total}",
+      "ja": "現像中 {current} / {total}",
+      "zh-Hant": "顯影 {current} / {total}"
+    },
+    "找不到照片：{names}；可替换对应片位": {
+      "en": "Photos not found: {names}; replace the affected slots",
+      "ja": "写真が見つかりません：{names}。該当コマを置換できます",
+      "zh-Hant": "找不到照片：{names}；可替換對應片位"
+    },
+    "{count}年": {
+      "en": "{count}",
+      "ja": "{count}年",
+      "zh-Hant": "{count}年"
+    },
+    "{count}月": {
+      "en": "{count}",
+      "ja": "{count}月",
+      "zh-Hant": "{count}月"
+    },
+    "{label}，{count}张": {
+      "en": "{label}, {count} photos",
+      "ja": "{label}、{count}枚",
+      "zh-Hant": "{label}，{count}張"
+    },
+    "已完成 {done} / {total}": {
+      "en": "Completed {done} / {total}",
+      "ja": "完了 {done} / {total}",
+      "zh-Hant": "已完成 {done} / {total}"
+    },
+    "已完成 {done} / {total} · 失败 {failed}": {
+      "en": "Completed {done} / {total} · Failed {failed}",
+      "ja": "完了 {done} / {total}・失敗 {failed}",
+      "zh-Hant": "已完成 {done} / {total} · 失敗 {failed}"
+    },
+    "已完成 {done} / {total} · 取消 {cancelled}": {
+      "en": "Completed {done} / {total} · Cancelled {cancelled}",
+      "ja": "完了 {done} / {total}・取消 {cancelled}",
+      "zh-Hant": "已完成 {done} / {total} · 取消 {cancelled}"
+    },
+    "已完成 {done} / {total} · 失败 {failed} · 取消 {cancelled}": {
+      "en": "Completed {done} / {total} · Failed {failed} · Cancelled {cancelled}",
+      "ja": "完了 {done} / {total}・失敗 {failed}・取消 {cancelled}",
+      "zh-Hant": "已完成 {done} / {total} · 失敗 {failed} · 取消 {cancelled}"
+    },
+    "目标文件已存在，已自动使用新文件名：{path}": {
+      "en": "Target exists; using a new filename: {path}",
+      "ja": "保存先が存在するため、新しい名前を使用：{path}",
+      "zh-Hant": "目標檔案已存在，已自動使用新檔名：{path}"
+    },
+    "跳过非照片文件：{path}": {
+      "en": "Skipped non-photo file: {path}",
+      "ja": "写真以外のファイルをスキップ：{path}",
+      "zh-Hant": "略過非照片檔案：{path}"
+    },
+    "{state} · {count} 张": {
+      "en": "{state} · {count} photos",
+      "ja": "{state}・{count}枚",
+      "zh-Hant": "{state} · {count} 張"
+    },
+    "{state} · {count} 张 · 含子文件夹": {
+      "en": "{state} · {count} photos · Including subfolders",
+      "ja": "{state}・{count}枚・サブフォルダーを含む",
+      "zh-Hant": "{state} · {count} 張 · 含子資料夾"
+    },
+    "上次刷新 {time}": {
+      "en": "Last refreshed {time}",
+      "ja": "最終更新 {time}",
+      "zh-Hant": "上次重新整理 {time}"
+    },
+    "HDR 曲线参数无效：{parameter}": {
+      "en": "Invalid HDR curve parameter: {parameter}",
+      "zh-Hant": "HDR 曲線參數無效：{parameter}",
+      "ja": "HDR カーブのパラメーターが無効です：{parameter}"
+    },
+    "HDR 曲线必须包含 256 个有限采样：{parameter}": {
+      "en": "The HDR curve must contain 256 finite samples: {parameter}",
+      "zh-Hant": "HDR 曲線必須包含 256 個有限取樣：{parameter}",
+      "ja": "HDR カーブには有限値のサンプルが 256 個必要です：{parameter}"
+    }
+  }
+}

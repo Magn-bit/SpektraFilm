@@ -1,0 +1,19 @@
+<resources>
+    <style name="AppTheme.Base" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/spektra_background</item>
+        <item name="android:navigationBarColor">@color/spektra_ink</item>
+        <item name="android:windowBackground">@color/spektra_background</item>
+        <item name="android:colorBackground">@color/spektra_background</item>
+        <item name="android:colorAccent">@color/spektra_accent_text</item>
+        <item name="android:colorControlActivated">@color/spektra_accent_text</item>
+        <item name="android:colorControlNormal">@color/spektra_muted</item>
+        <item name="android:colorControlHighlight">@color/spektra_highlight</item>
+        <item name="android:colorButtonNormal">@color/spektra_surface</item>
+        <item name="android:textColorPrimary">@color/spektra_ink</item>
+        <item name="android:textColorSecondary">@color/spektra_muted</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="AppTheme" parent="AppTheme.Base" />
+</resources>

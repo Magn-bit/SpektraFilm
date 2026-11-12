@@ -1,0 +1,3 @@
+# Stage validation tools use the same pinned GPU dependency as requirements.txt.
+# This does not supply a complete native spectral pipeline or Android/Metal port.
+wgpu==0.33.0

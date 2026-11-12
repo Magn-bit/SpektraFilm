@@ -1,0 +1,44 @@
+#version 450
+layout(local_size_x=256) in;
+layout(binding=0,std430) readonly buffer Input { float v[]; } src;
+layout(binding=1,std430) readonly buffer Uniforms { float v[]; } u;
+layout(binding=2,std430) readonly buffer Meta { uint v[]; } m;
+layout(binding=3,std430) readonly buffer Segments { float v[]; } segments;
+layout(binding=4,std430) readonly buffer Bins { uint v[]; } bins;
+layout(binding=5,std430) writeonly buffer Output { float v[]; } dst;
+uint index1D(){return gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;}
+vec3 decode(vec3 c){return mix(c/12.92,pow(max((c+.055)/1.055,vec3(0)),vec3(2.4)),greaterThan(c,vec3(.04045)));}
+vec3 encode(vec3 c){return mix(c*12.92,1.055*pow(max(c,vec3(0)),vec3(1./2.4))-.055,greaterThan(c,vec3(.0031308)));}
+float lum(vec3 c){return dot(c,vec3(.2126,.7152,.0722));}
+float hdr_zone_gain(float l,float amount,float pivot,float rolloff,float stops,bool upper){
+    if(amount==0.)return 1.;
+    float distance=log2(max(l,1e-8)/pivot);
+    distance=max(upper?distance:-distance,0.);
+    float weight=1.-exp2(-distance/rolloff);
+    return exp2(clamp(amount,-1.,1.)*stops*weight*weight);
+}
+vec3 hdr_linear(vec3 linear,float highlights,float shadows){
+    if(highlights==0.&&shadows==0.)return linear;
+    float l=max(lum(linear),0.),gain=1.,zone;
+    zone=hdr_zone_gain(l,shadows,.18,1.7,3.3,false);gain*=zone;l*=zone;
+    zone=hdr_zone_gain(l,highlights,.18,1.7,4.3,true);gain*=zone;
+    return linear*gain;
+}
+float composite(float a,float coverage,float flow,float erase){float b=coverage*flow;return erase!=0.?a*(1.-b):a+(1.-a)*b;}
+void main(){
+    uint i=index1D();if(i>=m.v[0])return;vec3 c=vec3(src.v[3u*i],src.v[3u*i+1u],src.v[3u*i+2u]);uint x=i%m.v[1],y=i/m.v[1];
+    vec2 p=vec2(float(x)*u.v[2]+u.v[0],float(y)*u.v[3]+u.v[1]);float a=0.;
+    if(m.v[5]==1u){vec2 d=vec2(u.v[6],u.v[7])-vec2(u.v[4],u.v[5]);float len=dot(d,d);if(len>1e-12){float t=clamp(dot(p-vec2(u.v[4],u.v[5]),d)/len,0,1);a=t*t*(3.-2.*t);}}
+    else if(m.v[5]==2u){vec2 q=p-vec2(u.v[4],u.v[5]);q=vec2(q.x*u.v[8]+q.y*u.v[9],-q.x*u.v[9]+q.y*u.v[8]);float d=length(q/vec2(u.v[6],u.v[7]));a=1.-smoothstep(1.-u.v[10],1.,d);}
+    else {
+        uint bin=(y/64u)*m.v[6]+x/64u,base=2u*bin,count=bins.v[base+1u],offset=bins.v[base];float coverage=0.,flow=0.,erase=0.;int stroke=-1;
+        for(uint j=0u;j<count;++j){uint k=bins.v[2u*m.v[6]*m.v[7]+offset+j]*12u;int s=int(segments.v[k+8u]);if(s!=stroke){if(stroke>=0)a=composite(a,coverage,flow,erase);coverage=0.;stroke=s;flow=segments.v[k+6u];erase=segments.v[k+7u];}
+            vec2 first=vec2(segments.v[k],segments.v[k+1u]),d=vec2(segments.v[k+2u],segments.v[k+3u])-first,q=p-first;float len=dot(d,d);float t=len>1e-12?clamp(dot(q,d)/len,0,1):0.;float distance=length(q-t*d),inner=segments.v[k+4u],soft=segments.v[k+5u];coverage=max(coverage,1.-smoothstep(inner,inner+soft,distance));
+        }if(stroke>=0)a=composite(a,coverage,flow,erase);
+    }
+    if(u.v[11]!=0.)a=1.-a;a*=u.v[12];
+    if(a>0.){vec3 b=decode(c),z=b*exp2(u.v[13]);z*=vec3(u.v[14],u.v[15],u.v[16]);
+        z=hdr_linear(z,u.v[19],u.v[20]);
+        if(u.v[17]!=0.||u.v[18]!=0.){vec3 e=encode(z);if(u.v[17]!=0.)e=(e-.5)*(1.+u.v[17])+.5;if(u.v[18]!=0.)e=lum(e)+(e-lum(e))*(1.+u.v[18]);z=decode(e);}c=encode(mix(b,z,a));
+    }if(u.v[21]!=0.)c=clamp(c,0,1);dst.v[3u*i]=c.r;dst.v[3u*i+1u]=c.g;dst.v[3u*i+2u]=c.b;
+}

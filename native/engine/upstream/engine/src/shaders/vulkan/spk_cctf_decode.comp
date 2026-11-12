@@ -1,0 +1,54 @@
+#version 450
+
+// Transfer modes and exact breakpoints follow nodes.metal/core/colour.cpp.
+layout(local_size_x = 256) in;
+layout(set = 0, binding = 0, std430) readonly buffer Input { float value[]; } input_data;
+layout(set = 0, binding = 1, std430) readonly buffer Meta { uint value[]; } meta;
+layout(set = 0, binding = 2, std430) writeonly buffer Output { float value[]; } output_data;
+
+// vulkan_gpu.cpp folds a dispatch past maxComputeWorkGroupCount[0] (65535 on
+// lavapipe and Intel) into rows of workgroups; this is the 1D index it means.
+uint spk_global_index() {
+    return gl_GlobalInvocationID.y * (gl_NumWorkGroups.x * gl_WorkGroupSize.x) + gl_GlobalInvocationID.x;
+}
+
+float signed_power(float value, float exponent) {
+    float sign_value = value < 0.0 ? -1.0 : (value > 0.0 ? 1.0 : 0.0);
+    return sign_value * pow(abs(value), exponent);
+}
+
+float decode(float value, uint mode) {
+    switch (mode) {
+        case 0u: return 0.040449936 >= value ? value / 12.92
+                      : signed_power((value + 0.055) / 1.055, 2.4);
+        case 1u: return value < 16.0 * (1.0 / 512.0) ? value / 16.0 : pow(value, 1.8);
+        // Metal's ordinary non-integral pow returns NaN for a negative base.
+        // GLSL leaves that domain undefined, so reproduce the result explicitly.
+        case 2u: return value < 0.0 ? uintBitsToFloat(0x7fc00000u)
+                                  : pow(value, 563.0 / 256.0);
+        // Standalone canvas transforms keep out-of-gamut negative samples.
+        // Mode 2 retains the upstream pipeline's original domain semantics.
+        case 6u: return signed_power(value, 563.0 / 256.0);
+        case 3u: {
+            // BT.709's join has a small discontinuity, so the breakpoint's
+            // last bits pick a side. nodes.metal computes it as
+            // 1.099 * pow(0.018, 0.45) - 0.099 and Metal evaluates that to
+            // 0x3da66557 (0.081247978): measured 2026-10-29 by running the
+            // 1.3.4 metallib's spk_cctf_decode across the ulps around it.
+            // A GPU pow here lands elsewhere by driver (MoltenVK on Apple M6
+            // and a correctly rounded CPU float both give 0x3da66555), so the
+            // Metal engine's value is pinned rather than recomputed.
+            float alpha = 1.099;
+            float breakpoint = uintBitsToFloat(0x3da66557u);
+            return breakpoint > value ? value / 4.5
+                      : signed_power((value + (alpha - 1.0)) / alpha, 1.0 / 0.45);
+        }
+        default: return value;
+    }
+}
+
+void main() {
+    uint i = spk_global_index();
+    if (i >= meta.value[0]) return;
+    output_data.value[i] = decode(input_data.value[i], meta.value[1]);
+}

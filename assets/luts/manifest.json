@@ -1,0 +1,324 @@
+{
+  "size": 33,
+  "input": "srgb",
+  "output": "srgb",
+  "order": "r-fastest",
+  "paper": "kodak_portra_endura",
+  "stocks": [
+    {
+      "id": "kodak_portra_400",
+      "name": "Portra 400",
+      "maker": "Kodak",
+      "description": "柔和肤色 · 日常叙事",
+      "color": "#C4B995",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_portra_400.f32"
+    },
+    {
+      "id": "kodak_gold_200",
+      "name": "Gold 200",
+      "maker": "Kodak",
+      "description": "温暖日光 · 复古记忆",
+      "color": "#C7A869",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_gold_200.f32"
+    },
+    {
+      "id": "kodak_ektar_100",
+      "name": "Ektar 100",
+      "maker": "Kodak",
+      "description": "细腻颗粒 · 浓郁风景",
+      "color": "#B87A68",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_ektar_100.f32"
+    },
+    {
+      "id": "fujifilm_pro_400h",
+      "name": "Pro 400H",
+      "maker": "Fujifilm",
+      "description": "清透绿色 · 轻盈人像",
+      "color": "#91A690",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_pro_400h.f32"
+    },
+    {
+      "id": "fujifilm_c200",
+      "name": "C200",
+      "maker": "Fujifilm",
+      "description": "自然鲜活 · 旅行日常",
+      "color": "#A2AD7D",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_c200.f32"
+    },
+    {
+      "id": "kodak_vision3_500t",
+      "name": "Vision3 500T",
+      "maker": "Kodak",
+      "description": "钨丝灯光 · 电影夜色",
+      "color": "#7D9B9F",
+      "type": "negative",
+      "category": "cinema",
+      "file": "kodak_vision3_500t.f32"
+    },
+    {
+      "id": "fujifilm_velvia_100",
+      "name": "Velvia 100",
+      "maker": "Fujifilm",
+      "description": "鲜明反转片 · 风景",
+      "color": "#9B8C9E",
+      "type": "slide",
+      "category": "slide",
+      "file": "fujifilm_velvia_100.f32"
+    },
+    {
+      "id": "kodak_ektachrome_100",
+      "name": "Ektachrome E100",
+      "maker": "Kodak",
+      "description": "冷静高光 · 精确色彩",
+      "color": "#8F9FB3",
+      "type": "slide",
+      "category": "slide",
+      "file": "kodak_ektachrome_100.f32"
+    },
+    {
+      "id": "kodak_portra_160",
+      "name": "Portra 160",
+      "maker": "Kodak",
+      "description": "上游彩色负片 · ISO 160",
+      "color": "#BEB49C",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_portra_160.f32"
+    },
+    {
+      "id": "kodak_portra_800",
+      "name": "Portra 800",
+      "maker": "Kodak",
+      "description": "上游彩色负片 · ISO 800",
+      "color": "#BDA78D",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_portra_800.f32"
+    },
+    {
+      "id": "kodak_portra_800_push1",
+      "name": "Portra 800 · Push +1",
+      "maker": "Kodak",
+      "description": "上游增感曲线 · 一档",
+      "color": "#AC9982",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_portra_800_push1.f32"
+    },
+    {
+      "id": "kodak_portra_800_push2",
+      "name": "Portra 800 · Push +2",
+      "maker": "Kodak",
+      "description": "上游增感曲线 · 两档",
+      "color": "#998A79",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_portra_800_push2.f32"
+    },
+    {
+      "id": "kodak_ultramax_400",
+      "name": "Ultramax 400",
+      "maker": "Kodak",
+      "description": "上游彩色负片 · ISO 400",
+      "color": "#B9A370",
+      "type": "negative",
+      "category": "negative",
+      "file": "kodak_ultramax_400.f32"
+    },
+    {
+      "id": "kodak_kodachrome_64",
+      "name": "Kodachrome 64",
+      "maker": "Kodak",
+      "description": "上游彩色反转片 · ISO 64",
+      "color": "#AA7867",
+      "type": "slide",
+      "category": "slide",
+      "file": "kodak_kodachrome_64.f32"
+    },
+    {
+      "id": "kodak_vision3_50d",
+      "name": "Vision3 50D",
+      "maker": "Kodak",
+      "description": "电影负片 · 日光型",
+      "color": "#A9AD94",
+      "type": "negative",
+      "category": "cinema",
+      "file": "kodak_vision3_50d.f32"
+    },
+    {
+      "id": "kodak_vision3_250d",
+      "name": "Vision3 250D",
+      "maker": "Kodak",
+      "description": "电影负片 · 日光型",
+      "color": "#9EA696",
+      "type": "negative",
+      "category": "cinema",
+      "file": "kodak_vision3_250d.f32"
+    },
+    {
+      "id": "kodak_vision3_200t",
+      "name": "Vision3 200T",
+      "maker": "Kodak",
+      "description": "电影负片 · 钨光型",
+      "color": "#87999B",
+      "type": "negative",
+      "category": "cinema",
+      "file": "kodak_vision3_200t.f32"
+    },
+    {
+      "id": "kodak_verita_200d",
+      "name": "Verita 200D",
+      "maker": "Kodak",
+      "description": "上游电影负片配置 · 日光型",
+      "color": "#A7A08B",
+      "type": "negative",
+      "category": "cinema",
+      "file": "kodak_verita_200d.f32"
+    },
+    {
+      "id": "fujifilm_provia_100f",
+      "name": "Provia 100F",
+      "maker": "Fujifilm",
+      "description": "上游彩色反转片 · ISO 100",
+      "color": "#9BA6A3",
+      "type": "slide",
+      "category": "slide",
+      "file": "fujifilm_provia_100f.f32"
+    },
+    {
+      "id": "fujifilm_xtra_400",
+      "name": "Superia X-Tra 400",
+      "maker": "Fujifilm",
+      "description": "上游彩色负片 · ISO 400",
+      "color": "#91A087",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_xtra_400.f32"
+    },
+    {
+      "id": "fujifilm_velvia_50",
+      "name": "Velvia 50",
+      "maker": "Fujifilm",
+      "description": "低感反转片 · 层次与浓郁色彩",
+      "color": "#9F786F",
+      "type": "slide",
+      "category": "slide",
+      "file": "fujifilm_velvia_50.f32",
+      "model_status": "estimated",
+      "source": "Jan Lohse / spectral_film_lut",
+      "profile_license": "MIT",
+      "profile_sha256": "70175e7b248acd05066b0f03bcd9fbbbbba92e6d4142881720b9980631eda810"
+    },
+    {
+      "id": "agfa_vista_100",
+      "name": "Vista 100",
+      "maker": "Agfa",
+      "description": "日光负片 · 温暖日常",
+      "color": "#AD8062",
+      "type": "negative",
+      "category": "negative",
+      "file": "agfa_vista_100.f32",
+      "model_status": "estimated",
+      "source": "Jan Lohse / spectral_film_lut",
+      "profile_license": "MIT",
+      "profile_sha256": "2c29c830942d0a5db9e32ed7a6381fe4a082a1335df82abfb1ce10aab61a45b5"
+    },
+    {
+      "id": "fujifilm_natura_1600",
+      "name": "Natura 1600",
+      "maker": "Fujifilm",
+      "description": "高感负片 · 弱光与夜色",
+      "color": "#9A8B78",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_natura_1600.f32",
+      "model_status": "estimated",
+      "source": "Jan Lohse / spectral_film_lut",
+      "profile_license": "MIT",
+      "profile_sha256": "3cb4d68a5d336d5de30c64c752b30590feb9dc716b8f485d806f707cf726d8b9"
+    },
+    {
+      "id": "kodak_tri_x_400",
+      "name": "Tri-X 400",
+      "maker": "Kodak",
+      "description": "黑白负片 · D-76",
+      "color": "#858981",
+      "type": "bw",
+      "category": "bw",
+      "file": "kodak_tri_x_400.f32"
+    },
+    {
+      "id": "kodak_tmax_100",
+      "name": "T-Max 100",
+      "maker": "Kodak",
+      "description": "黑白负片 · D-76",
+      "color": "#989C94",
+      "type": "bw",
+      "category": "bw",
+      "file": "kodak_tmax_100.f32"
+    },
+    {
+      "id": "fujifilm_neopan_acros_100_ii",
+      "name": "Neopan Acros II",
+      "maker": "Fujifilm",
+      "description": "黑白负片 · D-76",
+      "color": "#8D9688",
+      "type": "bw",
+      "category": "bw",
+      "file": "fujifilm_neopan_acros_100_ii.f32"
+    },
+    {
+      "id": "ilford_hp5_plus_400",
+      "name": "HP5 Plus 400",
+      "maker": "Ilford",
+      "description": "黑白负片 · ILFOTEC HC",
+      "color": "#82877E",
+      "type": "bw",
+      "category": "bw",
+      "file": "ilford_hp5_plus_400.f32"
+    },
+    {
+      "id": "fujifilm_pro_160s",
+      "name": "Pro 160S",
+      "maker": "Fujifilm",
+      "description": "",
+      "color": "#B0BBA0",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_pro_160s.f32"
+    },
+    {
+      "id": "fujifilm_pro_160c",
+      "name": "Pro 160C",
+      "maker": "Fujifilm",
+      "description": "",
+      "color": "#A5B7AA",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_pro_160c.f32"
+    },
+    {
+      "id": "fujifilm_superia_reala",
+      "name": "Superia Reala",
+      "maker": "Fujifilm",
+      "description": "",
+      "color": "#9DAD90",
+      "type": "negative",
+      "category": "negative",
+      "file": "fujifilm_superia_reala.f32"
+    }
+  ],
+  "source": "https://github.com/andreavolpato/spektrafilm",
+  "author": "Andrea Volpato; additional datasets Jan Lohse",
+  "license": "CC BY-SA 4.0 (upstream); MIT (additional profiles)"
+}

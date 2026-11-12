@@ -1,0 +1,67 @@
+#version 450
+// SpektraFilm density-domain textures. Original implementation, not a port
+// of a proprietary grain renderer. All channels share the same density field.
+layout(local_size_x = 256) in;
+layout(std430, binding = 0) readonly buffer Source { float src[]; };
+layout(std430, binding = 1) readonly buffer Parameters { float p[]; };
+layout(std430, binding = 2) readonly buffer Meta { uint meta[]; };
+layout(std430, binding = 3) writeonly buffer Output { float dst[]; };
+
+uint grain_hash(uvec2 v, uint seed) {
+    uint h = v.x * 374761393u + v.y * 668265263u + seed * 1442695041u;
+    h = (h ^ (h >> 13u)) * 1274126177u;
+    return h ^ (h >> 16u);
+}
+float grain_random(ivec2 at, uint seed) {
+    return (float(grain_hash(uvec2(at), seed) >> 8u) + .5) * (2. / 16777216.) - 1.;
+}
+float grain_field(vec2 at, uint seed) {
+    ivec2 cell = ivec2(floor(at));
+    vec2 f = fract(at);
+    // Quintic interpolation keeps particle edges smooth, not square pixels.
+    f = f*f*f*(f*(f*6.-15.)+10.);
+    return mix(mix(grain_random(cell,seed),grain_random(cell+ivec2(1,0),seed),f.x),
+               mix(grain_random(cell+ivec2(0,1),seed),grain_random(cell+ivec2(1,1),seed),f.x),f.y);
+}
+float grain_particles(vec2 at, uint seed) {
+    ivec2 cell=ivec2(floor(at));float total=0.;
+    // Jittered isotropic dye clouds avoid the square plateaus of thresholded
+    // value noise. Coordinates depend only on the original film plane.
+    for(int y=-1;y<=1;++y)for(int x=-1;x<=1;++x) {
+        ivec2 c=cell+ivec2(x,y);float weight=grain_random(c,seed);
+        if(abs(weight)<.38)continue;
+        vec2 center=vec2(c)+.5+vec2(grain_random(c,seed+19u),grain_random(c,seed+37u))*.28;
+        vec2 offset=at-center;
+        float radius=.20+.09*(grain_random(c,seed+53u)+1.);
+        total+=sign(weight)*exp(-dot(offset,offset)/(2.*radius*radius));
+    }
+    return total*2.2;
+}
+void main() {
+    uint i = gl_GlobalInvocationID.y * (gl_NumWorkGroups.x * gl_WorkGroupSize.x) + gl_GlobalInvocationID.x;
+    if (i >= meta[0]) return;
+    vec2 xy = vec2(float(int(meta[3])) + float(i % meta[1]),
+                   float(int(meta[4])) + float(i / meta[1])) + .5;
+    vec2 q = xy / max(.65, p[1]);
+    uint seed = meta[5];
+    float field;
+    if (meta[2] == 1u) {
+        field = (grain_field(q*1.7,seed)*.62 + grain_field(q*.8+vec2(17.3,8.1),seed+13u)*.38)*1.8;
+    } else if (meta[2] == 3u) {
+        // Sparse heavy-tailed grains retain a soft boundary; amount and
+        // granularity cannot produce this distribution from the classic mode.
+        field = grain_particles(q*.62+vec2(5.7,9.2),seed);
+    } else if (meta[2] == 4u) {
+        // Connected, irregular clumps with fine grains inside each clump.
+        float clump = grain_field(q*.25+vec2(21.8,5.4),seed+31u)*1.65;
+        float detail = grain_field(q*1.3,seed)*1.65;
+        field = clump*.85 + detail*.35*(.55+.8*abs(clump));
+    } else {
+        field = (grain_field(q,seed)*.78 + grain_field(q*2.4+vec2(9.1,3.4),seed+7u)*.22)*1.8;
+    }
+    float maximum = max(.1,p[3]);
+    float density = clamp((src[i*3u]+src[i*3u+1u]+src[i*3u+2u])/3.+.03,.005,maximum*.98);
+    float sigma = sqrt(max(0.,density*(maximum-density*p[4])*p[0]))*p[2]*.10;
+    float delta = field*sigma;
+    for (uint c=0u;c<3u;++c) dst[i*3u+c] = src[i*3u+c]+delta;
+}

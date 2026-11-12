@@ -1,0 +1,52 @@
+#version 450
+// Port of minilab.metal: measured negative -> recovered log-positive -> paper CMY.
+layout(local_size_x=256) in;
+layout(set=0,binding=0,std430) readonly buffer CMY {float v[];} cmy;
+layout(set=0,binding=1,std430) readonly buffer CHD {float v[];} chd;
+layout(set=0,binding=2,std430) readonly buffer Base {float v[];} base;
+layout(set=0,binding=3,std430) readonly buffer IXS {float v[];} ixs;
+layout(set=0,binding=4,std430) readonly buffer Epilogue {float v[];} ep;
+layout(set=0,binding=5,std430) readonly buffer Meta {uint v[];} meta;
+layout(set=0,binding=6,std430) readonly buffer XAxis {float v[];} xa;
+layout(set=0,binding=7,std430) readonly buffer Inverse {float v[];} inv;
+layout(set=0,binding=8,std430) readonly buffer YAxis {float v[];} ya;
+layout(set=0,binding=9,std430) readonly buffer Lookup {float v[];} lut;
+layout(set=0,binding=10,std430) readonly buffer Lower {float v[];} lo;
+layout(set=0,binding=11,std430) readonly buffer InvSpan {float v[];} inv_span;
+layout(set=0,binding=12,std430) writeonly buffer Output {float v[];} dst;
+
+float interpolate(uint K,uint channel,float value) {
+    if(value<=xa.v[channel])return ya.v[channel];
+    if(value>=xa.v[(K-1u)*3u+channel])return ya.v[(K-1u)*3u+channel];
+    uint low=0u,high=K;
+    while(low<high){uint mid=low+((high-low)>>1u);if(xa.v[mid*3u+channel]<=value)low=mid+1u;else high=mid;}
+    uint k=low-1u;
+    float f=(value-xa.v[k*3u+channel])*inv.v[k*3u+channel];
+    return ya.v[k*3u+channel]+f*(ya.v[(k+1u)*3u+channel]-ya.v[k*3u+channel]);
+}
+void main() {
+    uint i=gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;
+    if(i>=meta.v[0])return;
+    uint nl=meta.v[1],K=meta.v[2],S=meta.v[3];
+    vec3 C=vec3(cmy.v[3u*i],cmy.v[3u*i+1u],cmy.v[3u*i+2u]);
+    precise vec3 a=vec3(0);
+    for(uint l=0u;l<nl;++l){
+        precise float d=C.x*chd.v[3u*l]+C.y*chd.v[3u*l+1u]+C.z*chd.v[3u*l+2u]+base.v[l];
+        float t=exp2(-d*3.321928094887362);
+        a+=t*vec3(ixs.v[3u*l],ixs.v[3u*l+1u],ixs.v[3u*l+2u]);
+    }
+    vec3 v=log(max(a*vec3(ep.v[0],ep.v[1],ep.v[2])+vec3(ep.v[3],ep.v[4],ep.v[5]),vec3(0))+vec3(1e-10))/log(10.0);
+    vec3 positive=vec3(interpolate(K,0u,v.x),interpolate(K,1u,v.y),interpolate(K,2u,v.z));
+    vec3 c=clamp((positive-vec3(lo.v[0],lo.v[1],lo.v[2]))*vec3(inv_span.v[0],inv_span.v[1],inv_span.v[2]),0.0,1.0)*float(S-1u);
+    uvec3 c0=uvec3(floor(c)),c1=min(c0+uvec3(1),uvec3(S-1u));vec3 f=c-vec3(c0);
+    uint b00=((c0.x*S+c0.y)*S)*3u,b01=((c0.x*S+c1.y)*S)*3u;
+    uint b10=((c1.x*S+c0.y)*S)*3u,b11=((c1.x*S+c1.y)*S)*3u;
+    uint k0=c0.z*3u,k1=c1.z*3u;
+    for(uint ch=0u;ch<3u;++ch){
+        float c00=lut.v[b00+k0+ch]*(1.0-f.z)+lut.v[b00+k1+ch]*f.z;
+        float c01=lut.v[b01+k0+ch]*(1.0-f.z)+lut.v[b01+k1+ch]*f.z;
+        float c10=lut.v[b10+k0+ch]*(1.0-f.z)+lut.v[b10+k1+ch]*f.z;
+        float c11=lut.v[b11+k0+ch]*(1.0-f.z)+lut.v[b11+k1+ch]*f.z;
+        dst.v[3u*i+ch]=(c00*(1.0-f.y)+c01*f.y)*(1.0-f.x)+(c10*(1.0-f.y)+c11*f.y)*f.x;
+    }
+}

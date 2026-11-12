@@ -1,0 +1,47 @@
+#version 450
+// RAW restoration, after source WB/colour conversion and before film grain.
+// Source-pixel radii are independent of preview resolution and strip position.
+layout(local_size_x=256) in;
+layout(binding=0,std430) readonly buffer Input { float v[]; } src;
+layout(binding=1,std430) readonly buffer Uniforms { float v[]; } u;
+layout(binding=2,std430) readonly buffer Meta { uint v[]; } m;
+layout(binding=3,std430) writeonly buffer Output { float v[]; } dst;
+uint index1D(){return gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;}
+vec3 readAt(ivec2 p){p=clamp(p,ivec2(0),ivec2(m.v[1],m.v[2])-1);uint k=(uint(p.y)*m.v[1]+uint(p.x))*3u;return vec3(src.v[k],src.v[k+1u],src.v[k+2u]);}
+vec3 sampleAt(vec2 p){ivec2 a=ivec2(floor(p));vec2 f=fract(p);return mix(mix(readAt(a),readAt(a+ivec2(1,0)),f.x),mix(readAt(a+ivec2(0,1)),readAt(a+ivec2(1,1)),f.x),f.y);}
+float lum(vec3 c){return dot(c,vec3(.2126,.7152,.0722));}
+vec3 opponent(vec3 c){float y=lum(c);return vec3(y,c.r-y,c.b-y);}
+vec3 rgb(vec3 c){return vec3(c.x+c.y,c.x-(.2126*c.y+.0722*c.z)/.7152,c.x+c.z);}
+void main(){
+    uint i=index1D();if(i>=m.v[0])return;vec2 p=vec2(i%m.v[1],i/m.v[1]);vec3 source=sampleAt(p),center=opponent(source),result=source;
+    if(u.v[5]==0.){
+        float sigmaY=.004+.075*u.v[1],sigmaC=.03+.32*u.v[2];
+        float sumY=0.,weightY=0.;vec2 sumC=vec2(0);float weightC=0.;
+        for(int y=-2;y<=2;++y)for(int x=-2;x<=2;++x){
+            vec3 q=opponent(sampleAt(p+vec2(x/u.v[3],y/u.v[4])));
+            float spatial=exp(-.5*float(x*x+y*y)/1.44),dy=q.x-center.x;
+            float edge=exp(-.5*dy*dy/(sigmaY*sigmaY));
+            float wy=spatial*edge;sumY+=q.x*wy;weightY+=wy;
+            // Luminance guidance protects real boundaries. A broader chroma
+            // range removes isolated RGB speckles without desaturating edges.
+            vec2 dc=q.yz-center.yz;float wc=spatial*exp(-.5*dy*dy/.0064)*exp(-.5*dot(dc,dc)/(sigmaC*sigmaC));
+            sumC+=q.yz*wc;weightC+=wc;
+        }
+        center.x=mix(center.x,sumY/max(weightY,1e-8),u.v[1]);
+        center.yz=mix(center.yz,sumC/max(weightC,1e-8),u.v[2]);result=rgb(center);
+    }else{
+        float smoothY=0.,total=0.,lo=center.x,hi=center.x;
+        for(int y=-1;y<=1;++y)for(int x=-1;x<=1;++x){
+            float value=lum(sampleAt(p+vec2(x/u.v[3],y/u.v[4])));
+            float w=float((x==0?2:1)*(y==0?2:1));smoothY+=value*w;total+=w;lo=min(lo,value);hi=max(hi,value);
+        }
+        float residual=center.x-smoothY/total,threshold=.0005+.012*u.v[1];
+        float detail=sign(residual)*max(0.,abs(residual)-threshold);
+        float changed=center.x+detail*(1.8*u.v[0]);
+        float allowance=.15*(hi-lo);changed=clamp(changed,lo-allowance,hi+allowance);
+        // Luminance-only sharpening preserves colour and float headroom.
+        result+=changed-center.x;
+    }
+    if(u.v[6]!=0.)result=clamp(result,0,1);
+    dst.v[3u*i]=result.r;dst.v[3u*i+1u]=result.g;dst.v[3u*i+2u]=result.b;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Explicit ADB-only acceptance runner; no activity or normal UI entry. -->
+    <instrumentation android:name=".NativeReleaseInstrumentation" android:targetPackage="com.spektra.film" android:functionalTest="true" />
+    <instrumentation android:name=".EditorUiInstrumentation" android:targetPackage="com.spektra.film" android:functionalTest="true" />
+</manifest>

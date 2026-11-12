@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/mm2/Little-CMS/releases/tag/lcms2.20",
+  "tag": "lcms2.20",
+  "license": "MIT",
+  "product_extension": "../matrix_display.c: float matrix/TRC display evaluator; ICC curve tables are caller-owned"
+}

@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "profiles": {
+    "fujifilm_velvia_50": {
+      "paper": "kodak_portra_endura",
+      "neutral_filters_cmy": null,
+      "illuminant": null,
+      "profile_sha256": "70175e7b248acd05066b0f03bcd9fbbbbba92e6d4142881720b9980631eda810",
+      "source_sha256": "4a9c61abee7c319d0ec0ac62ff758f3314628c983c905d1d579a6c6fc301f26c",
+      "provenance_file": "fujifilm_velvia_50.provenance.json",
+      "model_status": "estimated"
+    },
+    "agfa_vista_100": {
+      "paper": "fujifilm_crystal_archive_typeii",
+      "neutral_filters_cmy": [
+        0.0,
+        42.672250117845145,
+        23.096880962930484
+      ],
+      "illuminant": "TH-KG3",
+      "profile_sha256": "2c29c830942d0a5db9e32ed7a6381fe4a082a1335df82abfb1ce10aab61a45b5",
+      "source_sha256": "57d9455c7eb56f25ae5e21dfcbcc30cf2359e25e9d59f357e0b0e3d5630c9410",
+      "provenance_file": "agfa_vista_100.provenance.json",
+      "model_status": "estimated"
+    },
+    "fujifilm_natura_1600": {
+      "paper": "fujifilm_crystal_archive_typeii",
+      "neutral_filters_cmy": [
+        0.0,
+        46.49630120802669,
+        50.72966098355611
+      ],
+      "illuminant": "TH-KG3",
+      "profile_sha256": "3cb4d68a5d336d5de30c64c752b30590feb9dc716b8f485d806f707cf726d8b9",
+      "source_sha256": "5c6afce79b702ea74496f9f63e43695fdd39ba2164c7ff010da71227ae2949fa",
+      "provenance_file": "fujifilm_natura_1600.provenance.json",
+      "model_status": "estimated"
+    },
+    "fujifilm_pro_160s": {
+      "paper": "fujifilm_crystal_archive_typeii",
+      "neutral_filters_cmy": [
+        0.0,
+        28.375969475625997,
+        38.11793123884441
+      ],
+      "illuminant": "TH-KG3",
+      "source_revision": "a15043f6fe2d365d0c359d22e0868076800916d9",
+      "provenance_file": "fujifilm_pro_160s.provenance.json",
+      "model_status": "estimated"
+    },
+    "fujifilm_pro_160c": {
+      "paper": "fujifilm_crystal_archive_typeii",
+      "neutral_filters_cmy": [
+        0.0,
+        28.371730991882682,
+        33.060779472748465
+      ],
+      "illuminant": "TH-KG3",
+      "source_revision": "a15043f6fe2d365d0c359d22e0868076800916d9",
+      "provenance_file": "fujifilm_pro_160c.provenance.json",
+      "model_status": "estimated"
+    },
+    "fujifilm_superia_reala": {
+      "paper": "fujifilm_crystal_archive_typeii",
+      "neutral_filters_cmy": [
+        0.0,
+        54.340138184402306,
+        49.27000316701545
+      ],
+      "illuminant": "TH-KG3",
+      "source_revision": "a15043f6fe2d365d0c359d22e0868076800916d9",
+      "provenance_file": "fujifilm_superia_reala.provenance.json",
+      "model_status": "estimated"
+    }
+  }
+}

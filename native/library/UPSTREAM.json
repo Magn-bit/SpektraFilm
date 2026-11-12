@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/JamesQiu2005/SpektraLab_library",
+  "commit": "f236e03b4c8eea622fd7360c4d6277ada48b180c",
+  "version": "0.3.1",
+  "license": "MIT",
+  "windows_port": "SpektraFilm; UTF-8 filesystem paths, Unicode NFC, native time and file metadata, non-overwriting atomic session moves, Unicode host entry point. Original C ABI, schema and method table retained.",
+  "sqlite": {
+    "version": "3.54.1",
+    "source": "https://www.sqlite.org/2026/sqlite-amalgamation-3540100.zip",
+    "license": "public domain"
+  }
+}

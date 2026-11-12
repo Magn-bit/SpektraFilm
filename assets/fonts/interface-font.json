@@ -1,0 +1,33 @@
+{
+  "style": "chinese-fangsong-latin-serif",
+  "family": "Spektra Bilingual Serif",
+  "file": "SpektraBilingualSerif-Regular.ttf",
+  "weight": 400,
+  "sha256": "a89a59da23f6a27019e80bf52feceb2831495e882c8da160da420f1f9adec6c3",
+  "scripts": {
+    "chinese": "Zhuque Fangsong (technical preview)",
+    "latin_and_numerals": "Noto Serif SC Regular"
+  },
+  "sources": {
+    "latin": {
+      "file": "NotoSerifSC.ttf",
+      "sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9"
+    },
+    "chinese": {
+      "file": "ZhuqueFangsong-Regular.ttf",
+      "sha256": "558c62730844fe54ba220146ed62f859d4e2880188d92d985f8921c6e3743bc4"
+    }
+  },
+  "licenses": [
+    "OFL.txt",
+    "ZhuqueFangsong-OFL.txt"
+  ],
+  "verified_glyphs": 13009,
+  "verification": "All encoded glyph outlines and horizontal metrics match their source subsets; Chinese punctuation remains Fangsong.",
+  "sizes": {
+    "display": 32,
+    "heading": 18,
+    "body": 15,
+    "caption": 14
+  }
+}

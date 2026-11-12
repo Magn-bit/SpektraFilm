@@ -1,0 +1,29 @@
+#version 450
+// Exact port of the upstream scene-domain Decode curve. Five EV-domain rows.
+layout(local_size_x = 256) in;
+layout(set=0,binding=0,std430) readonly buffer Input {float v[];} rgb;
+layout(set=0,binding=1,std430) readonly buffer Parameters {float v[];} p;
+layout(set=0,binding=2,std430) readonly buffer Table {float v[];} t;
+layout(set=0,binding=3,std430) readonly buffer Count {uint v[];} count;
+layout(set=0,binding=4,std430) writeonly buffer Output {float v[];} dst;
+
+float gain(float v,uint row,uint n,float S,float ref,float ec) {
+    if (!(v>0.0) || isnan(v) || isinf(v)) return 1.0;
+    float E=log2(v/ref)+ec;
+    float u=clamp((E+S)/(2.0*S),0.0,1.0);
+    float x=u*float(n-1u);
+    uint i=min(uint(x),n-2u);
+    float y=mix(t.v[row*n+i],t.v[row*n+i+1u],x-float(i));
+    return clamp(exp2(2.0*S*(y-u)),exp2(-30.0),exp2(30.0));
+}
+void main() {
+    uint i=gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;
+    if(i>=count.v[0])return;
+    uint n=uint(p.v[0]);float S=p.v[1],ref=p.v[2],ec=p.v[6];
+    vec3 c=vec3(rgb.v[3u*i],rgb.v[3u*i+1u],rgb.v[3u*i+2u]);
+    float Y=dot(vec3(p.v[3],p.v[4],p.v[5]),max(c,vec3(0)));
+    c*=gain(Y,1u,n,S,ref,ec);
+    c*=vec3(gain(c.r,0u,n,S,ref,ec),gain(c.g,0u,n,S,ref,ec),gain(c.b,0u,n,S,ref,ec));
+    c*=vec3(gain(c.r,2u,n,S,ref,ec),gain(c.g,3u,n,S,ref,ec),gain(c.b,4u,n,S,ref,ec));
+    dst.v[3u*i]=c.r;dst.v[3u*i+1u]=c.g;dst.v[3u*i+2u]=c.b;
+}

@@ -1,0 +1,19 @@
+{
+  "project": "SpektraLab",
+  "repository": "https://github.com/JamesQiu2005/SpektraLab",
+  "commit": "2ca735ad60a998e925bf346f57d80012bdb5c6bf",
+  "version": "windows-v1.3.4-beta.2",
+  "license": "GPL-3.0; spectral resources retain CC-BY-SA or their source licenses",
+  "copied_from": "output/spektralab-research/windows/source-release",
+  "integrations_2026_11_11": {
+    "source_commit": "1952c63537ec576d24422f1065b12495631346a5",
+    "source_version": "2.3.2",
+    "scope": [
+      "minilab enlarger live optical constants",
+      "actual post-Decode scene histograms and exposure axis",
+      "per-medium family-A grain-aware HDR curve",
+      "per-layer spectral positive-film HDR scan (Vulkan shader port)"
+    ],
+    "preserved": "Product Vulkan/HDR tone/colour/memory/canvas optimizations retained; not a wholesale upstream replacement"
+  }
+}

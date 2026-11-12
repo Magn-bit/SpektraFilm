@@ -1,0 +1,15 @@
+#version 450
+// SpektraLab 2.3.2 dye-density expansion, portable Vulkan rendition.
+layout(local_size_x=256) in;
+layout(set=0,binding=0,std430) readonly buffer Input {float v[];} src;
+layout(set=0,binding=1,std430) readonly buffer Model {float v[];} hdr;
+layout(set=0,binding=2,std430) readonly buffer Meta {uint v[];} n;
+layout(set=0,binding=3,std430) writeonly buffer Output {float v[];} dst;
+void main() {
+    uint i=gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;
+    if(i>=n.v[0])return;
+    for(uint c=0u;c<3u;++c) {
+        precise float v=src.v[3u*i+c],dk=hdr.v[2u*c];
+        dst.v[3u*i+c]=v<dk?dk-(dk-v)*hdr.v[2u*c+1u]:v;
+    }
+}

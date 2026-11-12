@@ -1,0 +1,10 @@
+{
+  "name": "ExifTool",
+  "version": "13.61",
+  "homepage": "https://exiftool.org/",
+  "source": {
+    "exiftool-13.61_64.zip": "https://downloads.sourceforge.net/project/exiftool/exiftool-13.61_64.zip",
+    "Image-ExifTool-13.61.tar.gz": "https://downloads.sourceforge.net/project/exiftool/Image-ExifTool-13.61.tar.gz"
+  },
+  "license": "Same terms as Perl: Artistic or GPL"
+}

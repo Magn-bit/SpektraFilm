@@ -1,0 +1,11 @@
+#version 450
+layout(local_size_x=256) in;
+layout(binding=0,std430) readonly buffer Input { float v[]; } src;
+layout(binding=1,std430) readonly buffer Uniforms { float v[]; } u;
+layout(binding=2,std430) readonly buffer Meta { uint v[]; } m;
+layout(binding=3,std430) writeonly buffer Output { float v[]; } dst;
+uint index1D(){return gl_GlobalInvocationID.y*(gl_NumWorkGroups.x*gl_WorkGroupSize.x)+gl_GlobalInvocationID.x;}
+vec3 sampleAt(ivec2 p){p=clamp(p,ivec2(0),ivec2(m.v[1],m.v[2])-1);uint i=(uint(p.y)*m.v[1]+uint(p.x))*3u;return vec3(src.v[i],src.v[i+1u],src.v[i+2u]);}
+float lum(vec3 c){return dot(c,vec3(.2126,.7152,.0722));}
+float average(ivec2 p,float r,float center){float sum=0.,total=0.;for(int y=-2;y<=2;++y)for(int x=-2;x<=2;++x){ivec2 q=p+ivec2(round(vec2(x*r/u.v[2],y*r/u.v[3])));float l=lum(sampleAt(q));float w=exp(-.5*float(x*x+y*y)) * exp(-abs(l-center)*8.);sum+=l*w;total+=w;}return sum/max(total,1e-7);}
+void main(){uint i=index1D();if(i>=m.v[0])return;ivec2 p=ivec2(i%m.v[1],i/m.v[1]);vec3 c=sampleAt(p);float l=lum(c),d=0.;if(u.v[0]!=0.)d+=(l-average(p,2.,l))*u.v[0]*.8;if(u.v[1]!=0.)d+=(l-average(p,24.,l))*u.v[1]*.7;float taper=smoothstep(0.,.08,l)*(1.-smoothstep(.92,1.,l));c+=d*taper;if(u.v[4]!=0.)c=clamp(c,0,1);dst.v[3u*i]=c.r;dst.v[3u*i+1u]=c.g;dst.v[3u*i+2u]=c.b;}

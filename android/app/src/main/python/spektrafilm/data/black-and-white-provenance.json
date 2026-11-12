@@ -1,0 +1,77 @@
+{
+  "profiles": [
+    {
+      "id": "fujifilm_neopan_acros_100_ii",
+      "sha256": "4429b45664a06c7ee8d16687bcc7adf656403e534fba584f83762e160abdc4f9",
+      "source": "https://github.com/JamesQiu2005/SpektraLab/blob/12d75e60a02281e4b470329b4ac2ac14947caa37/engine/resources_product/profiles/fujifilm_neopan_acros_100_ii.json",
+      "datasource": "FUJIFILM data sheet AF3-0258E (NEOPAN 100 ACROS II, 135), p3: charts are 300 dpi raster images, traced at 600 dpi (spectrogram to 5400 K daylight; D-76 characteristic curves).",
+      "license": "Built from FUJIFILM data sheet AF3-0258E. See engine/resources_product/NOTICE.md.",
+      "assumptions": {
+        "log_sensitivity": "SHEET (raster) 401-662 nm: the spectrogram to 5400 K daylight with a 5400 K black body divided out (ASSUMED source spectrum); ASSUMED held below 401 nm, ASSUMED log-linear tail -0.0680 dex/nm above 662 nm; scale MEASURED so grey 0.184 -> raw 1",
+        "density_curves": "SHEET (raster) for log_exposure -2.10..1.56 (D-76 small tank, 20 C, 7.25 min: the sheet's own time, interpolated between the 7 and 10 min curves; contrast index 0.572); ASSUMED flat toe below, ASSUMED straight line slope 0.802 into a ceiling of gross D 3.0 above",
+        "log_exposure_anchor": "SHEET ISO 100 + LIT: 0 = log10(0.8/100)+1.0 = -1.097 log lux-s",
+        "base_density": "SHEET (raster) level 0.144 (base+fog), ASSUMED spectrally flat",
+        "channel_density": "ASSUMED: neutral silver, 1/3 per channel at every wavelength",
+        "hanatos2025_adaptation": "omitted on purpose (no fitted window/surface)",
+        "density_curves_layers": "ASSUMED: three-CDF fit of the curve (max fit error 0.0139 D), no sheet data on emulsion sub-layers"
+      }
+    },
+    {
+      "id": "ilford_hp5_plus_400",
+      "sha256": "a09ccdb57816f220ab598e534318a743ef79e16a300f8bd2de7453d451fe8ec5",
+      "source": "https://github.com/JamesQiu2005/SpektraLab/blob/12d75e60a02281e4b470329b4ac2ac14947caa37/engine/resources_product/profiles/ilford_hp5_plus_400.json",
+      "datasource": "HARMAN technology Ltd, 'HP5 PLUS Technical Information' (Nov 2018), p1 (wedge spectrogram to 2850 K tungsten) and p5 (characteristic curve, ILFOTEC HC 1+31, 6.5 min): raster charts, traced at 600 dpi.",
+      "license": "Built from HARMAN technology Ltd's HP5 PLUS technical information (Nov 2018). See engine/resources_product/NOTICE.md.",
+      "assumptions": {
+        "log_sensitivity": "SHEET (raster) 380-654 nm: the 'wedge spectrogram to tungsten light (2850K)' taken as drawn; ASSUMED its 0-1 'Sensitivity' axis is log units and ASSUMED the source is not to be divided out -- the reading that reproduces Ilford's own daylight filter factors for HP5 Plus (W8 1.7, W15 2.0; W25 comes out 6.2 against 4.0), where dividing a 2850 K black body out gives 2.9 / 4.2 / 16; ASSUMED log-linear tail -0.0365 dex/nm above 654 nm; scale MEASURED so grey 0.184 -> raw 1",
+        "density_curves": "SHEET (raster) for log_exposure -2.03..2.03 (ILFOTEC HC 1+31, 6.5 min, 20 C: the one curve the sheet plots; contrast index 0.599); ASSUMED flat toe below, ASSUMED straight line slope 0.634 into a ceiling of gross D 3.0 above",
+        "log_exposure_anchor": "ASSUMED: the sheet's exposure axis is relative. 0 = one log unit above the curve's own D = base+fog + 0.1 point, i.e. the film is taken to have exactly its rated speed (ISO 400: log10(0.8/400)+1.0 = -1.699 log lux-s)",
+        "base_density": "SHEET (raster) level 0.175 (base+fog), ASSUMED spectrally flat",
+        "channel_density": "ASSUMED: neutral silver, 1/3 per channel at every wavelength",
+        "hanatos2025_adaptation": "omitted on purpose (no fitted window/surface)",
+        "density_curves_layers": "ASSUMED: three-CDF fit of the curve (max fit error 0.0087 D), no sheet data on emulsion sub-layers"
+      }
+    },
+    {
+      "id": "ilford_multigrade_iv_rc",
+      "sha256": "0f776f1f26f04aca4ec438ed377dc1acf4073dc1a8ae32c51607a6cb1a02521d",
+      "source": "https://github.com/JamesQiu2005/SpektraLab/blob/12d75e60a02281e4b470329b4ac2ac14947caa37/engine/resources_product/profiles/ilford_multigrade_iv_rc.json",
+      "datasource": "HARMAN technology Ltd, \"MULTIGRADE RC PAPERS Technical Information\", June 2019 (MULTIGRADE-IV-RC-Papers-060619.pdf): characteristic curves for filters 00-5 (raster charts, p3), ISO R / ISO P tables (p2), spectral sensitivity chart (p1, no ordinate scale).",
+      "license": "Fitted to HARMAN technology Ltd, MULTIGRADE RC PAPERS Technical Information (June 2019). See engine/resources_product/NOTICE.md.",
+      "assumptions": {}
+    },
+    {
+      "id": "kodak_tmax_100",
+      "sha256": "c9160236872034b86fb42b67be3a9252088bfa7bdbb450148b0c20ad83e3033a",
+      "source": "https://github.com/JamesQiu2005/SpektraLab/blob/12d75e60a02281e4b470329b4ac2ac14947caa37/engine/resources_product/profiles/kodak_tmax_100.json",
+      "datasource": "Kodak publication F-4016 (June 2018), vector paths of p8 (spectral sensitivity; D-76 small-tank characteristic curves).",
+      "license": "Built from Kodak publication F-4016 (June 2018). See engine/resources_product/NOTICE.md.",
+      "assumptions": {
+        "log_sensitivity": "SHEET 400-700 nm (the 0.3-above-D-min curve of p8), ASSUMED held below 400 nm, ASSUMED log-linear tail -0.0354 dex/nm above 700 nm; scale MEASURED so grey 0.184 -> raw 1",
+        "density_curves": "SHEET for log_exposure -2.04..1.74 (D-76 small tank, daylight, 6.18 min = CI 0.56, interpolated between the plotted curves); ASSUMED flat toe below, ASSUMED straight line slope 0.601 into a ceiling of gross D 3.2 above (the highest density the sheet plots)",
+        "log_exposure_anchor": "SHEET ISO 100 + LIT: 0 = log10(0.8/100)+1.0 = -1.097 log lux-s",
+        "base_density": "SHEET level 0.209 (base+fog at CI 0.56), ASSUMED spectrally flat",
+        "channel_density": "ASSUMED: neutral silver, 1/3 per channel at every wavelength",
+        "hanatos2025_adaptation": "omitted on purpose (no fitted window/surface)",
+        "density_curves_layers": "ASSUMED: three-CDF fit of the curve (max fit error 0.0088 D), no sheet data on emulsion sub-layers"
+      }
+    },
+    {
+      "id": "kodak_tri_x_400",
+      "sha256": "a54be071c6a055a9a49acb7072d10bf0b1bcddf9c0a459b0800a9b14bb66b1f1",
+      "source": "https://github.com/JamesQiu2005/SpektraLab/blob/12d75e60a02281e4b470329b4ac2ac14947caa37/engine/resources_product/profiles/kodak_tri_x_400.json",
+      "datasource": "Kodak publication F-4017 (Feb 2016), vector paths of p7 (spectral sensitivity) and p8 (D-76 characteristic curves, 400TX 135).",
+      "license": "Built from Kodak publication F-4017 (Feb 2016). See engine/resources_product/NOTICE.md.",
+      "assumptions": {
+        "log_sensitivity": "SHEET 380-668 nm (upper curve of p7), ASSUMED log-linear tail -0.0526 dex/nm above 668 nm; scale MEASURED so grey 0.184 -> raw 1",
+        "density_curves": "SHEET for log_exposure -1.74..2.04 (D-76 large tank, 7.72 min = CI 0.56, interpolated between the 6 and 8 min curves); ASSUMED flat toe below, ASSUMED straight line slope 0.473 into a ceiling of gross D 3.0 above",
+        "log_exposure_anchor": "SHEET ISO 400 + LIT: 0 = log10(0.8/400)+1.0 = -1.699 log lux-s",
+        "base_density": "SHEET level 0.286 (135 base+fog at CI 0.56), ASSUMED spectrally flat",
+        "channel_density": "ASSUMED: neutral silver, 1/3 per channel at every wavelength",
+        "density_curves_layers": "ASSUMED: three-CDF fit of the curve (max fit error 0.0047 D), no sheet data on emulsion sub-layers",
+        "hanatos2025_adaptation": "omitted on purpose (no fitted window/surface)"
+      }
+    }
+  ],
+  "source_commit": "12d75e60a02281e4b470329b4ac2ac14947caa37"
+}
