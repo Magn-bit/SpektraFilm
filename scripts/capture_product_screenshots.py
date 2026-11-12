@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT), str(ROOT / 'vendor')]
 os.environ.pop('QT_QPA_PLATFORM', None)
 from PIL import Image
-from PySide6.QtCore import QObject, QUrl
+from PySide6.QtCore import QObject, QUrl, QPoint
+from PySide6.QtGui import QCursor
 from PySide6.QtQml import QQmlApplicationEngine, QQmlEngine, QQmlExpression
 from PySide6.QtQuickControls2 import QQuickStyle
 from PySide6.QtTest import QTest
@@ -29,6 +30,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--photo', type=Path, help='Use a photograph authorized for the public product page')
     parser.add_argument('--diagnose', action='store_true', help='Print one worker traceback if startup exceeds 20 seconds')
+    parser.add_argument('--only', choices=['film-frame'], help='Refresh an affected documentation view without replaying unrelated tools')
     args = parser.parse_args()
     if args.diagnose:
         faulthandler.dump_traceback_later(20)
@@ -110,6 +112,7 @@ def main():
             item('parameterScroll').property('contentItem').setProperty('contentY', 0)
 
         def shot(name):
+            QCursor.setPos(window.mapToGlobal(QPoint(window.width()-4,window.height()-4)))
             QTest.qWait(400)
             original = scratch / (name + '.png')
             assert window.grabWindow().save(str(original))
@@ -119,6 +122,22 @@ def main():
             captures.append(name + '.jpg')
             print('Captured', name, flush=True)
 
+        def film_frame():
+            assert ctrl.prepareComposition()
+            composition = item('compositionDialog')
+            js(composition, 'open()')
+            ctrl.composition.applyFramePreset('film_135')
+            panel = composition.property('item') or composition
+            panel.setProperty('presetExpanded', True)
+            ctrl.composition.requestFrameTemplates(True)
+            wait(lambda: not ctrl.composition.state['busy']
+                 and not ctrl.composition.state['native_pending']
+                 and not ctrl.composition._template_pending
+                 and not ctrl.composition._template_in_flight
+                 and bool(ctrl.composition.state['native_canvas']), 100)
+            shot('film-frame')
+            js(composition, 'close()')
+
         try:
             ctrl.add_paths([str(sample)])
             wait(lambda: bool(ctrl.frame) and not ctrl.busy)
@@ -126,6 +145,13 @@ def main():
             ctrl.setFilmEnabled(True)
             QTest.qWait(500)
             wait(lambda: not ctrl.busy)
+            if args.only == 'film-frame':
+                film_frame()
+                (scratch / 'capture-film-frame.json').write_text(json.dumps(dict(
+                    captures=captures, warnings=warnings, sample=sample.name,
+                    scope='One affected documentation view; unrelated tools and exports not replayed'),
+                    ensure_ascii=False, indent=2), encoding='utf-8')
+                return
             window.setProperty('activeTask', 'film')
             top()
             shot('workspace')
@@ -163,16 +189,7 @@ def main():
                 js(crop, "chooseRatio('XPan 65:24',65/24)")
             shot('crop')
             js(window, 'cancelCrop()')
-            assert ctrl.prepareComposition()
-            composition = item('compositionDialog')
-            js(composition, 'open()')
-            ctrl.composition.applyFramePreset('film_135')
-            composition.setProperty('frameCategory', 0)
-            wait(lambda: not ctrl.composition.state['busy']
-                 and not ctrl.composition.state['native_pending']
-                 and bool(ctrl.composition.state['native_canvas']), 100)
-            shot('film-frame')
-            js(composition, 'close()')
+            film_frame()
             QTest.qWait(120)
             export = item('exportDialog')
             js(export, 'open()')

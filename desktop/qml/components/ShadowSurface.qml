@@ -15,7 +15,7 @@ Item {
             layer.enabled: true
             layer.effect: MultiEffect {
                 shadowEnabled: true
-                shadowColor: '#181C16'
+                shadowColor: '#191918'
                 shadowOpacity: index===0 ? root.shadow.ambient : index===1 ? root.shadow.key : root.shadow.contact
                 shadowBlur: index===2 ? .13 : root.shadow.blur
                 shadowVerticalOffset: index===0 ? 0 : index===1 ? root.shadow.offset : 1
@@ -23,5 +23,5 @@ Item {
             }
         }
     }
-    Rectangle { anchors.fill: parent; radius: root.cornerRadius; color: Theme.dark && root.elevation>0 ? Qt.lighter(root.color,1+root.elevation*.025) : root.color; border.width:Theme.dark && root.elevation>0 ? 1 : 0;border.color:'#205F7350' }
+    Rectangle { anchors.fill: parent; radius: root.cornerRadius; color: Theme.dark && root.elevation>0 ? Qt.lighter(root.color,1+root.elevation*.025) : root.color; border.width:Theme.dark && root.elevation>0 ? 1 : 0;border.color:'#18FFFFFF' }
 }

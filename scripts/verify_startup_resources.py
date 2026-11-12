@@ -5,6 +5,7 @@ import ctypes as ct
 from ctypes import wintypes as wt
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -14,6 +15,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT), str(ROOT / 'vendor'), str(ROOT / 'scripts')]
 from desktop import lens
+from desktop.version import VERSION
 from publish_windows_update import candidate_metadata
 
 
@@ -87,7 +89,9 @@ def main():
     assert (out / 'packaged-raw.png').is_file()
     assert all(icons.values()), icons
     assert before == (args.photo.stat().st_size, args.photo.stat().st_mtime_ns)
-    report = dict(ok=True, version='0.8.3', seconds=round(time.monotonic()-started, 3),
+    marks={name.lower():float(milliseconds) for name,milliseconds in re.findall(
+        r'STARTUP_(FIRST_FRAME|PREVIEW|READY)_MS ([\d.]+)',(out/'startup.log').read_text(encoding='utf-8',errors='replace'))}
+    report = dict(ok=True, version=VERSION, seconds=round(time.monotonic()-started, 3),stage_ms=marks,
         checks=['bundled ExifTool wins without PATH enumeration',
                 'explicit ExifTool override works when bundled tool is absent',
                 'missing Windows optional tool does not scan PATH',

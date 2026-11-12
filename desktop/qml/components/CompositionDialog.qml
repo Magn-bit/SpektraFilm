@@ -14,6 +14,7 @@ StudioDialog {
     anchors.centerIn:parent;width:parent.width-40;height:parent.height-40;padding:20
     closePolicy:layoutState.busy ? Popup.NoAutoClose : Popup.CloseOnEscape
     onOpened:{frameCategory=filmEdge ? 0 : 1;presetExpanded=false;workspace.requestFrameTemplates(false)}
+    onFilmEdgeChanged:if(opened)frameCategory=filmEdge ? 0 : 1
     onClosed:workspace.requestFrameTemplates(false)
     function selectedPhoto(){return layoutState.photos.length ? layoutState.photos[Math.max(0,Math.min(layoutState.active,layoutState.photos.length-1))] : ({})}
     function source(index){return layoutState.photos.length>index ? layoutState.photos[index].source : ''}
@@ -77,11 +78,18 @@ StudioDialog {
                     Repeater {model:layoutState.show_info&&layoutState.decorations ? layoutState.decorations.labels : [];delegate:MinchoText {required property var modelData;text:qsTr(String(modelData.text||''));x:modelData.x*canvas.width;y:modelData.y*canvas.height;width:Math.max(1,modelData.width*canvas.width);font.pixelSize:Math.max(1,layoutState.margin*canvas.fit*.32);color:layoutState.style==='contact' ? '#CBD3C3' : '#404339';elide:Text.ElideRight;z:5}}
                 }
             }
-            ColumnLayout {
-                Layout.preferredWidth:Math.max(300,Math.min(360,parent.width*.29));Layout.maximumWidth:360;Layout.minimumWidth:280;Layout.fillHeight:true;spacing:14
-                RowLayout {
-                    Layout.fillWidth:true;spacing:4
+            Item {
+                Layout.preferredWidth:Math.max(300,Math.min(360,parent.width*.29));Layout.maximumWidth:360;Layout.minimumWidth:280;Layout.fillHeight:true
+                ShadowSurface {anchors.fill:parent;cornerRadius:10;elevation:1;color:Theme.toolSurface}
+                ColumnLayout {
+                anchors.fill:parent;anchors.margins:12;spacing:14
+                Item {
+                    Layout.fillWidth:true;Layout.preferredHeight:42
+                    Rectangle {anchors.fill:parent;radius:6;color:Theme.panelInset}
+                    RowLayout {
+                    anchors.fill:parent;anchors.margins:3;spacing:4
                     Repeater {model:['边框','取景','图饰'];StudioButton {required property int index;required property string modelData;objectName:'compositionTool_'+index;text:qsTr(String(modelData));quiet:true;selected:root.tool===index;Layout.fillWidth:true;onClicked:root.tool=index}}
+                }
                 }
                 ScrollView {
                     id:options;objectName:'compositionOptionsViewport';Layout.fillWidth:true;Layout.fillHeight:true;Layout.minimumHeight:0;Layout.preferredHeight:1;clip:true;contentWidth:availableWidth;contentHeight:optionsContent.implicitHeight;rightPadding:12
@@ -100,13 +108,13 @@ StudioDialog {
                                 title:qsTr(String('样式'));detail:qsTr(String(layoutState.frame_preset_name||''));expanded:root.presetExpanded
                                 onToggled:{root.presetExpanded=!root.presetExpanded;workspace.requestFrameTemplates(root.presetExpanded)}
                             GridLayout {
-                                objectName:'compositionPhysicalFrameSelector';width:parent.width;columns:3;columnSpacing:6;rowSpacing:6
+                                objectName:'compositionPhysicalFrameSelector';width:parent.width;columns:2;columnSpacing:8;rowSpacing:8
                                 Repeater {
                                     id:physicalPresets;model:layoutState.frame_presets||[]
                                     CompositionFrameTile {
                                         required property int index;required property var modelData
                                         objectName:modelData.id==='film_135' ? 'compositionTemplate_film' : modelData.id==='film_half' ? 'compositionTemplate_half_frame' : 'compositionPreset_'+modelData.id
-                                        Layout.fillWidth:true;Layout.preferredWidth:(parent.width-12)/3;Layout.minimumWidth:0;Layout.maximumWidth:(parent.width-12)/3
+                                        Layout.fillWidth:true;Layout.preferredWidth:(parent.width-8)/2;Layout.minimumWidth:0;Layout.maximumWidth:(parent.width-8)/2
                                         physicalFrame:true;treatment:modelData.style;title:qsTr(String(modelData.name));nativeSource:modelData.source||''
                                         thumbnailLoading:modelData.loading
                                         chosen:modelData.selected;enabled:modelData.enabled
@@ -209,13 +217,14 @@ StudioDialog {
                     }
                 }
                 Rectangle {
-                    objectName:'compositionOutputFooter';Layout.fillWidth:true;implicitHeight:outputOptions.implicitHeight+24;color:Theme.surface;z:3
+                    objectName:'compositionOutputFooter';Layout.fillWidth:true;implicitHeight:outputOptions.implicitHeight+24;color:Theme.panelFooter;radius:6;z:3
                 Column {
-                    id:outputOptions;anchors.left:parent.left;anchors.right:parent.right;anchors.top:parent.top;anchors.topMargin:12;spacing:8;enabled:!layoutState.exporting
+                    id:outputOptions;anchors.left:parent.left;anchors.right:parent.right;anchors.top:parent.top;anchors.margins:8;anchors.topMargin:12;spacing:8;enabled:!layoutState.exporting
                     MaterialSelector {label:qsTr(String('格式'));fillField:true;value:layoutState.format;choices:[{id:'tiff',name:'TIFF · 16 位'},{id:'png',name:'PNG · 16 位'},{id:'jpeg',name:'JPG · 最高品质'}];onSelected:function(v){workspace.setOption('format',v)}}
                     MaterialSelector {label:qsTr(String('长边'));fillField:true;value:String(layoutState.edge);choices:[{id:'0',name:'原像素排版'},{id:'12000',name:'12000 px'},{id:'6000',name:'6000 px'},{id:'3000',name:'3000 px'}];onSelected:function(v){workspace.setOption('edge',Number(v))}}
                 }
                 }
+            }
             }
         }
         RowLayout {

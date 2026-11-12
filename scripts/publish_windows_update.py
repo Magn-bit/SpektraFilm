@@ -11,11 +11,17 @@ REQUIRED=(
     'native/engine/runtime/spektrafilm_engine.dll','native/engine/runtime/spektrafilm_raw.dll',
     'native/engine/runtime/resources/vulkan/spk_editor_color.spv',
     'native/engine/runtime/resources/vulkan/spk_scan_hdr_expand.spv',
+    'native/engine/runtime/resources/vulkan/spk_overscan_light.spv',
     'native/library/runtime/spklib-host.exe','native/color/runtime/spektrafilm_lcms2.dll',
     'native/hdr/runtime/spektrafilm_hdr.dll','native/hdr/runtime/libultrahdr-LICENSE.txt',
     'native/hdr/runtime/libjpeg-turbo-LICENSE.md','native/hdr/runtime/image_io-LICENSE.txt',
     'native/hdr/runtime/adobe-hdr-gain-map-NOTICE.txt','native/hdr/runtime/UPSTREAM.json',
     'desktop/qml/Studio.qml','desktop/qml/components/CompositionDialog.qml',
+    'desktop/qml/components/CompositionFrameTile.qml',
+    'desktop/qml/components/PanelToggle.qml',
+    'desktop/qml/components/Theme.qml','desktop/qml/components/EditorTools.qml',
+    'desktop/qml/components/ShadowSurface.qml','desktop/qml/components/DeferredPopup.qml',
+    'assets/icons/triangle-down.svg','assets/icons/sun.svg','assets/icons/moon.svg',
     'desktop/qml/components/ImportWorkspace.qml','desktop/translations/ui.json',
     'desktop/qml/components/FilmLibrary.qml','desktop/qml/components/ExportResults.qml',
     'desktop/qml/components/ChannelMixerPanel.qml','desktop/qml/components/ParametricCurvePanel.qml',
@@ -205,7 +211,7 @@ def publish(candidate,evidence):
             'Android development sources are unbuilt; current APK matching source is '+old_source.name+'.')
     manifest=dict(version=VERSION,published_at=datetime.now(timezone(timedelta(hours=8))).isoformat(),
         windows=dict(executable='Windows/SpektraFilm/SpektraFilm.exe',console='Windows/SpektraFilm/SpektraFilmCLI.exe',
-            version=VERSION,smoke_verified=True,ui_revision='2026-11-12-import-styles'),
+            version=VERSION,smoke_verified=True,ui_revision='2026-11-12-workspace-depth-subtle-film-base'),
         android=android|dict(version='0.5.0',source='Source/'+old_source.name,unchanged=True),source=source,
         evidence=f'Evidence/Windows-{VERSION}/review.json',changes=report['changes'],verification=report['checks'],limitations=report['limitations'])
     write_json(stage/'manifest.json',manifest)

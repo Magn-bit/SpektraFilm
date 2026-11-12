@@ -139,7 +139,8 @@ ApplicationWindow {
         anchors.fill: parent
         layer.enabled: true
         layer.effect: MultiEffect { maskEnabled: true; maskSource: cornerMask; maskThresholdMin: .5; maskSpreadAtMin: 1 }
-        Rectangle { anchors.fill: parent; color: Theme.surface }
+        Rectangle { anchors.fill: parent; color: Theme.workspace }
+        Rectangle {width:parent.width;height:78;color:Theme.surface}
         ColumnLayout {
         anchors.fill: parent; spacing: 0
         Item {
@@ -148,6 +149,26 @@ ApplicationWindow {
                 anchors.fill: parent; acceptedButtons: Qt.LeftButton
                 onPressed: window.startSystemMove()
                 onDoubleClicked: window.toggleMaximize()
+            }
+            StudioButton {
+                id:appearanceToggle;objectName:'toggleAppearanceButton'
+                anchors.left:parent.left;anchors.leftMargin:12;anchors.verticalCenter:parent.verticalCenter
+                implicitWidth:30;implicitHeight:30;quiet:true
+                checkable:true;checked:Theme.dark
+                Accessible.name:qsTr(Theme.dark ? '切换浅色模式' : '切换深色模式')
+                Accessible.description:qsTr(Theme.dark ? '当前为深色模式' : '当前为浅色模式')
+                ToolTip.visible:hovered && !down;ToolTip.delay:600;ToolTip.text:Accessible.name
+                contentItem:Item {
+                    VectorIcon {
+                        anchors.centerIn:parent;width:15;height:15;name:'moon';opacity:Theme.dark ? 0 : 1
+                        Behavior on opacity {NumberAnimation {duration:Theme.fast}}
+                    }
+                    VectorIcon {
+                        anchors.centerIn:parent;width:15;height:15;name:'sun';opacity:Theme.dark ? 1 : 0
+                        Behavior on opacity {NumberAnimation {duration:Theme.fast}}
+                    }
+                }
+                onClicked:ctrl.updatePreference('appearance',Theme.dark ? 'light' : 'dark')
             }
             Row {
                 objectName: 'windowControls'
@@ -201,15 +222,18 @@ ApplicationWindow {
                     onClicked: exportDialog.open()
                 }
             }
-            Rectangle { anchors.bottom: parent.bottom; width: parent.width; height: 1; color: Theme.rule }
         }
         RowLayout {
             visible:window.workspaceMode==='edit' || window.workspaceMode==='develop'
             Layout.fillWidth: true; Layout.fillHeight: true; spacing: 0
+            Layout.leftMargin:12;Layout.rightMargin:12;Layout.topMargin:10;Layout.bottomMargin:12
+            Item {
+            Layout.fillWidth:true;Layout.fillHeight:true
+            ShadowSurface {anchors.fill:parent;elevation:0;cornerRadius:10;color:Theme.canvas}
             ColumnLayout {
-                Layout.fillWidth: true; Layout.fillHeight: true; spacing: 0
+                anchors.fill:parent;spacing:0
                 Rectangle {
-                    Layout.fillWidth: true; height: 48; color: Theme.canvas
+                    Layout.fillWidth: true; height: 48; color:'transparent'
                     RowLayout {
                         anchors.fill: parent; anchors.leftMargin: 28; anchors.rightMargin: 20; spacing: 12
                         MinchoText { text: qsTr(String(ctrl.filename)); color: Theme.secondary; font.pixelSize: Theme.caption; elide: Text.ElideMiddle; Layout.fillWidth: true; visible:ctrl.currentIndex>=0 }
@@ -236,7 +260,6 @@ ApplicationWindow {
                             }
                             onClicked: window.comparing=!window.comparing
                         }
-                        StudioButton {objectName:'toggleToolsButton';text:qsTr(String(window.toolsVisible ? '收起工具' : '显示工具'));quiet:true;implicitHeight:30;onClicked:window.toolsVisible=!window.toolsVisible;ToolTip.visible:hovered;ToolTip.delay:600;ToolTip.text:qsTr(String('工具区 · Tab'))}
                     }
                 }
                 CropToolbar {
@@ -307,7 +330,7 @@ ApplicationWindow {
                     }
                 }
                 Rectangle {
-                    Layout.fillWidth: true; height: 41; color: Theme.canvas
+                    Layout.fillWidth: true; height: 41; color:'transparent'
                     RowLayout {
                         anchors.fill: parent; anchors.leftMargin: 36; anchors.rightMargin: 25; spacing: 14
                         Rectangle { width: 4; height: 4; radius: 2; visible: ctrl.busy || ctrl.status.indexOf('失败')>=0; color: Theme.accentInk }
@@ -319,7 +342,6 @@ ApplicationWindow {
                         Item { Layout.fillWidth:true; visible: !ctrl.busy && ctrl.status.indexOf('失败')<0 }
                         StudioButton { text: qsTr(String('重试')); visible: ctrl.status.indexOf('失败')>=0; quiet: true; height: 28; onClicked: ctrl.retry() }
                         StudioButton { text: qsTr(String('停止批量')); visible: ctrl.exporting && ctrl.batchTotal>0; quiet: true; implicitHeight: 28; onClicked: ctrl.cancelBatchExport() }
-                        StudioButton {text:qsTr(String(window.stripVisible ? '收起照片' : '显示照片'));quiet:true;implicitHeight:28;visible:ctrl.photoCount>0;onClicked:window.stripVisible=!window.stripVisible}
                         TextField {
                             id:zoomValue;objectName:'zoomPercentage';visible:ctrl.currentIndex>=0
                             implicitWidth:64;implicitHeight:28;rightPadding:17;leftPadding:4
@@ -357,10 +379,10 @@ ApplicationWindow {
                     }
                 }
                 Item {
-                    objectName: 'photoStrip'
+                    id:photoStrip;objectName: 'photoStrip'
                     Layout.fillWidth: true; Layout.preferredHeight: 112
                     visible: ctrl.photoCount>0 && window.stripVisible && window.workspaceMode!=='library'
-                    Rectangle { width: parent.width; height: 1; color: Theme.rule }
+                    ShadowSurface {anchors.fill:parent;elevation:1;cornerRadius:10;color:Theme.panelFooter}
                     RowLayout {
                         anchors.fill: parent; anchors.margins: 18; spacing: 19
                         Column { Layout.preferredWidth: 95; spacing: 7
@@ -385,20 +407,35 @@ ApplicationWindow {
                                 Keys.onReturnPressed: function(event) { ctrl.selectWithModifiers(index,event.modifiers) }
                                 Keys.onSpacePressed: function(event) { ctrl.selectWithModifiers(index,event.modifiers) }
                                 Image { x: 3; y: 3; width: 77; height: 48; source: photo.thumbnail; fillMode: Image.PreserveAspectCrop;asynchronous:true;cache:true;sourceSize.width:154;sourceSize.height:96 }
-                                Rectangle { width: 83; height: 54; color: 'transparent'; border.width: parent.current || parent.activeFocus ? 2 : 1; border.color: parent.current ? Theme.ink : parent.chosen || parent.activeFocus ? Theme.accent : Theme.rule }
+                                Rectangle { width: 83; height: 54; color: 'transparent'; border.width: parent.current || parent.activeFocus ? 2 : 1; border.color: parent.current || parent.chosen || parent.activeFocus ? Theme.accentInk : Theme.border }
                                 MinchoText { x: 0; y: 58; width: 83; text: qsTr(String(String(index+1).padStart(2,'0')+(parent.current ? ' · 当前' : ''))); horizontalAlignment: Text.AlignHCenter; font.pixelSize: Theme.caption; color: parent.current ? Theme.ink : Theme.secondary }
                                 Rectangle { x: 65; y: 5; width: 12; height: 12; radius: 6; color: Theme.surface; border.width: 1; border.color: Theme.accent; visible: parent.chosen; Rectangle { anchors.centerIn: parent; width: 4; height: 4; radius: 2; color: Theme.accent } }
                                 MouseArea { anchors.fill: parent; cursorShape: Qt.PointingHandCursor; onClicked: function(mouse) { ctrl.selectWithModifiers(index,mouse.modifiers) } }
                             }
                         }
                         StudioButton {objectName:'syncSettingsButton';text:qsTr(String('同步'));quiet:true;enabled:ctrl.currentIndex>=0 && !ctrl.exporting;onClicked:syncDialog.open()}
-                        StudioButton { objectName: 'addPhotosButton'; text: qsTr(String('添加')); iconName: 'plus'; quiet: true; enabled: !ctrl.exporting; onClicked: ctrl.importPhotos() }
                     }
                 }
             }
+                PanelToggle {
+                    id:stripToggle;objectName:'togglePhotoStripButton'
+                    visible:ctrl.photoCount>0
+                    anchors.horizontalCenter:parent.horizontalCenter
+                    y:window.stripVisible ? photoStrip.y-10 : parent.height-height
+                    z:2
+                    expanded:window.stripVisible;panelName:qsTr('照片栏')
+                    onClicked:window.stripVisible=!window.stripVisible
+                }
+                PanelToggle {
+                    objectName:'toggleToolsButton';sidePanel:true
+                    anchors.right:parent.right;anchors.verticalCenter:parent.verticalCenter;z:3
+                    expanded:window.toolsVisible;panelName:qsTr('工具区');shortcut:'Tab'
+                    onClicked:window.toolsVisible=!window.toolsVisible
+                }
+            }
             Item {
-                Layout.preferredWidth:6;Layout.fillHeight:true;visible:window.toolsVisible
-                Rectangle {anchors.right:parent.right;width:1;height:parent.height;color:resizeTools.containsMouse || resizeTools.pressed ? Theme.accent : Theme.rule}
+                Layout.preferredWidth:12;Layout.fillHeight:true;visible:window.toolsVisible
+                Rectangle {anchors.centerIn:parent;width:2;height:48;radius:1;visible:resizeTools.containsMouse || resizeTools.pressed;color:Theme.accent}
                 MouseArea {
                     id:resizeTools;objectName:'resizeTools';anchors.fill:parent;hoverEnabled:true;cursorShape:Qt.SizeHorCursor;preventStealing:true
                     property real initialWidth:0
@@ -409,10 +446,11 @@ ApplicationWindow {
                     ToolTip.visible:containsMouse && !pressed;ToolTip.delay:700;ToolTip.text:qsTr(String('拖动调整工具区宽度；双击恢复'))
                 }
             }
-            Rectangle {
+            Item {
                 id:toolsPane;objectName:'toolsPane'
                 Layout.preferredWidth:Math.max(320,Math.min(window.sidebarWidth,window.width-620));Layout.fillHeight:true
-                visible:window.toolsVisible;color:Theme.surface
+                visible:window.toolsVisible
+                ShadowSurface {anchors.fill:parent;elevation:2;cornerRadius:10;color:Theme.toolSurface}
                 EditorTools {
                     id:editorTools;anchors.fill:parent;stock:window.stock;enabled:!window.cropping
                     onLibraryRequested:library.open()
@@ -459,9 +497,9 @@ ApplicationWindow {
             onPressed: window.startSystemResize(modelData)
         }
     }
-    FilmLibrary {
-        id:library;controller:ctrl;library:ctrl.filmLibrary
-        onAccepted:close()
+    DeferredPopup {
+        id:library;objectName:'libraryPopup'
+        sourceComponent:FilmLibrary {controller:ctrl;library:ctrl.filmLibrary;onAccepted:close()}
     }
     Popup {
         id: toastPopup; x: (window.width-width)/2; y: window.height-height-23; width: Math.min(640,toastLabel.implicitWidth+40); padding: 18
@@ -494,11 +532,11 @@ ApplicationWindow {
             }
         }
     }
-    StyleLibrary {id:styleLibrary;width:Math.min(640,window.width-64);height:Math.min(760,window.height-64);anchors.centerIn:parent}
-    SettingsPanel {id:settingsPanel}
-    SyncSettingsDialog {id:syncDialog}
-    ExportDialog {id:exportDialog;onRecipesRequested:outputRecipeDialog.open()}
-    OutputRecipeDialog {id:outputRecipeDialog}
+    DeferredPopup {id:styleLibrary;objectName:'styleLibrary';sourceComponent:StyleLibrary {width:Math.min(640,window.width-64);height:Math.min(760,window.height-64);anchors.centerIn:parent}}
+    DeferredPopup {id:settingsPanel;objectName:'settingsPanel';sourceComponent:SettingsPanel {}}
+    DeferredPopup {id:syncDialog;objectName:'syncSettingsDialog';sourceComponent:SyncSettingsDialog {}}
+    DeferredPopup {id:exportDialog;objectName:'exportDialog';sourceComponent:ExportDialog {onRecipesRequested:outputRecipeDialog.open()}}
+    DeferredPopup {id:outputRecipeDialog;objectName:'outputRecipeDialog';sourceComponent:OutputRecipeDialog {}}
     StudioDialog {
         id: aboutDialog; objectName: 'aboutDialog'; anchors.centerIn: parent; width: 520
         contentItem: Column {
@@ -509,5 +547,5 @@ ApplicationWindow {
             StudioButton { text: qsTr(String('返回暗房')); primary: true; width: parent.width; onClicked: aboutDialog.close() }
         }
     }
-    CompositionDialog {id:compositionDialog}
+    DeferredPopup {id:compositionDialog;objectName:'compositionDialog';sourceComponent:CompositionDialog {}}
 }

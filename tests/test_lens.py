@@ -17,7 +17,8 @@ class LensTests(unittest.TestCase):
     def setUp(self):
         self.store = tempfile.TemporaryDirectory()
         self.root = Path(self.store.name)
-        self.env = patch.dict(os.environ, {'SPEKTRAFILM_LCP_PATH': str(self.root)})
+        self.env = patch.dict(os.environ, {'SPEKTRAFILM_LCP_PATH': str(self.root),
+            'SPEKTRAFILM_LCP_INDEX_CACHE':str(self.root/'identities.json')})
         self.env.start()
         self.tool = patch('desktop.lens._exiftool', return_value=None)
         self.tool.start()
@@ -62,6 +63,21 @@ class LensTests(unittest.TestCase):
         self.assertEqual(status['focal_length'], 35)
         self.assertEqual(status['metadata_source'], 'pillow')
         json.dumps(status)
+
+    def test_identity_cache_reuses_headers_and_invalidates_changed_profile(self):
+        path=self.profile()
+        roots=lens._profile_roots()
+        expected=lens._identity_index(roots)
+        self.assertTrue((self.root/'identities.json').is_file())
+        lens._identity_index.cache_clear()
+        lens._profile_header.cache_clear()
+        with patch.object(lens,'_profile_header',side_effect=AssertionError('unchanged profile reparsed')):
+            self.assertEqual(lens._identity_index(roots),expected)
+        path.write_text(path.read_text(encoding='utf-8')+'\n',encoding='utf-8')
+        lens._identity_index.cache_clear()
+        with patch.object(lens,'_profile_header',wraps=lens._profile_header) as headers:
+            self.assertEqual(lens._identity_index(roots),expected)
+            headers.assert_called_once()
 
     def test_raw_profiles_do_not_apply_to_jpeg(self):
         self.profile(raw=True)

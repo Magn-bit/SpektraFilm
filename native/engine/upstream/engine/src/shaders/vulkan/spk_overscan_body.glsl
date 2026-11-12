@@ -381,6 +381,48 @@ void main() {
 // own; the viewing tilt and parallax are the scan's. Linear output RGB,
 // after the scanner's blur and sharpening (the edge's softness is `film_alpha`'s).
 #if defined(SPK_OVERSCAN_LIGHT)
+// Scanner/base finish, in film millimetres. One correlated luminance field,
+// not independent RGB noise. Global film coordinates keep full/region renders
+// aligned; the photographed gate is excluded, including both half-frame gates.
+float scan_noise(vec2 p, uint seed) {
+    const ivec2 cell=ivec2(floor(p));
+    const vec2 f=fract(p), w=f*f*(3.0f-2.0f*f);
+    const int key=cell.x+cell.y*4099;
+    return mix(mix(hash_f(key,seed),hash_f(key+1,seed),w.x),
+               mix(hash_f(key+4099,seed),hash_f(key+4100,seed),w.x),w.y);
+}
+
+float rebate_only(vec2 st) {
+    vec2 sg=st;
+    const float advance=params.v[P_PAIR_ADV];
+    if (advance>0.0f && sg.x>params.v[P_GS0]+0.5f*(params.v[P_GW]+advance)) sg.x-=advance;
+    const vec2 center=vec2(params.v[P_GS0]+0.5f*params.v[P_GW],params.v[P_GT0]+0.5f*params.v[P_GH]);
+    const vec2 q=abs(sg-center)-0.5f*vec2(params.v[P_GW],params.v[P_GH]);
+    if (max(q.x,q.y)<-0.30f) return 0.0f;
+    return smoothstep(0.025f,0.16f,gate_sdf(sg));
+}
+
+vec3 scan_rebate(vec3 c, vec2 st, float amount, uint seed) {
+    const float px=params.v[P_PX];
+    const float broad=scan_noise(st/1.7f,seed^0x3813u);
+    const float mottle=0.6f*broad+0.4f*scan_noise(st/0.23f,seed^0x71B9u);
+    // Suppress subpixel frequencies rather than aliasing them into coarse
+    // preview noise. No output-pixel RNG or repeated per-tile grain.
+    const float resolved=inversesqrt(1.0f+(px/0.024f)*(px/0.024f));
+    const float fine=(scan_noise(st/0.024f,seed^0xD32Fu)-0.5f)*resolved;
+    const vec3 base=vec3(params.v[P_BASE_R],params.v[P_BASE_G],params.v[P_BASE_B]);
+    const vec3 tint=mix(vec3(1.0f),base/max(max(base.r,base.g),max(base.b,0.001f)),0.78f);
+    const float edge_dist=max(0.0f,min(st.y,params.v[P_FILM_W]-st.y));
+    // Keep the base nearly black. Transmission belongs at the thin outer
+    // edge, not in a bright brown veil across the entire rebate. Its spectral
+    // tint remains visible at the edge while fine density stays quiet.
+    float transmitted=0.0008f+0.0012f*mottle+0.0012f*fine;
+    transmitted+=0.008f*exp(-edge_dist/0.16f)*(0.75f+0.25f*broad);
+    const float shadow=1.0f-smoothstep(0.012f,0.065f,max(c.r,max(c.g,c.b)));
+    return c+amount*((-0.16f*shadow-0.08f*mottle-0.018f*fine)*c
+        +transmitted*tint*max(vec3(0.0f),vec3(1.0f)-c));
+}
+
 void main() {
     const uint i = gl_GlobalInvocationID.y * (gl_NumWorkGroups.x * gl_WorkGroupSize.x) + gl_GlobalInvocationID.x;
     if (i >= count.v[0]) return;
@@ -390,9 +432,26 @@ void main() {
     const bool white = params.v[P_HOLES_LIGHT] > 0.5f;
     vec3 light = vec3(params.v[P_LIGHT_R], params.v[P_LIGHT_G], params.v[P_LIGHT_B]);
     vec3 c = vec3(src.v[3u * i], src.v[3u * i + 1u], src.v[3u * i + 2u]);
+    const uint finish_seed=uint(params.v[P_PERF_SEED]);
+    const bool finish=params.v[P_ROUGH_AMP]>0.0f && finish_seed!=0u;
+    if (finish) {
+        const float rebate=rebate_only(st);
+        if (rebate>0.0f) c=scan_rebate(c,st,rebate,finish_seed);
+        if (white) {
+            // The scan lamp is near-white, not a uniform digital #FFFFFF.
+            const float field=scan_noise(st/3.0f,finish_seed^0x751u);
+            light*=0.96f+0.025f*field;
+        }
+    }
     if (params.v[P_PERFORATED] > 0.5f) {
         uint hole;
         const float d = perf_sdf(st, hole);
+        if (finish && d>=0.0f && d<0.35f) {
+            const vec3 base=vec3(params.v[P_BASE_R],params.v[P_BASE_G],params.v[P_BASE_B]);
+            const vec3 transmission=mix(vec3(1.0f),base/max(max(base.r,base.g),max(base.b,0.001f)),0.72f);
+            const float thickness=0.55f+0.45f*scan_noise(st/0.15f,finish_seed^hole);
+            c+=rebate_only(st)*0.008f*thickness*exp(-d/0.045f)*transmission;
+        }
         // The cut is not a perfectly vertical knife: the base is a little rounded
         // where the punch went through, and a scan sees that as a soft shoulder
         // just outside the hole -- measured on the owner's reference at 1-2 px

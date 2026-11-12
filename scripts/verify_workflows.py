@@ -77,9 +77,9 @@ with tempfile.TemporaryDirectory() as folder:
         assert item('zoomControl').property('visible')
         assert item('openImportWorkspaceButton').property('visible') and item('openCompositionButton').property('visible')
         checks.append('photo-dependent geometry, source dimensions and preview tools return after import')
-        add_button=window.findChild(QObject,'addPhotosButton')
-        assert add_button and add_button.property('visible') and photo_strip.property('visible')
-        assert not empty_import.property('visible');checks.append('photo list shows one contextual import entry')
+        assert window.findChild(QObject,'addPhotosButton') is None
+        assert item('openImportWorkspaceButton').property('visible') and photo_strip.property('visible')
+        assert not empty_import.property('visible');checks.append('one toolbar import entry; no duplicate photo-strip add action')
         mime=QMimeData();mime.setUrls([QUrl.fromLocalFile(str(second))]);clipboard.setMimeData(mime)
         window.requestActivate();wait(lambda:window.isActive())
         QTest.keyClick(window,Qt.Key_V,Qt.ControlModifier)

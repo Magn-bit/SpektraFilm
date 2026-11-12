@@ -14,6 +14,8 @@ import re
 import shutil
 import subprocess
 import json
+import tempfile
+import threading
 import xml.etree.ElementTree as ET
 
 import numpy as np
@@ -25,6 +27,35 @@ from .raw_source import source_pixels, normalized_pixels, display_image
 _ORIENT = {2: Image.Transpose.FLIP_LEFT_RIGHT, 3: Image.Transpose.ROTATE_180,
            4: Image.Transpose.FLIP_TOP_BOTTOM, 5: Image.Transpose.TRANSPOSE,
            6: Image.Transpose.ROTATE_270, 7: Image.Transpose.TRANSVERSE, 8: Image.Transpose.ROTATE_90}
+_INDEX_LOCK = threading.RLock()
+
+
+def _identity_cache():
+    """Cache parsed identities; calibration files remain the source of truth."""
+    base=Path(os.environ.get('LOCALAPPDATA') or os.environ.get('XDG_CACHE_HOME') or Path.home()/'.cache')
+    path=Path(os.environ.get('SPEKTRAFILM_LCP_INDEX_CACHE') or base/'SpektraFilm/lens-identities-v1.json')
+    try:
+        if path.stat().st_size>16*1024**2:return path,{}
+        record=json.loads(path.read_text(encoding='utf-8'))
+        entries=record.get('entries') if record.get('version')==1 else None
+        return path,entries if isinstance(entries,dict) and len(entries)<=16384 else {}
+    except (OSError,ValueError,TypeError,AttributeError):return path,{}
+
+
+def _write_identity_cache(path,entries):
+    temporary=None
+    try:
+        path.parent.mkdir(parents=True,exist_ok=True)
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=path.parent,
+                                         prefix='lens-identities-',suffix='.tmp',delete=False) as stream:
+            temporary=Path(stream.name)
+            json.dump(dict(version=1,entries=entries),stream,separators=(',',':'))
+        os.replace(temporary,path)
+    except OSError:pass
+    finally:
+        if temporary is not None:
+            try:temporary.unlink(missing_ok=True)
+            except OSError:pass
 
 
 def _orient_pixels(values,orientation):
@@ -302,16 +333,36 @@ def _profile_header(path, stamp, size):
 
 @lru_cache(maxsize=4)
 def _identity_index(roots):
+    with _INDEX_LOCK:return _build_identity_index(roots)
+
+
+def _build_identity_index(roots):
+    cache_path,records=_identity_cache()
     result = {}
+    updated={}
+    changed=False
     for path in _profile_paths(roots):
         try:
             info = Path(path).stat()
-            header = _profile_header(path, info.st_mtime_ns, info.st_size)
+            saved=records.get(path)
+            header=None
+            if isinstance(saved,list) and len(saved)==3 and saved[:2]==[info.st_mtime_ns,info.st_size]:
+                value=saved[2]
+                if (isinstance(value,dict) and isinstance(value.get('make'),str)
+                    and isinstance(value.get('camera'),str) and isinstance(value.get('names'),list)
+                    and all(isinstance(name,str) for name in value['names'])
+                    and (value.get('raw') is None or isinstance(value['raw'],bool))):header=value
+            if header is None:
+                header=_profile_header(path,info.st_mtime_ns,info.st_size)
+                changed=True
+            updated[path]=[info.st_mtime_ns,info.st_size,dict(header,names=sorted(header['names']))]
         except (OSError, ET.ParseError, ValueError, TypeError):
             continue
         for name in header['names']:
             key = header['make'], header['raw'], name
             result.setdefault(key, []).append((path, header['camera']))
+    if len(updated)<=16384 and (changed or updated.keys()!=records.keys()):
+        _write_identity_cache(cache_path,updated)
     return result
 
 

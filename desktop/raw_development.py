@@ -194,8 +194,11 @@ def read_developed_raw(path, max_edge=None, *, policy='auto'):
     # frame just to display it. Colour conversion is pointwise in the pre
     # stage; independent stripes have exactly the same source coordinates.
     visible = np.empty(pixels.shape, dtype=np.uint8)
-    for top in range(0, pixels.shape[0], 256):
-        block = process_editor(pixels[top:top + 256], {}, stage='pre',
+    # A bounded preview fits in one dispatch. Repeated tiny GPU transfers add
+    # latency at startup; full sources retain bounded conversion scratch.
+    block_rows = pixels.shape[0] if max_edge and pixels.shape[0]*pixels.shape[1]<=4_194_304 else 256
+    for top in range(0, pixels.shape[0], block_rows):
+        block = process_editor(pixels[top:top + block_rows], {}, stage='pre',
                                source_color_space='ProPhoto RGB', source_linear=True,
                                source_size=(pixels.shape[1], pixels.shape[0]), origin=(0, top),
                                exposure_ev=ev, clamp_output=True)

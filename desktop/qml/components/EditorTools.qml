@@ -29,8 +29,11 @@ ColumnLayout {
     onHasPhotoChanged:if(!hasPhoto && task!=='film')task='film'
     Component.onCompleted:if(!hasPhoto && task!=='film')task='film'
     spacing:0
-    RowLayout {
-        Layout.fillWidth:true;Layout.leftMargin:16;Layout.rightMargin:16;Layout.topMargin:12;Layout.bottomMargin:12;spacing:2
+    Item {
+        Layout.fillWidth:true;Layout.preferredHeight:46;Layout.leftMargin:12;Layout.rightMargin:12;Layout.topMargin:12;Layout.bottomMargin:12
+        Rectangle {anchors.fill:parent;radius:6;color:Theme.panelInset}
+        RowLayout {
+        anchors.fill:parent;anchors.margins:4;spacing:2
         Repeater {
             model:[{id:'basic',name:'基础'},{id:'color',name:'颜色'},{id:'local',name:'局部'},{id:'film',name:'胶片'},{id:'geometry',name:'几何'}]
             delegate:StudioButton {
@@ -46,6 +49,7 @@ ColumnLayout {
                 onClicked:root.task=modelData.id
             }
         }
+    }
     }
     HistogramPanel {
         objectName:'editorHistogram'
@@ -68,8 +72,13 @@ ColumnLayout {
         }
         Column {
             width:parameterScroll.availableWidth;spacing:24
-            Column {
-                width:parent.width;spacing:20;visible:root.task==='basic'&&root.hasPhoto;enabled:ctrl.currentIndex>=0 && !ctrl.exporting
+            Loader {
+                width:parent.width;visible:root.task==='basic'&&root.hasPhoto
+                property bool visited:false
+                active:visible || visited
+                onLoaded:visited=true
+                sourceComponent:Column {
+                width:parent.width;spacing:20;enabled:ctrl.currentIndex>=0 && !ctrl.exporting
                 MinchoText {text:qsTr(String('基础调整'));font.pixelSize:Theme.heading;height:32}
                 FineParameter {label:qsTr(String('曝光'));parameter:'exposure';minimum:-8;maximum:8;step:.01;unit:'EV';signedValue:true}
                 ToolSection {
@@ -134,7 +143,14 @@ ColumnLayout {
                     }
                 }
             }
-            ColorToolsPanel {width:parent.width;visible:root.task==='color'&&root.hasPhoto;onStylesRequested:root.stylesRequested()}
+                }
+            Loader {
+                width:parent.width;visible:root.task==='color'&&root.hasPhoto
+                property bool visited:false
+                active:visible || visited
+                onLoaded:visited=true
+                sourceComponent:ColorToolsPanel {onStylesRequested:root.stylesRequested()}
+            }
             MaskPanel {id:localTools;width:parent.width;visible:root.task==='local'&&root.hasPhoto}
             Column {
                 width:parent.width;spacing:24;visible:root.task==='film'
@@ -253,15 +269,25 @@ ColumnLayout {
                     }
                 }
             }
-            GeometryPanel {objectName:'geometryPanel';width:parent.width;visible:root.task==='geometry'&&root.hasPhoto;onCropRequested:root.cropRequested();onGuidedRequested:function(mode){root.guidedRequested(mode)}}
+            Loader {
+                width:parent.width;visible:root.task==='geometry'&&root.hasPhoto
+                property bool visited:false
+                active:visible || visited
+                onLoaded:visited=true
+                sourceComponent:GeometryPanel {objectName:'geometryPanel';onCropRequested:root.cropRequested();onGuidedRequested:function(mode){root.guidedRequested(mode)}}
+            }
             Item {width:1;height:16}
         }
     }
-    RowLayout {
-        Layout.fillWidth:true;Layout.margins:16;spacing:6
+    Item {
+        Layout.fillWidth:true;Layout.preferredHeight:62
+        Rectangle {anchors.fill:parent;radius:10;color:Theme.panelFooter}
+        RowLayout {
+        anchors.fill:parent;anchors.leftMargin:16;anchors.rightMargin:16;spacing:6
         StudioButton {objectName:'undoButton';text:qsTr(String('撤销'));quiet:true;visible:root.hasPhoto;enabled:ctrl.canUndo && !ctrl.exporting;onClicked:ctrl.undo();ToolTip.visible:hovered || visualFocus;ToolTip.delay:600;ToolTip.text:qsTr(String('撤销 · Ctrl+Z'))}
         StudioButton {objectName:'redoButton';text:qsTr(String('重做'));quiet:true;visible:root.hasPhoto;enabled:ctrl.canRedo && !ctrl.exporting;onClicked:ctrl.redo();ToolTip.visible:hovered || visualFocus;ToolTip.delay:600;ToolTip.text:qsTr(String('重做 · Ctrl+Y'))}
         Item {Layout.fillWidth:true}
         StudioButton {objectName:'resetPhotoButton';text:qsTr(String('恢复默认'));quiet:true;visible:root.hasPhoto;enabled:ctrl.canReset && !ctrl.exporting;onClicked:ctrl.reset();ToolTip.visible:hovered || visualFocus;ToolTip.delay:600;ToolTip.text:qsTr(String('恢复当前照片全部参数；可撤销'))}
+    }
     }
 }

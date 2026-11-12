@@ -13,6 +13,7 @@ import tempfile
 import threading
 import time
 import unittest
+from concurrent.futures import ThreadPoolExecutor
 from unittest.mock import patch
 
 from PIL import Image
@@ -66,6 +67,29 @@ class NativePreviewControllerTests(unittest.TestCase):
 
     def red(self):
         return self.ctrl.provider.images['frame'].pixelColor(0,0).red()
+
+    def test_concurrent_preview_sizes_share_decode_without_fulfilling_full_source(self):
+        started=threading.Event();release=threading.Event();calls=[]
+        def reader(path,edge,**kwargs):
+            calls.append(edge);started.set()
+            if not release.wait(3):raise RuntimeError('source test timed out')
+            return Image.new('RGB',(1280,960),(120,100,80))
+        path=str(self.path)
+        with patch('desktop.full_detail.read_cached_photo',side_effect=reader):
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                fast=pool.submit(self.ctrl._source,path,640)
+                try:
+                    self.assertTrue(started.wait(2))
+                    refined=pool.submit(self.ctrl._source,path,self.ctrl._preview_edge)
+                finally:release.set()
+                self.assertEqual(fast.result(timeout=3).size,(640,480))
+                self.assertEqual(refined.result(timeout=3).size,(1280,960))
+            self.assertEqual(calls,[self.ctrl._preview_edge])
+            self.ctrl._source(path,0)
+            self.assertEqual(calls[-1],None)
+            self.path.write_bytes(self.path.read_bytes()+b'changed')
+            self.ctrl._source(path,640)
+            self.assertEqual(calls,[self.ctrl._preview_edge,None,self.ctrl._preview_edge])
 
     def test_native_live_final_undo_and_redo_keep_one_model_and_latest_value(self):
         self.load();self.calls.clear()

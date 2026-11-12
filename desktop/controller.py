@@ -9,6 +9,7 @@ import threading
 import time
 import uuid
 from collections import OrderedDict
+from concurrent.futures import Future
 
 from PIL.ImageQt import ImageQt
 from PySide6.QtCore import QObject, Property, Signal, Slot, QTimer, QThreadPool, QRunnable, QUrl, QStandardPaths, Qt
@@ -159,6 +160,8 @@ class Controller(QObject):
         self.fast_pool.setMaxThreadCount(1)
         self.crop_pool = QThreadPool(self)
         self.crop_pool.setMaxThreadCount(1)
+        self.metadata_pool = QThreadPool(self)
+        self.metadata_pool.setMaxThreadCount(1)
         self._crop_source = ''
         self._crop_busy = False
         self._crop_request = 0
@@ -209,9 +212,11 @@ class Controller(QObject):
         self._mask_stroke = None
         self._edit_generation = -1
         self._cache = OrderedDict()
+        self._source_inflight = {}
         self._source_stamps = {}
         self._cache_lock = threading.RLock()
         self._prepared = OrderedDict()
+        self._prepared_inflight = {}
         self._mask_bases = OrderedDict()
         self._render_epochs = {}
         self._lens_status = {}
@@ -1161,6 +1166,12 @@ class Controller(QObject):
         self._crop_request+=1;self._crop_busy=False;self._crop_source=''
         self._minimum_frame_generation=self._generation+1
         self._settings=_full_settings(self._photos[index]['settings'])
+        if self._settings.lens_correction or self._settings.defringe:
+            path=self._photos[index]['path']
+            def inspect():
+                from .lens import inspect_photo
+                return None if self._closed or self.currentPath!=path else inspect_photo(path)
+            self._submit(inspect,dict(kind='lens_prefetch'),metadata=True)
         self._before=None
         self._edit_generation=-1
         self._lens_status={}
@@ -1891,13 +1902,14 @@ class Controller(QObject):
         # replaces the entire frame with a multi-hundred-MB GUI image.
         self._full_detail.set_enabled(value)
 
-    def _submit(self,fn,context,*,fast=False,export=False):
+    def _submit(self,fn,context,*,fast=False,export=False,metadata=False):
         worker=Job(fn,context)
         key=id(worker)
         self._jobs[key]=worker
         context['job']=key
         worker.signals.done.connect(self._done)
-        (self.export_pool if export else self.fast_pool if fast else self.pool).start(worker)
+        (self.metadata_pool if metadata else self.export_pool if export else self.fast_pool if fast else self.pool).start(worker)
+
 
     def _cache_source(self,key,image):
         try:
@@ -1958,8 +1970,35 @@ class Controller(QObject):
             from PIL import Image
             image.thumbnail((edge,edge),Image.Resampling.LANCZOS)
         else:
-            from .full_detail import read_cached_photo
-            image=read_cached_photo(path,edge or None,reader=read_photo)
+            # Fast and refined previews request the same selected RAW within
+            # milliseconds. Share one real decode at the configured preview
+            # size instead of unpacking/demosaicing it twice at 640 and 1920.
+            decode_edge=max(edge,self._preview_edge) if edge else 0
+            decode_key=(path,decode_edge,stamp)
+            with self._cache_lock:
+                image=self._cache.get((path,decode_edge))
+                pending=self._source_inflight.get(decode_key)
+                owner=image is None and pending is None
+                if owner:
+                    pending=Future()
+                    self._source_inflight[decode_key]=pending
+            if image is None:
+                if owner:
+                    try:
+                        from .full_detail import read_cached_photo
+                        image=read_cached_photo(path,decode_edge or None,reader=read_photo)
+                        self._cache_source((path,decode_edge),image)
+                        pending.set_result(image)
+                    except BaseException as error:
+                        pending.set_exception(error)
+                        raise
+                    finally:
+                        with self._cache_lock:self._source_inflight.pop(decode_key,None)
+                else:image=pending.result()
+            if edge and decode_edge!=edge:
+                from PIL import Image
+                image=image.copy()
+                image.thumbnail((edge,edge),Image.Resampling.LANCZOS)
         self._cache_source((path,edge),image)
         return image
 
@@ -1984,19 +2023,40 @@ class Controller(QObject):
 
     def _prepared_source(self,path,settings,edge):
         """Share immutable optical preparation between render and analysis."""
+        requested_edge=edge
+        edge=max(edge,self._preview_edge) if 0<edge<=self._preview_edge else edge
         original=self._source(path,edge)
         epoch=self._render_epochs.get(path,0)
         status={}
         if settings.lens_correction or settings.defringe:
             optical_key=(path,edge,self._source_stamps.get(path),settings.lens_correction,settings.defringe,epoch)
-            with self._cache_lock:cached=self._prepared.get(optical_key)
+            with self._cache_lock:
+                cached=self._prepared.get(optical_key)
+                pending=self._prepared_inflight.get(optical_key)
+                owner=cached is None and pending is None
+                if owner:
+                    pending=Future()
+                    self._prepared_inflight[optical_key]=pending
             if cached is None:
-                cached=prepare_photo_source(original,path,settings)
-                if 0<edge<=2560:
-                    with self._cache_lock:
-                        self._prepared[optical_key]=cached
-                        self._trim_source_cache_locked()
+                if owner:
+                    try:
+                        cached=prepare_photo_source(original,path,settings)
+                        if 0<edge<=2560:
+                            with self._cache_lock:
+                                self._prepared[optical_key]=cached
+                                self._trim_source_cache_locked()
+                        pending.set_result(cached)
+                    except BaseException as error:
+                        pending.set_exception(error)
+                        raise
+                    finally:
+                        with self._cache_lock:self._prepared_inflight.pop(optical_key,None)
+                else:cached=pending.result()
             original,status=cached
+        if requested_edge and requested_edge!=edge:
+            from PIL import Image
+            original=original.copy()
+            original.thumbnail((requested_edge,requested_edge),Image.Resampling.LANCZOS)
         return original,status
 
     def _render_photo(self,path,settings,edge,interactive=False,color_config=None):
@@ -2119,6 +2179,7 @@ class Controller(QObject):
         self._jobs.pop(result['job'],None)
         if self._closed: return
         kind=result['kind']
+        if kind=='lens_prefetch':return
         fast=kind=='fast'
         if fast: self._fast_busy=False
         elif kind not in ('export','batch_export','crop','analysis','cache','auto_adjust'): self._busy=False
@@ -2523,6 +2584,7 @@ class Controller(QObject):
         self.fast_pool.waitForDone()
         self.export_pool.waitForDone()
         self.crop_pool.waitForDone()
+        self.metadata_pool.waitForDone()
         # Release exact source maps after all consumers stop. Windows cannot
         # remove a session/cache directory while an ndarray still owns a map.
         self._jobs.clear()

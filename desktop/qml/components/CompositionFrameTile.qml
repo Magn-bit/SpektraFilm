@@ -12,7 +12,10 @@ Button {
     property bool thumbnailLoading:false
     property bool chosen:false
     readonly property bool dark:physicalFrame||treatment==='contact'
-    implicitHeight:76;padding:6;hoverEnabled:true;activeFocusOnTab:true
+    implicitHeight:98;padding:8;hoverEnabled:true;activeFocusOnTab:true
+    HoverHandler {cursorShape:control.enabled ? Qt.PointingHandCursor : Qt.ArrowCursor}
+    scale:down ? .985 : 1
+    Behavior on scale {NumberAnimation {duration:Theme.fast;easing.type:Theme.easing}}
     opacity:enabled ? 1 : .42
     Accessible.name:qsTr(String(title))
     Accessible.checkable:true
@@ -28,7 +31,7 @@ Button {
     contentItem:Column {
         spacing:5
         Item {
-            width:parent.width;height:39
+            width:parent.width;height:56
             Image {
                 anchors.fill:parent;visible:control.physicalFrame
                 source:control.nativeSource;fillMode:Image.PreserveAspectFit
@@ -40,7 +43,7 @@ Button {
                 running:visible
             }
             Rectangle {
-                id:paper;visible:!control.physicalFrame;anchors.centerIn:parent;width:Math.min(parent.width,72);height:39
+                id:paper;visible:!control.physicalFrame;anchors.centerIn:parent;width:Math.min(parent.width,108);height:56
                 color:control.dark ? '#22281F' : '#F8F4E9'
                 readonly property real mat:control.treatment==='plain' ? 0 : control.treatment==='film'||control.treatment==='half_frame' ? 6 : 4
                 Item {

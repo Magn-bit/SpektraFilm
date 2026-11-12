@@ -106,6 +106,16 @@ def main():
             first_frame[0]=True
             print(f'STARTUP_FIRST_FRAME_MS {(time.perf_counter()-PYTHON_ENTRY)*1000:.1f}',flush=True)
     root_window.frameSwapped.connect(report_first_frame)
+    if args.capture_state:
+        preview_marks=set()
+        def report_preview():
+            if not controller.frame:return
+            stage='READY' if not controller.busy else 'PREVIEW'
+            if stage not in preview_marks:
+                preview_marks.add(stage)
+                print(f'STARTUP_{stage}_MS {(time.perf_counter()-PYTHON_ENTRY)*1000:.1f}',flush=True)
+        controller.frameChanged.connect(report_preview)
+        controller.stateChanged.connect(report_preview)
     state_path=Path(test_store.name if test_store else QStandardPaths.writableLocation(QStandardPaths.AppLocalDataLocation))/'window.ini'
     window_state=WindowState(engine.rootObjects()[0],state_path)
     engine.rootObjects()[0].restoreRequested.connect(window_state.restoreNormal)
@@ -138,7 +148,7 @@ def main():
             masks=[{'id':'old-mask','name':'Old mask','kind':'radial','exposure':2}],
             look_lut='legacy-look',look_strength=40,lens_correction=True,defringe=True)
         controller._edit_path(paths[0]).write_text(json.dumps({'version':1,'settings':legacy_settings}),encoding='utf-8')
-    if not single_instance:QTimer.singleShot(100,lambda:controller.add_paths(paths))
+    if not single_instance:QTimer.singleShot(0,lambda:controller.add_paths(paths))
     if args.capture_state:
         from PySide6.QtCore import QMetaObject
         capture_started=time.monotonic()

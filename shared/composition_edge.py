@@ -73,9 +73,10 @@ def stock_format_choices(stock):
 def stock_look(stock,perforated=True):
     stock=stock.replace('_push1','').replace('_push2','')
     if stock not in WORDS:
-        # Unknown/extended profiles may use film geometry, but no invented
-        # manufacturer words or made-up DX number imply a measured strip.
-        return dict(stock=stock,family='generic',ink='#C5C7BD',base='#141713',words='FILM',dx=None)
+        # Extended profiles still carry their own model name. This is a
+        # descriptive label, not an invented manufacturer inscription or DX.
+        words=' '.join(stock.replace('_',' ').upper().split()) or 'FILM'
+        return dict(stock=stock,family='generic',ink='#C5C7BD',base='#141713',words=words,dx=None)
     bw=stock in ('kodak_tri_x_400','kodak_tmax_100','fujifilm_neopan_acros_100_ii','ilford_hp5_plus_400')
     family=('cine' if 'vision3' in stock else 'cinestill' if stock.startswith('cinestill') else
             'ilford' if stock.startswith('ilford') else 'fuji_slide' if stock in

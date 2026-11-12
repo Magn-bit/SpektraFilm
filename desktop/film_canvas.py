@@ -219,5 +219,6 @@ def render_film_edge(source_prepared,settings,options,preview=False,progress=Non
     else:source_density=max(gates[0].shape[:2])/float(overrides['film_format_mm'])*records[0]['density_scale']
     scale=source_density*geometry['mm_per_px']
     geometry=dict(geometry,pair_layered=layered,source_dimensions=[[image.width,image.height] for image in images],
+        stock=first.stock,edge_text=overrides['overscan_edge_text'],
         source_canvas_w=round(pixels.shape[1]*scale),source_canvas_h=round(pixels.shape[0]*scale))
     return rotate_canvas(pixels,geometry,int(options.get('group_turn',0)))
