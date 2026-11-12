@@ -36,3 +36,7 @@ FilmLibrary 1.0 FilmLibrary.qml
 ChannelMixerPanel 1.0 ChannelMixerPanel.qml
 ParametricCurvePanel 1.0 ParametricCurvePanel.qml
 PanelToggle 1.0 PanelToggle.qml
+ToolNavigator 1.0 ToolNavigator.qml
+GradientMaskGuides 1.0 GradientMaskGuides.qml
+AiEditingPanel 1.0 AiEditingPanel.qml
+StudioIconButton 1.0 StudioIconButton.qml

@@ -18,7 +18,7 @@ heif_location=Path(importlib.util.find_spec('pillow_heif').origin).parent.parent
 binaries=vendor_binaries+[(str(path),'.') for path in heif_location.glob('libheif*.dll')]
 analysis=Analysis([str(root/'desktop/main.py')],
     pathex=[str(root),str(root/'vendor')],binaries=binaries,datas=datas,
-    hiddenimports=vendor_hidden+['desktop.automation','PySide6.QtSvg','wgpu.backends.wgpu_native','rawpy','tifffile',
+    hiddenimports=vendor_hidden+['desktop.automation','desktop.ai_editor','desktop.ai_contract','desktop.ai_prompts','desktop.ai_providers','PySide6.QtSvg','wgpu.backends.wgpu_native','rawpy','tifffile',
         'imagecodecs','pillow_heif','_pillow_heif','matplotlib.backends.backend_agg'],
     hookspath=[],hooksconfig={},runtime_hooks=[],
     excludes=['tkinter','IPython','pytest'],noarchive=False)

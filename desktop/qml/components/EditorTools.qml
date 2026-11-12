@@ -12,6 +12,8 @@ ColumnLayout {
     property string meterMethod:'balanced'
     property string meterTarget:'both'
     property var taskScrollPositions:({})
+    readonly property string navigationMaskId:ctrl.activeMaskId
+    onNavigationMaskIdChanged:if(task==='local')Qt.callLater(sectionNavigator.rebuild)
     property alias maskTools:localTools
     signal libraryRequested()
     signal stylesRequested()
@@ -25,6 +27,7 @@ ColumnLayout {
             Qt.callLater(function(){parameterScroll.contentItem.contentY=Math.max(0,Math.min(y,parameterScroll.contentItem.contentHeight-parameterScroll.availableHeight))})
         }
         previousTask=task
+        Qt.callLater(sectionNavigator.rebuild)
     }
     onHasPhotoChanged:if(!hasPhoto && task!=='film')task='film'
     Component.onCompleted:if(!hasPhoto && task!=='film')task='film'
@@ -56,6 +59,11 @@ ColumnLayout {
         visible:root.hasPhoto
         Layout.fillWidth:true;Layout.leftMargin:24;Layout.rightMargin:24;Layout.bottomMargin:12
     }
+    ToolNavigator {
+        id:sectionNavigator
+        Layout.fillWidth:true;Layout.leftMargin:24;Layout.rightMargin:24;Layout.bottomMargin:12
+        contentRoot:parameterContent;flickable:parameterScroll.contentItem;contextKey:root.task
+    }
     ScrollView {
         id:parameterScroll;objectName:'parameterScroll'
         Layout.fillWidth:true;Layout.fillHeight:true;Layout.minimumHeight:0;Layout.preferredHeight:1;Layout.leftMargin:24;Layout.rightMargin:12;clip:true
@@ -71,16 +79,17 @@ ColumnLayout {
             background:Item{}
         }
         Column {
+            id:parameterContent
             width:parameterScroll.availableWidth;spacing:24
             Loader {
                 width:parent.width;visible:root.task==='basic'&&root.hasPhoto
                 property bool visited:false
                 active:visible || visited
-                onLoaded:visited=true
+                onLoaded:{visited=true;Qt.callLater(sectionNavigator.rebuild)}
                 sourceComponent:Column {
                 width:parent.width;spacing:20;enabled:ctrl.currentIndex>=0 && !ctrl.exporting
                 MinchoText {text:qsTr(String('基础调整'));font.pixelSize:Theme.heading;height:32}
-                FineParameter {label:qsTr(String('曝光'));parameter:'exposure';minimum:-8;maximum:8;step:.01;unit:'EV';signedValue:true}
+                FineParameter {readonly property string sectionTitle:qsTr('曝光');label:qsTr(String('曝光'));parameter:'exposure';minimum:-8;maximum:8;step:.01;unit:'EV';signedValue:true}
                 ToolSection {
                     title:qsTr(String('白平衡'));expanded:root.basicGroup==='wb';onToggled:root.basicGroup=expanded ? '' : 'wb'
                     StudioButton {objectName:'autoWhiteBalanceButton';text:qsTr(String('自动白平衡'));quiet:true;implicitHeight:30;enabled:!ctrl.autoAdjustBusy;onClicked:ctrl.autoAdjust('white_balance')}
@@ -148,7 +157,7 @@ ColumnLayout {
                 width:parent.width;visible:root.task==='color'&&root.hasPhoto
                 property bool visited:false
                 active:visible || visited
-                onLoaded:visited=true
+                onLoaded:{visited=true;Qt.callLater(sectionNavigator.rebuild)}
                 sourceComponent:ColorToolsPanel {onStylesRequested:root.stylesRequested()}
             }
             MaskPanel {id:localTools;width:parent.width;visible:root.task==='local'&&root.hasPhoto}
@@ -160,6 +169,7 @@ ColumnLayout {
                     StudioSwitch {Accessible.name:qsTr('胶片显影');objectName:'filmEnabledButton';checked:ctrl.parameters.film_enabled;enabled:ctrl.currentIndex>=0 && !ctrl.exporting;onToggled:ctrl.setFilmEnabled(checked)}
                 }
                 Column {
+                    readonly property string sectionTitle:qsTr('胶片选择')
                     width:parent.width;spacing:8
                     MinchoText {objectName:'filmTitle';text:qsTr(String(root.stock.name));displayRole:true;font.pixelSize:26;font.weight:Font.Normal;wrapMode:Text.WordWrap;maximumLineCount:2;elide:Text.ElideRight;width:parent.width}
                     RowLayout {
@@ -177,6 +187,7 @@ ColumnLayout {
                         onSelected:function(value){if(value==='scan')ctrl.setFilmOption('scan_film',true);else if(value==='di')ctrl.setFilmOption('digital_intermediate',true);else ctrl.setPaper(value)}
                     }
                     Column {
+                        readonly property string sectionTitle:qsTr('成像')
                         width:parent.width;spacing:10
                         MinchoText {text:qsTr(String('成像'));font.pixelSize:Theme.heading;color:Theme.secondary;height:30}
                         FineParameter {label:qsTr(String('胶片强度'));parameter:'strength';step:.1;unit:'%'}
@@ -191,6 +202,7 @@ ColumnLayout {
                         FineParameter {objectName:'hdrPeak';label:qsTr('HDR 峰值');parameter:'hdr_peak_stops';minimum:.5;maximum:4;step:.1;fineStep:.01;unit:'EV';enabled:ctrl.parameters.hdr_enabled}
                     }
                     Column {
+                        readonly property string sectionTitle:qsTr('颗粒')
                         width:parent.width;spacing:12
                         RowLayout {width:parent.width;MinchoText {text:qsTr('颗粒');font.pixelSize:Theme.heading;color:Theme.secondary;Layout.fillWidth:true}StudioSwitch {Accessible.name:qsTr('颗粒');objectName:'grainToggle';checked:ctrl.parameters.grain_enabled;onToggled:ctrl.setFilmOption('grain_enabled',checked)}}
                         Column {
@@ -273,7 +285,7 @@ ColumnLayout {
                 width:parent.width;visible:root.task==='geometry'&&root.hasPhoto
                 property bool visited:false
                 active:visible || visited
-                onLoaded:visited=true
+                onLoaded:{visited=true;Qt.callLater(sectionNavigator.rebuild)}
                 sourceComponent:GeometryPanel {objectName:'geometryPanel';onCropRequested:root.cropRequested();onGuidedRequested:function(mode){root.guidedRequested(mode)}}
             }
             Item {width:1;height:16}

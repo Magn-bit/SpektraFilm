@@ -17,6 +17,7 @@ ApplicationWindow {
     font.family: Theme.family
     font.pixelSize: Theme.body
     property bool toolsVisible:true
+    property string toolsMode:'develop'
     property bool stripVisible:true
     property real sidebarWidth:380
     property bool cropping:false
@@ -279,7 +280,7 @@ ApplicationWindow {
                             sourcePixelWidth:ctrl.sourceDimensions[0];sourcePixelHeight:ctrl.sourceDimensions[1]
                             geometryForward:ctrl.geometryForward;geometryInverse:ctrl.geometryInverse
                             cropping:window.cropping
-                            maskEditing:window.toolsVisible && editorTools.task==='local' && !window.cropping
+                            maskEditing:window.toolsVisible && window.toolsMode==='develop' && editorTools.task==='local' && !window.cropping
                             activeMask:ctrl.activeMaskGuide
                             maskOverlaySource:ctrl.maskOverlaySource
                             maskOverlayOpacity:editorTools.maskTools.overlayOpacity
@@ -426,18 +427,13 @@ ApplicationWindow {
                     expanded:window.stripVisible;panelName:qsTr('照片栏')
                     onClicked:window.stripVisible=!window.stripVisible
                 }
-                PanelToggle {
-                    objectName:'toggleToolsButton';sidePanel:true
-                    anchors.right:parent.right;anchors.verticalCenter:parent.verticalCenter;z:3
-                    expanded:window.toolsVisible;panelName:qsTr('工具区');shortcut:'Tab'
-                    onClicked:window.toolsVisible=!window.toolsVisible
-                }
             }
             Item {
-                Layout.preferredWidth:12;Layout.fillHeight:true;visible:window.toolsVisible
-                Rectangle {anchors.centerIn:parent;width:2;height:48;radius:1;visible:resizeTools.containsMouse || resizeTools.pressed;color:Theme.accent}
+                id:toolsGutter;objectName:'toolsGutter'
+                Layout.preferredWidth:16;Layout.fillHeight:true
                 MouseArea {
                     id:resizeTools;objectName:'resizeTools';anchors.fill:parent;hoverEnabled:true;cursorShape:Qt.SizeHorCursor;preventStealing:true
+                    enabled:window.toolsVisible
                     property real initialWidth:0
                     property real pressX:0
                     onPressed:function(mouse){initialWidth=window.sidebarWidth;pressX=mapToItem(window.contentItem,mouse.x,mouse.y).x}
@@ -445,18 +441,46 @@ ApplicationWindow {
                     onDoubleClicked:window.sidebarWidth=380
                     ToolTip.visible:containsMouse && !pressed;ToolTip.delay:700;ToolTip.text:qsTr(String('拖动调整工具区宽度；双击恢复'))
                 }
+                PanelToggle {
+                    objectName:'toggleToolsButton';sidePanel:true
+                    anchors.centerIn:parent;width:parent.width;z:1
+                    expanded:window.toolsVisible;panelName:qsTr('工具区');shortcut:'Tab'
+                    onClicked:window.toolsVisible=!window.toolsVisible
+                }
             }
             Item {
                 id:toolsPane;objectName:'toolsPane'
                 Layout.preferredWidth:Math.max(320,Math.min(window.sidebarWidth,window.width-620));Layout.fillHeight:true
                 visible:window.toolsVisible
                 ShadowSurface {anchors.fill:parent;elevation:2;cornerRadius:10;color:Theme.toolSurface}
+                ColumnLayout {
+                    anchors.fill:parent;spacing:0
+                    RowLayout {
+                        Layout.fillWidth:true;Layout.leftMargin:24;Layout.rightMargin:24;Layout.topMargin:16;Layout.bottomMargin:12;spacing:8
+                        StudioButton {
+                            objectName:'toolsMode_develop';text:qsTr('显影');quiet:true;selected:window.toolsMode==='develop';implicitHeight:32;implicitWidth:56
+                            Accessible.role:Accessible.PageTab;Accessible.selected:selected;onClicked:window.toolsMode='develop'
+                        }
+                        StudioIconButton {
+                            objectName:'toolsMode_ai';glyph:'sparkles';description:qsTr('AI 修图');selected:window.toolsMode==='ai'
+                            Accessible.role:Accessible.PageTab;Accessible.selected:selected;onClicked:window.toolsMode='ai'
+                        }
+                        Item {Layout.fillWidth:true}
+                        StudioIconButton {
+                            objectName:'openAISettingsButton';glyph:'gear';visible:window.toolsMode==='ai'
+                            selected:aiEditingPanel.providerSettingsVisible
+                            description:qsTr(aiEditingPanel.providerSettingsVisible ? '返回 AI 修图' : '服务商设置')
+                            onClicked:aiEditingPanel.toggleProviderSettings()
+                        }
+                    }
                 EditorTools {
-                    id:editorTools;anchors.fill:parent;stock:window.stock;enabled:!window.cropping
+                    id:editorTools;Layout.fillWidth:true;Layout.fillHeight:true;stock:window.stock;enabled:!window.cropping;visible:window.toolsMode==='develop'
                     onLibraryRequested:library.open()
                     onStylesRequested:styleLibrary.open()
                     onCropRequested:window.openCrop()
                     onGuidedRequested:function(mode){window.comparing=false;viewport.beginGuides(mode)}
+                }
+                    AiEditingPanel {id:aiEditingPanel;Layout.fillWidth:true;Layout.fillHeight:true;visible:window.toolsMode==='ai'}
                 }
             }
         }

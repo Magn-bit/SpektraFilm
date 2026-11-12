@@ -77,8 +77,8 @@ SpektraFilm 是一款独立离线的 RAW 编辑与光谱胶片模拟软件。导
 
 | 平台 | 当前发布 | 下载与安装 |
 | --- | --- | --- |
-| Windows x64 | **0.8.4**，首次预览与窗口图标修订 | 下载 [分卷 001](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.8.4-Windows-x64.7z.001) 和 [分卷 002](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.8.4-Windows-x64.7z.002)，放在同一目录，用 7-Zip 解压 `001`，运行 `SpektraFilm.exe` |
-| Android arm64-v8a | **0.5.0 / code 23** | [下载 APK](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.4/SpektraFilm-0.5.0-arm64-v8a.apk)，在系统允许安装后打开 |
+| Windows x64 | **0.8.6**，外部 AI 照片分析与可撤销修图建议 | [Releases](https://github.com/Magn-bit/SpektraFilm/releases/latest) |
+| Android arm64-v8a | **0.5.0 / code 23** | [下载 APK](https://github.com/Magn-bit/SpektraFilm/releases/download/v0.8.6/SpektraFilm-0.5.0-arm64-v8a.apk)，在系统允许安装后打开 |
 | 源码 | 当前开发源码与各发布物的对应源码 | [浏览源码](https://github.com/Magn-bit/SpektraFilm)或在 [Releases](https://github.com/Magn-bit/SpektraFilm/releases/latest) 下载对应源码包 |
 
 Windows 便携版不需要安装 Python 或 WSL；原生 GPU 光谱路径需要可用的 Vulkan 驱动。Windows 当前未做正式代码签名，Android 包使用开发调试签名。
@@ -87,12 +87,13 @@ Windows 便携版不需要安装 Python 或 WSL；原生 GPU 光谱路径需要�
 
 Windows 是当前主要开发与验收平台。Android 已有独立离线显影版本，但其发布节奏与桌面不同，**不应将这次 Windows 的全部功能视为 Android 已同步**。
 
-| 能力 | Windows 0.8.4 | Android 0.5.0 |
+| 能力 | Windows 0.8.6 | Android 0.5.0 |
 | --- | --- | --- |
 | 独立离线运行、RAW 导入、胶片显影 | 支持 | 支持；兼容性与速度依设备而异 |
 | 原尺寸导出、基础编辑、颗粒与裁切 | 支持 | 支持；本轮未重新做真机验收 |
 | 完整桌面颜色工具、图库、排版、输出配方 | 本页截图所示实现 | 不保证与桌面逐项一致 |
 | 本地 CLI / stdio MCP | 支持，GUI 会话接口默认关闭 | 不提供桌面接口 |
+| 外部 AI 分析与参数建议 | 用户配置服务商；本地加密凭据；应用前逐项确认 | 不提供 |
 | macOS / iOS | 暂无发布物 | 暂无发布物 |
 
 当前为持续迭代的 0.x 版本。RAW 支持取决于解码器、相机及压缩格式；Qt 编辑画布为 SDR，HDR 增益图输出有格式和组合限制。详细边界见 [HDR 输出](docs/hdr-output.md)、[RAW 兼容记录](docs/raw-camera-compatibility.md) 与 [版本说明](docs/windows-0.8.4-verification.md)。

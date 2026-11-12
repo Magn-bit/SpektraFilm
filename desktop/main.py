@@ -35,10 +35,11 @@ def main():
     parser.add_argument('--smoke-editor',action='store_true',help='Exercise levels, brightness and HDR in the exact packaged renderer')
     parser.add_argument('--smoke-film-policy',action='store_true')
     parser.add_argument('--verify-workspace',help='Opt-in exact-build workspace milestone output folder (requires --smoke-test)')
+    parser.add_argument('--verify-masks',help='Opt-in exact-build mask input milestone folder (requires --smoke-test)')
     parser.add_argument('--smoke-stock',help='Film ID for smoke verification (default: kodak_portra_400)')
-    parser.add_argument('--capture-state',choices=['empty','editor','library','export','grain','darkroom'])
+    parser.add_argument('--capture-state',choices=['empty','editor','library','export','grain','darkroom','ai'])
     args=parser.parse_args()
-    if (args.verify_export or args.verify_workspace or args.smoke_spectral or args.smoke_editor or args.smoke_film_policy or args.smoke_stock) and not args.smoke_test:
+    if (args.verify_export or args.verify_workspace or args.verify_masks or args.smoke_spectral or args.smoke_editor or args.smoke_film_policy or args.smoke_stock) and not args.smoke_test:
         parser.error('--verify-export and smoke options require --smoke-test')
     configure_process_identity()
     QCoreApplication.setApplicationName('SpektraFilm')
@@ -181,6 +182,8 @@ def main():
                     bottom=max(0,float(flickable.property('contentHeight'))-float(flickable.property('height')))
                     flickable.setProperty('contentY',bottom)
                 QTimer.singleShot(80,scroll_to_bottom)
+            elif args.capture_state=='ai':
+                window.setProperty('toolsMode','ai')
             def save():
                 if args.screenshot:
                     Path(args.screenshot).parent.mkdir(parents=True,exist_ok=True)
@@ -309,6 +312,15 @@ def main():
                 if args.screenshot:
                     Path(args.screenshot).parent.mkdir(parents=True,exist_ok=True)
                     assert window.grabWindow().save(args.screenshot)
+                if args.verify_masks:
+                    from desktop.mask_probe import run_mask_probe
+                    try:
+                        result=run_mask_probe(app,window,controller,args.verify_masks)
+                        report(result['ok']);app.exit(0)
+                    except Exception as error:
+                        print('MASK_UI_FAILED',type(error).__name__,str(error),flush=True)
+                        report(False);app.exit(3)
+                    return
                 if args.verify_workspace:
                     from desktop.workspace_probe import WorkspaceProbe
                     def complete(ok):

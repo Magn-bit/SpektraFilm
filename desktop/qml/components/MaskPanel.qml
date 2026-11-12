@@ -24,6 +24,7 @@ Column {
         overlaySuppressed=false
     }
     RowLayout {
+        readonly property string sectionTitle:qsTr('蒙版')
         width: parent.width
         MinchoText { text: qsTr(String('局部调整')); font.pixelSize: Theme.caption; color: Theme.secondary; Layout.fillWidth: true }
         MinchoText {text:qsTr(String(ctrl.maskLayers.length+' 层'));font.pixelSize:Theme.caption;color:Theme.secondary}
@@ -86,7 +87,7 @@ Column {
                 }
             }
         }
-        StudioSwitch {objectName:'toggleMaskOverlayButton';width:parent.width;text:qsTr('选区显示');checked:root.showOverlay;onToggled:root.showOverlay=checked}
+        StudioSwitch {readonly property string sectionTitle:qsTr('选区显示');objectName:'toggleMaskOverlayButton';width:parent.width;text:qsTr('选区显示');checked:root.showOverlay;onToggled:root.showOverlay=checked}
         RowLayout {
             width:parent.width;visible:ctrl.activeMaskGuide.kind==='brush';spacing:8
             StudioButton {
@@ -123,6 +124,8 @@ Column {
         }
         MaskParameter {visible:root.showOverlay;label:qsTr(String('显示浓度'));minimum:10;maximum:75;step:1;unit:'%';currentValue:root.overlayOpacity*100;localAdjustment:false;onEdited:function(value){root.overlayOpacity=value/100}}
         RowLayout {
+            readonly property string sectionTitle:qsTr('画笔设置')
+            function reveal(){root.brushExpanded=true}
             width: parent.width;visible:ctrl.activeMaskGuide.kind==='brush'
             StudioButton { text: qsTr(String(root.brushExpanded ? '收起画笔设置' : '画笔设置')); quiet: true; implicitHeight: 28; onClicked: root.brushExpanded=!root.brushExpanded }
             MinchoText { text: qsTr(String((root.brushRadius*100).toFixed(1)+'% · 柔边 '+Math.round(root.brushFeather*100)+'%')); font.pixelSize: Theme.caption; color: Theme.secondary; Layout.fillWidth: true; horizontalAlignment: Text.AlignRight }
@@ -135,6 +138,8 @@ Column {
             MinchoText { width: parent.width; text: qsTr(String('空格或右键拖动平移 · 滚轮缩放')); font.pixelSize: Theme.caption; color: Theme.secondary; wrapMode: Text.WordWrap }
         }
         RowLayout {
+            readonly property string sectionTitle:qsTr('范围设置')
+            function reveal(){root.brushExpanded=true}
             width:parent.width;visible:ctrl.activeMaskGuide.kind!=='brush'
             StudioButton{text:qsTr(String(root.brushExpanded ? '收起范围设置' : '范围设置'));quiet:true;implicitHeight:28;onClicked:root.brushExpanded=!root.brushExpanded}
             MinchoText{text:qsTr(String(ctrl.activeMaskGuide.kind==='linear' ? '拖动端点与中点' : '拖动圆心与边缘'));font.pixelSize:Theme.caption;color:Theme.secondary;Layout.fillWidth:true;horizontalAlignment:Text.AlignRight}
@@ -145,7 +150,7 @@ Column {
             StudioSwitch {Layout.fillWidth:true;text:qsTr('反相');objectName:'maskInvertToggle';checked:!!ctrl.activeMaskGuide.inverted;onToggled:ctrl.invertMask()}
             Item { Layout.fillWidth: true }
         }
-        MaskParameter { label: qsTr(String('不透明度')); parameter: 'opacity'; minimum: 0; maximum: 100; valueScale: 100; unit: '%';onEditingStarted:root.suppressOverlay();onEditingFinished:root.restoreOverlay() }
+        MaskParameter {readonly property string sectionTitle:qsTr('局部调整');label: qsTr(String('不透明度')); parameter: 'opacity'; minimum: 0; maximum: 100; valueScale: 100; unit: '%';onEditingStarted:root.suppressOverlay();onEditingFinished:root.restoreOverlay() }
         MaskParameter {objectName:'maskExposureControl';label: qsTr(String('曝光')); parameter: 'exposure'; minimum: -3; maximum: 3; step: .01; unit: 'EV';onEditingStarted:root.suppressOverlay();onEditingFinished:root.restoreOverlay() }
         MaskParameter { label: qsTr(String('冷暖')); parameter: 'temperature';onEditingStarted:root.suppressOverlay();onEditingFinished:root.restoreOverlay() }
         MaskParameter { label: qsTr(String('色调')); parameter: 'tint';onEditingStarted:root.suppressOverlay();onEditingFinished:root.restoreOverlay() }

@@ -86,17 +86,27 @@ Popup {
                 Keys.onSpacePressed:choose()
                 Accessible.role:Accessible.RadioButton; Accessible.name:entry.name
                 Accessible.checked:entry.selected; Accessible.description:entry.error ? qsTr(String(entry.error)) : (entry.loading ? qsTr("正在预览") : "")
-                Rectangle {
-                    anchors.fill:parent; anchors.topMargin:3; anchors.bottomMargin:3; anchors.rightMargin:12; radius:5
-                    color:card.entry.selected ? Theme.selection : cardMouse.containsMouse ? Theme.hover : "transparent"
-                    border.width:card.activeFocus ? 1 : 0; border.color:Theme.accent
-                    Behavior on color { ColorAnimation { duration:Theme.fast } }
+                Item {
+                    anchors.fill:parent; anchors.topMargin:3; anchors.bottomMargin:3; anchors.rightMargin:12
+                    Rectangle {
+                        anchors.fill:parent;radius:5;color:Theme.hover
+                        opacity:cardMouse.containsMouse && !card.entry.selected ? 1 : 0
+                        Behavior on opacity {NumberAnimation {duration:Theme.fast}}
+                    }
+                    Rectangle {
+                        anchors.fill:parent;radius:5;color:Theme.selection
+                        opacity:card.entry.selected ? 1 : 0
+                    }
+                    Rectangle {
+                        anchors.fill:parent;radius:5;color:'transparent'
+                        border.width:card.activeFocus ? 1 : 0;border.color:Theme.accent
+                    }
                 }
                 RowLayout {
                     anchors.fill:parent; anchors.leftMargin:8; anchors.rightMargin:24; spacing:16
                     Rectangle {
                         Layout.preferredWidth:112; Layout.preferredHeight:84; color:Theme.canvas; radius:3; clip:true
-                        Image { anchors.fill:parent; source:card.entry.url; fillMode:Image.PreserveAspectCrop; asynchronous:true; cache:false }
+                        Image { anchors.fill:parent; source:card.entry.url; fillMode:Image.PreserveAspectCrop; asynchronous:true; cache:false; retainWhileLoading:true }
                         Rectangle { anchors.fill:parent; color:Theme.surface; opacity:card.entry.loading && card.entry.url ? .12 : 0 }
                         BusyIndicator { anchors.centerIn:parent; width:26; height:26; running:card.entry.loading; visible:running && !card.entry.url }
                         MinchoText { anchors.centerIn:parent; visible:!card.entry.url && !card.entry.loading; text:card.entry.error ? qsTr("重试") : root.library.hasPhoto ? "" : qsTr("未载入照片"); font.pixelSize:12; color:Theme.secondary }

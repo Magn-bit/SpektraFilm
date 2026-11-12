@@ -68,7 +68,7 @@ class _Task(QRunnable):
                 alpha=rasterize_mask(layer,width,height)
                 alpha=np.asarray(apply_geometry_image(Image.fromarray(alpha),geometry),np.float32)
             pixels=np.empty((*alpha.shape,4),np.uint8)
-            pixels[...,:3]=(245,74,91) if self.color=='red' else (25,213,229)
+            pixels[...,:3]=(217,107,98) if self.color=='red' else (85,191,199)
             pixels[...,3]=np.rint(np.clip(alpha,0,1)*255).astype(np.uint8)
             result=(self.key,self.color,alpha,QImage(ImageQt(Image.fromarray(pixels))).copy(),None)
         except Exception as error:result=(self.key,self.color,None,None,str(error))
@@ -110,9 +110,24 @@ class MaskOverlay(QObject):
         key,color,alpha,image,error=result
         if not error:
             self.cache_key,self.cache_alpha=key,alpha
-            if key==self.key and color==self.color:
+            if self._publishable(key) and color==self.color:
                 self.provider.publish('mask-overlay',image);self.version+=1
                 self.source=f'image://photos/mask-overlay?v={self.version}';self.changed.emit()
         if self.pending and self.visible:self.timer.start()
+    def _publishable(self,key):
+        if key==self.key:return True
+        if self.key is None or key[1:]!=self.key[1:]:return False
+        previous,current=key[0],self.key[0]
+        if previous.kind!='brush' or current.kind!='brush' or not previous.strokes:return False
+        if replace(previous,strokes=())!=replace(current,strokes=()):return False
+        if len(previous.strokes)!=len(current.strokes) or previous.strokes[:-1]!=current.strokes[:-1]:return False
+        before,after=previous.strokes[-1],current.strokes[-1]
+        # A completed prefix of this *same* in-progress stroke can be shown
+        # while its continuation is prepared. Reject edits, erases/undo, layer
+        # switches and older geometry. Strict equality otherwise starves the
+        # overlay whenever continuous input is faster than rasterization.
+        return (replace(before,points=())==replace(after,points=()) and
+                len(before.points)<=len(after.points) and
+                after.points[:len(before.points)]==before.points)
     def close(self):
         self.closed=True;self.timer.stop();self.pool.waitForDone();self.cache_alpha=None;self.brush=_BrushRaster()

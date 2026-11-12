@@ -3,6 +3,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import argparse
 import json
+import re
 import shutil
 import uuid
 import zipfile
@@ -13,6 +14,57 @@ VERSION,VERSION_CODE='0.5.0',23
 ITEMS=('Windows','Android','Source','Evidence','README.md','manifest.json','SHA256SUMS.txt')
 EXCLUDED={'.git','.gradle','.kotlin','.cxx','__pycache__','build','CMakeFiles','node_modules'}
 BINARY_SUFFIXES={'.pyc','.pyo','.nbc','.nbi','.dll','.exe','.so','.o','.obj','.a','.lib','.pdb','.log','.apk','.class'}
+_EMBEDDED_CREDENTIAL=re.compile(rb'(?i)(?<![A-Za-z0-9])(?:sk-(?:proj-|ant-|svcacct-)?[A-Za-z0-9_-]{32,}|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|AKIA[A-Z0-9]{16}|AIza[0-9A-Za-z_-]{35})(?![A-Za-z0-9])')
+
+
+def _scan_stream(stream):
+    carry=b''
+    while True:
+        chunk=stream.read(1024*1024)
+        if not chunk:return False
+        data=carry+chunk
+        if _EMBEDDED_CREDENTIAL.search(data):return True
+        carry=data[-512:]
+
+
+def _audit_zip(path_or_stream):
+    try:
+        with zipfile.ZipFile(path_or_stream) as archive:
+            for info in archive.infolist():
+                if info.is_dir():continue
+                with archive.open(info) as member:
+                    if _scan_stream(member):
+                        raise ValueError('A packaged file appears to contain an API credential; public release was not created')
+    except zipfile.BadZipFile:
+        return False
+    return True
+
+
+def audit_public_artifacts(paths):
+    """Scan every file, including binary strings and compressed archive entries."""
+    for item in paths:
+        path=Path(item)
+        if path.is_symlink():raise ValueError('Cannot audit a linked public artifact')
+        if path.is_dir():
+            children=sorted(path.rglob('*'))
+            for child in children:
+                if child.is_symlink():raise ValueError('Cannot audit a linked public artifact')
+                if child.is_file():audit_public_artifacts([child])
+            continue
+        try:
+            if zipfile.is_zipfile(path):
+                _audit_zip(path)
+            else:
+                with path.open('rb') as stream:
+                    if _scan_stream(stream):
+                        raise ValueError('A file appears to contain an API credential; public release was not created')
+        except OSError as error:
+            raise ValueError('Cannot audit a public artifact before packaging') from error
+
+
+def reject_embedded_credentials(files):
+    """Retain the source-archive API while auditing all included payloads."""
+    audit_public_artifacts(files)
 
 
 def read_json(path):
@@ -68,6 +120,7 @@ def source_files():
 
 def create_source_archive(path,version=VERSION,building_notes=''):
     files=source_files()
+    reject_embedded_credentials(files)
     with zipfile.ZipFile(path,'w',zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as archive:
         for file in files:
             before=identity(file)
@@ -95,6 +148,7 @@ def verify_candidates(windows,apk,review):
         raise ValueError('Windows candidate differs from reviewed metadata')
     if not apk.is_file() or identity(apk)!=review.get('android',{}).get('artifact'):
         raise ValueError('Android candidate differs from reviewed metadata')
+    audit_public_artifacts([windows,apk])
     if review['windows'].get('smoke_ok') is not True or review['android'].get('package_ok') is not True:
         raise ValueError('Candidate smoke/package checks must pass')
     internal=windows/'_internal'
@@ -184,6 +238,7 @@ def main():
             '本次不生成哈希清单、不重复昂贵历史测试。\n',encoding='utf-8')
         # Confirm staging completed while the reviewed candidates stayed fixed.
         verify_candidates(windows,apk,review)
+        audit_public_artifacts([stage])
         install_stage(stage)
     except Exception:
         # Retain a failed stage for diagnosis; the existing release is intact.

@@ -5526,6 +5526,51 @@
       "en": "Selection overlay",
       "ja": "選択範囲の表示",
       "zh-Hant": "選區顯示"
+    },
+    "点曲线": {
+      "en": "Point curve",
+      "ja": "ポイントカーブ",
+      "zh-Hant": "點曲線"
+    },
+    "参数曲线": {
+      "en": "Parametric curve",
+      "ja": "パラメトリックカーブ",
+      "zh-Hant": "參數曲線"
+    },
+    "在曲线上添加或拖动控制点": {
+      "en": "Add or drag control points on the curve",
+      "ja": "カーブ上の制御点を追加・ドラッグ",
+      "zh-Hant": "在曲線上新增或拖動控制點"
+    },
+    "用滑块调整高光、亮调、暗调和阴影": {
+      "en": "Adjust highlights, lights, darks and shadows with sliders",
+      "ja": "スライダーでハイライト・明部・暗部・シャドウを調整",
+      "zh-Hant": "用滑桿調整高光、亮調、暗調和陰影"
+    },
+    "跳转到工具分组": {
+      "en": "Jump to tool section",
+      "ja": "ツールグループへ移動",
+      "zh-Hant": "跳轉至工具分組"
+    },
+    "胶片选择": {
+      "en": "Film selection",
+      "ja": "フィルム選択",
+      "zh-Hant": "膠片選擇"
+    },
+    "裁切与自动校正": {
+      "en": "Crop and auto correction",
+      "ja": "切り抜きと自動補正",
+      "zh-Hant": "裁切與自動校正"
+    },
+    "旋转与透视": {
+      "en": "Rotation and perspective",
+      "ja": "回転と遠近補正",
+      "zh-Hant": "旋轉與透視"
+    },
+    "翻转与画幅": {
+      "en": "Flip and aspect",
+      "ja": "反転と縦横比",
+      "zh-Hant": "翻轉與畫幅"
     }
   },
   "templates": {

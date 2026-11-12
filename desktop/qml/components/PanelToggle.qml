@@ -7,8 +7,9 @@ Button {
     property bool sidePanel:false
     property string panelName:''
     property string shortcut:''
-    implicitWidth:sidePanel ? 28 : 40
+    implicitWidth:sidePanel ? 16 : 40
     implicitHeight:sidePanel ? 44 : 28
+    padding:0
     hoverEnabled:true
     activeFocusOnTab:true
     checked:expanded
@@ -20,17 +21,18 @@ Button {
     HoverHandler {cursorShape:Qt.PointingHandCursor}
     contentItem:Item {
         VectorIcon {
-            anchors.centerIn:parent;width:16;height:16;name:'triangle-down'
-            iconColor:control.down ? Theme.accentInk : Theme.ink
+            anchors.centerIn:parent;width:12;height:12;name:'triangle-down'
+            iconColor:control.down || control.visualFocus ? Theme.accentInk : Theme.secondary
             rotation:control.sidePanel ? (control.expanded ? -90 : 90) : (control.expanded ? 0 : 180)
             Behavior on rotation {NumberAnimation {duration:Theme.fast;easing.type:Theme.easing}}
         }
     }
     background:Rectangle {
         anchors.centerIn:parent
-        width:control.sidePanel ? 22 : 36;height:control.sidePanel ? 36 : 22;radius:5
-        color:control.down ? Theme.selection : control.hovered ? Theme.hover : Theme.panelFooter
+        width:control.sidePanel ? control.width : 32;height:control.sidePanel ? 32 : 20;radius:4
+        color:control.down ? Theme.selection : Theme.hover
+        opacity:control.hovered || control.down || control.visualFocus ? 1 : 0
         border.width:control.visualFocus ? 1 : 0;border.color:Theme.accent
-        Behavior on color {ColorAnimation {duration:Theme.fast}}
+        Behavior on opacity {NumberAnimation {duration:Theme.fast}}
     }
 }

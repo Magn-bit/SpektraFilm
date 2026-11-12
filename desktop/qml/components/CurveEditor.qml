@@ -84,8 +84,20 @@ Column {
     }
     RowLayout {
         width:parent.width;spacing:4
-        StudioButton {text:qsTr('控制点');quiet:true;selected:!root.parametricMode;Layout.fillWidth:true;implicitHeight:30;onClicked:{root.finish();root.parametricMode=false}}
-        StudioButton {text:qsTr('参数');quiet:true;selected:root.parametricMode;Layout.fillWidth:true;implicitHeight:30;onClicked:{root.finish();root.parametricMode=true}}
+        StudioButton {
+            objectName:'pointCurveMode';text:qsTr('点曲线');quiet:true;selected:!root.parametricMode;Layout.fillWidth:true;implicitHeight:32
+            Accessible.role:Accessible.PageTab;Accessible.selected:selected
+            Accessible.description:qsTr('在曲线上添加或拖动控制点')
+            ToolTip.visible:hovered || visualFocus;ToolTip.delay:600;ToolTip.text:Accessible.description
+            onClicked:{root.finish();root.parametricMode=false}
+        }
+        StudioButton {
+            objectName:'parametricCurveMode';text:qsTr('参数曲线');quiet:true;selected:root.parametricMode;Layout.fillWidth:true;implicitHeight:32
+            Accessible.role:Accessible.PageTab;Accessible.selected:selected
+            Accessible.description:qsTr('用滑块调整高光、亮调、暗调和阴影')
+            ToolTip.visible:hovered || visualFocus;ToolTip.delay:600;ToolTip.text:Accessible.description
+            onClicked:{root.finish();root.parametricMode=true}
+        }
     }
     RowLayout {
         width: parent.width; spacing: 3

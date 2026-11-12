@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Window
 import QtQuick.Controls.Basic
+import QtQuick.Shapes
 
 Item {
     id: root
@@ -54,8 +55,9 @@ Item {
     property var gradientPressPixel: [0,0]
     property string hoveredGradientHandle: ''
     readonly property var guideMask: gradientHandle && gradientMaskId===activeMask.id ? gradientDraft : activeMask
-    readonly property bool overlaySourceNeeded:maskEditing && !comparing && !cropping && !guiding && hasImage && showMaskOverlay && !!activeMask.id
-    readonly property bool overlayVisible:overlaySourceNeeded && !suppressMaskOverlay
+    readonly property bool overlayWanted:maskEditing && !comparing && !cropping && !guiding && hasImage && showMaskOverlay && !!activeMask.id
+    readonly property bool overlaySourceNeeded:overlayWanted && activeMask.kind==='brush'
+    readonly property bool overlayVisible:overlayWanted && !suppressMaskOverlay
     readonly property bool brushEnabled: maskEditing && !cropping && !comparing && !guiding && hasImage && !!activeMask.id
     property real comparePosition: .5
     signal positionRequested(real value)
@@ -114,15 +116,8 @@ Item {
     onCroppingChanged:{if(cropping)endGuides();else detailTimer.restart()}
     onBrushEnabledChanged: { if(!brushEnabled) finishStroke();else forceActiveFocus() }
     onActiveMaskChanged: { if(gradientMaskId && gradientMaskId!==activeMask.id)finishStroke() }
-    onGuideMaskChanged: gradientOutline.requestPaint()
-    onHoveredGradientHandleChanged: gradientOutline.requestPaint()
     onOverlayVisibleChanged: { if(!overlayVisible)hoveredGradientHandle='' }
     onOverlaySourceNeededChanged:ctrl.setMaskOverlayVisible(overlaySourceNeeded)
-    onImageXChanged: gradientOutline.requestPaint()
-    onImageYChanged: gradientOutline.requestPaint()
-    onImageWidthChanged: gradientOutline.requestPaint()
-    onImageHeightChanged: gradientOutline.requestPaint()
-    onGeometryForwardChanged:{gradientOutline.requestPaint();brushCursor.requestPaint()}
 
     function flushPoints() {
         if(strokeToken && pendingPoints.length) { var batch=pendingPoints;pendingPoints=[];ctrl.appendMaskPoints(strokeToken,batch) }
@@ -453,59 +448,28 @@ Item {
     Image {
         id:maskOverlay;objectName:'maskOverlay'
         x:root.imageX;y:root.imageY;width:root.imageWidth;height:root.imageHeight
-        source:root.maskOverlaySource;cache:false;asynchronous:true;fillMode:Image.Stretch;smooth:true
-        visible:root.overlayVisible && root.activeMask.enabled!==false
+        source:root.maskOverlaySource;cache:false;asynchronous:true;retainWhileLoading:true;fillMode:Image.Stretch;smooth:true
+        visible:root.overlayVisible && root.activeMask.kind==='brush' && root.activeMask.enabled!==false
         opacity:root.maskOverlayOpacity*(root.activeMask.opacity===undefined ? 1 : root.activeMask.opacity)
     }
-    Canvas {
-        id:gradientOutline;objectName:'gradientOutline';anchors.fill:parent;z:3
+    ShaderEffect {
+        objectName:'gradientMaskOverlay'
+        x:root.imageX;y:root.imageY;width:root.imageWidth;height:root.imageHeight
+        visible:root.overlayVisible && root.activeMask.kind!=='brush' && root.activeMask.enabled!==false
+        opacity:root.maskOverlayOpacity*(root.activeMask.opacity===undefined ? 1 : root.activeMask.opacity)
+        readonly property var m:root.guideMask
+        property vector4d inverseX:Qt.vector4d(root.geometryInverse[0],root.geometryInverse[1],root.geometryInverse[2],0)
+        property vector4d inverseY:Qt.vector4d(root.geometryInverse[3],root.geometryInverse[4],root.geometryInverse[5],0)
+        property vector4d inverseW:Qt.vector4d(root.geometryInverse[6],root.geometryInverse[7],root.geometryInverse[8],0)
+        property vector4d maskPoints:m.kind==='linear' ? Qt.vector4d(m.start[0],m.start[1],m.end[0],m.end[1]) : Qt.vector4d((m.center||[.5,.5])[0],(m.center||[.5,.5])[1],0,0)
+        property vector4d maskShape:Qt.vector4d(m.radius_x||.25,m.radius_y||.25,(m.rotation||0)*Math.PI/180,m.feather===undefined ? .75 : m.feather)
+        property vector4d maskSpace:Qt.vector4d(Math.max(1,root.sourcePixelWidth-1),Math.max(1,root.sourcePixelHeight-1),m.kind==='radial' ? 1 : 0,m.inverted ? 1 : 0)
+        property color tint:root.maskOverlayColor
+        fragmentShader:assetsUrl+'shaders/mask-gradient.frag.qsb'
+    }
+    GradientMaskGuides {
+        objectName:'gradientOutline';anchors.fill:parent;z:3;viewport:root
         visible:root.overlayVisible && root.activeMask.kind!=='brush'
-        onWidthChanged:requestPaint()
-        onHeightChanged:requestPaint()
-        onPaint:{
-            var c=getContext('2d');c.reset();c.clearRect(0,0,width,height);var m=root.guideMask;if(!m.id)return
-            c.save();c.beginPath();c.rect(root.imageX,root.imageY,root.imageWidth,root.imageHeight);c.clip();c.lineJoin='round';c.lineCap='round'
-            var handles=root.gradientControls();if(!handles.length){c.restore();return}
-            function outline(inner) {
-                c.beginPath()
-                var radius=inner ? Math.max(0,1-m.feather) : 1
-                for(var sample=0;sample<=96;sample++){var edge=root.viewPoint(root.radialPoint(m,sample*Math.PI/48,radius));if(sample===0)c.moveTo(edge[0],edge[1]);else c.lineTo(edge[0],edge[1])}c.closePath()
-                if(!inner){c.moveTo(handles[1].p[0],handles[1].p[1]);c.lineTo(handles[3].p[0],handles[3].p[1])}
-            }
-            if(m.kind==='linear') {
-                // The center moves the gradient. Dashed outer boundaries
-                // describe its true 0% and 100% rasterized feather limits.
-                var values=[0,.5,1],names=['start','move','end']
-                for(var i=0;i<3;i++) {
-                    var boundary=root.linearBoundary(m,values[i]);if(boundary.length<2)continue
-                    var selected=root.gradientHandle===names[i] || root.hoveredGradientHandle===names[i]
-                    c.setLineDash(i===1 ? [] : [5,5]);c.beginPath();c.moveTo(boundary[0][0],boundary[0][1]);c.lineTo(boundary[1][0],boundary[1][1])
-                    c.lineWidth=selected ? 3.2 : 2.6;c.strokeStyle='#8C252725';c.stroke()
-                    c.lineWidth=selected ? 1.5 : 1;c.strokeStyle=selected ? '#FFFFFF' : '#E6FFFFFF';c.stroke()
-                }
-                c.setLineDash([]);c.beginPath();c.moveTo(handles[0].p[0],handles[0].p[1]);c.lineTo(handles[1].p[0],handles[1].p[1]);c.lineWidth=1;c.strokeStyle='#99FFFFFF';c.stroke()
-            } else {
-                c.lineWidth=3;c.strokeStyle='#B3252725';outline(false);c.stroke()
-                c.lineWidth=1.15;c.strokeStyle='#F2FFFFFF';outline(false);c.stroke()
-                c.setLineDash([4,4]);c.lineWidth=2.6;c.strokeStyle='#80252725';outline(true);c.stroke()
-                c.lineWidth=1;c.strokeStyle='#D9FFFFFF';outline(true);c.stroke();c.setLineDash([])
-            }
-            // Keep guides on the photograph while leaving boundary controls
-            // fully visible in its surrounding gutter.
-            c.restore()
-            for(var h=0;h<handles.length;h++){
-                var active=root.gradientHandle===handles[h].id || root.hoveredGradientHandle===handles[h].id,rotation=handles[h].id==='linear_rotation' || handles[h].id==='rotation'
-                var r=rotation ? 7 : handles[h].id==='move' || handles[h].id==='center' ? 6 : 4
-                c.beginPath();c.arc(handles[h].p[0],handles[h].p[1],r+1.3,0,Math.PI*2);c.fillStyle='#B3252725';c.fill()
-                c.beginPath();c.arc(handles[h].p[0],handles[h].p[1],r,0,Math.PI*2);c.fillStyle=active ? Theme.accentInk : Theme.surface;c.fill();c.lineWidth=1.2;c.strokeStyle=active ? '#FFFFFF' : Theme.accentInk;c.stroke()
-                if(rotation) {
-                    var x=handles[h].p[0],y=handles[h].p[1];c.strokeStyle=active ? '#FFFFFF' : Theme.ink;c.lineWidth=1
-                    c.beginPath();c.arc(x,y,3.2,-Math.PI*.8,Math.PI*.7);c.stroke();c.beginPath();c.moveTo(x+1.9,y+3);c.lineTo(x-.1,y+3.5);c.lineTo(x+.5,y+1.4);c.stroke()
-                } else if(handles[h].id==='move' || handles[h].id==='center') {
-                    c.beginPath();c.arc(handles[h].p[0],handles[h].p[1],1.5,0,Math.PI*2);c.fillStyle=active ? '#FFFFFF' : Theme.accentInk;c.fill()
-                }
-            }
-        }
     }
     MouseArea {
         id: brushMouse; objectName: 'maskBrushArea'; anchors.fill: parent; z: 5
@@ -517,7 +481,7 @@ Item {
         property real cursorX: 0
         property real cursorY: 0
         // A native cursor remains visible even before/while the brush-ring
-        // Canvas is repainted, or when an image/provider is being replaced.
+        // scene graph updates, or when an image/provider is being replaced.
         cursorShape: panning ? Qt.ClosedHandCursor : root.temporaryPan ? Qt.OpenHandCursor : root.activeMask.kind==='brush' ? Qt.CrossCursor : root.gradientCursor(root.gradientHandle || root.hoveredGradientHandle)
         onPressed: function(mouse) {
             root.forceActiveFocus();cursorX=previousX=mouse.x;cursorY=previousY=mouse.y
@@ -545,28 +509,36 @@ Item {
         onCanceled: { panning=false;root.cancelGradient();root.finishStroke() }
         onExited:root.hoveredGradientHandle=''
         onWheel: function(event) { var delta=event.angleDelta.y || event.pixelDelta.y;if(delta) root.stepZoom(delta/120,event.x,event.y);event.accepted=true }
-        Canvas {
+        Shape {
             id:brushCursor;objectName:'brushCursor'
             readonly property var sourcePoint:root.pointAt(brushMouse.cursorX,brushMouse.cursorY)
-            readonly property real cursorRadius: {
-                var maximum=1
-                for(var i=0;i<4;i++){var p=root.brushCircle(sourcePoint,root.brushRadius,i*Math.PI/2);maximum=Math.max(maximum,Math.hypot(p[0]-brushMouse.cursorX,p[1]-brushMouse.cursorY))}
-                return maximum+6
-            }
-            x:brushMouse.cursorX-cursorRadius;y:brushMouse.cursorY-cursorRadius;width:cursorRadius*2;height:cursorRadius*2
+            readonly property real sourceRadius:root.brushRadius*Math.min(root.sourcePixelWidth,root.sourcePixelHeight)
+            readonly property real diameter:Math.max(2,2*sourceRadius*Math.min(root.imageWidth/Math.max(1,root.sourcePixelWidth),root.imageHeight/Math.max(1,root.sourcePixelHeight)))
+            x:root.imageX;y:root.imageY;width:diameter;height:diameter
+            preferredRendererType:Shape.CurveRenderer
             visible: root.brushEnabled && root.activeMask.kind==='brush' && brushMouse.containsMouse && !brushMouse.panning && !root.temporaryPan && sourcePoint[0]>=0 && sourcePoint[0]<=1 && sourcePoint[1]>=0 && sourcePoint[1]<=1
-            onVisibleChanged:requestPaint()
-            onPaint: {
-                var c=getContext('2d');c.reset();c.clearRect(0,0,width,height)
-                var p=sourcePoint
-                function circle(radius) {c.beginPath();for(var i=0;i<=48;i++){var v=root.brushCircle(p,radius,i*Math.PI/24);if(i===0)c.moveTo(v[0]-brushCursor.x,v[1]-brushCursor.y);else c.lineTo(v[0]-brushCursor.x,v[1]-brushCursor.y)}c.closePath()}
-                c.lineWidth=2;c.strokeStyle='#8C252725';circle(root.brushRadius);c.stroke()
-                c.lineWidth=1;c.strokeStyle='#F2FFFFFF';circle(root.brushRadius);c.stroke()
-                if(root.brushFeather>0){c.strokeStyle='#A6FFFFFF';circle(root.brushRadius*(1-root.brushFeather));c.stroke()}
-                c.beginPath();c.moveTo(width/2-2,height/2);c.lineTo(width/2+2,height/2);c.moveTo(width/2,height/2-2);c.lineTo(width/2,height/2+2);c.lineWidth=2;c.strokeStyle='#8C252725';c.stroke();c.lineWidth=1;c.strokeStyle='#FFFFFF';c.stroke()
+            // Geometry stays immutable while the pointer moves. The scene graph
+            // projects the source-space circle, including perspective, without
+            // repainting/uploading a cursor-sized Canvas on every mouse event.
+            transform:Matrix4x4 {
+                matrix:{
+                    var g=root.geometryForward,rx=brushCursor.sourceRadius/Math.max(1,root.sourcePixelWidth),ry=brushCursor.sourceRadius/Math.max(1,root.sourcePixelHeight)
+                    var x=brushCursor.sourcePoint[0]-rx,y=brushCursor.sourcePoint[1]-ry,a=2*rx/brushCursor.diameter,b=2*ry/brushCursor.diameter,w=root.imageWidth,h=root.imageHeight
+                    return Qt.matrix4x4(w*g[0]*a,w*g[1]*b,0,w*(g[0]*x+g[1]*y+g[2]),h*g[3]*a,h*g[4]*b,0,h*(g[3]*x+g[4]*y+g[5]),0,0,1,0,g[6]*a,g[7]*b,0,g[6]*x+g[7]*y+g[8])
+                }
             }
-            Connections {target:brushMouse;function onCursorXChanged(){brushCursor.requestPaint()}function onCursorYChanged(){brushCursor.requestPaint()}}
-            Connections {target:root;function onBrushRadiusChanged(){brushCursor.requestPaint()}function onBrushFeatherChanged(){brushCursor.requestPaint()}}
+            ShapePath {
+                fillColor:'transparent';strokeColor:'#80252725';strokeWidth:2
+                PathAngleArc {centerX:brushCursor.width/2;centerY:brushCursor.height/2;radiusX:brushCursor.width/2;radiusY:brushCursor.height/2;startAngle:0;sweepAngle:360}
+            }
+            ShapePath {
+                fillColor:'transparent';strokeColor:'#F2FFFFFF';strokeWidth:1
+                PathAngleArc {centerX:brushCursor.width/2;centerY:brushCursor.height/2;radiusX:brushCursor.width/2;radiusY:brushCursor.height/2;startAngle:0;sweepAngle:360}
+            }
+            ShapePath {
+                fillColor:'transparent';strokeColor:root.brushFeather>0 ? '#A6FFFFFF' : 'transparent';strokeWidth:.8
+                PathAngleArc {centerX:brushCursor.width/2;centerY:brushCursor.height/2;radiusX:brushCursor.width/2*(1-root.brushFeather);radiusY:brushCursor.height/2*(1-root.brushFeather);startAngle:0;sweepAngle:360}
+            }
         }
     }
     GuidedGeometryOverlay {id:geometryGuides;anchors.fill:parent;viewport:root;z:30;onCloseRequested:root.endGuides()}

@@ -11,6 +11,7 @@ Column {
         objectName:'geometryControls'
         width: parent.width; spacing: 16; enabled: ctrl.currentIndex>=0 && !ctrl.exporting
         RowLayout {
+            readonly property string sectionTitle:qsTr('裁切与自动校正')
             width:parent.width;spacing:6
             MinchoText{objectName:'geometryDimensions';visible:ctrl.imageWidth>0&&ctrl.imageHeight>0;text:qsTr(String(ctrl.imageWidth+' × '+ctrl.imageHeight));font.pixelSize:Theme.caption;color:Theme.secondary;Layout.fillWidth:true;elide:Text.ElideRight}
             StudioButton {objectName:'autoGeometryButton';text:qsTr(String('自动拉直'));quiet:true;implicitHeight:34;Accessible.name:qsTr(String('自动检测直线并拉直'));enabled:!ctrl.autoAdjustBusy;onClicked:ctrl.autoAdjust('geometry')}
@@ -60,13 +61,14 @@ Column {
                 }
             }
         }
-        MaskParameter { scope: 'geometry'; label: qsTr(String('旋转')); parameter: 'rotation'; minimum: -45; maximum: 45; step: .1; unit: '°' }
+        MaskParameter {readonly property string sectionTitle:qsTr('旋转与透视');scope: 'geometry'; label: qsTr(String('旋转')); parameter: 'rotation'; minimum: -45; maximum: 45; step: .1; unit: '°' }
         MaskParameter { scope: 'geometry'; label: qsTr(String('垂直透视')); parameter: 'vertical' }
         MaskParameter { scope: 'geometry'; label: qsTr(String('水平透视')); parameter: 'horizontal' }
         MaskParameter { scope: 'geometry'; label: qsTr(String('纵横比例')); parameter: 'aspect' }
         MaskParameter { scope: 'geometry'; label: qsTr(String('缩放')); parameter: 'scale'; minimum: 100; maximum: 200; unit: '%' }
         RowLayout {
             width: parent.width
+            readonly property string sectionTitle:qsTr('翻转与画幅')
             StudioButton { text: qsTr(String(ctrl.parameters.geometry.flip_horizontal ? '取消水平翻转' : '水平翻转')); quiet: true; selected: ctrl.parameters.geometry.flip_horizontal; onClicked: ctrl.setGeometryFlag('flip_horizontal',!ctrl.parameters.geometry.flip_horizontal) }
             StudioButton { text: qsTr(String(ctrl.parameters.geometry.flip_vertical ? '取消垂直翻转' : '垂直翻转')); quiet: true; selected: ctrl.parameters.geometry.flip_vertical; onClicked: ctrl.setGeometryFlag('flip_vertical',!ctrl.parameters.geometry.flip_vertical) }
         }

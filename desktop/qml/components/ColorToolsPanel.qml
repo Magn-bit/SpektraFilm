@@ -12,6 +12,7 @@ Column {
     width: parent.width; spacing: 18
     enabled: ctrl.currentIndex>=0 && !ctrl.exporting
     RowLayout {
+        readonly property string sectionTitle:qsTr('风格预设')
         width:parent.width;spacing:12
         MinchoText{text:qsTr(String('风格预设'));font.pixelSize:Theme.heading;Layout.fillWidth:true}
         StudioButton {

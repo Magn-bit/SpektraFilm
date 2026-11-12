@@ -325,6 +325,9 @@ class Controller(QObject):
         from .gui_automation import GuiAutomation
         self._gui_automation=GuiAutomation(self)
         self._gui_automation.error.connect(self.toast)
+        from .ai_editor import AiEditor
+        self._ai_editor=AiEditor(self,provider)
+        self._ai_editor.notice.connect(self.toast)
         from .update_check import UpdateCheck
         self._update_check=UpdateCheck(self)
         from .import_workspace import ImportWorkspace
@@ -501,6 +504,8 @@ class Controller(QObject):
     def filmLibrary(self):return self._film_library
     @Property(QObject,constant=True)
     def guiAutomation(self):return self._gui_automation
+    @Property(QObject,constant=True)
+    def aiEditor(self):return self._ai_editor
     @Property(QObject,constant=True)
     def updateCheck(self):return self._update_check
     @Property(QObject,constant=True)
@@ -2566,6 +2571,7 @@ class Controller(QObject):
         self._film_library.close()
         self._output_proof.close()
         self._gui_automation.close()
+        self._ai_editor.close()
         self._update_check.close()
         self._import_workspace.close()
         self._composition.close()
